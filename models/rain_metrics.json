@@ -1,0 +1,118 @@
+{
+ "Haryana region": {
+  "best_candidate": "SARIMA(1,0,1)(1,1,1,12) on sqrt rain",
+  "validation_skill_pct": 0.97,
+  "accepted": false,
+  "validation": {
+   "Climatology": {
+    "mae": 24.045891013999764,
+    "monsoon_mae": 104.8567690774564
+   },
+   "Seasonal naive": {
+    "mae": 33.468888888888884,
+    "monsoon_mae": 135.23333333333332
+   },
+   "AR(2) on anomalies": {
+    "mae": 24.035087977582286,
+    "monsoon_mae": 104.85641207001594
+   },
+   "MA(2) on anomalies": {
+    "mae": 24.03571285345506,
+    "monsoon_mae": 104.8567690774564
+   },
+   "ARIMA(1,0,1) on anomalies": {
+    "mae": 24.05118168627596,
+    "monsoon_mae": 104.91608292918366
+   },
+   "ARIMA(2,0,1) on anomalies": {
+    "mae": 24.028494055285734,
+    "monsoon_mae": 104.55947379242261
+   },
+   "ARIMA(1,1,1) on anomalies": {
+    "mae": 24.48206025604667,
+    "monsoon_mae": 105.21615505663175
+   },
+   "SARIMA(1,0,1)(1,1,1,12) on sqrt rain": {
+    "mae": 23.8129071597858,
+    "monsoon_mae": 105.90785645691372
+   },
+   "SARIMA(0,0,1)(0,1,1,12) on sqrt rain": {
+    "mae": 23.8428138764205,
+    "monsoon_mae": 106.67875970982678
+   }
+  },
+  "test": {
+   "Climatology": {
+    "mae": 22.981901914540718,
+    "monsoon_mae": 127.79906783610599
+   },
+   "Seasonal naive": {
+    "mae": 27.0775,
+    "monsoon_mae": 152.57
+   },
+   "SARIMA(1,0,1)(1,1,1,12) on sqrt rain": {
+    "mae": 21.16062894423879,
+    "monsoon_mae": 110.93636425730347
+   }
+  },
+  "range_10_90_coverage_test_pct": 84.2
+ },
+ "Punjab": {
+  "best_candidate": "SARIMA(0,0,1)(0,1,1,12) on sqrt rain",
+  "validation_skill_pct": 3.17,
+  "accepted": true,
+  "validation": {
+   "Climatology": {
+    "mae": 24.157389711203184,
+    "monsoon_mae": 115.39308298048668
+   },
+   "Seasonal naive": {
+    "mae": 29.97388888888889,
+    "monsoon_mae": 111.55999999999999
+   },
+   "AR(2) on anomalies": {
+    "mae": 24.127954765362034,
+    "monsoon_mae": 115.38996336313154
+   },
+   "MA(2) on anomalies": {
+    "mae": 24.143643760360504,
+    "monsoon_mae": 115.39308298048668
+   },
+   "ARIMA(1,0,1) on anomalies": {
+    "mae": 24.13062721408095,
+    "monsoon_mae": 115.36992384916365
+   },
+   "ARIMA(2,0,1) on anomalies": {
+    "mae": 24.14304166809905,
+    "monsoon_mae": 115.39455130732816
+   },
+   "ARIMA(1,1,1) on anomalies": {
+    "mae": 24.646726831121285,
+    "monsoon_mae": 109.34687608713658
+   },
+   "SARIMA(1,0,1)(1,1,1,12) on sqrt rain": {
+    "mae": 23.489644659832578,
+    "monsoon_mae": 106.9475850608228
+   },
+   "SARIMA(0,0,1)(0,1,1,12) on sqrt rain": {
+    "mae": 23.39112144076983,
+    "monsoon_mae": 107.38302293215595
+   }
+  },
+  "test": {
+   "Climatology": {
+    "mae": 24.912517962990705,
+    "monsoon_mae": 105.5379512568187
+   },
+   "Seasonal naive": {
+    "mae": 31.363333333333333,
+    "monsoon_mae": 164.01999999999998
+   },
+   "SARIMA(0,0,1)(0,1,1,12) on sqrt rain": {
+    "mae": 22.799612787497267,
+    "monsoon_mae": 102.70510264412523
+   }
+  },
+  "range_10_90_coverage_test_pct": 86.7
+ }
+}
