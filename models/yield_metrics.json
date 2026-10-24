@@ -1,0 +1,111 @@
+{
+ "best_params": {
+  "regressor__model__n_estimators": 100,
+  "regressor__model__min_samples_leaf": 1,
+  "regressor__model__max_features": 1.0,
+  "regressor__model__max_depth": null
+ },
+ "cv_best_median_error_pct": 10.27,
+ "band_all": {
+  "q10": -0.25608165475333744,
+  "q90": 0.3006351194843338
+ },
+ "band_crop": {
+  "Arhar/Tur": {
+   "q10": -0.24779373355182932,
+   "q90": 0.2063398237630849
+  },
+  "Bajra": {
+   "q10": -0.2062838106551105,
+   "q90": 0.16128143656543736
+  },
+  "Barley": {
+   "q10": -0.2856886346919299,
+   "q90": 0.21103548238034622
+  },
+  "Cotton": {
+   "q10": -0.6725150156109606,
+   "q90": 0.8058138017512566
+  },
+  "Gram": {
+   "q10": -0.3183533129944003,
+   "q90": 0.3941736858947341
+  },
+  "Maize": {
+   "q10": -0.32917613092547165,
+   "q90": 0.3098763392173709
+  },
+  "Masoor": {
+   "q10": -0.46976696356786357,
+   "q90": 0.36198949595176655
+  },
+  "Moong": {
+   "q10": -0.39383860326046843,
+   "q90": 0.24765677938542102
+  },
+  "Onion": {
+   "q10": -0.1394686853485699,
+   "q90": 0.22122887908755448
+  },
+  "Peas and beans": {
+   "q10": -0.2846559640096906,
+   "q90": 1.7257897182825364
+  },
+  "Potato": {
+   "q10": -0.07854735033046212,
+   "q90": 0.16088826617831664
+  },
+  "Rapeseed and Mustard": {
+   "q10": -0.23228676883851254,
+   "q90": 0.3267474654757109
+  },
+  "Rice": {
+   "q10": -0.1085583262247165,
+   "q90": 0.11902790750511928
+  },
+  "Sesamum": {
+   "q10": -0.4734172514392247,
+   "q90": 0.5276425446253041
+  },
+  "Sugarcane": {
+   "q10": -0.09328279430075312,
+   "q90": 1.6795588561253856
+  },
+  "Wheat": {
+   "q10": -0.18726561978323927,
+   "q90": 0.139364636859471
+  }
+ },
+ "test": [
+  {
+   "Method": "Forest, all test rows",
+   "Rows": 1429,
+   "Median error %": 9.7,
+   "Within 25%": 79.8
+  },
+  {
+   "Method": "Rule crop and district median, all test rows",
+   "Rows": 1429,
+   "Median error %": 18.3,
+   "Within 25%": 65.2
+  },
+  {
+   "Method": "Forest, rows with history",
+   "Rows": 1316,
+   "Median error %": 9.1,
+   "Within 25%": 81.1
+  },
+  {
+   "Method": "Rule same as last year, rows with history",
+   "Rows": 1316,
+   "Median error %": 8.4,
+   "Within 25%": 81.8
+  },
+  {
+   "Method": "Rule mean of last 3 years, rows with history",
+   "Rows": 1316,
+   "Median error %": 9.7,
+   "Within 25%": 81.9
+  }
+ ]
+}
