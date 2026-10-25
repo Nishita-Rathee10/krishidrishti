@@ -1,0 +1,481 @@
+State,District,Season,Crop,Item,MeanShare,Major,P_suitable
+Haryana,Ambala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),1.1128050476836964e-06,0,0.004
+Haryana,Ambala,Kharif,Bajra,Bajra (Kharif),0.0018138215404698746,0,0.409
+Haryana,Ambala,Kharif,Cotton,Cotton (Kharif),0.0,0,0.005
+Haryana,Ambala,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.005
+Haryana,Ambala,Kharif,Jowar,Jowar (Kharif),1.0465505693235097e-05,0,0.008
+Haryana,Ambala,Kharif,Maize,Maize (Kharif),0.0064165281841471215,0,0.791
+Haryana,Bhiwani,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.003914537528429516,0,0.268
+Haryana,Bhiwani,Kharif,Bajra,Bajra (Kharif),0.44151493386551754,1,0.766
+Haryana,Bhiwani,Kharif,Cotton,Cotton (Kharif),0.36131794961420866,1,0.987
+Haryana,Bhiwani,Kharif,Guar seed,Guar seed (Kharif),0.06524165865421605,1,0.29
+Haryana,Bhiwani,Kharif,Jowar,Jowar (Kharif),0.004808013311200412,0,0.258
+Haryana,Bhiwani,Kharif,Maize,Maize (Kharif),6.424996491050489e-05,0,0.012
+Haryana,Charki Dadri,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.16727569396537276,1,0.098
+Haryana,Charki Dadri,Kharif,Bajra,Bajra (Kharif),0.31055909558318595,1,0.956
+Haryana,Charki Dadri,Kharif,Cotton,Cotton (Kharif),0.2258700581919838,1,0.994
+Haryana,Charki Dadri,Kharif,Guar seed,Guar seed (Kharif),0.12785135511339915,1,0.839
+Haryana,Charki Dadri,Kharif,Jowar,Jowar (Kharif),0.00869526111812731,0,0.13
+Haryana,Charki Dadri,Kharif,Maize,Maize (Kharif),4.684981822270529e-05,0,0.029
+Haryana,Faridabad,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.006014067294296299,0,0.208
+Haryana,Faridabad,Kharif,Bajra,Bajra (Kharif),0.20915829720907003,1,0.796
+Haryana,Faridabad,Kharif,Cotton,Cotton (Kharif),0.007721280753770524,0,0.787
+Haryana,Faridabad,Kharif,Guar seed,Guar seed (Kharif),0.00023376061400830206,0,0.035
+Haryana,Faridabad,Kharif,Jowar,Jowar (Kharif),0.0737614395621631,1,0.68
+Haryana,Faridabad,Kharif,Maize,Maize (Kharif),8.736676568233443e-05,0,0.05
+Haryana,Fatehabad,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.00018278571717771322,0,0.109
+Haryana,Fatehabad,Kharif,Bajra,Bajra (Kharif),0.016915797172827752,0,0.474
+Haryana,Fatehabad,Kharif,Cotton,Cotton (Kharif),0.403806977893601,1,0.986
+Haryana,Fatehabad,Kharif,Guar seed,Guar seed (Kharif),0.01698755811695197,0,0.688
+Haryana,Fatehabad,Kharif,Jowar,Jowar (Kharif),0.0,0,0.111
+Haryana,Fatehabad,Kharif,Maize,Maize (Kharif),0.0,0,0.012
+Haryana,Gurgaon,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.009288703715783202,0,0.254
+Haryana,Gurgaon,Kharif,Bajra,Bajra (Kharif),0.7946332639890763,1,0.939
+Haryana,Gurgaon,Kharif,Cotton,Cotton (Kharif),0.027766834071959963,1,0.955
+Haryana,Gurgaon,Kharif,Guar seed,Guar seed (Kharif),0.0032422240294200065,0,0.164
+Haryana,Gurgaon,Kharif,Jowar,Jowar (Kharif),0.017436631244759825,0,0.651
+Haryana,Gurgaon,Kharif,Maize,Maize (Kharif),2.2894297030609674e-05,0,0.016
+Haryana,Hisar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0007208061848025727,0,0.258
+Haryana,Hisar,Kharif,Bajra,Bajra (Kharif),0.1310738605829684,1,0.568
+Haryana,Hisar,Kharif,Cotton,Cotton (Kharif),0.5556532547173993,1,0.988
+Haryana,Hisar,Kharif,Guar seed,Guar seed (Kharif),0.045233845151754604,1,0.828
+Haryana,Hisar,Kharif,Jowar,Jowar (Kharif),0.0,0,0.067
+Haryana,Hisar,Kharif,Maize,Maize (Kharif),0.00016756395709232382,0,0.014
+Haryana,Jhajjar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.024403388394180693,1,0.151
+Haryana,Jhajjar,Kharif,Bajra,Bajra (Kharif),0.39048428343085956,1,0.931
+Haryana,Jhajjar,Kharif,Cotton,Cotton (Kharif),0.059120150620727174,1,0.969
+Haryana,Jhajjar,Kharif,Guar seed,Guar seed (Kharif),0.004611650576422542,0,0.207
+Haryana,Jhajjar,Kharif,Jowar,Jowar (Kharif),0.11865577409591943,1,0.325
+Haryana,Jhajjar,Kharif,Maize,Maize (Kharif),0.0008445356369095293,0,0.019
+Haryana,Jind,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0005764602524279377,0,0.095
+Haryana,Jind,Kharif,Bajra,Bajra (Kharif),0.08706160480786876,1,0.216
+Haryana,Jind,Kharif,Cotton,Cotton (Kharif),0.3051074862652484,1,0.867
+Haryana,Jind,Kharif,Guar seed,Guar seed (Kharif),0.0003042580620449381,0,0.093
+Haryana,Jind,Kharif,Jowar,Jowar (Kharif),0.00014185738604123322,0,0.216
+Haryana,Jind,Kharif,Maize,Maize (Kharif),4.164449482914189e-05,0,0.011
+Haryana,Kaithal,Kharif,Arhar/Tur,Arhar/Tur (Kharif),1.1761246692149368e-06,0,0.031
+Haryana,Kaithal,Kharif,Bajra,Bajra (Kharif),0.019679290150880116,0,0.049
+Haryana,Kaithal,Kharif,Cotton,Cotton (Kharif),0.04663835446130929,1,0.343
+Haryana,Kaithal,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.022
+Haryana,Kaithal,Kharif,Jowar,Jowar (Kharif),1.662362993583279e-05,0,0.039
+Haryana,Kaithal,Kharif,Maize,Maize (Kharif),6.649451974333115e-05,0,0.032
+Haryana,Karnal,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.000461086091501818,0,0.026
+Haryana,Karnal,Kharif,Bajra,Bajra (Kharif),0.003456972453535781,0,0.16
+Haryana,Karnal,Kharif,Cotton,Cotton (Kharif),5.5991041433370664e-05,0,0.076
+Haryana,Karnal,Kharif,Guar seed,Guar seed (Kharif),1.439609220161718e-05,0,0.001
+Haryana,Karnal,Kharif,Jowar,Jowar (Kharif),5.430296711412312e-06,0,0.18
+Haryana,Karnal,Kharif,Maize,Maize (Kharif),0.00034714226178840415,0,0.095
+Haryana,Kurukshetra,Kharif,Arhar/Tur,Arhar/Tur (Kharif),3.4944263899080963e-06,0,0.013
+Haryana,Kurukshetra,Kharif,Bajra,Bajra (Kharif),0.0,0,0.039
+Haryana,Kurukshetra,Kharif,Cotton,Cotton (Kharif),0.0,0,0.015
+Haryana,Kurukshetra,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001
+Haryana,Kurukshetra,Kharif,Jowar,Jowar (Kharif),0.003140167274679045,0,0.032
+Haryana,Kurukshetra,Kharif,Maize,Maize (Kharif),0.0033742357975833108,0,0.335
+Haryana,Mahendragarh,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0007093047981560593,0,0.437
+Haryana,Mahendragarh,Kharif,Bajra,Bajra (Kharif),0.8624019890605317,1,0.915
+Haryana,Mahendragarh,Kharif,Cotton,Cotton (Kharif),0.102424393571294,1,0.984
+Haryana,Mahendragarh,Kharif,Guar seed,Guar seed (Kharif),0.029642781522178908,1,0.697
+Haryana,Mahendragarh,Kharif,Jowar,Jowar (Kharif),0.00031092038726558734,0,0.122
+Haryana,Mahendragarh,Kharif,Maize,Maize (Kharif),0.0,0,0.011
+Haryana,Mewat,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.010609295860581607,0,0.242
+Haryana,Mewat,Kharif,Bajra,Bajra (Kharif),0.5565215665125031,1,0.954
+Haryana,Mewat,Kharif,Cotton,Cotton (Kharif),0.04894176975248799,1,0.962
+Haryana,Mewat,Kharif,Guar seed,Guar seed (Kharif),0.000332181395529558,0,0.235
+Haryana,Mewat,Kharif,Jowar,Jowar (Kharif),0.21072133431462842,1,0.368
+Haryana,Mewat,Kharif,Maize,Maize (Kharif),4.866258982303038e-05,0,0.013
+Haryana,Palwal,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.00967222601001972,0,0.225
+Haryana,Palwal,Kharif,Bajra,Bajra (Kharif),0.1391616905995314,1,0.933
+Haryana,Palwal,Kharif,Cotton,Cotton (Kharif),0.11754791477544066,1,0.942
+Haryana,Palwal,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.124
+Haryana,Palwal,Kharif,Jowar,Jowar (Kharif),0.13127587805749885,1,0.494
+Haryana,Palwal,Kharif,Maize,Maize (Kharif),1.1655283339937993e-05,0,0.014
+Haryana,Panchkula,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0003802801081584668,0,0.002
+Haryana,Panchkula,Kharif,Bajra,Bajra (Kharif),0.05015638906290305,1,0.011
+Haryana,Panchkula,Kharif,Cotton,Cotton (Kharif),0.0,0,0.001
+Haryana,Panchkula,Kharif,Guar seed,Guar seed (Kharif),1.0399334442595674e-05,0,0.002
+Haryana,Panchkula,Kharif,Jowar,Jowar (Kharif),0.0038020169236119158,0,0.006
+Haryana,Panchkula,Kharif,Maize,Maize (Kharif),0.2831604045165969,1,0.313
+Haryana,Panipat,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.001422445449359686,0,0.045
+Haryana,Panipat,Kharif,Bajra,Bajra (Kharif),0.0019968508978360586,0,0.158
+Haryana,Panipat,Kharif,Cotton,Cotton (Kharif),0.00012872000823808055,0,0.166
+Haryana,Panipat,Kharif,Guar seed,Guar seed (Kharif),1.1491743182523357e-06,0,0.003
+Haryana,Panipat,Kharif,Jowar,Jowar (Kharif),1.1491743182523357e-05,0,0.133
+Haryana,Panipat,Kharif,Maize,Maize (Kharif),2.2983486365046714e-05,0,0.036
+Haryana,Rewari,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.00226195616078748,0,0.311
+Haryana,Rewari,Kharif,Bajra,Bajra (Kharif),0.8722889506080742,1,0.969
+Haryana,Rewari,Kharif,Cotton,Cotton (Kharif),0.07205859489308644,1,0.976
+Haryana,Rewari,Kharif,Guar seed,Guar seed (Kharif),0.0075568762782169995,0,0.342
+Haryana,Rewari,Kharif,Jowar,Jowar (Kharif),0.006278620673532307,0,0.639
+Haryana,Rewari,Kharif,Maize,Maize (Kharif),0.0,0,0.014
+Haryana,Rohtak,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.022970310946060443,1,0.036
+Haryana,Rohtak,Kharif,Bajra,Bajra (Kharif),0.1583931575895297,1,0.718
+Haryana,Rohtak,Kharif,Cotton,Cotton (Kharif),0.1476647357251644,1,0.717
+Haryana,Rohtak,Kharif,Guar seed,Guar seed (Kharif),0.0008841912615713771,0,0.028
+Haryana,Rohtak,Kharif,Jowar,Jowar (Kharif),0.1583022432050435,1,0.584
+Haryana,Rohtak,Kharif,Maize,Maize (Kharif),0.005714688964093619,0,0.036
+Haryana,Sirsa,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0002867512880647675,0,0.104
+Haryana,Sirsa,Kharif,Bajra,Bajra (Kharif),0.010567154574572787,0,0.585
+Haryana,Sirsa,Kharif,Cotton,Cotton (Kharif),0.6528322883186539,1,0.982
+Haryana,Sirsa,Kharif,Guar seed,Guar seed (Kharif),0.047703802385233876,1,0.784
+Haryana,Sirsa,Kharif,Jowar,Jowar (Kharif),1.6563604240282687e-05,0,0.088
+Haryana,Sirsa,Kharif,Maize,Maize (Kharif),0.00015358704187970126,0,0.022
+Haryana,Sonipat,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.007574533415544882,0,0.39
+Haryana,Sonipat,Kharif,Bajra,Bajra (Kharif),0.06381901930884656,1,0.739
+Haryana,Sonipat,Kharif,Cotton,Cotton (Kharif),0.02386661994629358,1,0.726
+Haryana,Sonipat,Kharif,Guar seed,Guar seed (Kharif),3.980321291534652e-06,0,0.048
+Haryana,Sonipat,Kharif,Jowar,Jowar (Kharif),0.055644519142572534,1,0.594
+Haryana,Sonipat,Kharif,Maize,Maize (Kharif),0.0038641539977427317,0,0.044
+Haryana,Yamunanagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),2.7522809528396657e-06,0,0.011
+Haryana,Yamunanagar,Kharif,Bajra,Bajra (Kharif),0.003221333548983559,0,0.255
+Haryana,Yamunanagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.002
+Haryana,Yamunanagar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.004
+Haryana,Yamunanagar,Kharif,Jowar,Jowar (Kharif),0.0,0,0.411
+Haryana,Yamunanagar,Kharif,Maize,Maize (Kharif),0.0096034260842558,0,0.626
+Haryana,Ambala,Rabi,Barley,Barley (Rabi),3.215365158303145e-05,0,0.002
+Haryana,Ambala,Rabi,Gram,Gram (Rabi),1.0717883861010481e-05,0,0.006
+Haryana,Ambala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.014652935258204745,0,0.762
+Haryana,Bhiwani,Rabi,Barley,Barley (Rabi),0.021296184974053972,1,0.18
+Haryana,Bhiwani,Rabi,Gram,Gram (Rabi),0.08618064316881774,1,0.047
+Haryana,Bhiwani,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.43696865678701113,1,0.783
+Haryana,Charki Dadri,Rabi,Barley,Barley (Rabi),0.013186962592735088,0,0.261
+Haryana,Charki Dadri,Rabi,Gram,Gram (Rabi),0.010427199291892583,0,0.748
+Haryana,Charki Dadri,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.5017576709870206,1,0.955
+Haryana,Faridabad,Rabi,Barley,Barley (Rabi),0.0016383565531456236,0,0.179
+Haryana,Faridabad,Rabi,Gram,Gram (Rabi),0.0,0,0.035
+Haryana,Faridabad,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.01619442512402166,0,0.754
+Haryana,Fatehabad,Rabi,Barley,Barley (Rabi),0.009024913593257359,0,0.124
+Haryana,Fatehabad,Rabi,Gram,Gram (Rabi),0.002788699428489789,0,0.199
+Haryana,Fatehabad,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.06532480712406949,1,0.515
+Haryana,Gurgaon,Rabi,Barley,Barley (Rabi),0.02057251349699142,1,0.242
+Haryana,Gurgaon,Rabi,Gram,Gram (Rabi),0.0,0,0.147
+Haryana,Gurgaon,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.21218657837718014,1,0.842
+Haryana,Hisar,Rabi,Barley,Barley (Rabi),0.012890634887245723,0,0.081
+Haryana,Hisar,Rabi,Gram,Gram (Rabi),0.037867457415357283,1,0.165
+Haryana,Hisar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.21854238133560763,1,0.882
+Haryana,Jhajjar,Rabi,Barley,Barley (Rabi),0.02291539286779092,1,0.271
+Haryana,Jhajjar,Rabi,Gram,Gram (Rabi),0.002112620112297744,0,0.162
+Haryana,Jhajjar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.2092551962466568,1,0.825
+Haryana,Jind,Rabi,Barley,Barley (Rabi),0.003220289649166347,0,0.092
+Haryana,Jind,Rabi,Gram,Gram (Rabi),0.00014994539214196467,0,0.038
+Haryana,Jind,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.02290266302163208,1,0.29
+Haryana,Karnal,Rabi,Barley,Barley (Rabi),0.00011701897489923134,0,0.018
+Haryana,Karnal,Rabi,Gram,Gram (Rabi),0.00012766244065473813,0,0.002
+Haryana,Karnal,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.010094986076962967,0,0.201
+Haryana,Kurukshetra,Rabi,Barley,Barley (Rabi),8.744698526518298e-06,0,0.01
+Haryana,Kurukshetra,Rabi,Gram,Gram (Rabi),8.700948403375968e-05,0,0.002
+Haryana,Kurukshetra,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.015588810601098773,0,0.086
+Haryana,Mahendragarh,Rabi,Barley,Barley (Rabi),0.003599727138468124,0,0.124
+Haryana,Mahendragarh,Rabi,Gram,Gram (Rabi),0.05556942909471694,1,0.146
+Haryana,Mahendragarh,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.5881182904064653,1,0.943
+Haryana,Mewat,Rabi,Barley,Barley (Rabi),0.007970712851605005,0,0.274
+Haryana,Mewat,Rabi,Gram,Gram (Rabi),0.0032072758422702343,0,0.15
+Haryana,Mewat,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.23880309550499823,1,0.927
+Haryana,Palwal,Rabi,Barley,Barley (Rabi),0.009554198111055758,0,0.325
+Haryana,Palwal,Rabi,Gram,Gram (Rabi),0.0,0,0.107
+Haryana,Palwal,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0259584339794925,1,0.842
+Haryana,Panchkula,Rabi,Barley,Barley (Rabi),0.0005117707267144319,0,0.002
+Haryana,Panchkula,Rabi,Gram,Gram (Rabi),0.001981358323424464,0,0.004
+Haryana,Panchkula,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.03976100712397543,1,0.338
+Haryana,Panipat,Rabi,Barley,Barley (Rabi),1.0906909527185471e-05,0,0.031
+Haryana,Panipat,Rabi,Gram,Gram (Rabi),0.0002671861232110739,0,0.005
+Haryana,Panipat,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.009666090460158075,0,0.149
+Haryana,Rewari,Rabi,Barley,Barley (Rabi),0.011723547161443752,0,0.324
+Haryana,Rewari,Rabi,Gram,Gram (Rabi),8.605629803017133e-06,0,0.215
+Haryana,Rewari,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.5807011193152701,1,0.919
+Haryana,Rohtak,Rabi,Barley,Barley (Rabi),0.017537075068560982,0,0.096
+Haryana,Rohtak,Rabi,Gram,Gram (Rabi),0.003787254852542335,0,0.026
+Haryana,Rohtak,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.09824061314322852,1,0.346
+Haryana,Sirsa,Rabi,Barley,Barley (Rabi),0.014032728147409329,0,0.123
+Haryana,Sirsa,Rabi,Gram,Gram (Rabi),0.015035782532972544,0,0.532
+Haryana,Sirsa,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.1293366563396297,1,0.696
+Haryana,Sonipat,Rabi,Barley,Barley (Rabi),6.854009595613435e-05,0,0.138
+Haryana,Sonipat,Rabi,Gram,Gram (Rabi),6.744816608436416e-06,0,0.053
+Haryana,Sonipat,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.012631755759878713,0,0.801
+Haryana,Ambala,Whole Year,Coriander,Coriander (Whole Year),0.003822154031381133,0,0.013
+Haryana,Ambala,Whole Year,Garlic,Garlic (Whole Year),0.010473589025018942,0,0.041
+Haryana,Ambala,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.01
+Haryana,Ambala,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6765633161605173,1,0.985
+Haryana,Bhiwani,Whole Year,Coriander,Coriander (Whole Year),0.002057276626478546,0,0.313
+Haryana,Bhiwani,Whole Year,Garlic,Garlic (Whole Year),0.02173658387174958,1,0.605
+Haryana,Bhiwani,Whole Year,Guar seed,Guar seed (Whole Year),0.09843398120043081,1,0.644
+Haryana,Bhiwani,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6618681259214847,1,0.86
+Haryana,Charki Dadri,Whole Year,Coriander,Coriander (Whole Year),0.006205726931469167,0,0.498
+Haryana,Charki Dadri,Whole Year,Garlic,Garlic (Whole Year),0.012279087082863674,0,0.881
+Haryana,Charki Dadri,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.983
+Haryana,Charki Dadri,Whole Year,Sugarcane,Sugarcane (Whole Year),0.906646949531718,1,0.442
+Haryana,Faridabad,Whole Year,Coriander,Coriander (Whole Year),0.03971393818454977,1,0.239
+Haryana,Faridabad,Whole Year,Garlic,Garlic (Whole Year),0.02464230506511938,1,0.224
+Haryana,Faridabad,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.46
+Haryana,Faridabad,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6056790968913272,1,0.832
+Haryana,Fatehabad,Whole Year,Coriander,Coriander (Whole Year),0.01267063012807936,0,0.509
+Haryana,Fatehabad,Whole Year,Garlic,Garlic (Whole Year),0.12365555228653477,1,0.757
+Haryana,Fatehabad,Whole Year,Guar seed,Guar seed (Whole Year),0.09673992008717762,1,0.56
+Haryana,Fatehabad,Whole Year,Sugarcane,Sugarcane (Whole Year),0.20910679354582,1,0.947
+Haryana,Gurgaon,Whole Year,Coriander,Coriander (Whole Year),0.017661775874587723,0,0.341
+Haryana,Gurgaon,Whole Year,Garlic,Garlic (Whole Year),0.04099426214351688,1,0.385
+Haryana,Gurgaon,Whole Year,Guar seed,Guar seed (Whole Year),0.09946682464454977,1,0.616
+Haryana,Gurgaon,Whole Year,Sugarcane,Sugarcane (Whole Year),0.006060606060606061,0,0.925
+Haryana,Hisar,Whole Year,Coriander,Coriander (Whole Year),0.002285566045857765,0,0.474
+Haryana,Hisar,Whole Year,Garlic,Garlic (Whole Year),0.02188957229561186,1,0.702
+Haryana,Hisar,Whole Year,Guar seed,Guar seed (Whole Year),0.09775061720869274,1,0.743
+Haryana,Hisar,Whole Year,Sugarcane,Sugarcane (Whole Year),0.5256716911364784,1,0.807
+Haryana,Jhajjar,Whole Year,Coriander,Coriander (Whole Year),0.017347090461077068,0,0.369
+Haryana,Jhajjar,Whole Year,Garlic,Garlic (Whole Year),0.008375950654240894,0,0.62
+Haryana,Jhajjar,Whole Year,Guar seed,Guar seed (Whole Year),0.06842825560585325,1,0.589
+Haryana,Jhajjar,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6822845666461528,1,0.776
+Haryana,Jind,Whole Year,Coriander,Coriander (Whole Year),0.024320382683882823,1,0.139
+Haryana,Jind,Whole Year,Garlic,Garlic (Whole Year),0.02115063061139114,1,0.633
+Haryana,Jind,Whole Year,Guar seed,Guar seed (Whole Year),0.015821094793057412,0,0.446
+Haryana,Jind,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6952406576562066,1,0.964
+Haryana,Kaithal,Whole Year,Coriander,Coriander (Whole Year),0.013666093627258846,0,0.111
+Haryana,Kaithal,Whole Year,Garlic,Garlic (Whole Year),0.0261153631077563,1,0.376
+Haryana,Kaithal,Whole Year,Guar seed,Guar seed (Whole Year),0.0011133603238866396,0,0.167
+Haryana,Kaithal,Whole Year,Sugarcane,Sugarcane (Whole Year),0.7817440932558473,1,0.986
+Haryana,Karnal,Whole Year,Coriander,Coriander (Whole Year),0.004516347852802977,0,0.129
+Haryana,Karnal,Whole Year,Garlic,Garlic (Whole Year),0.04601904516884654,1,0.142
+Haryana,Karnal,Whole Year,Guar seed,Guar seed (Whole Year),0.0010698707925273642,0,0.039
+Haryana,Karnal,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6870261462499195,1,0.987
+Haryana,Kurukshetra,Whole Year,Coriander,Coriander (Whole Year),0.002000340022277328,0,0.019
+Haryana,Kurukshetra,Whole Year,Garlic,Garlic (Whole Year),0.004576663257566393,0,0.302
+Haryana,Kurukshetra,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.007
+Haryana,Kurukshetra,Whole Year,Sugarcane,Sugarcane (Whole Year),0.546482243712012,1,0.995
+Haryana,Mahendragarh,Whole Year,Coriander,Coriander (Whole Year),0.042427428839400746,1,0.182
+Haryana,Mahendragarh,Whole Year,Garlic,Garlic (Whole Year),0.05901232895293114,1,0.395
+Haryana,Mahendragarh,Whole Year,Guar seed,Guar seed (Whole Year),0.1,1,0.551
+Haryana,Mahendragarh,Whole Year,Sugarcane,Sugarcane (Whole Year),0.0,0,0.825
+Haryana,Mewat,Whole Year,Coriander,Coriander (Whole Year),0.005319065692656761,0,0.447
+Haryana,Mewat,Whole Year,Garlic,Garlic (Whole Year),0.007361200129086668,0,0.586
+Haryana,Mewat,Whole Year,Guar seed,Guar seed (Whole Year),0.04222529371112647,1,0.609
+Haryana,Mewat,Whole Year,Sugarcane,Sugarcane (Whole Year),0.18123423448456435,1,0.499
+Haryana,Palwal,Whole Year,Coriander,Coriander (Whole Year),0.00597204148338374,0,0.564
+Haryana,Palwal,Whole Year,Garlic,Garlic (Whole Year),0.01887506228803527,0,0.652
+Haryana,Palwal,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.818
+Haryana,Palwal,Whole Year,Sugarcane,Sugarcane (Whole Year),0.8916328388276558,1,0.538
+Haryana,Panchkula,Whole Year,Coriander,Coriander (Whole Year),0.00744508719224643,0,0.011
+Haryana,Panchkula,Whole Year,Garlic,Garlic (Whole Year),0.016948006463895604,0,0.029
+Haryana,Panchkula,Whole Year,Guar seed,Guar seed (Whole Year),0.0010882708585247885,0,0.002
+Haryana,Panchkula,Whole Year,Sugarcane,Sugarcane (Whole Year),0.12187057361646188,1,0.984
+Haryana,Panipat,Whole Year,Coriander,Coriander (Whole Year),0.01776266426262017,0,0.098
+Haryana,Panipat,Whole Year,Garlic,Garlic (Whole Year),0.0076972708654186595,0,0.493
+Haryana,Panipat,Whole Year,Guar seed,Guar seed (Whole Year),0.0020020666494445878,0,0.043
+Haryana,Panipat,Whole Year,Sugarcane,Sugarcane (Whole Year),0.7717425096640687,1,0.989
+Haryana,Rewari,Whole Year,Coriander,Coriander (Whole Year),0.04045891710433675,1,0.176
+Haryana,Rewari,Whole Year,Garlic,Garlic (Whole Year),0.047736068301534866,1,0.285
+Haryana,Rewari,Whole Year,Guar seed,Guar seed (Whole Year),0.09820433436532508,1,0.629
+Haryana,Rewari,Whole Year,Sugarcane,Sugarcane (Whole Year),0.0,0,0.783
+Haryana,Rohtak,Whole Year,Coriander,Coriander (Whole Year),0.006342079176588872,0,0.589
+Haryana,Rohtak,Whole Year,Garlic,Garlic (Whole Year),0.003159887529607374,0,0.426
+Haryana,Rohtak,Whole Year,Guar seed,Guar seed (Whole Year),0.022939677145284623,1,0.148
+Haryana,Rohtak,Whole Year,Sugarcane,Sugarcane (Whole Year),0.8668397567816799,1,0.953
+Haryana,Sirsa,Whole Year,Coriander,Coriander (Whole Year),0.025961650108520067,1,0.252
+Haryana,Sirsa,Whole Year,Garlic,Garlic (Whole Year),0.19590264025663323,1,0.832
+Haryana,Sirsa,Whole Year,Guar seed,Guar seed (Whole Year),0.09977203550642502,1,0.795
+Haryana,Sirsa,Whole Year,Sugarcane,Sugarcane (Whole Year),0.031673676957637266,1,0.87
+Haryana,Sonipat,Whole Year,Coriander,Coriander (Whole Year),0.03764940807506115,1,0.174
+Haryana,Sonipat,Whole Year,Garlic,Garlic (Whole Year),0.0024243963914676895,0,0.432
+Haryana,Sonipat,Whole Year,Guar seed,Guar seed (Whole Year),0.005033686236766121,0,0.629
+Haryana,Sonipat,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6788228432688954,1,0.942
+Haryana,Yamunanagar,Whole Year,Coriander,Coriander (Whole Year),0.00589767148632787,0,0.041
+Haryana,Yamunanagar,Whole Year,Garlic,Garlic (Whole Year),0.016410454386441606,0,0.069
+Haryana,Yamunanagar,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.007
+Haryana,Yamunanagar,Whole Year,Sugarcane,Sugarcane (Whole Year),0.7644320366688893,1,0.995
+Haryana,Kaithal,Rabi,Barley,Barley (Rabi),0.0,0,0.039
+Haryana,Kaithal,Rabi,Gram,Gram (Rabi),1.6345923326722317e-05,0,0.012
+Haryana,Kaithal,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.005473852795825482,0,0.095
+Haryana,Yamunanagar,Rabi,Barley,Barley (Rabi),0.0,0,0.004
+Haryana,Yamunanagar,Rabi,Gram,Gram (Rabi),0.00014074372834422885,0,0.004
+Haryana,Yamunanagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.030796708580079973,1,0.347
+Punjab,Amritsar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0012474755754922713,0,0.003
+Punjab,Amritsar,Kharif,Bajra,Bajra (Kharif),0.0005330490405117271,0,0.003
+Punjab,Amritsar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.052
+Punjab,Amritsar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001
+Punjab,Amritsar,Kharif,Maize,Maize (Kharif),0.0058398101398562325,0,0.14
+Punjab,Barnala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0006887066348554282,0,0.02
+Punjab,Barnala,Kharif,Bajra,Bajra (Kharif),0.0,0,0.026
+Punjab,Barnala,Kharif,Cotton,Cotton (Kharif),0.0535798848601747,1,0.425
+Punjab,Barnala,Kharif,Guar seed,Guar seed (Kharif),0.0006881179491077217,0,0.036
+Punjab,Barnala,Kharif,Maize,Maize (Kharif),8.635578583765112e-05,0,0.028
+Punjab,Bathinda,Kharif,Arhar/Tur,Arhar/Tur (Kharif),7.713073659853452e-05,0,0.07
+Punjab,Bathinda,Kharif,Bajra,Bajra (Kharif),0.0001908864444961327,0,0.269
+Punjab,Bathinda,Kharif,Cotton,Cotton (Kharif),0.46190470381322896,1,0.976
+Punjab,Bathinda,Kharif,Guar seed,Guar seed (Kharif),0.025127694174262194,1,0.531
+Punjab,Bathinda,Kharif,Maize,Maize (Kharif),0.0003755163349605708,0,0.01
+Punjab,Faridkot,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.00017043061506063467,0,0.019
+Punjab,Faridkot,Kharif,Bajra,Bajra (Kharif),0.0,0,0.026
+Punjab,Faridkot,Kharif,Cotton,Cotton (Kharif),0.06993160648737243,1,0.891
+Punjab,Faridkot,Kharif,Guar seed,Guar seed (Kharif),0.004670749748140167,0,0.276
+Punjab,Faridkot,Kharif,Maize,Maize (Kharif),0.0,0,0.008
+Punjab,Fazilka,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0013624332150946725,0,0.046
+Punjab,Fazilka,Kharif,Bajra,Bajra (Kharif),0.0006899865626968291,0,0.128
+Punjab,Fazilka,Kharif,Cotton,Cotton (Kharif),0.37576990025541845,1,0.962
+Punjab,Fazilka,Kharif,Guar seed,Guar seed (Kharif),0.16115174623518916,1,0.53
+Punjab,Fazilka,Kharif,Maize,Maize (Kharif),0.0020596440965867566,0,0.02
+Punjab,Firozepur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.00010787640296782298,0,0.019
+Punjab,Firozepur,Kharif,Bajra,Bajra (Kharif),0.0002591344908007256,0,0.027
+Punjab,Firozepur,Kharif,Cotton,Cotton (Kharif),0.06393841565474694,1,0.819
+Punjab,Firozepur,Kharif,Guar seed,Guar seed (Kharif),0.009386132967365722,0,0.217
+Punjab,Firozepur,Kharif,Maize,Maize (Kharif),0.0010344827586206897,0,0.013
+Punjab,Hoshiarpur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0001484880019048795,0,0.003
+Punjab,Hoshiarpur,Kharif,Bajra,Bajra (Kharif),0.0,0,0.006
+Punjab,Hoshiarpur,Kharif,Cotton,Cotton (Kharif),0.0,0,0.005
+Punjab,Hoshiarpur,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.003
+Punjab,Hoshiarpur,Kharif,Maize,Maize (Kharif),0.43460136620253065,1,0.332
+Punjab,Jalandhar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.002336480449609027,0,0.007
+Punjab,Jalandhar,Kharif,Bajra,Bajra (Kharif),0.0,0,0.008
+Punjab,Jalandhar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.009
+Punjab,Jalandhar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.002
+Punjab,Jalandhar,Kharif,Maize,Maize (Kharif),0.040988999759815035,1,0.132
+Punjab,Ludhiana,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.002602845322153731,0,0.004
+Punjab,Ludhiana,Kharif,Bajra,Bajra (Kharif),0.00011467889908256881,0,0.009
+Punjab,Ludhiana,Kharif,Cotton,Cotton (Kharif),0.0015278866635176742,0,0.045
+Punjab,Ludhiana,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.002
+Punjab,Ludhiana,Kharif,Maize,Maize (Kharif),0.007385434726179994,0,0.093
+Punjab,Mansa,Kharif,Arhar/Tur,Arhar/Tur (Kharif),5.790387955993051e-05,0,0.031
+Punjab,Mansa,Kharif,Bajra,Bajra (Kharif),0.00314290201080495,0,0.062
+Punjab,Mansa,Kharif,Cotton,Cotton (Kharif),0.4329581417384761,1,0.911
+Punjab,Mansa,Kharif,Guar seed,Guar seed (Kharif),0.022293647645662593,1,0.082
+Punjab,Mansa,Kharif,Maize,Maize (Kharif),5.698005698005698e-05,0,0.012
+Punjab,Moga,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0015033514839133725,0,0.014
+Punjab,Moga,Kharif,Bajra,Bajra (Kharif),0.0001097694840834248,0,0.015
+Punjab,Moga,Kharif,Cotton,Cotton (Kharif),0.006899479544908752,0,0.864
+Punjab,Moga,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.062
+Punjab,Moga,Kharif,Maize,Maize (Kharif),0.00027454446871690464,0,0.02
+Punjab,Muktsar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0003349150664865392,0,0.062
+Punjab,Muktsar,Kharif,Bajra,Bajra (Kharif),4.96031746031746e-05,0,0.129
+Punjab,Muktsar,Kharif,Cotton,Cotton (Kharif),0.2872534245540111,1,0.969
+Punjab,Muktsar,Kharif,Guar seed,Guar seed (Kharif),0.009932275247421542,0,0.64
+Punjab,Muktsar,Kharif,Maize,Maize (Kharif),0.0,0,0.013
+Punjab,Patiala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),4.253509145044662e-05,0,0.007
+Punjab,Patiala,Kharif,Bajra,Bajra (Kharif),0.0,0,0.021
+Punjab,Patiala,Kharif,Cotton,Cotton (Kharif),0.002724553202482182,0,0.024
+Punjab,Patiala,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001
+Punjab,Patiala,Kharif,Maize,Maize (Kharif),0.004097899480437979,0,0.212
+Punjab,Rupnagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0016664751900735432,0,0.013
+Punjab,Rupnagar,Kharif,Bajra,Bajra (Kharif),0.0006451612903225806,0,0.031
+Punjab,Rupnagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.039
+Punjab,Rupnagar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.015
+Punjab,Rupnagar,Kharif,Maize,Maize (Kharif),0.3587225874141463,1,0.419
+Punjab,SAS Nagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0058025194809324795,0,0.005
+Punjab,SAS Nagar,Kharif,Bajra,Bajra (Kharif),0.002604166666666667,0,0.125
+Punjab,SAS Nagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.014
+Punjab,SAS Nagar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.016
+Punjab,SAS Nagar,Kharif,Maize,Maize (Kharif),0.17542820341382007,1,0.193
+Punjab,Sangrur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0010094149914375982,0,0.03
+Punjab,Sangrur,Kharif,Bajra,Bajra (Kharif),0.00048853190527103,0,0.124
+Punjab,Sangrur,Kharif,Cotton,Cotton (Kharif),0.03081458740731822,1,0.843
+Punjab,Sangrur,Kharif,Guar seed,Guar seed (Kharif),0.000347793687643277,0,0.274
+Punjab,Sangrur,Kharif,Maize,Maize (Kharif),0.0018816451410539272,0,0.017
+Punjab,Tarn Taran,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0018206955643278251,0,0.014
+Punjab,Tarn Taran,Kharif,Bajra,Bajra (Kharif),0.0,0,0.005
+Punjab,Tarn Taran,Kharif,Cotton,Cotton (Kharif),0.001682444713700142,0,0.368
+Punjab,Tarn Taran,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.026
+Punjab,Tarn Taran,Kharif,Maize,Maize (Kharif),0.0029929388403046623,0,0.049
+Punjab,Kapurthala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.009
+Punjab,Kapurthala,Kharif,Bajra,Bajra (Kharif),0.000819672131147541,0,0.029
+Punjab,Kapurthala,Kharif,Cotton,Cotton (Kharif),0.0,0,0.082
+Punjab,Kapurthala,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.011
+Punjab,Kapurthala,Kharif,Maize,Maize (Kharif),0.017722491467510683,0,0.461
+Punjab,Barnala,Rabi,Barley,Barley (Rabi),0.005436490549552558,0,0.029
+Punjab,Barnala,Rabi,Gram,Gram (Rabi),0.0004297948500110839,0,0.01
+Punjab,Barnala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0036980120805160644,0,0.056
+Punjab,Bathinda,Rabi,Barley,Barley (Rabi),0.005204501373687857,0,0.05
+Punjab,Bathinda,Rabi,Gram,Gram (Rabi),0.000776425985197822,0,0.129
+Punjab,Bathinda,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.00850128194977402,0,0.532
+Punjab,Faridkot,Rabi,Barley,Barley (Rabi),0.00017094017094017094,0,0.026
+Punjab,Faridkot,Rabi,Gram,Gram (Rabi),0.0,0,0.023
+Punjab,Faridkot,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0013666489835786676,0,0.09
+Punjab,Fatehgarh Sahib,Rabi,Barley,Barley (Rabi),0.0025267231987074292,0,0.006
+Punjab,Fatehgarh Sahib,Rabi,Gram,Gram (Rabi),0.0,0,0.002
+Punjab,Fatehgarh Sahib,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.007276472047017234,0,0.082
+Punjab,Fazilka,Rabi,Barley,Barley (Rabi),0.008687161047618196,0,0.048
+Punjab,Fazilka,Rabi,Gram,Gram (Rabi),0.004784016446389546,0,0.116
+Punjab,Fazilka,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.025192407343120168,1,0.424
+Punjab,Firozepur,Rabi,Barley,Barley (Rabi),0.001482966502342624,0,0.016
+Punjab,Firozepur,Rabi,Gram,Gram (Rabi),0.0005189466441774109,0,0.02
+Punjab,Firozepur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0038645442883338877,0,0.156
+Punjab,Jalandhar,Rabi,Barley,Barley (Rabi),5.834305717619603e-05,0,0.005
+Punjab,Jalandhar,Rabi,Gram,Gram (Rabi),0.0,0,0.003
+Punjab,Jalandhar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.005375277567756829,0,0.096
+Punjab,Ludhiana,Rabi,Barley,Barley (Rabi),0.00466360070908542,0,0.007
+Punjab,Ludhiana,Rabi,Gram,Gram (Rabi),0.0,0,0.001
+Punjab,Ludhiana,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.004435734003703512,0,0.056
+Punjab,Mansa,Rabi,Barley,Barley (Rabi),0.0043962774616506505,0,0.029
+Punjab,Mansa,Rabi,Gram,Gram (Rabi),0.0005198396130464604,0,0.026
+Punjab,Mansa,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.010460660841153088,0,0.169
+Punjab,Moga,Rabi,Barley,Barley (Rabi),0.0007324061455005369,0,0.017
+Punjab,Moga,Rabi,Gram,Gram (Rabi),0.00016971646480571745,0,0.009
+Punjab,Moga,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.004010564039592761,0,0.035
+Punjab,Muktsar,Rabi,Barley,Barley (Rabi),0.003499516882665134,0,0.038
+Punjab,Muktsar,Rabi,Gram,Gram (Rabi),0.0003830494925404872,0,0.074
+Punjab,Muktsar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.004106125949823041,0,0.524
+Punjab,Pathankot,Rabi,Barley,Barley (Rabi),0.002828054298642534,0,0.45
+Punjab,Pathankot,Rabi,Gram,Gram (Rabi),0.001463487351789988,0,0.382
+Punjab,Pathankot,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.022605835833693945,1,0.181
+Punjab,Patiala,Rabi,Barley,Barley (Rabi),0.0028298902849410576,0,0.003
+Punjab,Patiala,Rabi,Gram,Gram (Rabi),4.2462845010615714e-05,0,0.001
+Punjab,Patiala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0033444838593195214,0,0.153
+Punjab,Rupnagar,Rabi,Barley,Barley (Rabi),0.0005658267432717535,0,0.012
+Punjab,Rupnagar,Rabi,Gram,Gram (Rabi),0.0007487001476280863,0,0.017
+Punjab,Rupnagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.028406908133300733,1,0.429
+Punjab,SAS Nagar,Rabi,Barley,Barley (Rabi),0.0005718157001426964,0,0.004
+Punjab,SAS Nagar,Rabi,Gram,Gram (Rabi),0.0011487218053828636,0,0.012
+Punjab,SAS Nagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.011749659051939273,0,0.281
+Punjab,Sangrur,Rabi,Barley,Barley (Rabi),0.006222746480797912,0,0.032
+Punjab,Sangrur,Rabi,Gram,Gram (Rabi),0.000240693152110615,0,0.032
+Punjab,Sangrur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.005499356432804271,0,0.271
+Punjab,Amritsar,Rabi,Barley,Barley (Rabi),0.0,0,0.003
+Punjab,Amritsar,Rabi,Gram,Gram (Rabi),0.00010518332820738624,0,0.001
+Punjab,Amritsar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.007250913480384542,0,0.05
+Punjab,Gurdaspur,Rabi,Barley,Barley (Rabi),0.0,0,0.011
+Punjab,Gurdaspur,Rabi,Gram,Gram (Rabi),4.3572984749455335e-05,0,0.013
+Punjab,Gurdaspur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.011358344760592375,0,0.676
+Punjab,Hoshiarpur,Rabi,Barley,Barley (Rabi),0.0,0,0.004
+Punjab,Hoshiarpur,Rabi,Gram,Gram (Rabi),0.00045691548488418663,0,0.002
+Punjab,Hoshiarpur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.027040235220839905,1,0.145
+Punjab,Tarn Taran,Rabi,Barley,Barley (Rabi),0.0,0,0.019
+Punjab,Tarn Taran,Rabi,Gram,Gram (Rabi),5.4495912806539515e-05,0,0.005
+Punjab,Tarn Taran,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0017158284017231365,0,0.01
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.01
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Bajra,Bajra (Kharif),0.0,0,0.048
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.029
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Guar seed,Guar seed (Kharif),0.00029587417469269136,0,0.011
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Maize,Maize (Kharif),0.15219623252177095,1,0.369
+Punjab,Fatehgarh Sahib,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.007
+Punjab,Fatehgarh Sahib,Kharif,Bajra,Bajra (Kharif),0.0,0,0.019
+Punjab,Fatehgarh Sahib,Kharif,Cotton,Cotton (Kharif),0.0,0,0.037
+Punjab,Fatehgarh Sahib,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.002
+Punjab,Fatehgarh Sahib,Kharif,Maize,Maize (Kharif),0.005292950280363874,0,0.082
+Punjab,Gurdaspur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.009
+Punjab,Gurdaspur,Kharif,Bajra,Bajra (Kharif),0.0,0,0.057
+Punjab,Gurdaspur,Kharif,Cotton,Cotton (Kharif),0.0,0,0.024
+Punjab,Gurdaspur,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.022
+Punjab,Gurdaspur,Kharif,Maize,Maize (Kharif),0.014399197163163296,0,0.782
+Punjab,Pathankot,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.506
+Punjab,Pathankot,Kharif,Bajra,Bajra (Kharif),0.0,0,0.549
+Punjab,Pathankot,Kharif,Cotton,Cotton (Kharif),0.0,0,0.098
+Punjab,Pathankot,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.053
+Punjab,Pathankot,Kharif,Maize,Maize (Kharif),0.21676687286790033,1,0.228
+Punjab,Kapurthala,Rabi,Barley,Barley (Rabi),0.0,0,0.021
+Punjab,Kapurthala,Rabi,Gram,Gram (Rabi),0.0,0,0.01
+Punjab,Kapurthala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.006349015542449242,0,0.113
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Barley,Barley (Rabi),0.0,0,0.011
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Gram,Gram (Rabi),0.0,0,0.011
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.02172289935213514,1,0.457
+Punjab,Amritsar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.992
+Punjab,Barnala,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.976
+Punjab,Fatehgarh Sahib,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.992
+Punjab,Fazilka,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.934
+Punjab,Firozepur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.955
+Punjab,Gurdaspur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.99
+Punjab,Hoshiarpur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.995
+Punjab,Jalandhar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.992
+Punjab,Kapurthala,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.991
+Punjab,Ludhiana,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.978
+Punjab,Muktsar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.946
+Punjab,Pathankot,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.713
+Punjab,Patiala,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.996
+Punjab,Rupnagar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.991
+Punjab,SAS Nagar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.976
+Punjab,Sangrur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.939
+Punjab,Shahid Bhagat Singh Nagar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.994
+Punjab,Tarn Taran,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.988

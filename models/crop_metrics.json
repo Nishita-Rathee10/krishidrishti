@@ -1,0 +1,75 @@
+{
+ "params": {
+  "C": 3.0,
+  "leaf": 1,
+  "max_features": 0.6
+ },
+ "within_crop_auc_oof": 0.7917091802701078,
+ "brier": 0.11406336666666667,
+ "brier_always_average": 0.21562065972222222,
+ "widely_grown": [
+  "Onion (Whole Year)",
+  "Potato (Whole Year)",
+  "Rice (Kharif)",
+  "Wheat (Rabi)"
+ ],
+ "rare": [
+  "Castor seed (Kharif)",
+  "Dry chillies (Whole Year)",
+  "Ginger (Whole Year)",
+  "Groundnut (Kharif)",
+  "Horse-gram (Kharif)",
+  "Masoor (Rabi)",
+  "Moong (Kharif)",
+  "Moong (Rabi)",
+  "Moth (Kharif)",
+  "Peas and beans (Kharif)",
+  "Peas and beans (Rabi)",
+  "Sannhamp (Kharif)",
+  "Sesamum (Kharif)",
+  "Sunflower (Kharif)",
+  "Sunflower (Rabi)",
+  "Sweet potato (Whole Year)",
+  "Turmeric (Whole Year)",
+  "Urad (Kharif)",
+  "other oilseeds (Rabi)"
+ ],
+ "calibration": [
+  {
+   "Bin": "[0.0, 0.1)",
+   "Rows": "216",
+   "Mean_predicted": "0.03",
+   "Actual_major_rate": "0.02"
+  },
+  {
+   "Bin": "[0.1, 0.3)",
+   "Rows": "83",
+   "Mean_predicted": "0.18",
+   "Actual_major_rate": "0.29"
+  },
+  {
+   "Bin": "[0.3, 0.5)",
+   "Rows": "46",
+   "Mean_predicted": "0.4",
+   "Actual_major_rate": "0.43"
+  },
+  {
+   "Bin": "[0.5, 0.7)",
+   "Rows": "38",
+   "Mean_predicted": "0.6",
+   "Actual_major_rate": "0.5"
+  },
+  {
+   "Bin": "[0.7, 0.9)",
+   "Rows": "41",
+   "Mean_predicted": "0.8",
+   "Actual_major_rate": "0.71"
+  },
+  {
+   "Bin": "[0.9, 1.0)",
+   "Rows": "56",
+   "Mean_predicted": "0.97",
+   "Actual_major_rate": "0.96"
+  }
+ ]
+}
