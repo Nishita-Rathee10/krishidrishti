@@ -1,0 +1,529 @@
+State,District,Month,Temp_mean_C,Temp_max_C,Temp_min_C,Humidity_pct
+Haryana,Ambala,1,13.13,29.81,1.91,44.75
+Haryana,Ambala,2,16.28,32.96,3.37,44.59
+Haryana,Ambala,3,21.79,39.03,5.12,38.08
+Haryana,Ambala,4,28.19,43.82,12.05,29.09
+Haryana,Ambala,5,32.97,46.86,16.93,24.99
+Haryana,Ambala,6,33.84,47.93,22.31,38.36
+Haryana,Ambala,7,30.68,45.84,22.86,66.01
+Haryana,Ambala,8,28.53,40.18,21.8,76.85
+Haryana,Ambala,9,26.75,37.86,18.14,71.79
+Haryana,Ambala,10,23.69,36.42,13.16,52.19
+Haryana,Ambala,11,19.03,34.0,8.8,43.41
+Haryana,Ambala,12,14.76,28.07,2.93,42.02
+Haryana,Bhiwani,1,13.34,30.91,-0.59,41.97
+Haryana,Bhiwani,2,16.99,34.71,1.7,40.36
+Haryana,Bhiwani,3,23.29,41.49,4.52,33.34
+Haryana,Bhiwani,4,29.98,45.22,12.48,25.13
+Haryana,Bhiwani,5,34.7,48.2,17.85,24.19
+Haryana,Bhiwani,6,35.82,48.65,23.54,36.6
+Haryana,Bhiwani,7,33.22,46.95,23.4,57.15
+Haryana,Bhiwani,8,31.04,44.98,23.35,66.35
+Haryana,Bhiwani,9,29.28,43.15,17.65,61.59
+Haryana,Bhiwani,10,26.06,40.51,13.13,43.01
+Haryana,Bhiwani,11,20.55,37.86,7.64,36.17
+Haryana,Bhiwani,12,15.32,29.84,-0.01,37.35
+Haryana,Charki Dadri,1,13.73,30.72,0.27,40.25
+Haryana,Charki Dadri,2,17.36,35.12,1.73,38.02
+Haryana,Charki Dadri,3,23.62,41.41,4.63,31.39
+Haryana,Charki Dadri,4,30.19,44.94,12.89,23.99
+Haryana,Charki Dadri,5,34.8,47.27,19.0,23.78
+Haryana,Charki Dadri,6,35.78,48.25,23.95,36.32
+Haryana,Charki Dadri,7,33.05,46.79,23.77,56.97
+Haryana,Charki Dadri,8,30.82,44.62,23.85,66.54
+Haryana,Charki Dadri,9,29.38,43.1,18.05,60.43
+Haryana,Charki Dadri,10,26.42,40.01,13.86,41.07
+Haryana,Charki Dadri,11,20.97,38.22,8.03,34.78
+Haryana,Charki Dadri,12,15.7,30.89,0.19,36.19
+Haryana,Faridabad,1,13.61,31.32,-1.36,44.2
+Haryana,Faridabad,2,17.4,35.73,1.21,41.2
+Haryana,Faridabad,3,23.63,42.67,6.1,32.92
+Haryana,Faridabad,4,30.44,45.59,14.12,24.19
+Haryana,Faridabad,5,35.05,48.08,17.78,23.38
+Haryana,Faridabad,6,35.88,48.79,24.0,36.42
+Haryana,Faridabad,7,32.27,46.83,23.76,62.72
+Haryana,Faridabad,8,29.79,43.82,22.64,74.9
+Haryana,Faridabad,9,28.32,40.2,17.07,69.39
+Haryana,Faridabad,10,25.18,38.7,12.48,51.25
+Haryana,Faridabad,11,20.08,37.67,6.53,43.34
+Haryana,Faridabad,12,15.24,29.84,0.47,42.18
+Haryana,Fatehabad,1,13.16,30.22,0.03,41.59
+Haryana,Fatehabad,2,16.81,34.59,1.52,40.5
+Haryana,Fatehabad,3,23.14,41.2,4.6,33.95
+Haryana,Fatehabad,4,29.82,45.39,12.77,25.55
+Haryana,Fatehabad,5,34.8,48.92,17.29,23.56
+Haryana,Fatehabad,6,36.08,49.23,23.68,35.47
+Haryana,Fatehabad,7,33.75,47.43,24.32,54.48
+Haryana,Fatehabad,8,31.85,45.2,23.63,61.62
+Haryana,Fatehabad,9,29.87,44.18,18.68,57.14
+Haryana,Fatehabad,10,26.42,41.2,12.56,38.85
+Haryana,Fatehabad,11,20.66,37.77,6.97,33.29
+Haryana,Fatehabad,12,15.31,29.89,0.03,35.73
+Haryana,Gurgaon,1,13.52,31.29,-0.83,42.61
+Haryana,Gurgaon,2,17.25,35.29,1.29,39.88
+Haryana,Gurgaon,3,23.51,42.45,4.79,32.35
+Haryana,Gurgaon,4,30.19,45.37,13.01,24.4
+Haryana,Gurgaon,5,34.89,47.48,18.21,23.63
+Haryana,Gurgaon,6,35.8,48.64,24.16,36.44
+Haryana,Gurgaon,7,32.73,46.74,23.71,59.26
+Haryana,Gurgaon,8,30.25,44.26,23.06,70.88
+Haryana,Gurgaon,9,28.69,41.34,17.4,65.8
+Haryana,Gurgaon,10,25.64,39.16,12.87,46.93
+Haryana,Gurgaon,11,20.33,38.27,6.9,39.87
+Haryana,Gurgaon,12,15.31,30.23,0.3,39.69
+Haryana,Hisar,1,13.59,29.99,0.72,40.01
+Haryana,Hisar,2,17.23,34.43,1.7,38.07
+Haryana,Hisar,3,23.49,40.98,4.76,32.13
+Haryana,Hisar,4,30.01,44.93,12.91,24.79
+Haryana,Hisar,5,34.74,47.89,18.08,23.92
+Haryana,Hisar,6,36.06,48.04,23.38,35.33
+Haryana,Hisar,7,33.82,47.04,24.15,53.43
+Haryana,Hisar,8,31.96,45.14,24.41,60.27
+Haryana,Hisar,9,30.2,43.96,18.74,55.2
+Haryana,Hisar,10,26.77,40.71,13.29,37.59
+Haryana,Hisar,11,20.95,37.69,7.41,33.2
+Haryana,Hisar,12,15.6,30.42,0.25,35.52
+Haryana,Jhajjar,1,13.52,31.29,-0.83,42.61
+Haryana,Jhajjar,2,17.25,35.29,1.29,39.88
+Haryana,Jhajjar,3,23.51,42.45,4.79,32.35
+Haryana,Jhajjar,4,30.19,45.37,13.01,24.4
+Haryana,Jhajjar,5,34.89,47.48,18.21,23.63
+Haryana,Jhajjar,6,35.8,48.64,24.16,36.44
+Haryana,Jhajjar,7,32.73,46.74,23.71,59.26
+Haryana,Jhajjar,8,30.25,44.26,23.06,70.88
+Haryana,Jhajjar,9,28.69,41.34,17.4,65.8
+Haryana,Jhajjar,10,25.64,39.16,12.87,46.93
+Haryana,Jhajjar,11,20.33,38.27,6.9,39.87
+Haryana,Jhajjar,12,15.31,30.23,0.3,39.69
+Haryana,Jind,1,13.0,30.57,-0.42,43.27
+Haryana,Jind,2,16.67,34.42,1.45,41.77
+Haryana,Jind,3,22.95,41.17,4.86,34.67
+Haryana,Jind,4,29.69,45.51,12.17,26.03
+Haryana,Jind,5,34.63,48.66,17.23,23.75
+Haryana,Jind,6,35.82,49.46,23.38,35.95
+Haryana,Jind,7,33.2,47.3,23.82,56.93
+Haryana,Jind,8,31.0,45.03,22.95,66.4
+Haryana,Jind,9,29.07,42.61,17.8,61.88
+Haryana,Jind,10,25.66,40.35,12.68,43.83
+Haryana,Jind,11,20.11,37.39,7.39,37.57
+Haryana,Jind,12,14.95,29.44,0.0,38.63
+Haryana,Kaithal,1,12.76,30.29,-0.09,44.6
+Haryana,Kaithal,2,16.44,34.12,1.69,43.25
+Haryana,Kaithal,3,22.66,40.82,4.92,36.11
+Haryana,Kaithal,4,29.4,45.5,12.29,27.21
+Haryana,Kaithal,5,34.58,48.42,17.34,23.3
+Haryana,Kaithal,6,35.8,49.68,23.22,35.07
+Haryana,Kaithal,7,33.15,47.67,23.96,56.8
+Haryana,Kaithal,8,30.93,44.54,23.23,66.57
+Haryana,Kaithal,9,28.88,41.92,18.0,62.22
+Haryana,Kaithal,10,25.24,39.41,12.63,45.41
+Haryana,Kaithal,11,19.63,36.56,7.05,40.09
+Haryana,Kaithal,12,14.6,29.09,0.21,40.84
+Haryana,Karnal,1,13.0,30.41,-0.35,45.37
+Haryana,Karnal,2,16.68,34.56,1.6,43.34
+Haryana,Karnal,3,22.85,41.2,5.38,35.56
+Haryana,Karnal,4,29.59,45.53,12.94,26.59
+Haryana,Karnal,5,34.47,48.28,17.28,23.89
+Haryana,Karnal,6,35.51,49.4,23.43,36.69
+Haryana,Karnal,7,32.44,46.75,23.58,60.87
+Haryana,Karnal,8,30.02,42.81,22.39,72.58
+Haryana,Karnal,9,28.15,40.36,17.29,68.01
+Haryana,Karnal,10,24.79,38.95,12.24,50.01
+Haryana,Karnal,11,19.5,36.17,7.08,43.22
+Haryana,Karnal,12,14.67,29.25,-0.03,42.54
+Haryana,Kurukshetra,1,13.07,30.03,0.75,46.27
+Haryana,Kurukshetra,2,16.61,34.36,2.52,44.9
+Haryana,Kurukshetra,3,22.6,40.67,5.49,37.33
+Haryana,Kurukshetra,4,29.29,45.54,12.76,27.75
+Haryana,Kurukshetra,5,34.22,48.05,17.28,24.05
+Haryana,Kurukshetra,6,35.16,49.29,22.96,37.26
+Haryana,Kurukshetra,7,31.96,47.11,23.46,63.31
+Haryana,Kurukshetra,8,29.64,41.45,21.91,74.83
+Haryana,Kurukshetra,9,27.68,39.59,17.4,70.65
+Haryana,Kurukshetra,10,24.35,38.23,12.45,52.43
+Haryana,Kurukshetra,11,19.22,34.64,7.07,45.32
+Haryana,Kurukshetra,12,14.62,29.06,0.89,44.25
+Haryana,Mahendragarh,1,13.73,30.72,0.27,40.25
+Haryana,Mahendragarh,2,17.36,35.12,1.73,38.02
+Haryana,Mahendragarh,3,23.62,41.41,4.63,31.39
+Haryana,Mahendragarh,4,30.19,44.94,12.89,23.99
+Haryana,Mahendragarh,5,34.8,47.27,19.0,23.78
+Haryana,Mahendragarh,6,35.78,48.25,23.95,36.32
+Haryana,Mahendragarh,7,33.05,46.79,23.77,56.97
+Haryana,Mahendragarh,8,30.82,44.62,23.85,66.54
+Haryana,Mahendragarh,9,29.38,43.1,18.05,60.43
+Haryana,Mahendragarh,10,26.42,40.01,13.86,41.07
+Haryana,Mahendragarh,11,20.97,38.22,8.03,34.78
+Haryana,Mahendragarh,12,15.7,30.89,0.19,36.19
+Haryana,Mewat,1,13.87,31.13,0.06,41.47
+Haryana,Mewat,2,17.58,36.08,1.3,38.29
+Haryana,Mewat,3,23.84,42.49,5.21,30.94
+Haryana,Mewat,4,30.45,45.34,13.96,23.35
+Haryana,Mewat,5,35.05,47.41,18.13,23.28
+Haryana,Mewat,6,35.75,48.48,24.18,36.72
+Haryana,Mewat,7,32.49,46.58,24.01,59.99
+Haryana,Mewat,8,30.04,43.91,22.4,71.51
+Haryana,Mewat,9,28.7,41.26,17.55,65.75
+Haryana,Mewat,10,25.84,39.28,13.39,46.57
+Haryana,Mewat,11,20.67,38.8,7.7,38.96
+Haryana,Mewat,12,15.7,31.03,0.09,38.41
+Haryana,Palwal,1,13.98,31.41,-0.5,42.76
+Haryana,Palwal,2,17.81,36.22,1.09,39.24
+Haryana,Palwal,3,24.13,43.14,5.75,31.0
+Haryana,Palwal,4,30.84,45.76,14.67,23.04
+Haryana,Palwal,5,35.44,48.03,18.35,22.73
+Haryana,Palwal,6,36.22,48.63,24.68,35.64
+Haryana,Palwal,7,32.52,47.15,24.52,61.52
+Haryana,Palwal,8,30.01,43.87,22.62,73.8
+Haryana,Palwal,9,28.73,40.88,17.41,67.92
+Haryana,Palwal,10,25.69,39.38,13.23,49.76
+Haryana,Palwal,11,20.51,38.47,7.27,42.02
+Haryana,Palwal,12,15.61,30.32,0.77,41.04
+Haryana,Panchkula,1,13.13,29.81,1.91,44.75
+Haryana,Panchkula,2,16.28,32.96,3.37,44.59
+Haryana,Panchkula,3,21.79,39.03,5.12,38.08
+Haryana,Panchkula,4,28.19,43.82,12.05,29.09
+Haryana,Panchkula,5,32.97,46.86,16.93,24.99
+Haryana,Panchkula,6,33.84,47.93,22.31,38.36
+Haryana,Panchkula,7,30.68,45.84,22.86,66.01
+Haryana,Panchkula,8,28.53,40.18,21.8,76.85
+Haryana,Panchkula,9,26.75,37.86,18.14,71.79
+Haryana,Panchkula,10,23.69,36.42,13.16,52.19
+Haryana,Panchkula,11,19.03,34.0,8.8,43.41
+Haryana,Panchkula,12,14.76,28.07,2.93,42.02
+Haryana,Panipat,1,13.0,30.41,-0.35,45.37
+Haryana,Panipat,2,16.68,34.56,1.6,43.34
+Haryana,Panipat,3,22.85,41.2,5.38,35.56
+Haryana,Panipat,4,29.59,45.53,12.94,26.59
+Haryana,Panipat,5,34.47,48.28,17.28,23.89
+Haryana,Panipat,6,35.51,49.4,23.43,36.69
+Haryana,Panipat,7,32.44,46.75,23.58,60.87
+Haryana,Panipat,8,30.02,42.81,22.39,72.58
+Haryana,Panipat,9,28.15,40.36,17.29,68.01
+Haryana,Panipat,10,24.79,38.95,12.24,50.01
+Haryana,Panipat,11,19.5,36.17,7.08,43.22
+Haryana,Panipat,12,14.67,29.25,-0.03,42.54
+Haryana,Rewari,1,13.87,31.13,0.06,41.47
+Haryana,Rewari,2,17.58,36.08,1.3,38.29
+Haryana,Rewari,3,23.84,42.49,5.21,30.94
+Haryana,Rewari,4,30.45,45.34,13.96,23.35
+Haryana,Rewari,5,35.05,47.41,18.13,23.28
+Haryana,Rewari,6,35.75,48.48,24.18,36.72
+Haryana,Rewari,7,32.49,46.58,24.01,59.99
+Haryana,Rewari,8,30.04,43.91,22.4,71.51
+Haryana,Rewari,9,28.7,41.26,17.55,65.75
+Haryana,Rewari,10,25.84,39.28,13.39,46.57
+Haryana,Rewari,11,20.67,38.8,7.7,38.96
+Haryana,Rewari,12,15.7,31.03,0.09,38.41
+Haryana,Rohtak,1,13.22,31.05,-1.21,44.01
+Haryana,Rohtak,2,16.95,34.9,1.32,41.63
+Haryana,Rohtak,3,23.22,42.03,5.27,33.79
+Haryana,Rohtak,4,29.95,45.47,12.7,25.45
+Haryana,Rohtak,5,34.74,48.19,17.59,23.8
+Haryana,Rohtak,6,35.77,49.08,23.72,36.34
+Haryana,Rohtak,7,32.78,46.45,23.15,59.29
+Haryana,Rohtak,8,30.31,44.07,22.84,70.94
+Haryana,Rohtak,9,28.53,41.02,17.3,66.43
+Haryana,Rohtak,10,25.3,39.26,12.33,48.11
+Haryana,Rohtak,11,19.94,37.42,6.78,41.23
+Haryana,Rohtak,12,14.97,29.63,0.19,40.96
+Haryana,Sirsa,1,13.43,29.47,0.54,39.92
+Haryana,Sirsa,2,17.03,34.53,1.54,39.01
+Haryana,Sirsa,3,23.36,41.23,4.69,33.02
+Haryana,Sirsa,4,29.93,45.35,12.91,25.23
+Haryana,Sirsa,5,34.95,48.84,16.75,23.07
+Haryana,Sirsa,6,36.37,48.59,23.88,34.4
+Haryana,Sirsa,7,34.34,47.14,24.3,51.51
+Haryana,Sirsa,8,32.59,45.27,24.18,57.47
+Haryana,Sirsa,9,30.54,44.41,19.04,53.15
+Haryana,Sirsa,10,26.94,41.26,12.56,35.7
+Haryana,Sirsa,11,21.02,37.8,6.65,31.35
+Haryana,Sirsa,12,15.55,30.44,0.47,34.46
+Haryana,Sonipat,1,13.22,31.05,-1.21,44.01
+Haryana,Sonipat,2,16.95,34.9,1.32,41.63
+Haryana,Sonipat,3,23.22,42.03,5.27,33.79
+Haryana,Sonipat,4,29.95,45.47,12.7,25.45
+Haryana,Sonipat,5,34.74,48.19,17.59,23.8
+Haryana,Sonipat,6,35.77,49.08,23.72,36.34
+Haryana,Sonipat,7,32.78,46.45,23.15,59.29
+Haryana,Sonipat,8,30.31,44.07,22.84,70.94
+Haryana,Sonipat,9,28.53,41.02,17.3,66.43
+Haryana,Sonipat,10,25.3,39.26,12.33,48.11
+Haryana,Sonipat,11,19.94,37.42,6.78,41.23
+Haryana,Sonipat,12,14.97,29.63,0.19,40.96
+Haryana,Yamunanagar,1,13.25,30.38,-0.46,48.48
+Haryana,Yamunanagar,2,16.7,33.95,2.86,46.71
+Haryana,Yamunanagar,3,22.4,40.73,5.93,38.78
+Haryana,Yamunanagar,4,29.02,44.56,12.46,28.59
+Haryana,Yamunanagar,5,33.69,47.83,17.28,24.89
+Haryana,Yamunanagar,6,34.33,48.94,22.87,39.7
+Haryana,Yamunanagar,7,30.64,45.81,23.0,70.08
+Haryana,Yamunanagar,8,28.55,39.73,22.11,80.87
+Haryana,Yamunanagar,9,26.74,35.05,17.69,77.11
+Haryana,Yamunanagar,10,23.57,35.16,11.72,59.05
+Haryana,Yamunanagar,11,18.91,32.56,7.27,50.02
+Haryana,Yamunanagar,12,14.59,29.2,0.82,47.63
+Punjab,Amritsar,1,12.43,28.36,-0.48,45.92
+Punjab,Amritsar,2,15.87,32.84,0.36,46.69
+Punjab,Amritsar,3,21.92,40.12,3.63,41.19
+Punjab,Amritsar,4,28.55,45.65,11.75,31.93
+Punjab,Amritsar,5,34.46,49.16,16.07,23.26
+Punjab,Amritsar,6,36.4,50.14,23.06,31.31
+Punjab,Amritsar,7,34.02,48.73,24.95,52.95
+Punjab,Amritsar,8,31.82,44.22,23.19,62.69
+Punjab,Amritsar,9,29.5,41.76,18.88,58.32
+Punjab,Amritsar,10,25.51,38.72,13.14,43.37
+Punjab,Amritsar,11,19.49,35.89,5.17,38.82
+Punjab,Amritsar,12,14.4,29.3,1.13,40.72
+Punjab,Barnala,1,12.49,29.69,-0.79,44.57
+Punjab,Barnala,2,16.17,34.08,1.16,43.88
+Punjab,Barnala,3,22.44,40.62,3.96,37.04
+Punjab,Barnala,4,29.2,45.32,11.91,28.17
+Punjab,Barnala,5,34.68,48.92,16.58,22.73
+Punjab,Barnala,6,36.12,49.96,23.21,33.5
+Punjab,Barnala,7,33.7,48.19,24.29,53.96
+Punjab,Barnala,8,31.71,44.45,23.46,61.99
+Punjab,Barnala,9,29.48,42.82,18.0,58.05
+Punjab,Barnala,10,25.64,39.27,13.1,42.16
+Punjab,Barnala,11,19.68,36.66,6.1,37.95
+Punjab,Barnala,12,14.48,29.22,0.28,39.7
+Punjab,Bathinda,1,13.08,29.42,0.1,41.45
+Punjab,Bathinda,2,16.65,34.59,1.08,41.34
+Punjab,Bathinda,3,23.03,41.12,4.31,34.73
+Punjab,Bathinda,4,29.72,45.57,12.6,26.31
+Punjab,Bathinda,5,35.02,49.34,16.61,22.58
+Punjab,Bathinda,6,36.44,49.54,23.75,33.95
+Punjab,Bathinda,7,34.3,47.77,24.5,51.98
+Punjab,Bathinda,8,32.54,45.07,23.88,58.03
+Punjab,Bathinda,9,30.3,44.54,18.68,54.36
+Punjab,Bathinda,10,26.62,41.52,12.41,37.23
+Punjab,Bathinda,11,20.68,37.66,6.02,32.45
+Punjab,Bathinda,12,15.26,30.0,0.47,35.4
+Punjab,Faridkot,1,12.76,29.13,-0.2,42.79
+Punjab,Faridkot,2,16.32,34.4,0.55,43.03
+Punjab,Faridkot,3,22.66,40.82,3.9,36.37
+Punjab,Faridkot,4,29.38,45.6,11.23,27.83
+Punjab,Faridkot,5,34.97,49.37,16.3,22.26
+Punjab,Faridkot,6,36.53,50.12,23.84,32.82
+Punjab,Faridkot,7,34.29,48.39,24.74,51.83
+Punjab,Faridkot,8,32.45,44.86,23.49,58.47
+Punjab,Faridkot,9,30.12,43.99,18.36,54.78
+Punjab,Faridkot,10,26.27,40.43,12.88,38.68
+Punjab,Faridkot,11,20.22,37.27,5.51,34.42
+Punjab,Faridkot,12,14.89,29.48,0.7,36.97
+Punjab,Fatehgarh Sahib,1,12.82,30.13,-0.37,45.63
+Punjab,Fatehgarh Sahib,2,16.38,33.86,2.63,44.8
+Punjab,Fatehgarh Sahib,3,22.46,40.45,4.66,37.76
+Punjab,Fatehgarh Sahib,4,29.16,45.26,12.67,28.46
+Punjab,Fatehgarh Sahib,5,34.39,48.28,17.31,23.44
+Punjab,Fatehgarh Sahib,6,35.59,49.68,22.77,35.04
+Punjab,Fatehgarh Sahib,7,32.84,47.84,23.88,58.35
+Punjab,Fatehgarh Sahib,8,30.65,43.86,22.92,68.3
+Punjab,Fatehgarh Sahib,9,28.59,41.4,18.4,63.94
+Punjab,Fatehgarh Sahib,10,25.09,38.41,13.18,46.43
+Punjab,Fatehgarh Sahib,11,19.56,35.87,7.59,40.92
+Punjab,Fatehgarh Sahib,12,14.62,28.87,0.38,42.0
+Punjab,Fazilka,1,13.25,28.92,-0.37,39.78
+Punjab,Fazilka,2,16.71,34.89,-0.11,40.0
+Punjab,Fazilka,3,23.05,41.13,4.98,34.69
+Punjab,Fazilka,4,29.64,45.93,11.32,27.3
+Punjab,Fazilka,5,35.36,50.17,15.24,21.33
+Punjab,Fazilka,6,37.34,49.7,23.54,30.33
+Punjab,Fazilka,7,35.91,48.8,25.27,44.79
+Punjab,Fazilka,8,34.44,45.56,24.3,48.45
+Punjab,Fazilka,9,31.75,45.15,19.26,45.91
+Punjab,Fazilka,10,27.33,42.12,13.88,31.88
+Punjab,Fazilka,11,20.85,36.87,4.86,30.24
+Punjab,Fazilka,12,15.33,29.88,0.89,34.15
+Punjab,Firozepur,1,12.79,28.68,-0.85,42.47
+Punjab,Firozepur,2,16.25,34.17,0.05,43.03
+Punjab,Firozepur,3,22.51,40.75,3.93,37.36
+Punjab,Firozepur,4,29.12,45.66,11.3,29.35
+Punjab,Firozepur,5,34.98,49.62,16.49,22.1
+Punjab,Firozepur,6,36.94,50.55,23.19,30.73
+Punjab,Firozepur,7,34.97,48.86,25.45,48.56
+Punjab,Firozepur,8,33.21,44.94,23.15,54.64
+Punjab,Firozepur,9,30.69,43.62,19.1,51.2
+Punjab,Firozepur,10,26.49,39.74,13.16,36.97
+Punjab,Firozepur,11,20.16,36.66,4.63,34.19
+Punjab,Firozepur,12,14.87,29.46,1.41,36.82
+Punjab,Gurdaspur,1,13.02,27.83,2.39,44.29
+Punjab,Gurdaspur,2,16.07,31.52,4.14,46.07
+Punjab,Gurdaspur,3,21.47,38.12,5.94,41.73
+Punjab,Gurdaspur,4,27.65,43.36,12.74,33.56
+Punjab,Gurdaspur,5,33.03,47.44,16.02,25.54
+Punjab,Gurdaspur,6,34.82,48.12,21.92,33.44
+Punjab,Gurdaspur,7,32.25,46.97,23.49,58.14
+Punjab,Gurdaspur,8,30.05,41.95,22.93,69.01
+Punjab,Gurdaspur,9,28.19,39.74,19.7,62.94
+Punjab,Gurdaspur,10,24.66,37.11,14.59,45.93
+Punjab,Gurdaspur,11,19.49,34.04,9.74,39.39
+Punjab,Gurdaspur,12,14.93,27.83,2.9,39.77
+Punjab,Hoshiarpur,1,12.52,28.44,0.05,46.85
+Punjab,Hoshiarpur,2,15.97,32.49,2.46,47.16
+Punjab,Hoshiarpur,3,21.86,39.47,4.53,41.41
+Punjab,Hoshiarpur,4,28.39,44.92,11.43,32.14
+Punjab,Hoshiarpur,5,33.98,48.36,15.77,24.24
+Punjab,Hoshiarpur,6,35.64,49.43,22.45,33.13
+Punjab,Hoshiarpur,7,33.13,47.86,24.66,56.28
+Punjab,Hoshiarpur,8,30.92,43.22,22.99,66.72
+Punjab,Hoshiarpur,9,28.75,40.8,18.2,62.41
+Punjab,Hoshiarpur,10,25.02,37.77,13.77,46.21
+Punjab,Hoshiarpur,11,19.35,35.25,6.59,40.96
+Punjab,Hoshiarpur,12,14.39,28.38,0.34,42.43
+Punjab,Jalandhar,1,12.52,28.44,0.05,46.85
+Punjab,Jalandhar,2,15.97,32.49,2.46,47.16
+Punjab,Jalandhar,3,21.86,39.47,4.53,41.41
+Punjab,Jalandhar,4,28.39,44.92,11.43,32.14
+Punjab,Jalandhar,5,33.98,48.36,15.77,24.24
+Punjab,Jalandhar,6,35.64,49.43,22.45,33.13
+Punjab,Jalandhar,7,33.13,47.86,24.66,56.28
+Punjab,Jalandhar,8,30.92,43.22,22.99,66.72
+Punjab,Jalandhar,9,28.75,40.8,18.2,62.41
+Punjab,Jalandhar,10,25.02,37.77,13.77,46.21
+Punjab,Jalandhar,11,19.35,35.25,6.59,40.96
+Punjab,Jalandhar,12,14.39,28.38,0.34,42.43
+Punjab,Kapurthala,1,12.52,28.44,0.05,46.85
+Punjab,Kapurthala,2,15.97,32.49,2.46,47.16
+Punjab,Kapurthala,3,21.86,39.47,4.53,41.41
+Punjab,Kapurthala,4,28.39,44.92,11.43,32.14
+Punjab,Kapurthala,5,33.98,48.36,15.77,24.24
+Punjab,Kapurthala,6,35.64,49.43,22.45,33.13
+Punjab,Kapurthala,7,33.13,47.86,24.66,56.28
+Punjab,Kapurthala,8,30.92,43.22,22.99,66.72
+Punjab,Kapurthala,9,28.75,40.8,18.2,62.41
+Punjab,Kapurthala,10,25.02,37.77,13.77,46.21
+Punjab,Kapurthala,11,19.35,35.25,6.59,40.96
+Punjab,Kapurthala,12,14.39,28.38,0.34,42.43
+Punjab,Ludhiana,1,12.45,29.41,-0.97,46.1
+Punjab,Ludhiana,2,16.05,33.58,1.3,45.73
+Punjab,Ludhiana,3,22.17,40.2,3.8,39.29
+Punjab,Ludhiana,4,28.87,45.56,10.93,30.06
+Punjab,Ludhiana,5,34.47,48.87,15.99,23.18
+Punjab,Ludhiana,6,36.03,49.99,22.6,33.0
+Punjab,Ludhiana,7,33.57,48.23,24.45,54.65
+Punjab,Ludhiana,8,31.48,44.2,23.27,63.79
+Punjab,Ludhiana,9,29.23,41.81,17.92,59.78
+Punjab,Ludhiana,10,25.37,38.35,13.16,44.12
+Punjab,Ludhiana,11,19.46,36.0,5.83,39.77
+Punjab,Ludhiana,12,14.37,28.89,0.46,41.52
+Punjab,Mansa,1,12.82,29.9,-0.13,42.73
+Punjab,Mansa,2,16.5,34.37,1.48,41.85
+Punjab,Mansa,3,22.83,40.95,4.5,35.09
+Punjab,Mansa,4,29.55,45.36,12.38,26.56
+Punjab,Mansa,5,34.82,49.0,17.02,22.8
+Punjab,Mansa,6,36.17,49.76,23.54,34.17
+Punjab,Mansa,7,33.83,47.81,24.5,53.58
+Punjab,Mansa,8,31.86,44.82,23.64,61.12
+Punjab,Mansa,9,29.71,43.52,18.38,57.11
+Punjab,Mansa,10,25.99,40.59,12.65,40.51
+Punjab,Mansa,11,20.13,37.28,6.53,35.71
+Punjab,Mansa,12,14.88,29.58,0.15,37.52
+Punjab,Moga,1,12.58,28.66,-0.57,44.23
+Punjab,Moga,2,16.11,33.9,0.17,44.55
+Punjab,Moga,3,22.33,40.53,3.65,38.39
+Punjab,Moga,4,29.01,45.52,11.52,29.72
+Punjab,Moga,5,34.79,49.25,16.07,22.52
+Punjab,Moga,6,36.56,50.43,23.59,31.73
+Punjab,Moga,7,34.28,48.66,24.81,51.64
+Punjab,Moga,8,32.3,44.75,23.4,59.48
+Punjab,Moga,9,29.94,42.85,18.44,55.55
+Punjab,Moga,10,25.95,39.04,13.03,40.57
+Punjab,Moga,11,19.82,36.66,5.25,36.66
+Punjab,Moga,12,14.61,29.38,1.28,38.89
+Punjab,Muktsar,1,13.07,28.79,-0.37,41.14
+Punjab,Muktsar,2,16.54,34.64,0.25,41.59
+Punjab,Muktsar,3,22.89,40.99,4.42,35.53
+Punjab,Muktsar,4,29.54,45.74,11.43,27.55
+Punjab,Muktsar,5,35.21,49.8,16.57,21.81
+Punjab,Muktsar,6,36.96,49.94,23.57,31.63
+Punjab,Muktsar,7,35.05,48.36,24.9,48.53
+Punjab,Muktsar,8,33.4,45.37,23.44,53.64
+Punjab,Muktsar,9,30.89,44.51,18.91,50.61
+Punjab,Muktsar,10,26.83,41.29,13.12,35.39
+Punjab,Muktsar,11,20.61,37.13,5.09,32.2
+Punjab,Muktsar,12,15.2,29.58,0.83,35.33
+Punjab,Pathankot,1,9.71,23.76,-1.47,45.25
+Punjab,Pathankot,2,11.96,26.85,-0.72,49.72
+Punjab,Pathankot,3,16.7,32.58,2.68,46.93
+Punjab,Pathankot,4,22.4,37.71,8.04,40.03
+Punjab,Pathankot,5,27.49,42.37,10.39,31.58
+Punjab,Pathankot,6,29.58,42.84,17.4,38.79
+Punjab,Pathankot,7,27.53,41.89,20.05,64.84
+Punjab,Pathankot,8,25.68,36.92,19.04,74.89
+Punjab,Pathankot,9,23.95,34.96,15.73,66.43
+Punjab,Pathankot,10,20.34,32.99,10.4,47.93
+Punjab,Pathankot,11,15.85,29.5,3.61,39.55
+Punjab,Pathankot,12,11.9,24.94,-2.27,38.78
+Punjab,Patiala,1,12.82,30.13,-0.37,45.63
+Punjab,Patiala,2,16.38,33.86,2.63,44.8
+Punjab,Patiala,3,22.46,40.45,4.66,37.76
+Punjab,Patiala,4,29.16,45.26,12.67,28.46
+Punjab,Patiala,5,34.39,48.28,17.31,23.44
+Punjab,Patiala,6,35.59,49.68,22.77,35.04
+Punjab,Patiala,7,32.84,47.84,23.88,58.35
+Punjab,Patiala,8,30.65,43.86,22.92,68.3
+Punjab,Patiala,9,28.59,41.4,18.4,63.94
+Punjab,Patiala,10,25.09,38.41,13.18,46.43
+Punjab,Patiala,11,19.56,35.87,7.59,40.92
+Punjab,Patiala,12,14.62,28.87,0.38,42.0
+Punjab,Rupnagar,1,13.14,29.49,1.3,45.0
+Punjab,Rupnagar,2,16.48,32.97,3.98,45.01
+Punjab,Rupnagar,3,22.23,39.43,5.43,39.06
+Punjab,Rupnagar,4,28.69,44.53,13.43,30.15
+Punjab,Rupnagar,5,33.88,47.8,17.05,24.32
+Punjab,Rupnagar,6,35.12,49.05,20.72,35.25
+Punjab,Rupnagar,7,32.41,47.25,23.96,59.37
+Punjab,Rupnagar,8,30.27,42.67,23.48,69.51
+Punjab,Rupnagar,9,28.32,40.38,18.99,64.78
+Punjab,Rupnagar,10,24.97,37.39,14.06,46.76
+Punjab,Rupnagar,11,19.7,35.5,9.05,40.51
+Punjab,Rupnagar,12,14.97,28.46,1.33,41.15
+Punjab,SAS Nagar,1,13.13,29.81,1.91,44.75
+Punjab,SAS Nagar,2,16.28,32.96,3.37,44.59
+Punjab,SAS Nagar,3,21.79,39.03,5.12,38.08
+Punjab,SAS Nagar,4,28.19,43.82,12.05,29.09
+Punjab,SAS Nagar,5,32.97,46.86,16.93,24.99
+Punjab,SAS Nagar,6,33.84,47.93,22.31,38.36
+Punjab,SAS Nagar,7,30.68,45.84,22.86,66.01
+Punjab,SAS Nagar,8,28.53,40.18,21.8,76.85
+Punjab,SAS Nagar,9,26.75,37.86,18.14,71.79
+Punjab,SAS Nagar,10,23.69,36.42,13.16,52.19
+Punjab,SAS Nagar,11,19.03,34.0,8.8,43.41
+Punjab,SAS Nagar,12,14.76,28.07,2.93,42.02
+Punjab,Sangrur,1,12.82,29.9,-0.13,42.73
+Punjab,Sangrur,2,16.5,34.37,1.48,41.85
+Punjab,Sangrur,3,22.83,40.95,4.5,35.09
+Punjab,Sangrur,4,29.55,45.36,12.38,26.56
+Punjab,Sangrur,5,34.82,49.0,17.02,22.8
+Punjab,Sangrur,6,36.17,49.76,23.54,34.17
+Punjab,Sangrur,7,33.83,47.81,24.5,53.58
+Punjab,Sangrur,8,31.86,44.82,23.64,61.12
+Punjab,Sangrur,9,29.71,43.52,18.38,57.11
+Punjab,Sangrur,10,25.99,40.59,12.65,40.51
+Punjab,Sangrur,11,20.13,37.28,6.53,35.71
+Punjab,Sangrur,12,14.88,29.58,0.15,37.52
+Punjab,Shahid Bhagat Singh Nagar,1,13.14,29.49,1.3,45.0
+Punjab,Shahid Bhagat Singh Nagar,2,16.48,32.97,3.98,45.01
+Punjab,Shahid Bhagat Singh Nagar,3,22.23,39.43,5.43,39.06
+Punjab,Shahid Bhagat Singh Nagar,4,28.69,44.53,13.43,30.15
+Punjab,Shahid Bhagat Singh Nagar,5,33.88,47.8,17.05,24.32
+Punjab,Shahid Bhagat Singh Nagar,6,35.12,49.05,20.72,35.25
+Punjab,Shahid Bhagat Singh Nagar,7,32.41,47.25,23.96,59.37
+Punjab,Shahid Bhagat Singh Nagar,8,30.27,42.67,23.48,69.51
+Punjab,Shahid Bhagat Singh Nagar,9,28.32,40.38,18.99,64.78
+Punjab,Shahid Bhagat Singh Nagar,10,24.97,37.39,14.06,46.76
+Punjab,Shahid Bhagat Singh Nagar,11,19.7,35.5,9.05,40.51
+Punjab,Shahid Bhagat Singh Nagar,12,14.97,28.46,1.33,41.15
+Punjab,Tarn Taran,1,12.43,28.36,-0.48,45.92
+Punjab,Tarn Taran,2,15.87,32.84,0.36,46.69
+Punjab,Tarn Taran,3,21.92,40.12,3.63,41.19
+Punjab,Tarn Taran,4,28.55,45.65,11.75,31.93
+Punjab,Tarn Taran,5,34.46,49.16,16.07,23.26
+Punjab,Tarn Taran,6,36.4,50.14,23.06,31.31
+Punjab,Tarn Taran,7,34.02,48.73,24.95,52.95
+Punjab,Tarn Taran,8,31.82,44.22,23.19,62.69
+Punjab,Tarn Taran,9,29.5,41.76,18.88,58.32
+Punjab,Tarn Taran,10,25.51,38.72,13.14,43.37
+Punjab,Tarn Taran,11,19.49,35.89,5.17,38.82
+Punjab,Tarn Taran,12,14.4,29.3,1.13,40.72
