@@ -1,0 +1,793 @@
+State,District,Item,Rank,Feature,Rule,Weight,District_value
+Haryana,Ambala,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2431,17.0
+Haryana,Ambala,Bajra (Kharif),2,RH_monsoon,RH_monsoon > 65.65,0.1466,71.55
+Haryana,Ambala,Bajra (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.1287,46.2
+Haryana,Ambala,Cotton (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2115,17.0
+Haryana,Ambala,Cotton (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.158,1104.7
+Haryana,Ambala,Cotton (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.1507,43.79
+Haryana,Ambala,Guar seed (Kharif),1,T_hot_max,T_hot_max <= 47.13,0.1457,46.2
+Haryana,Ambala,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0749,916.6
+Haryana,Ambala,Guar seed (Kharif),3,T_rabi,T_rabi <= 17.07,-0.068,17.0
+Haryana,Ambala,Jowar (Kharif),1,T_rabi,T_rabi <= 17.34,-0.25,17.0
+Haryana,Ambala,Jowar (Kharif),2,T_cold_min,T_cold_min > 0.73,-0.1614,2.74
+Haryana,Ambala,Jowar (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 534.30,0.0867,916.6
+Haryana,Ambala,Maize (Kharif),1,T_rabi,T_rabi <= 17.07,0.1511,17.0
+Haryana,Ambala,Maize (Kharif),2,T_cold_min,T_cold_min > 0.89,0.1294,2.74
+Haryana,Ambala,Maize (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.0814,916.6
+Haryana,Ambala,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max <= 47.13,0.2544,46.2
+Haryana,Ambala,Rapeseed and Mustard (Rabi),2,T_rabi,T_rabi <= 17.07,-0.2492,17.0
+Haryana,Ambala,Rapeseed and Mustard (Rabi),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.1165,916.6
+Haryana,Ambala,Guar seed (Whole Year),1,RH_winter,RH_winter > 42.90,-0.2099,43.79
+Haryana,Ambala,Guar seed (Whole Year),2,T_rabi,T_rabi <= 17.34,-0.1992,17.0
+Haryana,Ambala,Guar seed (Whole Year),3,T_cold_min,T_cold_min > 0.73,-0.1785,2.74
+Haryana,Bhiwani,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3087,17.9
+Haryana,Bhiwani,Bajra (Kharif),2,RH_winter,RH_winter <= 40.70,0.2305,39.89
+Haryana,Bhiwani,Bajra (Kharif),3,T_hot_max,47.12 < T_hot_max <= 47.58,0.0517,47.36
+Haryana,Bhiwani,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3692,39.89
+Haryana,Bhiwani,Cotton (Kharif),2,T_rabi,T_rabi > 17.83,0.1788,17.9
+Haryana,Bhiwani,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1357,348.5
+Haryana,Bhiwani,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1265,39.89
+Haryana,Bhiwani,Guar seed (Kharif),2,T_rabi,T_rabi > 17.83,0.0834,17.9
+Haryana,Bhiwani,Guar seed (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.072,348.5
+Haryana,Bhiwani,Jowar (Kharif),1,T_rabi,17.82 < T_rabi <= 18.17,0.1297,17.9
+Haryana,Bhiwani,Jowar (Kharif),2,RH_monsoon,RH_monsoon <= 61.74,-0.0988,61.7
+Haryana,Bhiwani,Jowar (Kharif),3,RH_annual,RH_annual <= 42.56,-0.0628,41.93
+Haryana,Bhiwani,Maize (Kharif),1,T_rabi,T_rabi > 17.83,-0.0968,17.9
+Haryana,Bhiwani,Maize (Kharif),2,RH_winter,RH_winter <= 40.70,-0.0917,39.89
+Haryana,Bhiwani,Maize (Kharif),3,T_cold_min,0.28 < T_cold_min <= 0.50,-0.0434,0.37
+Haryana,Bhiwani,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2964,17.9
+Haryana,Bhiwani,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter <= 40.70,0.134,39.89
+Haryana,Bhiwani,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,-0.0518,419.5
+Haryana,Bhiwani,Guar seed (Whole Year),1,T_rabi,17.82 < T_rabi <= 18.17,0.1219,17.9
+Haryana,Bhiwani,Guar seed (Whole Year),2,RH_annual,RH_annual <= 42.56,0.0776,41.93
+Haryana,Bhiwani,Guar seed (Whole Year),3,RH_monsoon,RH_monsoon <= 61.74,0.0603,61.7
+Haryana,Charki Dadri,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3104,18.28
+Haryana,Charki Dadri,Bajra (Kharif),2,RH_winter,RH_winter <= 40.70,0.2238,38.15
+Haryana,Charki Dadri,Bajra (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.1413,46.82
+Haryana,Charki Dadri,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3734,38.15
+Haryana,Charki Dadri,Cotton (Kharif),2,T_rabi,T_rabi > 17.83,0.1826,18.28
+Haryana,Charki Dadri,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1283,348.5
+Haryana,Charki Dadri,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1334,38.15
+Haryana,Charki Dadri,Guar seed (Kharif),2,T_hot_max,T_hot_max <= 47.13,0.1317,46.82
+Haryana,Charki Dadri,Guar seed (Kharif),3,T_rabi,T_rabi > 17.83,0.1049,18.28
+Haryana,Charki Dadri,Jowar (Kharif),1,T_rabi,T_rabi > 18.08,0.1961,18.28
+Haryana,Charki Dadri,Jowar (Kharif),2,RH_monsoon,RH_monsoon <= 61.74,-0.1043,61.31
+Haryana,Charki Dadri,Jowar (Kharif),3,RH_annual,RH_annual <= 42.56,-0.0621,40.81
+Haryana,Charki Dadri,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.1009,38.15
+Haryana,Charki Dadri,Maize (Kharif),2,T_rabi,T_rabi > 17.83,-0.0995,18.28
+Haryana,Charki Dadri,Maize (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.0629,46.82
+Haryana,Charki Dadri,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.3024,18.28
+Haryana,Charki Dadri,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max <= 47.13,0.2673,46.82
+Haryana,Charki Dadri,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter <= 40.70,0.1233,38.15
+Haryana,Charki Dadri,Guar seed (Whole Year),1,T_hot_max,T_hot_max <= 47.08,0.2842,46.82
+Haryana,Charki Dadri,Guar seed (Whole Year),2,RH_winter,RH_winter <= 39.39,0.1851,38.15
+Haryana,Charki Dadri,Guar seed (Whole Year),3,T_rabi,T_rabi > 18.08,0.1231,18.28
+Haryana,Faridabad,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3098,17.99
+Haryana,Faridabad,Bajra (Kharif),2,RH_monsoon,RH_monsoon > 65.65,0.1664,69.0
+Haryana,Faridabad,Bajra (Kharif),3,T_cold_min,T_cold_min <= 0.31,0.0995,0.11
+Haryana,Faridabad,Cotton (Kharif),1,T_rabi,T_rabi > 17.83,0.269,17.99
+Haryana,Faridabad,Cotton (Kharif),2,RH_winter,40.30 < RH_winter <= 42.56,0.1528,42.53
+Haryana,Faridabad,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0999,600.2
+Haryana,Faridabad,Guar seed (Kharif),1,T_rabi,T_rabi > 17.83,0.095,17.99
+Haryana,Faridabad,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0702,600.2
+Haryana,Faridabad,Guar seed (Kharif),3,RH_annual,RH_annual > 44.99,-0.0529,45.51
+Haryana,Faridabad,Jowar (Kharif),1,T_cold_min,T_cold_min <= 0.37,0.1271,0.11
+Haryana,Faridabad,Jowar (Kharif),2,T_rabi,17.82 < T_rabi <= 18.17,0.1035,17.99
+Haryana,Faridabad,Jowar (Kharif),3,RH_monsoon,RH_monsoon > 67.15,0.0837,69.0
+Haryana,Faridabad,Maize (Kharif),1,T_rabi,T_rabi > 17.83,-0.0998,17.99
+Haryana,Faridabad,Maize (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.0589,600.2
+Haryana,Faridabad,Maize (Kharif),3,RH_monsoon,RH_monsoon > 65.65,-0.0497,69.0
+Haryana,Faridabad,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.3385,17.99
+Haryana,Faridabad,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min <= 0.31,0.124,0.11
+Haryana,Faridabad,Rapeseed and Mustard (Rabi),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.1033,600.2
+Haryana,Faridabad,Guar seed (Whole Year),1,T_cold_min,T_cold_min <= 0.37,0.1453,0.11
+Haryana,Faridabad,Guar seed (Whole Year),2,T_rabi,17.82 < T_rabi <= 18.17,0.1435,17.99
+Haryana,Faridabad,Guar seed (Whole Year),3,RH_winter,41.01 < RH_winter <= 43.75,-0.0765,42.53
+Haryana,Fatehabad,Bajra (Kharif),1,RH_winter,RH_winter <= 40.70,0.2279,39.27
+Haryana,Fatehabad,Bajra (Kharif),2,RH_monsoon,RH_monsoon <= 57.99,-0.1544,57.75
+Haryana,Fatehabad,Bajra (Kharif),3,T_rabi,17.34 < T_rabi <= 17.87,0.1179,17.82
+Haryana,Fatehabad,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3728,39.27
+Haryana,Fatehabad,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1323,283.0
+Haryana,Fatehabad,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.1135,364.6
+Haryana,Fatehabad,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1523,39.27
+Haryana,Fatehabad,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1141,283.0
+Haryana,Fatehabad,Guar seed (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.0934,364.6
+Haryana,Fatehabad,Jowar (Kharif),1,RH_monsoon,RH_monsoon <= 61.74,-0.1012,57.75
+Haryana,Fatehabad,Jowar (Kharif),2,T_annual,T_annual > 25.83,0.0711,25.97
+Haryana,Fatehabad,Jowar (Kharif),3,RH_annual,RH_annual <= 42.56,-0.0574,40.14
+Haryana,Fatehabad,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.0933,39.27
+Haryana,Fatehabad,Maize (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,-0.0479,17.82
+Haryana,Fatehabad,Maize (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,0.0425,57.75
+Haryana,Fatehabad,Rapeseed and Mustard (Rabi),1,RH_winter,RH_winter <= 40.70,0.1162,39.27
+Haryana,Fatehabad,Rapeseed and Mustard (Rabi),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.082,47.85
+Haryana,Fatehabad,Rapeseed and Mustard (Rabi),3,T_rabi,17.34 < T_rabi <= 17.87,0.0792,17.82
+Haryana,Fatehabad,Guar seed (Whole Year),1,T_hot_max,T_hot_max > 47.59,-0.1581,47.85
+Haryana,Fatehabad,Guar seed (Whole Year),2,RH_winter,RH_winter <= 39.39,0.1575,39.27
+Haryana,Fatehabad,Guar seed (Whole Year),3,RH_monsoon,RH_monsoon <= 61.74,0.0662,57.75
+Haryana,Gurgaon,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3126,17.98
+Haryana,Gurgaon,Bajra (Kharif),2,T_cold_min,T_cold_min <= 0.31,0.1053,0.25
+Haryana,Gurgaon,Bajra (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,0.0723,40.73
+Haryana,Gurgaon,Cotton (Kharif),1,T_rabi,T_rabi > 17.83,0.1861,17.98
+Haryana,Gurgaon,Cotton (Kharif),2,RH_winter,40.30 < RH_winter <= 42.56,0.1509,40.73
+Haryana,Gurgaon,Cotton (Kharif),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,0.0776,544.0
+Haryana,Gurgaon,Guar seed (Kharif),1,T_rabi,T_rabi > 17.83,0.1,17.98
+Haryana,Gurgaon,Guar seed (Kharif),2,RH_annual,43.46 < RH_annual <= 45.03,-0.0358,43.48
+Haryana,Gurgaon,Guar seed (Kharif),3,RH_monsoon,61.80 < RH_monsoon <= 65.75,-0.0303,65.31
+Haryana,Gurgaon,Jowar (Kharif),1,T_cold_min,T_cold_min <= 0.37,0.1657,0.25
+Haryana,Gurgaon,Jowar (Kharif),2,T_rabi,17.82 < T_rabi <= 18.17,0.1286,17.98
+Haryana,Gurgaon,Jowar (Kharif),3,Rain_Annual_Normal,509.10 < Rain_Annual_Normal <= 691.40,0.0442,544.0
+Haryana,Gurgaon,Maize (Kharif),1,T_rabi,T_rabi > 17.83,-0.0943,17.98
+Haryana,Gurgaon,Maize (Kharif),2,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0464,544.0
+Haryana,Gurgaon,Maize (Kharif),3,T_cold_min,T_cold_min <= 0.31,-0.0422,0.25
+Haryana,Gurgaon,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2928,17.98
+Haryana,Gurgaon,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min <= 0.31,0.1036,0.25
+Haryana,Gurgaon,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.054,544.0
+Haryana,Gurgaon,Guar seed (Whole Year),1,T_rabi,17.82 < T_rabi <= 18.17,0.1269,17.98
+Haryana,Gurgaon,Guar seed (Whole Year),2,T_cold_min,T_cold_min <= 0.37,0.1162,0.25
+Haryana,Gurgaon,Guar seed (Whole Year),3,RH_winter,39.39 < RH_winter <= 41.22,0.0554,40.73
+Haryana,Hisar,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.2896,18.17
+Haryana,Hisar,Bajra (Kharif),2,RH_winter,RH_winter <= 40.70,0.2336,37.87
+Haryana,Hisar,Bajra (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,-0.1606,56.3
+Haryana,Hisar,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3748,37.87
+Haryana,Hisar,Cotton (Kharif),2,T_rabi,T_rabi > 17.83,0.1699,18.17
+Haryana,Hisar,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1259,325.1
+Haryana,Hisar,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1374,37.87
+Haryana,Hisar,Guar seed (Kharif),2,T_hot_max,T_hot_max <= 47.13,0.1262,46.95
+Haryana,Hisar,Guar seed (Kharif),3,T_rabi,T_rabi > 17.83,0.0966,18.17
+Haryana,Hisar,Jowar (Kharif),1,T_rabi,T_rabi > 18.08,0.1949,18.17
+Haryana,Hisar,Jowar (Kharif),2,T_cold_min,T_cold_min > 0.73,-0.1556,0.89
+Haryana,Hisar,Jowar (Kharif),3,RH_monsoon,RH_monsoon <= 61.74,-0.1033,56.3
+Haryana,Hisar,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.0984,37.87
+Haryana,Hisar,Maize (Kharif),2,T_rabi,T_rabi > 17.83,-0.0913,18.17
+Haryana,Hisar,Maize (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.0603,46.95
+Haryana,Hisar,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2945,18.17
+Haryana,Hisar,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max <= 47.13,0.2567,46.95
+Haryana,Hisar,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter <= 40.70,0.1292,37.87
+Haryana,Hisar,Guar seed (Whole Year),1,RH_winter,RH_winter <= 39.39,0.1743,37.87
+Haryana,Hisar,Guar seed (Whole Year),2,T_cold_min,T_cold_min > 0.73,-0.1564,0.89
+Haryana,Hisar,Guar seed (Whole Year),3,T_hot_max,T_hot_max <= 47.08,0.1319,46.95
+Haryana,Jhajjar,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3204,17.98
+Haryana,Jhajjar,Bajra (Kharif),2,T_cold_min,T_cold_min <= 0.31,0.1082,0.25
+Haryana,Jhajjar,Bajra (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,0.0655,40.73
+Haryana,Jhajjar,Cotton (Kharif),1,T_rabi,T_rabi > 17.83,0.185,17.98
+Haryana,Jhajjar,Cotton (Kharif),2,RH_winter,40.30 < RH_winter <= 42.56,0.1518,40.73
+Haryana,Jhajjar,Cotton (Kharif),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,0.0754,489.0
+Haryana,Jhajjar,Guar seed (Kharif),1,T_rabi,T_rabi > 17.83,0.1016,17.98
+Haryana,Jhajjar,Guar seed (Kharif),2,RH_annual,43.46 < RH_annual <= 45.03,-0.0355,43.48
+Haryana,Jhajjar,Guar seed (Kharif),3,RH_monsoon,61.80 < RH_monsoon <= 65.75,-0.0309,65.31
+Haryana,Jhajjar,Jowar (Kharif),1,T_cold_min,T_cold_min <= 0.37,0.1078,0.25
+Haryana,Jhajjar,Jowar (Kharif),2,T_rabi,17.82 < T_rabi <= 18.17,0.0938,17.98
+Haryana,Jhajjar,Jowar (Kharif),3,RH_monsoon,61.70 < RH_monsoon <= 65.55,-0.0392,65.31
+Haryana,Jhajjar,Maize (Kharif),1,T_rabi,T_rabi > 17.83,-0.0953,17.98
+Haryana,Jhajjar,Maize (Kharif),2,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0469,489.0
+Haryana,Jhajjar,Maize (Kharif),3,T_cold_min,T_cold_min <= 0.31,-0.0407,0.25
+Haryana,Jhajjar,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.3004,17.98
+Haryana,Jhajjar,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min <= 0.31,0.0995,0.25
+Haryana,Jhajjar,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0543,489.0
+Haryana,Jhajjar,Guar seed (Whole Year),1,T_rabi,17.82 < T_rabi <= 18.17,0.1305,17.98
+Haryana,Jhajjar,Guar seed (Whole Year),2,T_cold_min,T_cold_min <= 0.37,0.1093,0.25
+Haryana,Jhajjar,Guar seed (Whole Year),3,RH_winter,39.39 < RH_winter <= 41.22,0.0556,40.73
+Haryana,Jind,Bajra (Kharif),1,T_rabi,17.34 < T_rabi <= 17.87,0.0796,17.54
+Haryana,Jind,Bajra (Kharif),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0635,47.88
+Haryana,Jind,Bajra (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,0.0494,41.22
+Haryana,Jind,Cotton (Kharif),1,RH_winter,40.30 < RH_winter <= 42.56,0.156,41.22
+Haryana,Jind,Cotton (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,0.1018,17.54
+Haryana,Jind,Cotton (Kharif),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,0.0643,509.1
+Haryana,Jind,Guar seed (Kharif),1,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0479,47.88
+Haryana,Jind,Guar seed (Kharif),2,T_cold_min,0.28 < T_cold_min <= 0.50,-0.0335,0.34
+Haryana,Jind,Guar seed (Kharif),3,T_rabi,17.34 < T_rabi <= 17.87,0.0334,17.54
+Haryana,Jind,Jowar (Kharif),1,T_cold_min,T_cold_min <= 0.37,0.1391,0.34
+Haryana,Jind,Jowar (Kharif),2,T_rabi,17.34 < T_rabi <= 17.90,0.0364,17.54
+Haryana,Jind,Jowar (Kharif),3,RH_monsoon,61.70 < RH_monsoon <= 65.55,-0.031,61.74
+Haryana,Jind,Maize (Kharif),1,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0513,509.1
+Haryana,Jind,Maize (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,-0.0492,17.54
+Haryana,Jind,Maize (Kharif),3,T_cold_min,0.28 < T_cold_min <= 0.50,-0.0416,0.34
+Haryana,Jind,Rapeseed and Mustard (Rabi),1,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0911,47.88
+Haryana,Jind,Rapeseed and Mustard (Rabi),2,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0607,509.1
+Haryana,Jind,Rapeseed and Mustard (Rabi),3,Rain_JunSep_Normal,352.30 < Rain_JunSep_Normal <= 472.30,-0.0559,415.6
+Haryana,Jind,Guar seed (Whole Year),1,T_cold_min,T_cold_min <= 0.37,0.124,0.34
+Haryana,Jind,Guar seed (Whole Year),2,RH_winter,41.01 < RH_winter <= 43.75,-0.1025,41.22
+Haryana,Jind,Guar seed (Whole Year),3,T_hot_max,T_hot_max > 47.59,-0.0517,47.88
+Haryana,Kaithal,Bajra (Kharif),1,T_rabi,17.02 < T_rabi <= 17.34,-0.124,17.22
+Haryana,Kaithal,Bajra (Kharif),2,RH_winter,42.53 < RH_winter <= 43.97,-0.1071,42.9
+Haryana,Kaithal,Bajra (Kharif),3,RH_monsoon,61.80 < RH_monsoon <= 65.75,0.0396,61.86
+Haryana,Kaithal,Cotton (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.1626,42.9
+Haryana,Kaithal,Cotton (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.0821,17.22
+Haryana,Kaithal,Cotton (Kharif),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,0.0511,466.5
+Haryana,Kaithal,Guar seed (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.0564,42.9
+Haryana,Kaithal,Guar seed (Kharif),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0534,47.87
+Haryana,Kaithal,Guar seed (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0513,17.22
+Haryana,Kaithal,Jowar (Kharif),1,T_rabi,T_rabi <= 17.34,-0.2628,17.22
+Haryana,Kaithal,Jowar (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 395.40,-0.0673,384.0
+Haryana,Kaithal,Jowar (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 476.20,-0.0648,466.5
+Haryana,Kaithal,Maize (Kharif),1,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0536,466.5
+Haryana,Kaithal,Maize (Kharif),2,RH_winter,42.53 < RH_winter <= 43.97,0.0376,42.9
+Haryana,Kaithal,Maize (Kharif),3,Rain_JunSep_Normal,352.30 < Rain_JunSep_Normal <= 472.30,-0.0335,384.0
+Haryana,Kaithal,Guar seed (Whole Year),1,T_rabi,T_rabi <= 17.34,-0.1885,17.22
+Haryana,Kaithal,Guar seed (Whole Year),2,T_hot_max,T_hot_max > 47.59,-0.1053,47.87
+Haryana,Kaithal,Guar seed (Whole Year),3,RH_winter,41.01 < RH_winter <= 43.75,-0.073,42.9
+Haryana,Kaithal,Rapeseed and Mustard (Rabi),1,T_rabi,17.02 < T_rabi <= 17.34,-0.0924,17.22
+Haryana,Kaithal,Rapeseed and Mustard (Rabi),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0797,47.87
+Haryana,Kaithal,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0515,466.5
+Haryana,Karnal,Bajra (Kharif),1,RH_monsoon,RH_monsoon > 65.65,0.1503,67.15
+Haryana,Karnal,Bajra (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.1254,17.34
+Haryana,Karnal,Bajra (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.0993,43.75
+Haryana,Karnal,Cotton (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.1393,43.75
+Haryana,Karnal,Cotton (Kharif),2,RH_annual,RH_annual > 44.99,-0.1024,45.72
+Haryana,Karnal,Cotton (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.053,17.34
+Haryana,Karnal,Guar seed (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.0583,43.75
+Haryana,Karnal,Guar seed (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.0527,17.34
+Haryana,Karnal,Guar seed (Kharif),3,RH_annual,RH_annual > 44.99,-0.0518,45.72
+Haryana,Karnal,Jowar (Kharif),1,T_rabi,T_rabi <= 17.34,-0.236,17.34
+Haryana,Karnal,Jowar (Kharif),2,T_annual,T_annual <= 25.34,-0.0755,25.14
+Haryana,Karnal,Jowar (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 534.30,0.0736,577.0
+Haryana,Karnal,Maize (Kharif),1,RH_monsoon,RH_monsoon > 65.65,-0.0392,67.15
+Haryana,Karnal,Maize (Kharif),2,T_cold_min,0.28 < T_cold_min <= 0.50,-0.0383,0.41
+Haryana,Karnal,Maize (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,0.0331,43.75
+Haryana,Karnal,Rapeseed and Mustard (Rabi),1,T_rabi,17.02 < T_rabi <= 17.34,-0.0843,17.34
+Haryana,Karnal,Rapeseed and Mustard (Rabi),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0759,47.74
+Haryana,Karnal,Rapeseed and Mustard (Rabi),3,RH_winter,42.53 < RH_winter <= 43.97,-0.0447,43.75
+Haryana,Karnal,Guar seed (Whole Year),1,RH_winter,RH_winter > 42.90,-0.2163,43.75
+Haryana,Karnal,Guar seed (Whole Year),2,T_rabi,T_rabi <= 17.34,-0.2076,17.34
+Haryana,Karnal,Guar seed (Whole Year),3,T_hot_max,T_hot_max > 47.59,-0.0983,47.74
+Haryana,Kurukshetra,Bajra (Kharif),1,RH_winter,RH_winter > 43.79,-0.2079,45.14
+Haryana,Kurukshetra,Bajra (Kharif),2,RH_monsoon,RH_monsoon > 65.65,0.1511,69.6
+Haryana,Kurukshetra,Bajra (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.1252,17.22
+Haryana,Kurukshetra,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.4018,45.14
+Haryana,Kurukshetra,Cotton (Kharif),2,RH_annual,RH_annual > 44.99,-0.1076,47.36
+Haryana,Kurukshetra,Cotton (Kharif),3,T_cold_min,T_cold_min > 0.89,-0.0761,1.39
+Haryana,Kurukshetra,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1088,45.14
+Haryana,Kurukshetra,Guar seed (Kharif),2,T_cold_min,T_cold_min > 0.89,0.0608,1.39
+Haryana,Kurukshetra,Guar seed (Kharif),3,RH_annual,RH_annual > 44.99,-0.0543,47.36
+Haryana,Kurukshetra,Jowar (Kharif),1,T_rabi,T_rabi <= 17.34,-0.2382,17.22
+Haryana,Kurukshetra,Jowar (Kharif),2,T_cold_min,T_cold_min > 0.73,-0.1566,1.39
+Haryana,Kurukshetra,Jowar (Kharif),3,RH_monsoon,RH_monsoon > 67.15,0.0955,69.6
+Haryana,Kurukshetra,Maize (Kharif),1,T_cold_min,T_cold_min > 0.89,0.1235,1.39
+Haryana,Kurukshetra,Maize (Kharif),2,RH_winter,RH_winter > 43.79,0.1084,45.14
+Haryana,Kurukshetra,Maize (Kharif),3,T_annual,T_annual <= 25.08,0.0642,24.87
+Haryana,Kurukshetra,Rapeseed and Mustard (Rabi),1,RH_winter,RH_winter > 43.79,-0.1283,45.14
+Haryana,Kurukshetra,Rapeseed and Mustard (Rabi),2,T_rabi,17.02 < T_rabi <= 17.34,-0.0865,17.22
+Haryana,Kurukshetra,Rapeseed and Mustard (Rabi),3,T_annual,T_annual <= 25.08,-0.0854,24.87
+Haryana,Kurukshetra,Guar seed (Whole Year),1,RH_winter,RH_winter > 42.90,-0.2245,45.14
+Haryana,Kurukshetra,Guar seed (Whole Year),2,T_rabi,T_rabi <= 17.34,-0.2077,17.22
+Haryana,Kurukshetra,Guar seed (Whole Year),3,T_cold_min,T_cold_min > 0.73,-0.1646,1.39
+Haryana,Mahendragarh,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3108,18.28
+Haryana,Mahendragarh,Bajra (Kharif),2,RH_winter,RH_winter <= 40.70,0.2321,38.15
+Haryana,Mahendragarh,Bajra (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.1319,46.82
+Haryana,Mahendragarh,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3686,38.15
+Haryana,Mahendragarh,Cotton (Kharif),2,T_rabi,T_rabi > 17.83,0.1767,18.28
+Haryana,Mahendragarh,Cotton (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.1078,46.82
+Haryana,Mahendragarh,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1239,38.15
+Haryana,Mahendragarh,Guar seed (Kharif),2,T_hot_max,T_hot_max <= 47.13,0.1119,46.82
+Haryana,Mahendragarh,Guar seed (Kharif),3,T_rabi,T_rabi > 17.83,0.0982,18.28
+Haryana,Mahendragarh,Jowar (Kharif),1,T_rabi,T_rabi > 18.08,0.1871,18.28
+Haryana,Mahendragarh,Jowar (Kharif),2,RH_monsoon,RH_monsoon <= 61.74,-0.107,61.31
+Haryana,Mahendragarh,Jowar (Kharif),3,T_annual,T_annual > 25.83,0.0608,25.98
+Haryana,Mahendragarh,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.1006,38.15
+Haryana,Mahendragarh,Maize (Kharif),2,T_rabi,T_rabi > 17.83,-0.0938,18.28
+Haryana,Mahendragarh,Maize (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.0648,46.82
+Haryana,Mahendragarh,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2963,18.28
+Haryana,Mahendragarh,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max <= 47.13,0.2656,46.82
+Haryana,Mahendragarh,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter <= 40.70,0.124,38.15
+Haryana,Mahendragarh,Guar seed (Whole Year),1,RH_winter,RH_winter <= 39.39,0.1678,38.15
+Haryana,Mahendragarh,Guar seed (Whole Year),2,T_rabi,T_rabi > 18.08,0.1135,18.28
+Haryana,Mahendragarh,Guar seed (Whole Year),3,T_hot_max,T_hot_max <= 47.08,0.1009,46.82
+Haryana,Mewat,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3107,18.33
+Haryana,Mewat,Bajra (Kharif),2,RH_winter,RH_winter <= 40.70,0.2307,39.39
+Haryana,Mewat,Bajra (Kharif),3,RH_monsoon,RH_monsoon > 65.65,0.1531,65.75
+Haryana,Mewat,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3582,39.39
+Haryana,Mewat,Cotton (Kharif),2,T_rabi,T_rabi > 17.83,0.1768,18.33
+Haryana,Mewat,Cotton (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.1067,47.08
+Haryana,Mewat,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1428,39.39
+Haryana,Mewat,Guar seed (Kharif),2,T_hot_max,T_hot_max <= 47.13,0.1362,47.08
+Haryana,Mewat,Guar seed (Kharif),3,T_rabi,T_rabi > 17.83,0.1084,18.33
+Haryana,Mewat,Jowar (Kharif),1,T_rabi,T_rabi > 18.08,0.1472,18.33
+Haryana,Mewat,Jowar (Kharif),2,T_hot_max,T_hot_max <= 47.08,-0.0546,47.08
+Haryana,Mewat,Jowar (Kharif),3,RH_winter,RH_winter <= 39.39,-0.0386,39.39
+Haryana,Mewat,Maize (Kharif),1,T_rabi,T_rabi > 17.83,-0.0978,18.33
+Haryana,Mewat,Maize (Kharif),2,RH_winter,RH_winter <= 40.70,-0.097,39.39
+Haryana,Mewat,Maize (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.0672,47.08
+Haryana,Mewat,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2983,18.33
+Haryana,Mewat,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max <= 47.13,0.2663,47.08
+Haryana,Mewat,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter <= 40.70,0.1239,39.39
+Haryana,Mewat,Guar seed (Whole Year),1,RH_winter,RH_winter <= 39.39,0.1452,39.39
+Haryana,Mewat,Guar seed (Whole Year),2,T_hot_max,T_hot_max <= 47.08,0.1367,47.08
+Haryana,Mewat,Guar seed (Whole Year),3,T_rabi,T_rabi > 18.08,0.0931,18.33
+Haryana,Palwal,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3111,18.41
+Haryana,Palwal,Bajra (Kharif),2,RH_monsoon,RH_monsoon > 65.65,0.1623,67.75
+Haryana,Palwal,Bajra (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,0.0643,41.01
+Haryana,Palwal,Cotton (Kharif),1,T_rabi,T_rabi > 17.83,0.1777,18.41
+Haryana,Palwal,Cotton (Kharif),2,RH_winter,40.30 < RH_winter <= 42.56,0.1479,41.01
+Haryana,Palwal,Cotton (Kharif),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,0.0788,508.1
+Haryana,Palwal,Guar seed (Kharif),1,T_rabi,T_rabi > 17.83,0.1022,18.41
+Haryana,Palwal,Guar seed (Kharif),2,T_cold_min,0.28 < T_cold_min <= 0.50,-0.0353,0.45
+Haryana,Palwal,Guar seed (Kharif),3,RH_annual,43.46 < RH_annual <= 45.03,-0.0349,44.21
+Haryana,Palwal,Jowar (Kharif),1,T_rabi,T_rabi > 18.08,0.1619,18.41
+Haryana,Palwal,Jowar (Kharif),2,RH_monsoon,RH_monsoon > 67.15,0.0826,67.75
+Haryana,Palwal,Jowar (Kharif),3,T_annual,T_annual > 25.83,0.0597,25.96
+Haryana,Palwal,Maize (Kharif),1,T_rabi,T_rabi > 17.83,-0.1009,18.41
+Haryana,Palwal,Maize (Kharif),2,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.052,508.1
+Haryana,Palwal,Maize (Kharif),3,T_cold_min,0.28 < T_cold_min <= 0.50,-0.0424,0.45
+Haryana,Palwal,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2892,18.41
+Haryana,Palwal,Rapeseed and Mustard (Rabi),2,T_annual,T_annual > 25.83,0.0492,25.96
+Haryana,Palwal,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0449,508.1
+Haryana,Palwal,Guar seed (Whole Year),1,T_rabi,T_rabi > 18.08,0.2205,18.41
+Haryana,Palwal,Guar seed (Whole Year),2,T_annual,T_annual > 25.83,0.0858,25.96
+Haryana,Palwal,Guar seed (Whole Year),3,Rain_Annual_Normal,466.50 < Rain_Annual_Normal <= 544.00,0.0554,508.1
+Haryana,Panchkula,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2534,17.0
+Haryana,Panchkula,Bajra (Kharif),2,RH_monsoon,RH_monsoon > 65.65,0.1487,71.55
+Haryana,Panchkula,Bajra (Kharif),3,T_cold_min,T_cold_min > 0.89,-0.1327,2.74
+Haryana,Panchkula,Cotton (Kharif),1,T_rabi,T_rabi <= 17.07,-0.1985,17.0
+Haryana,Panchkula,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.1423,950.4
+Haryana,Panchkula,Cotton (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.1417,43.79
+Haryana,Panchkula,Guar seed (Kharif),1,T_hot_max,T_hot_max <= 47.13,0.1517,46.2
+Haryana,Panchkula,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0724,950.4
+Haryana,Panchkula,Guar seed (Kharif),3,T_rabi,T_rabi <= 17.07,-0.0704,17.0
+Haryana,Panchkula,Jowar (Kharif),1,T_rabi,T_rabi <= 17.34,-0.2371,17.0
+Haryana,Panchkula,Jowar (Kharif),2,T_cold_min,T_cold_min > 0.73,-0.1601,2.74
+Haryana,Panchkula,Jowar (Kharif),3,T_annual,T_annual <= 25.34,-0.0831,24.14
+Haryana,Panchkula,Maize (Kharif),1,T_rabi,T_rabi <= 17.07,0.1331,17.0
+Haryana,Panchkula,Maize (Kharif),2,T_cold_min,T_cold_min > 0.89,0.0995,2.74
+Haryana,Panchkula,Maize (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.0727,1148.2
+Haryana,Panchkula,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max <= 47.13,0.2571,46.2
+Haryana,Panchkula,Rapeseed and Mustard (Rabi),2,T_rabi,T_rabi <= 17.07,-0.2527,17.0
+Haryana,Panchkula,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1241,1148.2
+Haryana,Panchkula,Guar seed (Whole Year),1,RH_winter,RH_winter > 42.90,-0.2137,43.79
+Haryana,Panchkula,Guar seed (Whole Year),2,T_rabi,T_rabi <= 17.34,-0.2037,17.0
+Haryana,Panchkula,Guar seed (Whole Year),3,T_cold_min,T_cold_min > 0.73,-0.1688,2.74
+Haryana,Panipat,Bajra (Kharif),1,RH_monsoon,RH_monsoon > 65.65,0.1493,67.15
+Haryana,Panipat,Bajra (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.1294,17.34
+Haryana,Panipat,Bajra (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.0959,43.75
+Haryana,Panipat,Cotton (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.1284,43.75
+Haryana,Panipat,Cotton (Kharif),2,RH_annual,RH_annual > 44.99,-0.0884,45.72
+Haryana,Panipat,Cotton (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0599,17.34
+Haryana,Panipat,Guar seed (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.0594,43.75
+Haryana,Panipat,Guar seed (Kharif),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0575,47.74
+Haryana,Panipat,Guar seed (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0526,17.34
+Haryana,Panipat,Jowar (Kharif),1,T_rabi,T_rabi <= 17.34,-0.2502,17.34
+Haryana,Panipat,Jowar (Kharif),2,T_annual,T_annual <= 25.34,-0.0656,25.14
+Haryana,Panipat,Jowar (Kharif),3,RH_annual,RH_annual > 45.51,0.0646,45.72
+Haryana,Panipat,Maize (Kharif),1,T_cold_min,0.28 < T_cold_min <= 0.50,-0.0424,0.41
+Haryana,Panipat,Maize (Kharif),2,RH_monsoon,RH_monsoon > 65.65,-0.0367,67.15
+Haryana,Panipat,Maize (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,0.0357,43.75
+Haryana,Panipat,Rapeseed and Mustard (Rabi),1,T_rabi,17.02 < T_rabi <= 17.34,-0.0928,17.34
+Haryana,Panipat,Rapeseed and Mustard (Rabi),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0848,47.74
+Haryana,Panipat,Rapeseed and Mustard (Rabi),3,RH_winter,42.53 < RH_winter <= 43.97,-0.0439,43.75
+Haryana,Panipat,Guar seed (Whole Year),1,RH_winter,RH_winter > 42.90,-0.2085,43.75
+Haryana,Panipat,Guar seed (Whole Year),2,T_rabi,T_rabi <= 17.34,-0.2069,17.34
+Haryana,Panipat,Guar seed (Whole Year),3,T_hot_max,T_hot_max > 47.59,-0.1076,47.74
+Haryana,Rewari,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3163,18.33
+Haryana,Rewari,Bajra (Kharif),2,RH_winter,RH_winter <= 40.70,0.2339,39.39
+Haryana,Rewari,Bajra (Kharif),3,RH_monsoon,RH_monsoon > 65.65,0.1579,65.75
+Haryana,Rewari,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3616,39.39
+Haryana,Rewari,Cotton (Kharif),2,T_rabi,T_rabi > 17.83,0.1759,18.33
+Haryana,Rewari,Cotton (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.107,47.08
+Haryana,Rewari,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1499,39.39
+Haryana,Rewari,Guar seed (Kharif),2,T_hot_max,T_hot_max <= 47.13,0.1364,47.08
+Haryana,Rewari,Guar seed (Kharif),3,T_rabi,T_rabi > 17.83,0.1089,18.33
+Haryana,Rewari,Jowar (Kharif),1,T_rabi,T_rabi > 18.08,0.2369,18.33
+Haryana,Rewari,Jowar (Kharif),2,RH_monsoon,65.55 < RH_monsoon <= 67.75,0.0603,65.75
+Haryana,Rewari,Jowar (Kharif),3,T_hot_max,T_hot_max <= 47.08,-0.0484,47.08
+Haryana,Rewari,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.096,39.39
+Haryana,Rewari,Maize (Kharif),2,T_rabi,T_rabi > 17.83,-0.094,18.33
+Haryana,Rewari,Maize (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.0542,47.08
+Haryana,Rewari,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2948,18.33
+Haryana,Rewari,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max <= 47.13,0.272,47.08
+Haryana,Rewari,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter <= 40.70,0.1239,39.39
+Haryana,Rewari,Guar seed (Whole Year),1,RH_winter,RH_winter <= 39.39,0.1569,39.39
+Haryana,Rewari,Guar seed (Whole Year),2,T_hot_max,T_hot_max <= 47.08,0.1419,47.08
+Haryana,Rewari,Guar seed (Whole Year),3,T_rabi,T_rabi > 18.08,0.1026,18.33
+Haryana,Rohtak,Bajra (Kharif),1,T_cold_min,T_cold_min <= 0.31,0.1197,0.1
+Haryana,Rohtak,Bajra (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,0.0925,17.66
+Haryana,Rohtak,Bajra (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,0.0683,42.2
+Haryana,Rohtak,Cotton (Kharif),1,RH_winter,40.30 < RH_winter <= 42.56,0.1527,42.2
+Haryana,Rohtak,Cotton (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,0.0958,17.66
+Haryana,Rohtak,Cotton (Kharif),3,T_cold_min,T_cold_min <= 0.31,0.0742,0.1
+Haryana,Rohtak,Guar seed (Kharif),1,RH_annual,43.46 < RH_annual <= 45.03,-0.035,44.33
+Haryana,Rohtak,Guar seed (Kharif),2,T_hot_max,47.12 < T_hot_max <= 47.58,-0.034,47.58
+Haryana,Rohtak,Guar seed (Kharif),3,Rain_Annual_Normal,557.40 < Rain_Annual_Normal <= 720.40,-0.0332,618.0
+Haryana,Rohtak,Jowar (Kharif),1,T_cold_min,T_cold_min <= 0.37,0.1177,0.1
+Haryana,Rohtak,Jowar (Kharif),2,T_hot_max,47.36 < T_hot_max <= 47.63,0.047,47.58
+Haryana,Rohtak,Jowar (Kharif),3,RH_annual,43.48 < RH_annual <= 45.72,0.0415,44.33
+Haryana,Rohtak,Maize (Kharif),1,T_cold_min,T_cold_min <= 0.31,-0.0566,0.1
+Haryana,Rohtak,Maize (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,-0.049,17.66
+Haryana,Rohtak,Maize (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,-0.0387,42.2
+Haryana,Rohtak,Rapeseed and Mustard (Rabi),1,T_cold_min,T_cold_min <= 0.31,0.1038,0.1
+Haryana,Rohtak,Rapeseed and Mustard (Rabi),2,T_rabi,17.34 < T_rabi <= 17.87,0.0588,17.66
+Haryana,Rohtak,Rapeseed and Mustard (Rabi),3,Rain_JunSep_Normal,446.90 < Rain_JunSep_Normal <= 588.60,-0.0564,508.0
+Haryana,Rohtak,Guar seed (Whole Year),1,T_cold_min,T_cold_min <= 0.37,0.0957,0.1
+Haryana,Rohtak,Guar seed (Whole Year),2,RH_winter,41.01 < RH_winter <= 43.75,-0.0945,42.2
+Haryana,Rohtak,Guar seed (Whole Year),3,T_hot_max,47.36 < T_hot_max <= 47.63,-0.073,47.58
+Haryana,Sirsa,Bajra (Kharif),1,T_rabi,T_rabi > 17.83,0.3228,18.08
+Haryana,Sirsa,Bajra (Kharif),2,RH_winter,RH_winter <= 40.70,0.2409,37.8
+Haryana,Sirsa,Bajra (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,-0.1381,54.04
+Haryana,Sirsa,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3753,37.8
+Haryana,Sirsa,Cotton (Kharif),2,T_rabi,T_rabi > 17.83,0.1659,18.08
+Haryana,Sirsa,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1149,242.1
+Haryana,Sirsa,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1393,37.8
+Haryana,Sirsa,Guar seed (Kharif),2,T_rabi,T_rabi > 17.83,0.0908,18.08
+Haryana,Sirsa,Guar seed (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.0868,242.1
+Haryana,Sirsa,Jowar (Kharif),1,T_cold_min,T_cold_min > 0.73,-0.153,0.85
+Haryana,Sirsa,Jowar (Kharif),2,T_rabi,17.82 < T_rabi <= 18.17,0.1117,18.08
+Haryana,Sirsa,Jowar (Kharif),3,RH_monsoon,RH_monsoon <= 61.74,-0.095,54.04
+Haryana,Sirsa,Maize (Kharif),1,T_rabi,T_rabi > 17.83,-0.0994,18.08
+Haryana,Sirsa,Maize (Kharif),2,RH_winter,RH_winter <= 40.70,-0.0951,37.8
+Haryana,Sirsa,Maize (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,0.0449,54.04
+Haryana,Sirsa,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi > 17.83,0.2939,18.08
+Haryana,Sirsa,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter <= 40.70,0.1387,37.8
+Haryana,Sirsa,Rapeseed and Mustard (Rabi),3,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0896,47.59
+Haryana,Sirsa,Guar seed (Whole Year),1,RH_winter,RH_winter <= 39.39,0.1745,37.8
+Haryana,Sirsa,Guar seed (Whole Year),2,T_cold_min,T_cold_min > 0.73,-0.1507,0.85
+Haryana,Sirsa,Guar seed (Whole Year),3,T_rabi,17.82 < T_rabi <= 18.17,0.1181,18.08
+Haryana,Sonipat,Bajra (Kharif),1,T_cold_min,T_cold_min <= 0.31,0.1224,0.1
+Haryana,Sonipat,Bajra (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,0.1039,17.66
+Haryana,Sonipat,Bajra (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,0.0805,42.2
+Haryana,Sonipat,Cotton (Kharif),1,RH_winter,40.30 < RH_winter <= 42.56,0.1595,42.2
+Haryana,Sonipat,Cotton (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,0.0975,17.66
+Haryana,Sonipat,Cotton (Kharif),3,T_cold_min,T_cold_min <= 0.31,0.0643,0.1
+Haryana,Sonipat,Guar seed (Kharif),1,RH_annual,43.46 < RH_annual <= 45.03,-0.0353,44.33
+Haryana,Sonipat,Guar seed (Kharif),2,RH_monsoon,61.80 < RH_monsoon <= 65.75,-0.0323,65.55
+Haryana,Sonipat,Guar seed (Kharif),3,T_hot_max,47.12 < T_hot_max <= 47.58,-0.0312,47.58
+Haryana,Sonipat,Jowar (Kharif),1,T_cold_min,T_cold_min <= 0.37,0.1142,0.1
+Haryana,Sonipat,Jowar (Kharif),2,T_hot_max,47.36 < T_hot_max <= 47.63,0.0535,47.58
+Haryana,Sonipat,Jowar (Kharif),3,RH_annual,43.48 < RH_annual <= 45.72,0.0345,44.33
+Haryana,Sonipat,Maize (Kharif),1,T_cold_min,T_cold_min <= 0.31,-0.0494,0.1
+Haryana,Sonipat,Maize (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,-0.0489,17.66
+Haryana,Sonipat,Maize (Kharif),3,RH_winter,40.30 < RH_winter <= 42.56,-0.0444,42.2
+Haryana,Sonipat,Rapeseed and Mustard (Rabi),1,T_cold_min,T_cold_min <= 0.31,0.148,0.1
+Haryana,Sonipat,Rapeseed and Mustard (Rabi),2,T_rabi,17.34 < T_rabi <= 17.87,0.104,17.66
+Haryana,Sonipat,Rapeseed and Mustard (Rabi),3,RH_winter,40.30 < RH_winter <= 42.56,0.0495,42.2
+Haryana,Sonipat,Guar seed (Whole Year),1,T_cold_min,T_cold_min <= 0.37,0.1457,0.1
+Haryana,Sonipat,Guar seed (Whole Year),2,RH_winter,41.01 < RH_winter <= 43.75,-0.0739,42.2
+Haryana,Sonipat,Guar seed (Whole Year),3,T_hot_max,47.36 < T_hot_max <= 47.63,-0.0553,47.58
+Haryana,Yamunanagar,Bajra (Kharif),1,RH_winter,RH_winter > 43.79,-0.186,47.61
+Haryana,Yamunanagar,Bajra (Kharif),2,T_cold_min,T_cold_min > 0.89,-0.1367,1.07
+Haryana,Yamunanagar,Bajra (Kharif),3,RH_monsoon,RH_monsoon > 65.65,0.1328,76.02
+Haryana,Yamunanagar,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3682,47.61
+Haryana,Yamunanagar,Cotton (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.149,1107.0
+Haryana,Yamunanagar,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.1265,892.1
+Haryana,Yamunanagar,Guar seed (Kharif),1,T_hot_max,T_hot_max <= 47.13,0.1443,47.11
+Haryana,Yamunanagar,Guar seed (Kharif),2,RH_winter,RH_winter > 43.79,-0.103,47.61
+Haryana,Yamunanagar,Guar seed (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0703,892.1
+Haryana,Yamunanagar,Jowar (Kharif),1,T_rabi,T_rabi <= 17.34,-0.2515,17.17
+Haryana,Yamunanagar,Jowar (Kharif),2,T_cold_min,T_cold_min > 0.73,-0.1449,1.07
+Haryana,Yamunanagar,Jowar (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 534.30,0.0917,892.1
+Haryana,Yamunanagar,Maize (Kharif),1,RH_winter,RH_winter > 43.79,0.1107,47.61
+Haryana,Yamunanagar,Maize (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.0975,1107.0
+Haryana,Yamunanagar,Maize (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.0527,47.11
+Haryana,Yamunanagar,Guar seed (Whole Year),1,RH_winter,RH_winter > 42.90,-0.2182,47.61
+Haryana,Yamunanagar,Guar seed (Whole Year),2,T_rabi,T_rabi <= 17.34,-0.1905,17.17
+Haryana,Yamunanagar,Guar seed (Whole Year),3,T_cold_min,T_cold_min > 0.73,-0.1716,1.07
+Haryana,Yamunanagar,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max <= 47.13,0.2799,47.11
+Haryana,Yamunanagar,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter > 43.79,-0.1224,47.61
+Haryana,Yamunanagar,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1123,1107.0
+Punjab,Amritsar,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2568,16.82
+Punjab,Amritsar,Bajra (Kharif),2,RH_winter,RH_winter > 43.79,-0.1964,44.44
+Punjab,Amritsar,Bajra (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.1244,48.32
+Punjab,Amritsar,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3732,44.44
+Punjab,Amritsar,Cotton (Kharif),2,T_rabi,T_rabi <= 17.07,-0.1935,16.82
+Punjab,Amritsar,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.139,721.7
+Punjab,Amritsar,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1096,44.44
+Punjab,Amritsar,Guar seed (Kharif),2,T_rabi,T_rabi <= 17.07,-0.0729,16.82
+Punjab,Amritsar,Guar seed (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.0583,48.32
+Punjab,Amritsar,Maize (Kharif),1,T_rabi,T_rabi <= 17.07,0.1464,16.82
+Punjab,Amritsar,Maize (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1018,721.7
+Punjab,Amritsar,Maize (Kharif),3,RH_winter,RH_winter > 43.79,0.0898,44.44
+Punjab,Amritsar,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi <= 17.07,-0.256,16.82
+Punjab,Amritsar,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max > 47.96,-0.2006,48.32
+Punjab,Amritsar,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1335,721.7
+Punjab,Barnala,Bajra (Kharif),1,T_hot_max,T_hot_max > 47.96,-0.1365,48.07
+Punjab,Barnala,Bajra (Kharif),2,T_rabi,17.04 < T_rabi <= 17.34,-0.1246,17.05
+Punjab,Barnala,Bajra (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.1148,42.72
+Punjab,Barnala,Cotton (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.1655,42.72
+Punjab,Barnala,Cotton (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.1092,449.4
+Punjab,Barnala,Cotton (Kharif),3,T_rabi,17.04 < T_rabi <= 17.34,-0.0708,17.05
+Punjab,Barnala,Guar seed (Kharif),1,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.0778,449.4
+Punjab,Barnala,Guar seed (Kharif),2,T_rabi,17.04 < T_rabi <= 17.34,-0.061,17.05
+Punjab,Barnala,Guar seed (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.059,48.07
+Punjab,Barnala,Maize (Kharif),1,T_hot_max,T_hot_max > 47.96,-0.0619,48.07
+Punjab,Barnala,Maize (Kharif),2,T_cold_min,T_cold_min <= 0.31,-0.0561,0.22
+Punjab,Barnala,Maize (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,-0.0463,449.4
+Punjab,Barnala,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.2075,48.07
+Punjab,Barnala,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min <= 0.31,0.0998,0.22
+Punjab,Barnala,Rapeseed and Mustard (Rabi),3,T_rabi,17.04 < T_rabi <= 17.34,-0.0835,17.05
+Punjab,Bathinda,Bajra (Kharif),1,RH_winter,RH_winter <= 40.70,0.2234,39.4
+Punjab,Bathinda,Bajra (Kharif),2,RH_monsoon,RH_monsoon <= 57.99,-0.1305,54.79
+Punjab,Bathinda,Bajra (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.12,48.15
+Punjab,Bathinda,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3647,39.4
+Punjab,Bathinda,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1391,321.0
+Punjab,Bathinda,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.128,407.9
+Punjab,Bathinda,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1195,39.4
+Punjab,Bathinda,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.0921,321.0
+Punjab,Bathinda,Guar seed (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.0796,407.9
+Punjab,Bathinda,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.0926,39.4
+Punjab,Bathinda,Maize (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.0551,48.15
+Punjab,Bathinda,Maize (Kharif),3,T_rabi,17.34 < T_rabi <= 17.87,-0.05,17.74
+Punjab,Bathinda,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.1998,48.15
+Punjab,Bathinda,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter <= 40.70,0.1336,39.4
+Punjab,Bathinda,Rapeseed and Mustard (Rabi),3,T_rabi,17.34 < T_rabi <= 17.87,0.1015,17.74
+Punjab,Faridkot,Bajra (Kharif),1,RH_monsoon,RH_monsoon <= 57.99,-0.1417,55.03
+Punjab,Faridkot,Bajra (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.1237,48.36
+Punjab,Faridkot,Bajra (Kharif),3,T_rabi,17.34 < T_rabi <= 17.87,0.1143,17.37
+Punjab,Faridkot,Cotton (Kharif),1,RH_winter,40.30 < RH_winter <= 42.56,0.1524,40.93
+Punjab,Faridkot,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1293,325.1
+Punjab,Faridkot,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.1176,415.6
+Punjab,Faridkot,Guar seed (Kharif),1,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.1001,415.6
+Punjab,Faridkot,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.0937,325.1
+Punjab,Faridkot,Guar seed (Kharif),3,RH_annual,RH_annual <= 40.99,0.0713,40.02
+Punjab,Faridkot,Maize (Kharif),1,T_hot_max,T_hot_max > 47.96,-0.0571,48.36
+Punjab,Faridkot,Maize (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,-0.0528,17.37
+Punjab,Faridkot,Maize (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,0.0479,55.03
+Punjab,Faridkot,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.2095,48.36
+Punjab,Faridkot,Rapeseed and Mustard (Rabi),2,T_rabi,17.34 < T_rabi <= 17.87,0.0932,17.37
+Punjab,Faridkot,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,-0.056,415.6
+Punjab,Fazilka,Bajra (Kharif),1,RH_winter,RH_winter <= 40.70,0.2367,37.98
+Punjab,Fazilka,Bajra (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.1304,48.6
+Punjab,Fazilka,Bajra (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,-0.1281,46.38
+Punjab,Fazilka,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.363,37.98
+Punjab,Fazilka,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1339,352.3
+Punjab,Fazilka,Cotton (Kharif),3,T_rabi,17.34 < T_rabi <= 17.86,0.0813,17.84
+Punjab,Fazilka,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.127,37.98
+Punjab,Fazilka,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.095,352.3
+Punjab,Fazilka,Guar seed (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.0559,48.6
+Punjab,Fazilka,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.0911,37.98
+Punjab,Fazilka,Maize (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.0591,48.6
+Punjab,Fazilka,Maize (Kharif),3,T_cold_min,T_cold_min <= 0.31,-0.0516,0.14
+Punjab,Fazilka,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.2196,48.6
+Punjab,Fazilka,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter <= 40.70,0.1234,37.98
+Punjab,Fazilka,Rapeseed and Mustard (Rabi),3,T_cold_min,T_cold_min <= 0.31,0.0942,0.14
+Punjab,Firozepur,Bajra (Kharif),1,RH_monsoon,RH_monsoon <= 57.99,-0.1331,51.47
+Punjab,Firozepur,Bajra (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.1317,17.32
+Punjab,Firozepur,Bajra (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.1283,48.61
+Punjab,Firozepur,Cotton (Kharif),1,RH_winter,40.30 < RH_winter <= 42.56,0.1484,40.77
+Punjab,Firozepur,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1259,352.3
+Punjab,Firozepur,Cotton (Kharif),3,RH_annual,RH_annual <= 40.99,0.096,38.95
+Punjab,Firozepur,Guar seed (Kharif),1,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.0802,352.3
+Punjab,Firozepur,Guar seed (Kharif),2,RH_annual,RH_annual <= 40.99,0.0674,38.95
+Punjab,Firozepur,Guar seed (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.0606,48.61
+Punjab,Firozepur,Maize (Kharif),1,T_hot_max,T_hot_max > 47.96,-0.0629,48.61
+Punjab,Firozepur,Maize (Kharif),2,T_cold_min,T_cold_min <= 0.31,-0.0542,0.2
+Punjab,Firozepur,Maize (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,0.0475,51.47
+Punjab,Firozepur,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.2036,48.61
+Punjab,Firozepur,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min <= 0.31,0.1018,0.2
+Punjab,Firozepur,Rapeseed and Mustard (Rabi),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0885,17.32
+Punjab,Hoshiarpur,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2481,16.82
+Punjab,Hoshiarpur,Bajra (Kharif),2,RH_winter,RH_winter > 43.79,-0.2016,45.48
+Punjab,Hoshiarpur,Bajra (Kharif),3,T_cold_min,T_cold_min > 0.89,-0.1109,0.95
+Punjab,Hoshiarpur,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3939,45.48
+Punjab,Hoshiarpur,Cotton (Kharif),2,T_rabi,T_rabi <= 17.07,-0.1833,16.82
+Punjab,Hoshiarpur,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.1342,933.1
+Punjab,Hoshiarpur,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1074,45.48
+Punjab,Hoshiarpur,Guar seed (Kharif),2,T_rabi,T_rabi <= 17.07,-0.0722,16.82
+Punjab,Hoshiarpur,Guar seed (Kharif),3,T_cold_min,T_cold_min > 0.89,0.0615,0.95
+Punjab,Hoshiarpur,Maize (Kharif),1,T_cold_min,T_cold_min > 0.89,0.1333,0.95
+Punjab,Hoshiarpur,Maize (Kharif),2,T_rabi,T_rabi <= 17.07,0.0987,16.82
+Punjab,Hoshiarpur,Maize (Kharif),3,T_annual,T_annual <= 25.08,0.069,24.99
+Punjab,Hoshiarpur,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi <= 17.07,-0.2677,16.82
+Punjab,Hoshiarpur,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter > 43.79,-0.1756,45.48
+Punjab,Hoshiarpur,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1007,933.1
+Punjab,Jalandhar,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2491,16.82
+Punjab,Jalandhar,Bajra (Kharif),2,RH_winter,RH_winter > 43.79,-0.2022,45.48
+Punjab,Jalandhar,Bajra (Kharif),3,T_cold_min,T_cold_min > 0.89,-0.1108,0.95
+Punjab,Jalandhar,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3763,45.48
+Punjab,Jalandhar,Cotton (Kharif),2,T_rabi,T_rabi <= 17.07,-0.1841,16.82
+Punjab,Jalandhar,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal > 718.05,-0.1475,719.1
+Punjab,Jalandhar,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1002,45.48
+Punjab,Jalandhar,Guar seed (Kharif),2,T_rabi,T_rabi <= 17.07,-0.0721,16.82
+Punjab,Jalandhar,Guar seed (Kharif),3,T_cold_min,T_cold_min > 0.89,0.0576,0.95
+Punjab,Jalandhar,Maize (Kharif),1,Rain_Annual_Normal,Rain_Annual_Normal > 718.05,0.0917,719.1
+Punjab,Jalandhar,Maize (Kharif),2,T_cold_min,T_cold_min > 0.89,0.0904,0.95
+Punjab,Jalandhar,Maize (Kharif),3,T_rabi,T_rabi <= 17.07,0.0864,16.82
+Punjab,Jalandhar,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi <= 17.07,-0.2576,16.82
+Punjab,Jalandhar,Rapeseed and Mustard (Rabi),2,Rain_Annual_Normal,Rain_Annual_Normal > 718.05,0.1396,719.1
+Punjab,Jalandhar,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter > 43.79,-0.1129,45.48
+Punjab,Ludhiana,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2515,16.9
+Punjab,Ludhiana,Bajra (Kharif),2,RH_winter,RH_winter > 43.79,-0.2009,44.45
+Punjab,Ludhiana,Bajra (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.1246,48.14
+Punjab,Ludhiana,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.388,44.45
+Punjab,Ludhiana,Cotton (Kharif),2,T_rabi,T_rabi <= 17.07,-0.1783,16.9
+Punjab,Ludhiana,Cotton (Kharif),3,T_cold_min,T_cold_min <= 0.31,0.0738,0.26
+Punjab,Ludhiana,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1041,44.45
+Punjab,Ludhiana,Guar seed (Kharif),2,T_rabi,T_rabi <= 17.07,-0.067,16.9
+Punjab,Ludhiana,Guar seed (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.0667,48.14
+Punjab,Ludhiana,Maize (Kharif),1,T_rabi,T_rabi <= 17.07,0.13,16.9
+Punjab,Ludhiana,Maize (Kharif),2,RH_winter,RH_winter > 43.79,0.103,44.45
+Punjab,Ludhiana,Maize (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.0613,48.14
+Punjab,Ludhiana,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi <= 17.07,-0.2592,16.9
+Punjab,Ludhiana,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max > 47.96,-0.2032,48.14
+Punjab,Ludhiana,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter > 43.79,-0.1138,44.45
+Punjab,Mansa,Bajra (Kharif),1,RH_monsoon,RH_monsoon <= 57.99,-0.1399,57.27
+Punjab,Mansa,Bajra (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.1237,48.04
+Punjab,Mansa,Bajra (Kharif),3,T_rabi,17.34 < T_rabi <= 17.87,0.1185,17.43
+Punjab,Mansa,Cotton (Kharif),1,RH_winter,40.30 < RH_winter <= 42.56,0.1415,40.7
+Punjab,Mansa,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1355,334.8
+Punjab,Mansa,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.1132,419.8
+Punjab,Mansa,Guar seed (Kharif),1,RH_annual,RH_annual <= 40.99,0.0588,40.73
+Punjab,Mansa,Guar seed (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.0579,48.04
+Punjab,Mansa,Guar seed (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.0493,419.8
+Punjab,Mansa,Maize (Kharif),1,T_rabi,17.34 < T_rabi <= 17.87,-0.0543,17.43
+Punjab,Mansa,Maize (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.0541,48.04
+Punjab,Mansa,Maize (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,0.0453,57.27
+Punjab,Mansa,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.2153,48.04
+Punjab,Mansa,Rapeseed and Mustard (Rabi),2,T_rabi,17.34 < T_rabi <= 17.87,0.096,17.43
+Punjab,Mansa,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,-0.0568,419.8
+Punjab,Moga,Bajra (Kharif),1,RH_monsoon,RH_monsoon <= 57.99,-0.1512,55.56
+Punjab,Moga,Bajra (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.1279,17.09
+Punjab,Moga,Bajra (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.1187,48.4
+Punjab,Moga,Cotton (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.1432,42.56
+Punjab,Moga,Cotton (Kharif),2,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,0.0769,460.6
+Punjab,Moga,Cotton (Kharif),3,T_cold_min,T_cold_min <= 0.30,0.0624,0.29
+Punjab,Moga,Guar seed (Kharif),1,T_hot_max,T_hot_max > 47.96,-0.0614,48.4
+Punjab,Moga,Guar seed (Kharif),2,RH_winter,42.53 < RH_winter <= 43.97,-0.0593,42.56
+Punjab,Moga,Guar seed (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0471,17.09
+Punjab,Moga,Maize (Kharif),1,T_hot_max,T_hot_max > 47.96,-0.0576,48.4
+Punjab,Moga,Maize (Kharif),2,T_cold_min,T_cold_min <= 0.30,-0.0543,0.29
+Punjab,Moga,Maize (Kharif),3,RH_monsoon,RH_monsoon <= 57.99,0.0488,55.56
+Punjab,Moga,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.2034,48.4
+Punjab,Moga,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min <= 0.30,0.1066,0.29
+Punjab,Moga,Rapeseed and Mustard (Rabi),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0823,17.09
+Punjab,Muktsar,Bajra (Kharif),1,RH_winter,RH_winter <= 40.70,0.2215,39.35
+Punjab,Muktsar,Bajra (Kharif),2,RH_monsoon,RH_monsoon <= 57.99,-0.146,50.93
+Punjab,Muktsar,Bajra (Kharif),3,T_rabi,17.34 < T_rabi <= 17.87,0.1251,17.66
+Punjab,Muktsar,Cotton (Kharif),1,RH_winter,RH_winter <= 40.70,0.3695,39.35
+Punjab,Muktsar,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.1368,311.8
+Punjab,Muktsar,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.1216,399.5
+Punjab,Muktsar,Guar seed (Kharif),1,RH_winter,RH_winter <= 40.70,0.1296,39.35
+Punjab,Muktsar,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.0956,311.8
+Punjab,Muktsar,Guar seed (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.0709,399.5
+Punjab,Muktsar,Maize (Kharif),1,RH_winter,RH_winter <= 40.70,-0.0936,39.35
+Punjab,Muktsar,Maize (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.0573,48.49
+Punjab,Muktsar,Maize (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,-0.0487,399.5
+Punjab,Muktsar,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.189,48.49
+Punjab,Muktsar,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter <= 40.70,0.1391,39.35
+Punjab,Muktsar,Rapeseed and Mustard (Rabi),3,T_cold_min,T_cold_min <= 0.31,0.1049,0.24
+Punjab,Patiala,Bajra (Kharif),1,RH_winter,RH_winter > 43.79,-0.2062,44.14
+Punjab,Patiala,Bajra (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.1284,17.17
+Punjab,Patiala,Bajra (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.0862,615.2
+Punjab,Patiala,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3706,44.14
+Punjab,Patiala,Cotton (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.1392,752.0
+Punjab,Patiala,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.1187,615.2
+Punjab,Patiala,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1022,44.14
+Punjab,Patiala,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0649,615.2
+Punjab,Patiala,Guar seed (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0539,17.17
+Punjab,Patiala,Maize (Kharif),1,RH_winter,RH_winter > 43.79,0.0964,44.14
+Punjab,Patiala,Maize (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.0933,752.0
+Punjab,Patiala,Maize (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.0546,615.2
+Punjab,Patiala,Rapeseed and Mustard (Rabi),1,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1469,752.0
+Punjab,Patiala,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter > 43.79,-0.1232,44.14
+Punjab,Patiala,Rapeseed and Mustard (Rabi),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.0976,615.2
+Punjab,Rupnagar,Bajra (Kharif),1,T_rabi,17.02 < T_rabi <= 17.34,-0.1288,17.3
+Punjab,Rupnagar,Bajra (Kharif),2,T_cold_min,T_cold_min > 0.89,-0.103,2.2
+Punjab,Rupnagar,Bajra (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.0948,43.72
+Punjab,Rupnagar,Cotton (Kharif),1,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.1544,956.5
+Punjab,Rupnagar,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.1374,728.5
+Punjab,Rupnagar,Cotton (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.1373,43.72
+Punjab,Rupnagar,Guar seed (Kharif),1,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0656,728.5
+Punjab,Rupnagar,Guar seed (Kharif),2,RH_winter,42.53 < RH_winter <= 43.97,-0.0646,43.72
+Punjab,Rupnagar,Guar seed (Kharif),3,T_cold_min,T_cold_min > 0.89,0.0633,2.2
+Punjab,Rupnagar,Maize (Kharif),1,T_cold_min,T_cold_min > 0.89,0.0881,2.2
+Punjab,Rupnagar,Maize (Kharif),2,T_annual,T_annual <= 25.08,0.0739,25.02
+Punjab,Rupnagar,Maize (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.0634,956.5
+Punjab,Rupnagar,Rapeseed and Mustard (Rabi),1,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1259,956.5
+Punjab,Rupnagar,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min > 0.89,-0.1015,2.2
+Punjab,Rupnagar,Rapeseed and Mustard (Rabi),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.0924,728.5
+Punjab,SAS Nagar,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2548,17.0
+Punjab,SAS Nagar,Bajra (Kharif),2,RH_monsoon,RH_monsoon > 65.65,0.151,71.55
+Punjab,SAS Nagar,Bajra (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.1194,46.2
+Punjab,SAS Nagar,Cotton (Kharif),1,T_rabi,T_rabi <= 17.07,-0.205,17.0
+Punjab,SAS Nagar,Cotton (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.1473,818.7
+Punjab,SAS Nagar,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.1346,644.5
+Punjab,SAS Nagar,Guar seed (Kharif),1,T_hot_max,T_hot_max <= 47.13,0.1465,46.2
+Punjab,SAS Nagar,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0731,644.5
+Punjab,SAS Nagar,Guar seed (Kharif),3,T_rabi,T_rabi <= 17.07,-0.0688,17.0
+Punjab,SAS Nagar,Maize (Kharif),1,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1095,818.7
+Punjab,SAS Nagar,Maize (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,0.1038,644.5
+Punjab,SAS Nagar,Maize (Kharif),3,T_rabi,T_rabi <= 17.07,0.1025,17.0
+Punjab,SAS Nagar,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max <= 47.13,0.2777,46.2
+Punjab,SAS Nagar,Rapeseed and Mustard (Rabi),2,T_rabi,T_rabi <= 17.07,-0.251,17.0
+Punjab,SAS Nagar,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1153,818.7
+Punjab,Sangrur,Bajra (Kharif),1,RH_monsoon,RH_monsoon <= 57.99,-0.1365,57.27
+Punjab,Sangrur,Bajra (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,0.131,17.43
+Punjab,Sangrur,Bajra (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.1262,48.04
+Punjab,Sangrur,Cotton (Kharif),1,RH_winter,40.30 < RH_winter <= 42.56,0.1573,40.7
+Punjab,Sangrur,Cotton (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,0.1241,17.43
+Punjab,Sangrur,Cotton (Kharif),3,RH_annual,RH_annual <= 40.99,0.0995,40.73
+Punjab,Sangrur,Guar seed (Kharif),1,RH_annual,RH_annual <= 40.99,0.0759,40.73
+Punjab,Sangrur,Guar seed (Kharif),2,T_hot_max,T_hot_max > 47.96,-0.0537,48.04
+Punjab,Sangrur,Guar seed (Kharif),3,T_rabi,17.34 < T_rabi <= 17.87,0.0462,17.43
+Punjab,Sangrur,Maize (Kharif),1,T_hot_max,T_hot_max > 47.96,-0.0518,48.04
+Punjab,Sangrur,Maize (Kharif),2,T_rabi,17.34 < T_rabi <= 17.87,-0.0501,17.43
+Punjab,Sangrur,Maize (Kharif),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.048,557.4
+Punjab,Sangrur,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max > 47.96,-0.2004,48.04
+Punjab,Sangrur,Rapeseed and Mustard (Rabi),2,T_rabi,17.34 < T_rabi <= 17.87,0.0983,17.43
+Punjab,Sangrur,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,452.50 < Rain_Annual_Normal <= 568.00,-0.0489,557.4
+Punjab,Tarn Taran,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2547,16.82
+Punjab,Tarn Taran,Bajra (Kharif),2,RH_winter,RH_winter > 43.79,-0.1945,44.44
+Punjab,Tarn Taran,Bajra (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.1143,48.32
+Punjab,Tarn Taran,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.352,44.44
+Punjab,Tarn Taran,Cotton (Kharif),2,T_rabi,T_rabi <= 17.07,-0.1763,16.82
+Punjab,Tarn Taran,Cotton (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.1425,449.2
+Punjab,Tarn Taran,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1077,44.44
+Punjab,Tarn Taran,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal <= 353.15,0.0855,336.8
+Punjab,Tarn Taran,Guar seed (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal <= 455.60,0.0705,449.2
+Punjab,Tarn Taran,Maize (Kharif),1,T_rabi,T_rabi <= 17.07,0.1246,16.82
+Punjab,Tarn Taran,Maize (Kharif),2,RH_winter,RH_winter > 43.79,0.1022,44.44
+Punjab,Tarn Taran,Maize (Kharif),3,T_hot_max,T_hot_max > 47.96,-0.0548,48.32
+Punjab,Tarn Taran,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi <= 17.07,-0.2541,16.82
+Punjab,Tarn Taran,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max > 47.96,-0.1956,48.32
+Punjab,Tarn Taran,Rapeseed and Mustard (Rabi),3,RH_winter,RH_winter > 43.79,-0.1131,44.44
+Punjab,Kapurthala,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2531,16.82
+Punjab,Kapurthala,Bajra (Kharif),2,RH_winter,RH_winter > 43.79,-0.1926,45.48
+Punjab,Kapurthala,Bajra (Kharif),3,T_cold_min,T_cold_min > 0.89,-0.1094,0.95
+Punjab,Kapurthala,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3774,45.48
+Punjab,Kapurthala,Cotton (Kharif),2,T_rabi,T_rabi <= 17.07,-0.191,16.82
+Punjab,Kapurthala,Cotton (Kharif),3,T_cold_min,T_cold_min > 0.89,-0.0746,0.95
+Punjab,Kapurthala,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1074,45.48
+Punjab,Kapurthala,Guar seed (Kharif),2,T_rabi,T_rabi <= 17.07,-0.0733,16.82
+Punjab,Kapurthala,Guar seed (Kharif),3,T_cold_min,T_cold_min > 0.89,0.0584,0.95
+Punjab,Kapurthala,Maize (Kharif),1,T_rabi,T_rabi <= 17.07,0.1525,16.82
+Punjab,Kapurthala,Maize (Kharif),2,T_cold_min,T_cold_min > 0.89,0.1253,0.95
+Punjab,Kapurthala,Maize (Kharif),3,RH_winter,RH_winter > 43.79,0.12,45.48
+Punjab,Kapurthala,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi <= 17.07,-0.2419,16.82
+Punjab,Kapurthala,Rapeseed and Mustard (Rabi),2,RH_winter,RH_winter > 43.79,-0.1188,45.48
+Punjab,Kapurthala,Rapeseed and Mustard (Rabi),3,T_cold_min,T_cold_min > 0.89,-0.0709,0.95
+Punjab,Fatehgarh Sahib,Rapeseed and Mustard (Rabi),1,RH_winter,RH_winter > 43.79,-0.1216,44.14
+Punjab,Fatehgarh Sahib,Rapeseed and Mustard (Rabi),2,T_rabi,17.02 < T_rabi <= 17.34,-0.091,17.17
+Punjab,Fatehgarh Sahib,Rapeseed and Mustard (Rabi),3,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0773,47.74
+Punjab,Fatehgarh Sahib,Bajra (Kharif),1,RH_winter,RH_winter > 43.79,-0.2062,44.14
+Punjab,Fatehgarh Sahib,Bajra (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.1298,17.17
+Punjab,Fatehgarh Sahib,Bajra (Kharif),3,RH_monsoon,61.80 < RH_monsoon <= 65.75,0.0404,63.53
+Punjab,Fatehgarh Sahib,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3923,44.14
+Punjab,Fatehgarh Sahib,Cotton (Kharif),2,Rain_Annual_Normal,557.40 < Rain_Annual_Normal <= 720.40,-0.0551,683.1
+Punjab,Fatehgarh Sahib,Cotton (Kharif),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0527,17.17
+Punjab,Fatehgarh Sahib,Guar seed (Kharif),1,RH_winter,RH_winter > 43.79,-0.1067,44.14
+Punjab,Fatehgarh Sahib,Guar seed (Kharif),2,T_rabi,17.02 < T_rabi <= 17.34,-0.0516,17.17
+Punjab,Fatehgarh Sahib,Guar seed (Kharif),3,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0502,47.74
+Punjab,Fatehgarh Sahib,Maize (Kharif),1,RH_winter,RH_winter > 43.79,0.1,44.14
+Punjab,Fatehgarh Sahib,Maize (Kharif),2,T_hot_max,47.58 < T_hot_max <= 48.04,-0.0369,47.74
+Punjab,Fatehgarh Sahib,Maize (Kharif),3,T_cold_min,0.48 < T_cold_min <= 0.92,-0.0264,0.88
+Punjab,Pathankot,Rapeseed and Mustard (Rabi),1,T_rabi,T_rabi <= 17.07,-0.259,13.22
+Punjab,Pathankot,Rapeseed and Mustard (Rabi),2,T_hot_max,T_hot_max <= 47.13,0.1836,40.97
+Punjab,Pathankot,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1514,1112.5
+Punjab,Pathankot,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.1963,13.22
+Punjab,Pathankot,Bajra (Kharif),2,RH_winter,RH_winter > 43.79,-0.1824,44.58
+Punjab,Pathankot,Bajra (Kharif),3,T_hot_max,T_hot_max <= 47.13,0.1759,40.97
+Punjab,Pathankot,Cotton (Kharif),1,RH_winter,RH_winter > 43.79,-0.3598,44.58
+Punjab,Pathankot,Cotton (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.1488,827.8
+Punjab,Pathankot,Cotton (Kharif),3,T_rabi,T_rabi <= 17.07,-0.147,13.22
+Punjab,Pathankot,Guar seed (Kharif),1,T_hot_max,T_hot_max <= 47.13,0.1263,40.97
+Punjab,Pathankot,Guar seed (Kharif),2,RH_winter,RH_winter > 43.79,-0.0843,44.58
+Punjab,Pathankot,Guar seed (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0632,827.8
+Punjab,Pathankot,Maize (Kharif),1,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.0793,1112.5
+Punjab,Pathankot,Maize (Kharif),2,RH_winter,RH_winter > 43.79,0.0724,44.58
+Punjab,Pathankot,Maize (Kharif),3,T_rabi,T_rabi <= 17.07,0.0616,13.22
+Punjab,Gurdaspur,Rapeseed and Mustard (Rabi),1,T_hot_max,T_hot_max <= 47.13,0.2854,46.31
+Punjab,Gurdaspur,Rapeseed and Mustard (Rabi),2,T_rabi,T_rabi <= 17.07,-0.2379,17.0
+Punjab,Gurdaspur,Rapeseed and Mustard (Rabi),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1657,1112.5
+Punjab,Gurdaspur,Bajra (Kharif),1,T_rabi,T_rabi <= 17.07,-0.2601,17.0
+Punjab,Gurdaspur,Bajra (Kharif),2,T_hot_max,T_hot_max <= 47.13,0.1328,46.31
+Punjab,Gurdaspur,Bajra (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.1245,43.38
+Punjab,Gurdaspur,Cotton (Kharif),1,T_rabi,T_rabi <= 17.07,-0.1961,17.0
+Punjab,Gurdaspur,Cotton (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.1501,1112.5
+Punjab,Gurdaspur,Cotton (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.1453,43.38
+Punjab,Gurdaspur,Guar seed (Kharif),1,T_hot_max,T_hot_max <= 47.13,0.1449,46.31
+Punjab,Gurdaspur,Guar seed (Kharif),2,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0671,827.8
+Punjab,Gurdaspur,Guar seed (Kharif),3,T_rabi,T_rabi <= 17.07,-0.0666,17.0
+Punjab,Gurdaspur,Maize (Kharif),1,T_cold_min,T_cold_min > 0.89,0.1567,3.14
+Punjab,Gurdaspur,Maize (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1403,1112.5
+Punjab,Gurdaspur,Maize (Kharif),3,T_rabi,T_rabi <= 17.07,0.1315,17.0
+Punjab,Shahid Bhagat Singh Nagar,Bajra (Kharif),1,T_rabi,17.02 < T_rabi <= 17.34,-0.1246,17.3
+Punjab,Shahid Bhagat Singh Nagar,Bajra (Kharif),2,T_cold_min,T_cold_min > 0.89,-0.1058,2.2
+Punjab,Shahid Bhagat Singh Nagar,Bajra (Kharif),3,RH_winter,42.53 < RH_winter <= 43.97,-0.1026,43.72
+Punjab,Shahid Bhagat Singh Nagar,Cotton (Kharif),1,RH_winter,42.53 < RH_winter <= 43.97,-0.1539,43.72
+Punjab,Shahid Bhagat Singh Nagar,Cotton (Kharif),2,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,-0.151,1005.6
+Punjab,Shahid Bhagat Singh Nagar,Cotton (Kharif),3,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.1404,788.6
+Punjab,Shahid Bhagat Singh Nagar,Guar seed (Kharif),1,Rain_JunSep_Normal,Rain_JunSep_Normal > 570.00,-0.0711,788.6
+Punjab,Shahid Bhagat Singh Nagar,Guar seed (Kharif),2,RH_winter,42.53 < RH_winter <= 43.97,-0.0689,43.72
+Punjab,Shahid Bhagat Singh Nagar,Guar seed (Kharif),3,T_cold_min,T_cold_min > 0.89,0.0639,2.2
+Punjab,Shahid Bhagat Singh Nagar,Maize (Kharif),1,T_cold_min,T_cold_min > 0.89,0.089,2.2
+Punjab,Shahid Bhagat Singh Nagar,Maize (Kharif),2,T_annual,T_annual <= 25.08,0.0697,25.02
+Punjab,Shahid Bhagat Singh Nagar,Maize (Kharif),3,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.0634,1005.6
+Punjab,Shahid Bhagat Singh Nagar,Rapeseed and Mustard (Rabi),1,Rain_Annual_Normal,Rain_Annual_Normal > 716.75,0.1278,1005.6
+Punjab,Shahid Bhagat Singh Nagar,Rapeseed and Mustard (Rabi),2,T_cold_min,T_cold_min > 0.89,-0.0959,2.2
+Punjab,Shahid Bhagat Singh Nagar,Rapeseed and Mustard (Rabi),3,T_rabi,17.02 < T_rabi <= 17.34,-0.0873,17.3
