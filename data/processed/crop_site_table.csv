@@ -1,0 +1,613 @@
+State,District,Season,Crop,Item,MeanShare,Major,P_lodo,Trusted,Band,Status
+Haryana,Ambala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.001,False,Low,Other
+Haryana,Ambala,Kharif,Bajra,Bajra (Kharif),0.0018,0,0.354,True,Medium,Other
+Haryana,Ambala,Kharif,Cotton,Cotton (Kharif),0.0,0,0.001,True,Low,Other
+Haryana,Ambala,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.0,True,Low,Other
+Haryana,Ambala,Kharif,Jowar,Jowar (Kharif),0.0,0,0.003,True,Low,Other
+Haryana,Ambala,Kharif,Maize,Maize (Kharif),0.0064,0,0.823,True,High,"Climate suits, not major now"
+Haryana,Ambala,Kharif,Rice,Rice (Kharif),0.9586,1,,False,,Major crop now
+Haryana,Ambala,Rabi,Barley,Barley (Rabi),0.0,0,0.0,False,Low,Other
+Haryana,Ambala,Rabi,Gram,Gram (Rabi),0.0,0,0.002,False,Low,Other
+Haryana,Ambala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0147,0,0.761,True,High,"Climate suits, not major now"
+Haryana,Ambala,Rabi,Wheat,Wheat (Rabi),0.978,1,,False,,Major crop now
+Haryana,Ambala,Whole Year,Coriander,Coriander (Whole Year),0.0038,0,0.002,False,Low,Other
+Haryana,Ambala,Whole Year,Garlic,Garlic (Whole Year),0.0105,0,0.047,False,Low,Other
+Haryana,Ambala,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.003,True,Low,Other
+Haryana,Ambala,Whole Year,Onion,Onion (Whole Year),0.1427,1,,False,,Major crop now
+Haryana,Ambala,Whole Year,Potato,Potato (Whole Year),0.1594,1,,False,,Major crop now
+Haryana,Ambala,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6766,1,0.993,False,High,Major crop now
+Haryana,Bhiwani,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0039,0,0.29,False,Low,Other
+Haryana,Bhiwani,Kharif,Bajra,Bajra (Kharif),0.4415,1,0.758,True,High,Major crop now
+Haryana,Bhiwani,Kharif,Cotton,Cotton (Kharif),0.3613,1,0.987,True,High,Major crop now
+Haryana,Bhiwani,Kharif,Guar seed,Guar seed (Kharif),0.0652,1,0.291,True,Low,Major crop now
+Haryana,Bhiwani,Kharif,Jowar,Jowar (Kharif),0.0048,0,0.227,True,Low,Other
+Haryana,Bhiwani,Kharif,Maize,Maize (Kharif),0.0001,0,0.01,True,Low,Other
+Haryana,Bhiwani,Kharif,Rice,Rice (Kharif),0.0988,1,,False,,Major crop now
+Haryana,Bhiwani,Rabi,Barley,Barley (Rabi),0.0213,1,0.131,False,Low,Major crop now
+Haryana,Bhiwani,Rabi,Gram,Gram (Rabi),0.0862,1,0.062,False,Low,Major crop now
+Haryana,Bhiwani,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.437,1,0.777,True,High,Major crop now
+Haryana,Bhiwani,Rabi,Wheat,Wheat (Rabi),0.4551,1,,False,,Major crop now
+Haryana,Bhiwani,Whole Year,Coriander,Coriander (Whole Year),0.0021,0,0.279,False,Low,Other
+Haryana,Bhiwani,Whole Year,Garlic,Garlic (Whole Year),0.0217,1,0.623,False,Medium,Major crop now
+Haryana,Bhiwani,Whole Year,Guar seed,Guar seed (Whole Year),0.0984,1,0.696,True,Medium,Major crop now
+Haryana,Bhiwani,Whole Year,Onion,Onion (Whole Year),0.1719,1,,False,,Major crop now
+Haryana,Bhiwani,Whole Year,Potato,Potato (Whole Year),0.0439,1,,False,,Major crop now
+Haryana,Bhiwani,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6619,1,0.882,False,High,Major crop now
+Haryana,Charki Dadri,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.1673,1,0.096,False,Low,Major crop now
+Haryana,Charki Dadri,Kharif,Bajra,Bajra (Kharif),0.3106,1,0.945,True,High,Major crop now
+Haryana,Charki Dadri,Kharif,Cotton,Cotton (Kharif),0.2259,1,0.995,True,High,Major crop now
+Haryana,Charki Dadri,Kharif,Guar seed,Guar seed (Kharif),0.1279,1,0.834,True,High,Major crop now
+Haryana,Charki Dadri,Kharif,Jowar,Jowar (Kharif),0.0087,0,0.132,True,Low,Other
+Haryana,Charki Dadri,Kharif,Maize,Maize (Kharif),0.0,0,0.019,True,Low,Other
+Haryana,Charki Dadri,Kharif,Rice,Rice (Kharif),0.0737,1,,False,,Major crop now
+Haryana,Charki Dadri,Rabi,Barley,Barley (Rabi),0.0132,0,0.25,False,Low,Other
+Haryana,Charki Dadri,Rabi,Gram,Gram (Rabi),0.0104,0,0.708,False,High,Other
+Haryana,Charki Dadri,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.5018,1,0.955,True,High,Major crop now
+Haryana,Charki Dadri,Rabi,Wheat,Wheat (Rabi),0.4746,1,,False,,Major crop now
+Haryana,Charki Dadri,Whole Year,Coriander,Coriander (Whole Year),0.0062,0,0.486,False,Medium,Other
+Haryana,Charki Dadri,Whole Year,Garlic,Garlic (Whole Year),0.0123,0,0.88,False,High,Other
+Haryana,Charki Dadri,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.977,True,High,"Climate suits, not major now"
+Haryana,Charki Dadri,Whole Year,Onion,Onion (Whole Year),0.0621,1,,False,,Major crop now
+Haryana,Charki Dadri,Whole Year,Potato,Potato (Whole Year),0.0128,0,,False,,Other
+Haryana,Charki Dadri,Whole Year,Sugarcane,Sugarcane (Whole Year),0.9066,1,0.461,False,Medium,Major crop now
+Haryana,Faridabad,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.006,0,0.17,False,Low,Other
+Haryana,Faridabad,Kharif,Bajra,Bajra (Kharif),0.2092,1,0.83,True,High,Major crop now
+Haryana,Faridabad,Kharif,Cotton,Cotton (Kharif),0.0077,0,0.808,True,High,"Climate suits, not major now"
+Haryana,Faridabad,Kharif,Guar seed,Guar seed (Kharif),0.0002,0,0.026,True,Low,Other
+Haryana,Faridabad,Kharif,Jowar,Jowar (Kharif),0.0738,1,0.722,True,High,Major crop now
+Haryana,Faridabad,Kharif,Maize,Maize (Kharif),0.0001,0,0.04,True,Low,Other
+Haryana,Faridabad,Kharif,Rice,Rice (Kharif),0.6948,1,,False,,Major crop now
+Haryana,Faridabad,Rabi,Barley,Barley (Rabi),0.0016,0,0.173,False,Low,Other
+Haryana,Faridabad,Rabi,Gram,Gram (Rabi),0.0,0,0.019,False,Low,Other
+Haryana,Faridabad,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0162,0,0.722,True,High,"Climate suits, not major now"
+Haryana,Faridabad,Rabi,Wheat,Wheat (Rabi),0.9803,1,,False,,Major crop now
+Haryana,Faridabad,Whole Year,Coriander,Coriander (Whole Year),0.0397,1,0.308,False,Medium,Major crop now
+Haryana,Faridabad,Whole Year,Garlic,Garlic (Whole Year),0.0246,1,0.226,False,Low,Major crop now
+Haryana,Faridabad,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.327,True,Medium,Other
+Haryana,Faridabad,Whole Year,Onion,Onion (Whole Year),0.1397,1,,False,,Major crop now
+Haryana,Faridabad,Whole Year,Potato,Potato (Whole Year),0.1902,1,,False,,Major crop now
+Haryana,Faridabad,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6057,1,0.837,False,High,Major crop now
+Haryana,Fatehabad,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0002,0,0.088,False,Low,Other
+Haryana,Fatehabad,Kharif,Bajra,Bajra (Kharif),0.0169,0,0.428,True,Medium,Other
+Haryana,Fatehabad,Kharif,Cotton,Cotton (Kharif),0.4038,1,0.991,True,High,Major crop now
+Haryana,Fatehabad,Kharif,Guar seed,Guar seed (Kharif),0.017,0,0.75,True,High,"Climate suits, not major now"
+Haryana,Fatehabad,Kharif,Jowar,Jowar (Kharif),0.0,0,0.074,True,Low,Other
+Haryana,Fatehabad,Kharif,Maize,Maize (Kharif),0.0,0,0.008,True,Low,Other
+Haryana,Fatehabad,Kharif,Rice,Rice (Kharif),0.5516,1,,False,,Major crop now
+Haryana,Fatehabad,Rabi,Barley,Barley (Rabi),0.009,0,0.127,False,Low,Other
+Haryana,Fatehabad,Rabi,Gram,Gram (Rabi),0.0028,0,0.159,False,Low,Other
+Haryana,Fatehabad,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0653,1,0.487,True,Medium,Major crop now
+Haryana,Fatehabad,Rabi,Wheat,Wheat (Rabi),0.9223,1,,False,,Major crop now
+Haryana,Fatehabad,Whole Year,Coriander,Coriander (Whole Year),0.0127,0,0.516,False,Medium,Other
+Haryana,Fatehabad,Whole Year,Garlic,Garlic (Whole Year),0.1237,1,0.76,False,High,Major crop now
+Haryana,Fatehabad,Whole Year,Guar seed,Guar seed (Whole Year),0.0967,1,0.555,True,Medium,Major crop now
+Haryana,Fatehabad,Whole Year,Onion,Onion (Whole Year),0.2495,1,,False,,Major crop now
+Haryana,Fatehabad,Whole Year,Potato,Potato (Whole Year),0.3021,1,,False,,Major crop now
+Haryana,Fatehabad,Whole Year,Sugarcane,Sugarcane (Whole Year),0.2091,1,0.95,False,High,Major crop now
+Haryana,Gurgaon,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0093,0,0.369,False,Medium,Other
+Haryana,Gurgaon,Kharif,Bajra,Bajra (Kharif),0.7946,1,0.936,True,High,Major crop now
+Haryana,Gurgaon,Kharif,Cotton,Cotton (Kharif),0.0278,1,0.967,True,High,Major crop now
+Haryana,Gurgaon,Kharif,Guar seed,Guar seed (Kharif),0.0032,0,0.092,True,Low,Other
+Haryana,Gurgaon,Kharif,Jowar,Jowar (Kharif),0.0174,0,0.69,True,Medium,Other
+Haryana,Gurgaon,Kharif,Maize,Maize (Kharif),0.0,0,0.01,True,Low,Other
+Haryana,Gurgaon,Kharif,Rice,Rice (Kharif),0.1265,1,,False,,Major crop now
+Haryana,Gurgaon,Rabi,Barley,Barley (Rabi),0.0206,1,0.288,False,Low,Major crop now
+Haryana,Gurgaon,Rabi,Gram,Gram (Rabi),0.0,0,0.077,False,Low,Other
+Haryana,Gurgaon,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.2122,1,0.871,True,High,Major crop now
+Haryana,Gurgaon,Rabi,Wheat,Wheat (Rabi),0.7671,1,,False,,Major crop now
+Haryana,Gurgaon,Whole Year,Coriander,Coriander (Whole Year),0.0177,0,0.266,False,Low,Other
+Haryana,Gurgaon,Whole Year,Garlic,Garlic (Whole Year),0.041,1,0.318,False,Medium,Major crop now
+Haryana,Gurgaon,Whole Year,Guar seed,Guar seed (Whole Year),0.0995,1,0.668,True,Medium,Major crop now
+Haryana,Gurgaon,Whole Year,Onion,Onion (Whole Year),0.6532,1,,False,,Major crop now
+Haryana,Gurgaon,Whole Year,Potato,Potato (Whole Year),0.1821,1,,False,,Major crop now
+Haryana,Gurgaon,Whole Year,Sugarcane,Sugarcane (Whole Year),0.0061,0,0.939,False,High,Other
+Haryana,Hisar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0007,0,0.241,False,Low,Other
+Haryana,Hisar,Kharif,Bajra,Bajra (Kharif),0.1311,1,0.586,True,Medium,Major crop now
+Haryana,Hisar,Kharif,Cotton,Cotton (Kharif),0.5557,1,0.982,True,High,Major crop now
+Haryana,Hisar,Kharif,Guar seed,Guar seed (Kharif),0.0452,1,0.873,True,High,Major crop now
+Haryana,Hisar,Kharif,Jowar,Jowar (Kharif),0.0,0,0.059,True,Low,Other
+Haryana,Hisar,Kharif,Maize,Maize (Kharif),0.0002,0,0.013,True,Low,Other
+Haryana,Hisar,Kharif,Rice,Rice (Kharif),0.2286,1,,False,,Major crop now
+Haryana,Hisar,Rabi,Barley,Barley (Rabi),0.0129,0,0.097,False,Low,Other
+Haryana,Hisar,Rabi,Gram,Gram (Rabi),0.0379,1,0.199,False,Low,Major crop now
+Haryana,Hisar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.2185,1,0.915,True,High,Major crop now
+Haryana,Hisar,Rabi,Wheat,Wheat (Rabi),0.7306,1,,False,,Major crop now
+Haryana,Hisar,Whole Year,Coriander,Coriander (Whole Year),0.0023,0,0.511,False,Medium,Other
+Haryana,Hisar,Whole Year,Garlic,Garlic (Whole Year),0.0219,1,0.725,False,High,Major crop now
+Haryana,Hisar,Whole Year,Guar seed,Guar seed (Whole Year),0.0978,1,0.791,True,High,Major crop now
+Haryana,Hisar,Whole Year,Onion,Onion (Whole Year),0.1527,1,,False,,Major crop now
+Haryana,Hisar,Whole Year,Potato,Potato (Whole Year),0.175,1,,False,,Major crop now
+Haryana,Hisar,Whole Year,Sugarcane,Sugarcane (Whole Year),0.5257,1,0.799,False,High,Major crop now
+Haryana,Jhajjar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0244,1,0.086,False,Low,Major crop now
+Haryana,Jhajjar,Kharif,Bajra,Bajra (Kharif),0.3905,1,0.942,True,High,Major crop now
+Haryana,Jhajjar,Kharif,Cotton,Cotton (Kharif),0.0591,1,0.969,True,High,Major crop now
+Haryana,Jhajjar,Kharif,Guar seed,Guar seed (Kharif),0.0046,0,0.177,True,Low,Other
+Haryana,Jhajjar,Kharif,Jowar,Jowar (Kharif),0.1187,1,0.207,True,Low,Major crop now
+Haryana,Jhajjar,Kharif,Maize,Maize (Kharif),0.0008,0,0.015,True,Low,Other
+Haryana,Jhajjar,Kharif,Rice,Rice (Kharif),0.3991,1,,False,,Major crop now
+Haryana,Jhajjar,Rabi,Barley,Barley (Rabi),0.0229,1,0.401,False,Medium,Major crop now
+Haryana,Jhajjar,Rabi,Gram,Gram (Rabi),0.0021,0,0.141,False,Low,Other
+Haryana,Jhajjar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.2093,1,0.867,True,High,Major crop now
+Haryana,Jhajjar,Rabi,Wheat,Wheat (Rabi),0.7657,1,,False,,Major crop now
+Haryana,Jhajjar,Whole Year,Coriander,Coriander (Whole Year),0.0173,0,0.294,False,Low,Other
+Haryana,Jhajjar,Whole Year,Garlic,Garlic (Whole Year),0.0084,0,0.698,False,Medium,Other
+Haryana,Jhajjar,Whole Year,Guar seed,Guar seed (Whole Year),0.0684,1,0.714,True,High,Major crop now
+Haryana,Jhajjar,Whole Year,Onion,Onion (Whole Year),0.2026,1,,False,,Major crop now
+Haryana,Jhajjar,Whole Year,Potato,Potato (Whole Year),0.021,1,,False,,Major crop now
+Haryana,Jhajjar,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6823,1,0.552,False,Medium,Major crop now
+Haryana,Jind,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0006,0,0.089,False,Low,Other
+Haryana,Jind,Kharif,Bajra,Bajra (Kharif),0.0871,1,0.216,True,Low,Major crop now
+Haryana,Jind,Kharif,Cotton,Cotton (Kharif),0.3051,1,0.857,True,High,Major crop now
+Haryana,Jind,Kharif,Guar seed,Guar seed (Kharif),0.0003,0,0.085,True,Low,Other
+Haryana,Jind,Kharif,Jowar,Jowar (Kharif),0.0001,0,0.197,True,Low,Other
+Haryana,Jind,Kharif,Maize,Maize (Kharif),0.0,0,0.007,True,Low,Other
+Haryana,Jind,Kharif,Rice,Rice (Kharif),0.6042,1,,False,,Major crop now
+Haryana,Jind,Rabi,Barley,Barley (Rabi),0.0032,0,0.076,False,Low,Other
+Haryana,Jind,Rabi,Gram,Gram (Rabi),0.0001,0,0.022,False,Low,Other
+Haryana,Jind,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0229,1,0.254,True,Low,Major crop now
+Haryana,Jind,Rabi,Wheat,Wheat (Rabi),0.9736,1,,False,,Major crop now
+Haryana,Jind,Whole Year,Coriander,Coriander (Whole Year),0.0243,1,0.141,False,Low,Major crop now
+Haryana,Jind,Whole Year,Garlic,Garlic (Whole Year),0.0212,1,0.652,False,Medium,Major crop now
+Haryana,Jind,Whole Year,Guar seed,Guar seed (Whole Year),0.0158,0,0.43,True,Medium,Other
+Haryana,Jind,Whole Year,Onion,Onion (Whole Year),0.1016,1,,False,,Major crop now
+Haryana,Jind,Whole Year,Potato,Potato (Whole Year),0.1383,1,,False,,Major crop now
+Haryana,Jind,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6952,1,0.971,False,High,Major crop now
+Haryana,Kaithal,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.027,False,Low,Other
+Haryana,Kaithal,Kharif,Bajra,Bajra (Kharif),0.0197,0,0.051,True,Low,Other
+Haryana,Kaithal,Kharif,Cotton,Cotton (Kharif),0.0466,1,0.309,True,Medium,Major crop now
+Haryana,Kaithal,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.026,True,Low,Other
+Haryana,Kaithal,Kharif,Jowar,Jowar (Kharif),0.0,0,0.031,True,Low,Other
+Haryana,Kaithal,Kharif,Maize,Maize (Kharif),0.0001,0,0.022,True,Low,Other
+Haryana,Kaithal,Kharif,Rice,Rice (Kharif),0.9314,1,,False,,Major crop now
+Haryana,Kaithal,Rabi,Barley,Barley (Rabi),0.0,0,0.033,False,Low,Other
+Haryana,Kaithal,Rabi,Gram,Gram (Rabi),0.0,0,0.008,False,Low,Other
+Haryana,Kaithal,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0055,0,0.086,True,Low,Other
+Haryana,Kaithal,Rabi,Wheat,Wheat (Rabi),0.9936,1,,False,,Major crop now
+Haryana,Kaithal,Whole Year,Coriander,Coriander (Whole Year),0.0137,0,0.097,False,Low,Other
+Haryana,Kaithal,Whole Year,Garlic,Garlic (Whole Year),0.0261,1,0.421,False,Medium,Major crop now
+Haryana,Kaithal,Whole Year,Guar seed,Guar seed (Whole Year),0.0011,0,0.145,True,Low,Other
+Haryana,Kaithal,Whole Year,Onion,Onion (Whole Year),0.0888,1,,False,,Major crop now
+Haryana,Kaithal,Whole Year,Potato,Potato (Whole Year),0.086,1,,False,,Major crop now
+Haryana,Kaithal,Whole Year,Sugarcane,Sugarcane (Whole Year),0.7817,1,0.99,False,High,Major crop now
+Haryana,Karnal,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0005,0,0.022,False,Low,Other
+Haryana,Karnal,Kharif,Bajra,Bajra (Kharif),0.0035,0,0.162,True,Low,Other
+Haryana,Karnal,Kharif,Cotton,Cotton (Kharif),0.0001,0,0.054,True,Low,Other
+Haryana,Karnal,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001,True,Low,Other
+Haryana,Karnal,Kharif,Jowar,Jowar (Kharif),0.0,0,0.151,True,Low,Other
+Haryana,Karnal,Kharif,Maize,Maize (Kharif),0.0003,0,0.108,True,Low,Other
+Haryana,Karnal,Kharif,Rice,Rice (Kharif),0.984,1,,False,,Major crop now
+Haryana,Karnal,Rabi,Barley,Barley (Rabi),0.0001,0,0.019,False,Low,Other
+Haryana,Karnal,Rabi,Gram,Gram (Rabi),0.0001,0,0.002,False,Low,Other
+Haryana,Karnal,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0101,0,0.205,True,Low,Other
+Haryana,Karnal,Rabi,Wheat,Wheat (Rabi),0.9865,1,,False,,Major crop now
+Haryana,Karnal,Whole Year,Coriander,Coriander (Whole Year),0.0045,0,0.126,False,Low,Other
+Haryana,Karnal,Whole Year,Garlic,Garlic (Whole Year),0.046,1,0.149,False,Low,Major crop now
+Haryana,Karnal,Whole Year,Guar seed,Guar seed (Whole Year),0.0011,0,0.037,True,Low,Other
+Haryana,Karnal,Whole Year,Onion,Onion (Whole Year),0.0675,1,,False,,Major crop now
+Haryana,Karnal,Whole Year,Potato,Potato (Whole Year),0.1907,1,,False,,Major crop now
+Haryana,Karnal,Whole Year,Sugarcane,Sugarcane (Whole Year),0.687,1,0.989,False,High,Major crop now
+Haryana,Kurukshetra,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.013,False,Low,Other
+Haryana,Kurukshetra,Kharif,Bajra,Bajra (Kharif),0.0,0,0.035,True,Low,Other
+Haryana,Kurukshetra,Kharif,Cotton,Cotton (Kharif),0.0,0,0.009,True,Low,Other
+Haryana,Kurukshetra,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.003,True,Low,Other
+Haryana,Kurukshetra,Kharif,Jowar,Jowar (Kharif),0.0031,0,0.012,True,Low,Other
+Haryana,Kurukshetra,Kharif,Maize,Maize (Kharif),0.0034,0,0.297,True,Low,Other
+Haryana,Kurukshetra,Kharif,Rice,Rice (Kharif),0.9484,1,,False,,Major crop now
+Haryana,Kurukshetra,Rabi,Barley,Barley (Rabi),0.0,0,0.009,False,Low,Other
+Haryana,Kurukshetra,Rabi,Gram,Gram (Rabi),0.0001,0,0.001,False,Low,Other
+Haryana,Kurukshetra,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0156,0,0.097,True,Low,Other
+Haryana,Kurukshetra,Rabi,Wheat,Wheat (Rabi),0.9786,1,,False,,Major crop now
+Haryana,Kurukshetra,Whole Year,Coriander,Coriander (Whole Year),0.002,0,0.015,False,Low,Other
+Haryana,Kurukshetra,Whole Year,Garlic,Garlic (Whole Year),0.0046,0,0.328,False,Medium,Other
+Haryana,Kurukshetra,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.002,True,Low,Other
+Haryana,Kurukshetra,Whole Year,Onion,Onion (Whole Year),0.0304,1,,False,,Major crop now
+Haryana,Kurukshetra,Whole Year,Potato,Potato (Whole Year),0.4129,1,,False,,Major crop now
+Haryana,Kurukshetra,Whole Year,Sugarcane,Sugarcane (Whole Year),0.5465,1,0.996,False,High,Major crop now
+Haryana,Mahendragarh,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0007,0,0.394,False,Medium,Other
+Haryana,Mahendragarh,Kharif,Bajra,Bajra (Kharif),0.8624,1,0.926,True,High,Major crop now
+Haryana,Mahendragarh,Kharif,Cotton,Cotton (Kharif),0.1024,1,0.985,True,High,Major crop now
+Haryana,Mahendragarh,Kharif,Guar seed,Guar seed (Kharif),0.0296,1,0.716,True,High,Major crop now
+Haryana,Mahendragarh,Kharif,Jowar,Jowar (Kharif),0.0003,0,0.117,True,Low,Other
+Haryana,Mahendragarh,Kharif,Maize,Maize (Kharif),0.0,0,0.009,True,Low,Other
+Haryana,Mahendragarh,Kharif,Rice,Rice (Kharif),0.0,0,,False,,Other
+Haryana,Mahendragarh,Rabi,Barley,Barley (Rabi),0.0036,0,0.131,False,Low,Other
+Haryana,Mahendragarh,Rabi,Gram,Gram (Rabi),0.0556,1,0.193,False,Low,Major crop now
+Haryana,Mahendragarh,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.5881,1,0.942,True,High,Major crop now
+Haryana,Mahendragarh,Rabi,Wheat,Wheat (Rabi),0.3495,1,,False,,Major crop now
+Haryana,Mahendragarh,Whole Year,Coriander,Coriander (Whole Year),0.0424,1,0.164,False,Low,Major crop now
+Haryana,Mahendragarh,Whole Year,Garlic,Garlic (Whole Year),0.059,1,0.423,False,Medium,Major crop now
+Haryana,Mahendragarh,Whole Year,Guar seed,Guar seed (Whole Year),0.1,1,0.631,True,Medium,Major crop now
+Haryana,Mahendragarh,Whole Year,Onion,Onion (Whole Year),0.7089,1,,False,,Major crop now
+Haryana,Mahendragarh,Whole Year,Potato,Potato (Whole Year),0.0896,1,,False,,Major crop now
+Haryana,Mahendragarh,Whole Year,Sugarcane,Sugarcane (Whole Year),0.0,0,0.854,False,High,Other
+Haryana,Mewat,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0106,0,0.205,False,Low,Other
+Haryana,Mewat,Kharif,Bajra,Bajra (Kharif),0.5565,1,0.958,True,High,Major crop now
+Haryana,Mewat,Kharif,Cotton,Cotton (Kharif),0.0489,1,0.966,True,High,Major crop now
+Haryana,Mewat,Kharif,Guar seed,Guar seed (Kharif),0.0003,0,0.193,True,Low,Other
+Haryana,Mewat,Kharif,Jowar,Jowar (Kharif),0.2107,1,0.294,True,Low,Major crop now
+Haryana,Mewat,Kharif,Maize,Maize (Kharif),0.0,0,0.007,True,Low,Other
+Haryana,Mewat,Kharif,Rice,Rice (Kharif),0.163,1,,False,,Major crop now
+Haryana,Mewat,Rabi,Barley,Barley (Rabi),0.008,0,0.236,False,Low,Other
+Haryana,Mewat,Rabi,Gram,Gram (Rabi),0.0032,0,0.159,False,Low,Other
+Haryana,Mewat,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.2388,1,0.941,True,High,Major crop now
+Haryana,Mewat,Rabi,Wheat,Wheat (Rabi),0.7445,1,,False,,Major crop now
+Haryana,Mewat,Whole Year,Coriander,Coriander (Whole Year),0.0053,0,0.593,False,Medium,Other
+Haryana,Mewat,Whole Year,Garlic,Garlic (Whole Year),0.0074,0,0.672,False,Medium,Other
+Haryana,Mewat,Whole Year,Guar seed,Guar seed (Whole Year),0.0422,1,0.697,True,Medium,Major crop now
+Haryana,Mewat,Whole Year,Onion,Onion (Whole Year),0.7462,1,,False,,Major crop now
+Haryana,Mewat,Whole Year,Potato,Potato (Whole Year),0.0177,0,,False,,Other
+Haryana,Mewat,Whole Year,Sugarcane,Sugarcane (Whole Year),0.1812,1,0.39,False,Medium,Major crop now
+Haryana,Palwal,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0097,0,0.291,False,Low,Other
+Haryana,Palwal,Kharif,Bajra,Bajra (Kharif),0.1392,1,0.953,True,High,Major crop now
+Haryana,Palwal,Kharif,Cotton,Cotton (Kharif),0.1175,1,0.932,True,High,Major crop now
+Haryana,Palwal,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.095,True,Low,Other
+Haryana,Palwal,Kharif,Jowar,Jowar (Kharif),0.1313,1,0.525,True,Medium,Major crop now
+Haryana,Palwal,Kharif,Maize,Maize (Kharif),0.0,0,0.002,True,Low,Other
+Haryana,Palwal,Kharif,Rice,Rice (Kharif),0.5867,1,,False,,Major crop now
+Haryana,Palwal,Rabi,Barley,Barley (Rabi),0.0096,0,0.349,False,Medium,Other
+Haryana,Palwal,Rabi,Gram,Gram (Rabi),0.0,0,0.109,False,Low,Other
+Haryana,Palwal,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.026,1,0.867,True,High,Major crop now
+Haryana,Palwal,Rabi,Wheat,Wheat (Rabi),0.9645,1,,False,,Major crop now
+Haryana,Palwal,Whole Year,Coriander,Coriander (Whole Year),0.006,0,0.572,False,Medium,Other
+Haryana,Palwal,Whole Year,Garlic,Garlic (Whole Year),0.0189,0,0.687,False,Medium,Other
+Haryana,Palwal,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.806,True,High,"Climate suits, not major now"
+Haryana,Palwal,Whole Year,Onion,Onion (Whole Year),0.0516,1,,False,,Major crop now
+Haryana,Palwal,Whole Year,Potato,Potato (Whole Year),0.0313,1,,False,,Major crop now
+Haryana,Palwal,Whole Year,Sugarcane,Sugarcane (Whole Year),0.8916,1,0.57,False,Medium,Major crop now
+Haryana,Panchkula,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0004,0,0.003,False,Low,Other
+Haryana,Panchkula,Kharif,Bajra,Bajra (Kharif),0.0502,1,0.005,True,Low,Major crop now
+Haryana,Panchkula,Kharif,Cotton,Cotton (Kharif),0.0,0,0.0,True,Low,Other
+Haryana,Panchkula,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.003,True,Low,Other
+Haryana,Panchkula,Kharif,Jowar,Jowar (Kharif),0.0038,0,0.003,True,Low,Other
+Haryana,Panchkula,Kharif,Maize,Maize (Kharif),0.2832,1,0.378,True,Medium,Major crop now
+Haryana,Panchkula,Kharif,Rice,Rice (Kharif),0.6122,1,,False,,Major crop now
+Haryana,Panchkula,Rabi,Barley,Barley (Rabi),0.0005,0,0.0,False,Low,Other
+Haryana,Panchkula,Rabi,Gram,Gram (Rabi),0.002,0,0.002,False,Low,Other
+Haryana,Panchkula,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0398,1,0.4,True,Medium,Major crop now
+Haryana,Panchkula,Rabi,Wheat,Wheat (Rabi),0.9271,1,,False,,Major crop now
+Haryana,Panchkula,Whole Year,Coriander,Coriander (Whole Year),0.0074,0,0.006,False,Low,Other
+Haryana,Panchkula,Whole Year,Garlic,Garlic (Whole Year),0.0169,0,0.038,False,Low,Other
+Haryana,Panchkula,Whole Year,Guar seed,Guar seed (Whole Year),0.0011,0,0.003,True,Low,Other
+Haryana,Panchkula,Whole Year,Onion,Onion (Whole Year),0.297,1,,False,,Major crop now
+Haryana,Panchkula,Whole Year,Potato,Potato (Whole Year),0.5007,1,,False,,Major crop now
+Haryana,Panchkula,Whole Year,Sugarcane,Sugarcane (Whole Year),0.1219,1,0.993,False,High,Major crop now
+Haryana,Panipat,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0014,0,0.037,False,Low,Other
+Haryana,Panipat,Kharif,Bajra,Bajra (Kharif),0.002,0,0.141,True,Low,Other
+Haryana,Panipat,Kharif,Cotton,Cotton (Kharif),0.0001,0,0.136,True,Low,Other
+Haryana,Panipat,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001,True,Low,Other
+Haryana,Panipat,Kharif,Jowar,Jowar (Kharif),0.0,0,0.136,True,Low,Other
+Haryana,Panipat,Kharif,Maize,Maize (Kharif),0.0,0,0.056,True,Low,Other
+Haryana,Panipat,Kharif,Rice,Rice (Kharif),0.9853,1,,False,,Major crop now
+Haryana,Panipat,Rabi,Barley,Barley (Rabi),0.0,0,0.037,False,Low,Other
+Haryana,Panipat,Rabi,Gram,Gram (Rabi),0.0003,0,0.002,False,Low,Other
+Haryana,Panipat,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0097,0,0.136,True,Low,Other
+Haryana,Panipat,Rabi,Wheat,Wheat (Rabi),0.9854,1,,False,,Major crop now
+Haryana,Panipat,Whole Year,Coriander,Coriander (Whole Year),0.0178,0,0.081,False,Low,Other
+Haryana,Panipat,Whole Year,Garlic,Garlic (Whole Year),0.0077,0,0.59,False,Medium,Other
+Haryana,Panipat,Whole Year,Guar seed,Guar seed (Whole Year),0.002,0,0.049,True,Low,Other
+Haryana,Panipat,Whole Year,Onion,Onion (Whole Year),0.0759,1,,False,,Major crop now
+Haryana,Panipat,Whole Year,Potato,Potato (Whole Year),0.1141,1,,False,,Major crop now
+Haryana,Panipat,Whole Year,Sugarcane,Sugarcane (Whole Year),0.7717,1,0.991,False,High,Major crop now
+Haryana,Rewari,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0023,0,0.281,False,Low,Other
+Haryana,Rewari,Kharif,Bajra,Bajra (Kharif),0.8723,1,0.967,True,High,Major crop now
+Haryana,Rewari,Kharif,Cotton,Cotton (Kharif),0.0721,1,0.993,True,High,Major crop now
+Haryana,Rewari,Kharif,Guar seed,Guar seed (Kharif),0.0076,0,0.305,True,Medium,Other
+Haryana,Rewari,Kharif,Jowar,Jowar (Kharif),0.0063,0,0.684,True,Medium,Other
+Haryana,Rewari,Kharif,Maize,Maize (Kharif),0.0,0,0.001,True,Low,Other
+Haryana,Rewari,Kharif,Rice,Rice (Kharif),0.0318,1,,False,,Major crop now
+Haryana,Rewari,Rabi,Barley,Barley (Rabi),0.0117,0,0.321,False,Medium,Other
+Haryana,Rewari,Rabi,Gram,Gram (Rabi),0.0,0,0.201,False,Low,Other
+Haryana,Rewari,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.5807,1,0.937,True,High,Major crop now
+Haryana,Rewari,Rabi,Wheat,Wheat (Rabi),0.4032,1,,False,,Major crop now
+Haryana,Rewari,Whole Year,Coriander,Coriander (Whole Year),0.0405,1,0.16,False,Low,Major crop now
+Haryana,Rewari,Whole Year,Garlic,Garlic (Whole Year),0.0477,1,0.242,False,Low,Major crop now
+Haryana,Rewari,Whole Year,Guar seed,Guar seed (Whole Year),0.0982,1,0.733,True,High,Major crop now
+Haryana,Rewari,Whole Year,Onion,Onion (Whole Year),0.7718,1,,False,,Major crop now
+Haryana,Rewari,Whole Year,Potato,Potato (Whole Year),0.0416,1,,False,,Major crop now
+Haryana,Rewari,Whole Year,Sugarcane,Sugarcane (Whole Year),0.0,0,0.796,False,High,Other
+Haryana,Rohtak,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.023,1,0.036,False,Low,Major crop now
+Haryana,Rohtak,Kharif,Bajra,Bajra (Kharif),0.1584,1,0.714,True,High,Major crop now
+Haryana,Rohtak,Kharif,Cotton,Cotton (Kharif),0.1477,1,0.727,True,High,Major crop now
+Haryana,Rohtak,Kharif,Guar seed,Guar seed (Kharif),0.0009,0,0.034,True,Low,Other
+Haryana,Rohtak,Kharif,Jowar,Jowar (Kharif),0.1583,1,0.583,True,Medium,Major crop now
+Haryana,Rohtak,Kharif,Maize,Maize (Kharif),0.0057,0,0.016,True,Low,Other
+Haryana,Rohtak,Kharif,Rice,Rice (Kharif),0.504,1,,False,,Major crop now
+Haryana,Rohtak,Rabi,Barley,Barley (Rabi),0.0175,0,0.125,False,Low,Other
+Haryana,Rohtak,Rabi,Gram,Gram (Rabi),0.0038,0,0.022,False,Low,Other
+Haryana,Rohtak,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0982,1,0.389,True,Medium,Major crop now
+Haryana,Rohtak,Rabi,Wheat,Wheat (Rabi),0.8804,1,,False,,Major crop now
+Haryana,Rohtak,Whole Year,Coriander,Coriander (Whole Year),0.0063,0,0.606,False,Medium,Other
+Haryana,Rohtak,Whole Year,Garlic,Garlic (Whole Year),0.0032,0,0.469,False,Medium,Other
+Haryana,Rohtak,Whole Year,Guar seed,Guar seed (Whole Year),0.0229,1,0.163,True,Low,Major crop now
+Haryana,Rohtak,Whole Year,Onion,Onion (Whole Year),0.0648,1,,False,,Major crop now
+Haryana,Rohtak,Whole Year,Potato,Potato (Whole Year),0.0359,1,,False,,Major crop now
+Haryana,Rohtak,Whole Year,Sugarcane,Sugarcane (Whole Year),0.8668,1,0.958,False,High,Major crop now
+Haryana,Sirsa,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0003,0,0.102,False,Low,Other
+Haryana,Sirsa,Kharif,Bajra,Bajra (Kharif),0.0106,0,0.56,True,Medium,Other
+Haryana,Sirsa,Kharif,Cotton,Cotton (Kharif),0.6528,1,0.992,True,High,Major crop now
+Haryana,Sirsa,Kharif,Guar seed,Guar seed (Kharif),0.0477,1,0.775,True,High,Major crop now
+Haryana,Sirsa,Kharif,Jowar,Jowar (Kharif),0.0,0,0.069,True,Low,Other
+Haryana,Sirsa,Kharif,Maize,Maize (Kharif),0.0002,0,0.012,True,Low,Other
+Haryana,Sirsa,Kharif,Rice,Rice (Kharif),0.2741,1,,False,,Major crop now
+Haryana,Sirsa,Rabi,Barley,Barley (Rabi),0.014,0,0.094,False,Low,Other
+Haryana,Sirsa,Rabi,Gram,Gram (Rabi),0.015,0,0.495,False,Medium,Other
+Haryana,Sirsa,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.1293,1,0.693,True,Medium,Major crop now
+Haryana,Sirsa,Rabi,Wheat,Wheat (Rabi),0.8414,1,,False,,Major crop now
+Haryana,Sirsa,Whole Year,Coriander,Coriander (Whole Year),0.026,1,0.165,False,Low,Major crop now
+Haryana,Sirsa,Whole Year,Garlic,Garlic (Whole Year),0.1959,1,0.838,False,High,Major crop now
+Haryana,Sirsa,Whole Year,Guar seed,Guar seed (Whole Year),0.0998,1,0.801,True,High,Major crop now
+Haryana,Sirsa,Whole Year,Onion,Onion (Whole Year),0.2045,1,,False,,Major crop now
+Haryana,Sirsa,Whole Year,Potato,Potato (Whole Year),0.4204,1,,False,,Major crop now
+Haryana,Sirsa,Whole Year,Sugarcane,Sugarcane (Whole Year),0.0317,1,0.908,False,High,Major crop now
+Haryana,Sonipat,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0076,0,0.4,False,Medium,Other
+Haryana,Sonipat,Kharif,Bajra,Bajra (Kharif),0.0638,1,0.774,True,High,Major crop now
+Haryana,Sonipat,Kharif,Cotton,Cotton (Kharif),0.0239,1,0.667,True,Medium,Major crop now
+Haryana,Sonipat,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.046,True,Low,Other
+Haryana,Sonipat,Kharif,Jowar,Jowar (Kharif),0.0556,1,0.59,True,Medium,Major crop now
+Haryana,Sonipat,Kharif,Maize,Maize (Kharif),0.0039,0,0.047,True,Low,Other
+Haryana,Sonipat,Kharif,Rice,Rice (Kharif),0.83,1,,False,,Major crop now
+Haryana,Sonipat,Rabi,Barley,Barley (Rabi),0.0001,0,0.141,False,Low,Other
+Haryana,Sonipat,Rabi,Gram,Gram (Rabi),0.0,0,0.059,False,Low,Other
+Haryana,Sonipat,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0126,0,0.774,True,High,"Climate suits, not major now"
+Haryana,Sonipat,Rabi,Wheat,Wheat (Rabi),0.9873,1,,False,,Major crop now
+Haryana,Sonipat,Whole Year,Coriander,Coriander (Whole Year),0.0376,1,0.245,False,Low,Major crop now
+Haryana,Sonipat,Whole Year,Garlic,Garlic (Whole Year),0.0024,0,0.497,False,Medium,Other
+Haryana,Sonipat,Whole Year,Guar seed,Guar seed (Whole Year),0.005,0,0.561,True,Medium,Other
+Haryana,Sonipat,Whole Year,Onion,Onion (Whole Year),0.1027,1,,False,,Major crop now
+Haryana,Sonipat,Whole Year,Potato,Potato (Whole Year),0.1699,1,,False,,Major crop now
+Haryana,Sonipat,Whole Year,Sugarcane,Sugarcane (Whole Year),0.6788,1,0.956,False,High,Major crop now
+Haryana,Yamunanagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.007,False,Low,Other
+Haryana,Yamunanagar,Kharif,Bajra,Bajra (Kharif),0.0032,0,0.297,True,Low,Other
+Haryana,Yamunanagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.0,True,Low,Other
+Haryana,Yamunanagar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.0,True,Low,Other
+Haryana,Yamunanagar,Kharif,Jowar,Jowar (Kharif),0.0,0,0.382,True,Medium,Other
+Haryana,Yamunanagar,Kharif,Maize,Maize (Kharif),0.0096,0,0.739,True,High,"Climate suits, not major now"
+Haryana,Yamunanagar,Kharif,Rice,Rice (Kharif),0.9758,1,,False,,Major crop now
+Haryana,Yamunanagar,Rabi,Barley,Barley (Rabi),0.0,0,0.004,False,Low,Other
+Haryana,Yamunanagar,Rabi,Gram,Gram (Rabi),0.0001,0,0.003,False,Low,Other
+Haryana,Yamunanagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0308,1,0.355,True,Medium,Major crop now
+Haryana,Yamunanagar,Rabi,Wheat,Wheat (Rabi),0.9605,1,,False,,Major crop now
+Haryana,Yamunanagar,Whole Year,Coriander,Coriander (Whole Year),0.0059,0,0.025,False,Low,Other
+Haryana,Yamunanagar,Whole Year,Garlic,Garlic (Whole Year),0.0164,0,0.075,False,Low,Other
+Haryana,Yamunanagar,Whole Year,Guar seed,Guar seed (Whole Year),0.0,0,0.003,True,Low,Other
+Haryana,Yamunanagar,Whole Year,Onion,Onion (Whole Year),0.0578,1,,False,,Major crop now
+Haryana,Yamunanagar,Whole Year,Potato,Potato (Whole Year),0.1243,1,,False,,Major crop now
+Haryana,Yamunanagar,Whole Year,Sugarcane,Sugarcane (Whole Year),0.7644,1,0.996,False,High,Major crop now
+Punjab,Amritsar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0012,0,0.003,False,Low,Other
+Punjab,Amritsar,Kharif,Bajra,Bajra (Kharif),0.0005,0,0.003,True,Low,Other
+Punjab,Amritsar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.04,True,Low,Other
+Punjab,Amritsar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001,True,Low,Other
+Punjab,Amritsar,Kharif,Maize,Maize (Kharif),0.0058,0,0.166,True,Low,Other
+Punjab,Amritsar,Kharif,Rice,Rice (Kharif),0.9835,1,,False,,Major crop now
+Punjab,Amritsar,Rabi,Barley,Barley (Rabi),0.0,0,0.002,False,Low,Other
+Punjab,Amritsar,Rabi,Gram,Gram (Rabi),0.0001,0,0.0,False,Low,Other
+Punjab,Amritsar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0073,0,0.041,True,Low,Other
+Punjab,Amritsar,Rabi,Wheat,Wheat (Rabi),0.9861,1,,False,,Major crop now
+Punjab,Amritsar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.99,False,High,Major crop now
+Punjab,Barnala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0007,0,0.023,False,Low,Other
+Punjab,Barnala,Kharif,Bajra,Bajra (Kharif),0.0,0,0.012,True,Low,Other
+Punjab,Barnala,Kharif,Cotton,Cotton (Kharif),0.0536,1,0.427,True,Medium,Major crop now
+Punjab,Barnala,Kharif,Guar seed,Guar seed (Kharif),0.0007,0,0.043,True,Low,Other
+Punjab,Barnala,Kharif,Maize,Maize (Kharif),0.0001,0,0.027,True,Low,Other
+Punjab,Barnala,Kharif,Rice,Rice (Kharif),0.9426,1,,False,,Major crop now
+Punjab,Barnala,Rabi,Barley,Barley (Rabi),0.0054,0,0.033,False,Low,Other
+Punjab,Barnala,Rabi,Gram,Gram (Rabi),0.0004,0,0.004,False,Low,Other
+Punjab,Barnala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0037,0,0.049,True,Low,Other
+Punjab,Barnala,Rabi,Wheat,Wheat (Rabi),0.9876,1,,False,,Major crop now
+Punjab,Barnala,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.988,False,High,Major crop now
+Punjab,Bathinda,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0001,0,0.034,False,Low,Other
+Punjab,Bathinda,Kharif,Bajra,Bajra (Kharif),0.0002,0,0.16,True,Low,Other
+Punjab,Bathinda,Kharif,Cotton,Cotton (Kharif),0.4619,1,0.98,True,High,Major crop now
+Punjab,Bathinda,Kharif,Guar seed,Guar seed (Kharif),0.0251,1,0.392,True,Medium,Major crop now
+Punjab,Bathinda,Kharif,Maize,Maize (Kharif),0.0004,0,0.007,True,Low,Other
+Punjab,Bathinda,Kharif,Rice,Rice (Kharif),0.5106,1,,False,,Major crop now
+Punjab,Bathinda,Rabi,Barley,Barley (Rabi),0.0052,0,0.033,False,Low,Other
+Punjab,Bathinda,Rabi,Gram,Gram (Rabi),0.0008,0,0.07,False,Low,Other
+Punjab,Bathinda,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0085,0,0.522,True,Medium,Other
+Punjab,Bathinda,Rabi,Wheat,Wheat (Rabi),0.9847,1,,False,,Major crop now
+Punjab,Faridkot,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0002,0,0.023,False,Low,Other
+Punjab,Faridkot,Kharif,Bajra,Bajra (Kharif),0.0,0,0.019,True,Low,Other
+Punjab,Faridkot,Kharif,Cotton,Cotton (Kharif),0.0699,1,0.879,True,High,Major crop now
+Punjab,Faridkot,Kharif,Guar seed,Guar seed (Kharif),0.0047,0,0.297,True,Low,Other
+Punjab,Faridkot,Kharif,Maize,Maize (Kharif),0.0,0,0.014,True,Low,Other
+Punjab,Faridkot,Kharif,Rice,Rice (Kharif),0.9234,1,,False,,Major crop now
+Punjab,Faridkot,Rabi,Barley,Barley (Rabi),0.0002,0,0.023,False,Low,Other
+Punjab,Faridkot,Rabi,Gram,Gram (Rabi),0.0,0,0.024,False,Low,Other
+Punjab,Faridkot,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0014,0,0.092,True,Low,Other
+Punjab,Faridkot,Rabi,Wheat,Wheat (Rabi),0.9972,1,,False,,Major crop now
+Punjab,Fatehgarh Sahib,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.007,False,Low,Other
+Punjab,Fatehgarh Sahib,Kharif,Bajra,Bajra (Kharif),0.0,0,0.013,True,Low,Other
+Punjab,Fatehgarh Sahib,Kharif,Cotton,Cotton (Kharif),0.0,0,0.038,True,Low,Other
+Punjab,Fatehgarh Sahib,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001,True,Low,Other
+Punjab,Fatehgarh Sahib,Kharif,Maize,Maize (Kharif),0.0053,0,0.08,True,Low,Other
+Punjab,Fatehgarh Sahib,Kharif,Rice,Rice (Kharif),0.9947,1,,False,,Major crop now
+Punjab,Fatehgarh Sahib,Rabi,Barley,Barley (Rabi),0.0025,0,0.005,False,Low,Other
+Punjab,Fatehgarh Sahib,Rabi,Gram,Gram (Rabi),0.0,0,0.002,False,Low,Other
+Punjab,Fatehgarh Sahib,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0073,0,0.074,True,Low,Other
+Punjab,Fatehgarh Sahib,Rabi,Wheat,Wheat (Rabi),0.9783,1,,False,,Major crop now
+Punjab,Fatehgarh Sahib,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.998,False,High,Major crop now
+Punjab,Fazilka,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0014,0,0.056,False,Low,Other
+Punjab,Fazilka,Kharif,Bajra,Bajra (Kharif),0.0007,0,0.127,True,Low,Other
+Punjab,Fazilka,Kharif,Cotton,Cotton (Kharif),0.3758,1,0.969,True,High,Major crop now
+Punjab,Fazilka,Kharif,Guar seed,Guar seed (Kharif),0.1612,1,0.464,True,Medium,Major crop now
+Punjab,Fazilka,Kharif,Maize,Maize (Kharif),0.0021,0,0.006,True,Low,Other
+Punjab,Fazilka,Kharif,Rice,Rice (Kharif),0.4559,1,,False,,Major crop now
+Punjab,Fazilka,Rabi,Barley,Barley (Rabi),0.0087,0,0.046,False,Low,Other
+Punjab,Fazilka,Rabi,Gram,Gram (Rabi),0.0048,0,0.128,False,Low,Other
+Punjab,Fazilka,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0252,1,0.385,True,Medium,Major crop now
+Punjab,Fazilka,Rabi,Wheat,Wheat (Rabi),0.9602,1,,False,,Major crop now
+Punjab,Fazilka,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.936,False,High,Major crop now
+Punjab,Firozepur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0001,0,0.016,False,Low,Other
+Punjab,Firozepur,Kharif,Bajra,Bajra (Kharif),0.0003,0,0.008,True,Low,Other
+Punjab,Firozepur,Kharif,Cotton,Cotton (Kharif),0.0639,1,0.842,True,High,Major crop now
+Punjab,Firozepur,Kharif,Guar seed,Guar seed (Kharif),0.0094,0,0.205,True,Low,Other
+Punjab,Firozepur,Kharif,Maize,Maize (Kharif),0.001,0,0.011,True,Low,Other
+Punjab,Firozepur,Kharif,Rice,Rice (Kharif),0.9196,1,,False,,Major crop now
+Punjab,Firozepur,Rabi,Barley,Barley (Rabi),0.0015,0,0.018,False,Low,Other
+Punjab,Firozepur,Rabi,Gram,Gram (Rabi),0.0005,0,0.01,False,Low,Other
+Punjab,Firozepur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0039,0,0.121,True,Low,Other
+Punjab,Firozepur,Rabi,Wheat,Wheat (Rabi),0.9932,1,,False,,Major crop now
+Punjab,Firozepur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.983,False,High,Major crop now
+Punjab,Gurdaspur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.008,False,Low,Other
+Punjab,Gurdaspur,Kharif,Bajra,Bajra (Kharif),0.0,0,0.046,True,Low,Other
+Punjab,Gurdaspur,Kharif,Cotton,Cotton (Kharif),0.0,0,0.011,True,Low,Other
+Punjab,Gurdaspur,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.013,True,Low,Other
+Punjab,Gurdaspur,Kharif,Maize,Maize (Kharif),0.0144,0,0.85,True,High,"Climate suits, not major now"
+Punjab,Gurdaspur,Kharif,Rice,Rice (Kharif),0.9814,1,,False,,Major crop now
+Punjab,Gurdaspur,Rabi,Barley,Barley (Rabi),0.0,0,0.005,False,Low,Other
+Punjab,Gurdaspur,Rabi,Gram,Gram (Rabi),0.0,0,0.008,False,Low,Other
+Punjab,Gurdaspur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0114,0,0.786,True,High,"Climate suits, not major now"
+Punjab,Gurdaspur,Rabi,Wheat,Wheat (Rabi),0.9869,1,,False,,Major crop now
+Punjab,Gurdaspur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.989,False,High,Major crop now
+Punjab,Hoshiarpur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0001,0,0.001,False,Low,Other
+Punjab,Hoshiarpur,Kharif,Bajra,Bajra (Kharif),0.0,0,0.002,True,Low,Other
+Punjab,Hoshiarpur,Kharif,Cotton,Cotton (Kharif),0.0,0,0.003,True,Low,Other
+Punjab,Hoshiarpur,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.003,True,Low,Other
+Punjab,Hoshiarpur,Kharif,Maize,Maize (Kharif),0.4346,1,0.44,True,Medium,Major crop now
+Punjab,Hoshiarpur,Kharif,Rice,Rice (Kharif),0.5508,1,,False,,Major crop now
+Punjab,Hoshiarpur,Rabi,Barley,Barley (Rabi),0.0,0,0.003,False,Low,Other
+Punjab,Hoshiarpur,Rabi,Gram,Gram (Rabi),0.0005,0,0.0,False,Low,Other
+Punjab,Hoshiarpur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.027,1,0.165,True,Low,Major crop now
+Punjab,Hoshiarpur,Rabi,Wheat,Wheat (Rabi),0.9676,1,,False,,Major crop now
+Punjab,Hoshiarpur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.999,False,High,Major crop now
+Punjab,Jalandhar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0023,0,0.003,False,Low,Other
+Punjab,Jalandhar,Kharif,Bajra,Bajra (Kharif),0.0,0,0.001,True,Low,Other
+Punjab,Jalandhar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.004,True,Low,Other
+Punjab,Jalandhar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001,True,Low,Other
+Punjab,Jalandhar,Kharif,Maize,Maize (Kharif),0.041,1,0.158,True,Low,Major crop now
+Punjab,Jalandhar,Kharif,Rice,Rice (Kharif),0.9554,1,,False,,Major crop now
+Punjab,Jalandhar,Rabi,Barley,Barley (Rabi),0.0001,0,0.002,False,Low,Other
+Punjab,Jalandhar,Rabi,Gram,Gram (Rabi),0.0,0,0.001,False,Low,Other
+Punjab,Jalandhar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0054,0,0.096,True,Low,Other
+Punjab,Jalandhar,Rabi,Wheat,Wheat (Rabi),0.9907,1,,False,,Major crop now
+Punjab,Jalandhar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.997,False,High,Major crop now
+Punjab,Kapurthala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.014,False,Low,Other
+Punjab,Kapurthala,Kharif,Bajra,Bajra (Kharif),0.0008,0,0.026,True,Low,Other
+Punjab,Kapurthala,Kharif,Cotton,Cotton (Kharif),0.0,0,0.071,True,Low,Other
+Punjab,Kapurthala,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.007,True,Low,Other
+Punjab,Kapurthala,Kharif,Maize,Maize (Kharif),0.0177,0,0.473,True,Medium,Other
+Punjab,Kapurthala,Kharif,Rice,Rice (Kharif),0.9815,1,,False,,Major crop now
+Punjab,Kapurthala,Rabi,Barley,Barley (Rabi),0.0,0,0.018,False,Low,Other
+Punjab,Kapurthala,Rabi,Gram,Gram (Rabi),0.0,0,0.006,False,Low,Other
+Punjab,Kapurthala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0063,0,0.102,True,Low,Other
+Punjab,Kapurthala,Rabi,Wheat,Wheat (Rabi),0.9911,1,,False,,Major crop now
+Punjab,Kapurthala,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.992,False,High,Major crop now
+Punjab,Ludhiana,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0026,0,0.007,False,Low,Other
+Punjab,Ludhiana,Kharif,Bajra,Bajra (Kharif),0.0001,0,0.005,True,Low,Other
+Punjab,Ludhiana,Kharif,Cotton,Cotton (Kharif),0.0015,0,0.057,True,Low,Other
+Punjab,Ludhiana,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001,True,Low,Other
+Punjab,Ludhiana,Kharif,Maize,Maize (Kharif),0.0074,0,0.084,True,Low,Other
+Punjab,Ludhiana,Kharif,Rice,Rice (Kharif),0.9867,1,,False,,Major crop now
+Punjab,Ludhiana,Rabi,Barley,Barley (Rabi),0.0047,0,0.004,False,Low,Other
+Punjab,Ludhiana,Rabi,Gram,Gram (Rabi),0.0,0,0.001,False,Low,Other
+Punjab,Ludhiana,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0044,0,0.053,True,Low,Other
+Punjab,Ludhiana,Rabi,Wheat,Wheat (Rabi),0.9845,1,,False,,Major crop now
+Punjab,Ludhiana,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.989,False,High,Major crop now
+Punjab,Mansa,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0001,0,0.025,False,Low,Other
+Punjab,Mansa,Kharif,Bajra,Bajra (Kharif),0.0031,0,0.042,True,Low,Other
+Punjab,Mansa,Kharif,Cotton,Cotton (Kharif),0.433,1,0.925,True,High,Major crop now
+Punjab,Mansa,Kharif,Guar seed,Guar seed (Kharif),0.0223,1,0.083,True,Low,Major crop now
+Punjab,Mansa,Kharif,Maize,Maize (Kharif),0.0001,0,0.008,True,Low,Other
+Punjab,Mansa,Kharif,Rice,Rice (Kharif),0.5401,1,,False,,Major crop now
+Punjab,Mansa,Rabi,Barley,Barley (Rabi),0.0044,0,0.028,False,Low,Other
+Punjab,Mansa,Rabi,Gram,Gram (Rabi),0.0005,0,0.026,False,Low,Other
+Punjab,Mansa,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0105,0,0.141,True,Low,Other
+Punjab,Mansa,Rabi,Wheat,Wheat (Rabi),0.9831,1,,False,,Major crop now
+Punjab,Moga,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0015,0,0.011,False,Low,Other
+Punjab,Moga,Kharif,Bajra,Bajra (Kharif),0.0001,0,0.014,True,Low,Other
+Punjab,Moga,Kharif,Cotton,Cotton (Kharif),0.0069,0,0.876,True,High,"Climate suits, not major now"
+Punjab,Moga,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.059,True,Low,Other
+Punjab,Moga,Kharif,Maize,Maize (Kharif),0.0003,0,0.025,True,Low,Other
+Punjab,Moga,Kharif,Rice,Rice (Kharif),0.9898,1,,False,,Major crop now
+Punjab,Moga,Rabi,Barley,Barley (Rabi),0.0007,0,0.013,False,Low,Other
+Punjab,Moga,Rabi,Gram,Gram (Rabi),0.0002,0,0.003,False,Low,Other
+Punjab,Moga,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.004,0,0.039,True,Low,Other
+Punjab,Moga,Rabi,Wheat,Wheat (Rabi),0.9918,1,,False,,Major crop now
+Punjab,Muktsar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0003,0,0.034,False,Low,Other
+Punjab,Muktsar,Kharif,Bajra,Bajra (Kharif),0.0,0,0.069,True,Low,Other
+Punjab,Muktsar,Kharif,Cotton,Cotton (Kharif),0.2873,1,0.98,True,High,Major crop now
+Punjab,Muktsar,Kharif,Guar seed,Guar seed (Kharif),0.0099,0,0.713,True,High,"Climate suits, not major now"
+Punjab,Muktsar,Kharif,Maize,Maize (Kharif),0.0,0,0.009,True,Low,Other
+Punjab,Muktsar,Kharif,Rice,Rice (Kharif),0.7012,1,,False,,Major crop now
+Punjab,Muktsar,Rabi,Barley,Barley (Rabi),0.0035,0,0.031,False,Low,Other
+Punjab,Muktsar,Rabi,Gram,Gram (Rabi),0.0004,0,0.053,False,Low,Other
+Punjab,Muktsar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0041,0,0.418,True,Medium,Other
+Punjab,Muktsar,Rabi,Wheat,Wheat (Rabi),0.9913,1,,False,,Major crop now
+Punjab,Muktsar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.964,False,High,Major crop now
+Punjab,Pathankot,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.505,False,Medium,Other
+Punjab,Pathankot,Kharif,Bajra,Bajra (Kharif),0.0,0,0.525,True,Medium,Other
+Punjab,Pathankot,Kharif,Cotton,Cotton (Kharif),0.0,0,0.058,True,Low,Other
+Punjab,Pathankot,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.137,True,Low,Other
+Punjab,Pathankot,Kharif,Maize,Maize (Kharif),0.2168,1,0.479,True,Medium,Major crop now
+Punjab,Pathankot,Kharif,Rice,Rice (Kharif),0.7431,1,,False,,Major crop now
+Punjab,Pathankot,Rabi,Barley,Barley (Rabi),0.0028,0,0.507,False,Medium,Other
+Punjab,Pathankot,Rabi,Gram,Gram (Rabi),0.0015,0,0.5,False,Medium,Other
+Punjab,Pathankot,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0226,1,0.226,True,Low,Major crop now
+Punjab,Pathankot,Rabi,Wheat,Wheat (Rabi),0.969,1,,False,,Major crop now
+Punjab,Pathankot,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.507,False,Medium,Major crop now
+Punjab,Patiala,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.005,False,Low,Other
+Punjab,Patiala,Kharif,Bajra,Bajra (Kharif),0.0,0,0.017,True,Low,Other
+Punjab,Patiala,Kharif,Cotton,Cotton (Kharif),0.0027,0,0.021,True,Low,Other
+Punjab,Patiala,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.001,True,Low,Other
+Punjab,Patiala,Kharif,Maize,Maize (Kharif),0.0041,0,0.199,True,Low,Other
+Punjab,Patiala,Kharif,Rice,Rice (Kharif),0.9926,1,,False,,Major crop now
+Punjab,Patiala,Rabi,Barley,Barley (Rabi),0.0028,0,0.003,False,Low,Other
+Punjab,Patiala,Rabi,Gram,Gram (Rabi),0.0,0,0.001,False,Low,Other
+Punjab,Patiala,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0033,0,0.135,True,Low,Other
+Punjab,Patiala,Rabi,Wheat,Wheat (Rabi),0.9877,1,,False,,Major crop now
+Punjab,Patiala,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.998,False,High,Major crop now
+Punjab,Rupnagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0017,0,0.011,False,Low,Other
+Punjab,Rupnagar,Kharif,Bajra,Bajra (Kharif),0.0006,0,0.029,True,Low,Other
+Punjab,Rupnagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.014,True,Low,Other
+Punjab,Rupnagar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.009,True,Low,Other
+Punjab,Rupnagar,Kharif,Maize,Maize (Kharif),0.3587,1,0.49,True,Medium,Major crop now
+Punjab,Rupnagar,Kharif,Rice,Rice (Kharif),0.6376,1,,False,,Major crop now
+Punjab,Rupnagar,Rabi,Barley,Barley (Rabi),0.0006,0,0.008,False,Low,Other
+Punjab,Rupnagar,Rabi,Gram,Gram (Rabi),0.0007,0,0.012,False,Low,Other
+Punjab,Rupnagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0284,1,0.542,True,Medium,Major crop now
+Punjab,Rupnagar,Rabi,Wheat,Wheat (Rabi),0.9672,1,,False,,Major crop now
+Punjab,Rupnagar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.995,False,High,Major crop now
+Punjab,SAS Nagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0058,0,0.007,False,Low,Other
+Punjab,SAS Nagar,Kharif,Bajra,Bajra (Kharif),0.0026,0,0.106,True,Low,Other
+Punjab,SAS Nagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.012,True,Low,Other
+Punjab,SAS Nagar,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.008,True,Low,Other
+Punjab,SAS Nagar,Kharif,Maize,Maize (Kharif),0.1754,1,0.192,True,Low,Major crop now
+Punjab,SAS Nagar,Kharif,Rice,Rice (Kharif),0.8104,1,,False,,Major crop now
+Punjab,SAS Nagar,Rabi,Barley,Barley (Rabi),0.0006,0,0.003,False,Low,Other
+Punjab,SAS Nagar,Rabi,Gram,Gram (Rabi),0.0011,0,0.011,False,Low,Other
+Punjab,SAS Nagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0117,0,0.233,True,Low,Other
+Punjab,SAS Nagar,Rabi,Wheat,Wheat (Rabi),0.9677,1,,False,,Major crop now
+Punjab,SAS Nagar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.989,False,High,Major crop now
+Punjab,Sangrur,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.001,0,0.023,False,Low,Other
+Punjab,Sangrur,Kharif,Bajra,Bajra (Kharif),0.0005,0,0.131,True,Low,Other
+Punjab,Sangrur,Kharif,Cotton,Cotton (Kharif),0.0308,1,0.89,True,High,Major crop now
+Punjab,Sangrur,Kharif,Guar seed,Guar seed (Kharif),0.0003,0,0.3,True,Medium,Other
+Punjab,Sangrur,Kharif,Maize,Maize (Kharif),0.0019,0,0.014,True,Low,Other
+Punjab,Sangrur,Kharif,Rice,Rice (Kharif),0.9644,1,,False,,Major crop now
+Punjab,Sangrur,Rabi,Barley,Barley (Rabi),0.0062,0,0.028,False,Low,Other
+Punjab,Sangrur,Rabi,Gram,Gram (Rabi),0.0002,0,0.043,False,Low,Other
+Punjab,Sangrur,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0055,0,0.29,True,Low,Other
+Punjab,Sangrur,Rabi,Wheat,Wheat (Rabi),0.9854,1,,False,,Major crop now
+Punjab,Sangrur,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.925,False,High,Major crop now
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0,0,0.018,False,Low,Other
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Bajra,Bajra (Kharif),0.0,0,0.052,True,Low,Other
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Cotton,Cotton (Kharif),0.0,0,0.018,True,Low,Other
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Guar seed,Guar seed (Kharif),0.0003,0,0.009,True,Low,Other
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Maize,Maize (Kharif),0.1522,1,0.506,True,Medium,Major crop now
+Punjab,Shahid Bhagat Singh Nagar,Kharif,Rice,Rice (Kharif),0.8475,1,,False,,Major crop now
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Barley,Barley (Rabi),0.0,0,0.005,False,Low,Other
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Gram,Gram (Rabi),0.0,0,0.009,False,Low,Other
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0217,1,0.606,True,Medium,Major crop now
+Punjab,Shahid Bhagat Singh Nagar,Rabi,Wheat,Wheat (Rabi),0.9743,1,,False,,Major crop now
+Punjab,Shahid Bhagat Singh Nagar,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.998,False,High,Major crop now
+Punjab,Tarn Taran,Kharif,Arhar/Tur,Arhar/Tur (Kharif),0.0018,0,0.011,False,Low,Other
+Punjab,Tarn Taran,Kharif,Bajra,Bajra (Kharif),0.0,0,0.005,True,Low,Other
+Punjab,Tarn Taran,Kharif,Cotton,Cotton (Kharif),0.0017,0,0.346,True,Medium,Other
+Punjab,Tarn Taran,Kharif,Guar seed,Guar seed (Kharif),0.0,0,0.014,True,Low,Other
+Punjab,Tarn Taran,Kharif,Maize,Maize (Kharif),0.003,0,0.053,True,Low,Other
+Punjab,Tarn Taran,Kharif,Rice,Rice (Kharif),0.984,1,,False,,Major crop now
+Punjab,Tarn Taran,Rabi,Barley,Barley (Rabi),0.0,0,0.024,False,Low,Other
+Punjab,Tarn Taran,Rabi,Gram,Gram (Rabi),0.0001,0,0.004,False,Low,Other
+Punjab,Tarn Taran,Rabi,Rapeseed and Mustard,Rapeseed and Mustard (Rabi),0.0017,0,0.012,True,Low,Other
+Punjab,Tarn Taran,Rabi,Wheat,Wheat (Rabi),0.9959,1,,False,,Major crop now
+Punjab,Tarn Taran,Whole Year,Sugarcane,Sugarcane (Whole Year),1.0,1,0.997,False,High,Major crop now
