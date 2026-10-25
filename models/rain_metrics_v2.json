@@ -1,0 +1,84 @@
+{
+ "Haryana region": {
+  "chosen_climatology": "Climatology, all years",
+  "sarima_accepted": true,
+  "validation": {
+   "Climatology, all years": {
+    "mae": 23.10662069712029,
+    "monsoon_mae": 115.87602771189387
+   },
+   "Climatology, last 30 years": {
+    "mae": 23.365714285714287,
+    "monsoon_mae": 118.08561904761905
+   },
+   "Climatology, last 20 years": {
+    "mae": 23.438178571428573,
+    "monsoon_mae": 117.32628571428569
+   },
+   "SARIMA(0,0,1)(0,1,1,12) on sqrt rain": {
+    "mae": 22.61516350725259,
+    "monsoon_mae": 118.17101662735807
+   }
+  },
+  "test": {
+   "Climatology, all years": {
+    "mae": 22.981901914540718,
+    "monsoon_mae": 127.79906783610599
+   },
+   "Climatology, last 30 years": {
+    "mae": 22.657722222222223,
+    "monsoon_mae": 125.20633333333333
+   },
+   "Climatology, last 20 years": {
+    "mae": 22.316583333333334,
+    "monsoon_mae": 122.269
+   },
+   "SARIMA(0,0,1)(0,1,1,12) on sqrt rain": {
+    "mae": 21.198178466692802,
+    "monsoon_mae": 111.34777614364808
+   }
+  },
+  "range_coverage_test_pct": 84.2
+ },
+ "Punjab": {
+  "chosen_climatology": "Climatology, all years",
+  "sarima_accepted": true,
+  "validation": {
+   "Climatology, all years": {
+    "mae": 25.89952347880703,
+    "monsoon_mae": 139.63657430135615
+   },
+   "Climatology, last 30 years": {
+    "mae": 26.78418253968254,
+    "monsoon_mae": 141.11857142857147
+   },
+   "Climatology, last 20 years": {
+    "mae": 26.559249999999995,
+    "monsoon_mae": 138.12557142857142
+   },
+   "SARIMA(0,0,1)(0,1,1,12) on sqrt rain": {
+    "mae": 25.23998353264458,
+    "monsoon_mae": 138.82085661648838
+   }
+  },
+  "test": {
+   "Climatology, all years": {
+    "mae": 24.912517962990705,
+    "monsoon_mae": 105.5379512568187
+   },
+   "Climatology, last 30 years": {
+    "mae": 23.889833333333335,
+    "monsoon_mae": 102.44366666666664
+   },
+   "Climatology, last 20 years": {
+    "mae": 22.976875,
+    "monsoon_mae": 98.17699999999996
+   },
+   "SARIMA(0,0,1)(0,1,1,12) on sqrt rain": {
+    "mae": 22.799612787497267,
+    "monsoon_mae": 102.70510264412523
+   }
+  },
+  "range_coverage_test_pct": 86.7
+ }
+}
