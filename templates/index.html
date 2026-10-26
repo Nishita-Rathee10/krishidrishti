@@ -1,16 +1,91 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Krishi Drishti: crop planning for Punjab and Haryana</title>
-  <meta name="description" content="Plan a crop season in Punjab and Haryana using rainfall, soil and market price data.">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <main>
-    <h1>Krishi Drishti</h1>
-    <p>Crop planning for Punjab and Haryana. This is the starting page.</p>
-  </main>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Krishi Drishti: farm data for Punjab and Haryana districts{% endblock %}
+{% block description %}See the usual rain and temperature of all 44 districts of Punjab and Haryana, with a note on how far to trust each number.{% endblock %}
+
+{% block main %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Rain, crops and yield for every district of Punjab and Haryana</h1>
+      <p class="lead">Pick one of the 44 districts to see its usual rain and how warm its winters and summers are. Every number on this site comes with a note on how far to trust it.</p>
+
+      <div class="picker">
+        <label for="district-select">District</label>
+        <select id="district-select">
+          <option value="">Choose a district</option>
+          {% for state in ["Punjab", "Haryana"] %}
+          <optgroup label="{{ state }}">
+            {% for d in map_data.districts if d.state == state %}
+            <option value="{{ d.slug }}">{{ d.name }}</option>
+            {% endfor %}
+          </optgroup>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div id="readout" class="readout" aria-live="polite">
+        <p class="readout-empty">Choose a district from the list, or select a square on the map.</p>
+      </div>
+    </div>
+
+    <div class="map-panel" id="map-panel">
+      <fieldset class="layers">
+        <legend>Show on the map</legend>
+        <input type="radio" name="layer" id="layer-rain" value="rain" checked>
+        <label for="layer-rain">Yearly rain</label>
+        <input type="radio" name="layer" id="layer-winter" value="winter">
+        <label for="layer-winter">Winter temperature</label>
+        <input type="radio" name="layer" id="layer-summer" value="summer">
+        <label for="layer-summer">Peak summer heat</label>
+      </fieldset>
+
+      <div class="tile-map" id="tile-map" role="group" aria-label="Map of the 44 districts, one square each"></div>
+
+      <div class="legend-row">
+        <span id="legend-min"></span>
+        <div class="legend-bar" id="legend-bar"></div>
+        <span id="legend-max"></span>
+      </div>
+      <p class="map-note">Each square is one district, placed near its main town. This is a tile map, not a boundary map.<span id="approx-note"> A dashed square means its rain figure is copied from the district it was carved out of.</span></p>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <h2>How to read the map</h2>
+    <dl class="defs">
+      <div>
+        <dt>Yearly rain</dt>
+        <dd>The average rain in one year, in millimetres, over 1986 to 2015. Most of it falls between June and September.</dd>
+      </div>
+      <div>
+        <dt>Winter temperature</dt>
+        <dd>The average daily temperature from November to March, in degrees Celsius.</dd>
+      </div>
+      <div>
+        <dt>Peak summer heat</dt>
+        <dd>The highest temperature the NASA model shows in April, May and June, averaged over the three months, in degrees Celsius. This is the heat of the hottest days, not a normal day, and the model can run hotter than weather stations.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>Where these numbers come from and where they stop</h2>
+    <ul class="limits">
+      <li>Rain figures are district averages for 1986 to 2015. Fazilka, Pathankot and Charkhi Dadri became districts after the older records were made, so they use the figure of the district they were carved out of.</li>
+      <li>Temperatures come from a NASA computer model with squares about 50 km wide. They are taken at each district's main town, so neighbouring districts look alike.</li>
+      <li>The farm records used on this site end in 2019.</li>
+    </ul>
+  </div>
+</section>
+
+<script id="map-data" type="application/json">{{ map_data | tojson }}</script>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/map.js') }}" defer></script>
+{% endblock %}

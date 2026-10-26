@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Page not found | Krishi Drishti{% endblock %}
+{% block description %}This page does not exist. Go back to the Krishi Drishti home page.{% endblock %}
+{% block robots %}<meta name="robots" content="noindex">{% endblock %}
+{% block main %}
+<section class="notice">
+  <div class="wrap">
+    <h1>This page does not exist</h1>
+    <p>The address may have a typo, or the page may have moved. Check the address, or start again from the home page.</p>
+    <p><a class="btn" href="{{ url_for('index') }}">Go to the home page</a></p>
+  </div>
+</section>
+{% endblock %}

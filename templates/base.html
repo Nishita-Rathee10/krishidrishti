@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Krishi Drishti{% endblock %}</title>
+  <meta name="description" content="{% block description %}Farm data for the districts of Punjab and Haryana.{% endblock %}">
+  {% block robots %}{% endblock %}
+  {% if site_url %}<link rel="canonical" href="{{ site_url }}{{ request.path }}">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site_name }}">
+  <meta property="og:title" content="{{ self.title() }}">
+  <meta property="og:description" content="{{ self.description() }}">
+  <meta name="theme-color" content="#11241B">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="{{ url_for('index') }}">
+        <svg class="brand-mark" viewBox="0 0 21 21" aria-hidden="true" focusable="false">
+          <rect width="21" height="21" fill="#11241B"/>
+          <g fill="#EDBB2B">
+            <rect x="9.3" y="0.3" width="2.4" height="2.4"/>
+            <rect x="6.3" y="3.3" width="2.4" height="2.4"/><rect x="12.3" y="3.3" width="2.4" height="2.4"/>
+            <rect x="3.3" y="6.3" width="2.4" height="2.4"/><rect x="15.3" y="6.3" width="2.4" height="2.4"/>
+            <rect x="0.3" y="9.3" width="2.4" height="2.4"/><rect x="18.3" y="9.3" width="2.4" height="2.4"/>
+            <rect x="3.3" y="12.3" width="2.4" height="2.4"/><rect x="15.3" y="12.3" width="2.4" height="2.4"/>
+            <rect x="6.3" y="15.3" width="2.4" height="2.4"/><rect x="12.3" y="15.3" width="2.4" height="2.4"/>
+            <rect x="9.3" y="18.3" width="2.4" height="2.4"/>
+          </g>
+          <rect x="9.3" y="9.3" width="2.4" height="2.4" fill="#E0503F"/>
+        </svg>
+        <span class="brand-name">Krishi Drishti</span>
+      </a>
+    </div>
+  </header>
+  <div class="stitch stitch-field" aria-hidden="true"></div>
+
+  <main id="main">
+    {% block main %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="stitch stitch-sarson" aria-hidden="true"></div>
+    <div class="wrap footer-row">
+      <p class="footer-name">Krishi Drishti</p>
+      <p>A college project on supervised learning. It covers Punjab and Haryana only.</p>
+    </div>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
