@@ -217,3 +217,35 @@ h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; marg
 @media (min-width: 900px) {
   .district-head { padding: 48px 0 64px; }
 }
+
+/* Yield page */
+.yform { display: grid; gap: 4px 20px; grid-template-columns: minmax(0, 1fr); align-items: end; max-width: 52rem; }
+.yform .picker { margin: 16px 0 0; max-width: none; }
+.yform .btn { cursor: pointer; font: inherit; font-weight: 700; margin-top: 16px; justify-self: start; }
+.verdict { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.3; max-width: 36rem; margin-bottom: 1em; }
+.season-pick { margin: 0 0 14px; }
+.chart-yield svg { display: block; width: 100%; height: auto; }
+.chart-yield .grid { stroke: var(--rule); stroke-width: 1; }
+.chart-yield .tick { font-size: 13px; fill: var(--ink-soft); font-family: var(--font-body); }
+.chart-yield .zone { fill: #F4E7B9; opacity: .55; }
+.chart-yield .zone-label { font-size: 12px; fill: var(--ink-soft); font-family: var(--font-body); }
+.chart-yield .line { fill: none; stroke: var(--field); stroke-width: 2.5; stroke-linejoin: round; }
+.chart-yield .dot { fill: var(--field); }
+.chart-yield .range { fill: var(--canal); opacity: .25; }
+.chart-yield .guess { stroke: var(--chilli); stroke-width: 4; }
+.axis-title { margin: 6px 0 0; font-size: .92rem; color: var(--ink-soft); }
+.key-line { display: inline-block; width: 22px; height: 3px; background: var(--field); }
+.key-guess { display: inline-block; width: 22px; height: 4px; background: var(--chilli); }
+.key-range2 { display: inline-block; width: 22px; height: 14px; background: var(--canal); opacity: .3; }
+.table-scroll { overflow-x: auto; }
+.table-scroll .crop-table { min-width: 40rem; }
+.side-note.wide { max-width: 42rem; }
+@media (min-width: 700px) {
+  .yform { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; }
+  .yform .btn { margin-top: 0; }
+}
+
+.site-nav { margin-left: auto; display: flex; gap: 18px; font-weight: 600; }
+.site-nav a { color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
+.site-nav a:hover { border-bottom-color: var(--field); }
+@media (max-width: 520px) { .brand-name { font-size: 1.25rem; } .site-nav { gap: 12px; font-size: 1rem; } }

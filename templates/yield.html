@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Crop yield in Punjab and Haryana: past yields and how well our model guessed | Krishi Drishti{% endblock %}
+{% block description %}Pick a district and a crop to see its yield from 1998 to 2019, and how close our model came on three years it had never seen.{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ url_for('index') }}">All districts</a></p>
+    <h1>Crop yield</h1>
+    <p class="lead">Yield is how many tonnes a farm gets from one hectare. Pick a district and a crop to see its past yields, and how close our model came on three years it had never seen.</p>
+
+    <form class="yform" method="get" action="{{ url_for('yield_page') }}">
+      <div class="picker">
+        <label for="district">District</label>
+        <select id="district" name="district">
+          {% for state, items in groups.items() %}
+          <optgroup label="{{ state }}">
+            {% for it in items %}<option value="{{ it.slug }}"{% if it.slug == d.slug %} selected{% endif %}>{{ it.name }}</option>{% endfor %}
+          </optgroup>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="picker">
+        <label for="crop">Crop</label>
+        <select id="crop" name="crop">
+          {% for c in crops %}<option value="{{ c.slug }}"{% if c.slug == cslug %} selected{% endif %}>{{ c.name }}</option>{% endfor %}
+        </select>
+      </div>
+      <button class="btn" type="submit">Show yield</button>
+    </form>
+  </div>
+</section>
+
+<section class="band" id="result">
+  <div class="wrap">
+    {% if series %}
+    <h2>{{ crop.name }} in {{ d.name }}</h2>
+    {% if seasons|length > 1 %}
+    <p class="season-pick">Season:
+      {% for s in seasons %}
+        {% if s == season %}<strong>{{ s|capitalize }}</strong>{% else %}<a href="{{ url_for('yield_page', district=d.slug, crop=cslug, season=s) }}#result">{{ s|capitalize }}</a>{% endif %}{% if not loop.last %} &middot; {% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    <figure class="chart chart-yield">
+      <svg viewBox="0 0 {{ chart.w }} {{ chart.h }}" role="img" aria-labelledby="yt yd" focusable="false">
+        <title id="yt">Yield of {{ crop.name }} in {{ d.name }}, 1998 to 2019</title>
+        <desc id="yd">A line of real yields in tonnes per hectare. For 2017 to 2019 it also shows what our model guessed{% if show_range %} and a likely range{% endif %}. The numbers are in the table below the chart.</desc>
+        <rect class="zone" x="{{ chart.zone_x }}" y="{{ chart.top }}" width="{{ chart.zone_w }}" height="{{ chart.base - chart.top }}"/>
+        {% for t in chart.ticks %}
+        <line class="grid" x1="{{ chart.left }}" x2="{{ chart.right }}" y1="{{ t.y }}" y2="{{ t.y }}"/>
+        <text class="tick" x="{{ chart.left - 8 }}" y="{{ t.y + 4 }}" text-anchor="end">{{ t.label }}</text>
+        {% endfor %}
+        {% for x in chart.xticks %}
+        <text class="tick" x="{{ x.x }}" y="{{ chart.base + 22 }}" text-anchor="middle">{{ x.label }}</text>
+        {% endfor %}
+        <text class="zone-label" x="{{ chart.zone_x + chart.zone_w / 2 }}" y="{{ chart.top + 14 }}" text-anchor="middle">Not seen by model</text>
+        {% for r in chart.ranges %}<rect class="range" x="{{ r.x }}" y="{{ r.y }}" width="{{ r.w }}" height="{{ r.h }}"/>{% endfor %}
+        <path class="line" d="{{ chart.path }}"/>
+        {% for p in chart.pts %}<circle class="dot" cx="{{ p.x }}" cy="{{ p.y }}" r="3.5"><title>{{ p.year }}: {{ p.v }} t/ha</title></circle>{% endfor %}
+        {% for m in chart.marks %}<line class="guess" x1="{{ m.x1 }}" x2="{{ m.x2 }}" y1="{{ m.y }}" y2="{{ m.y }}"/>{% endfor %}
+      </svg>
+      <p class="axis-title">Tonnes per hectare</p>
+      <div class="key">
+        <span><i class="key-line"></i>Real yield</span>
+        {% if series.test %}<span><i class="key-guess"></i>Our model's guess</span>{% endif %}
+        {% if show_range and series.test %}<span><i class="key-range2"></i>Likely range</span>{% endif %}
+      </div>
+    </figure>
+
+    {% if series.test %}
+    <h3 class="gap-top">The three years the model had not seen</h3>
+    <table class="crop-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Real yield</th><th scope="col">Model's guess</th><th scope="col">Last year's yield</th>{% if show_range %}<th scope="col">Likely range</th>{% endif %}</tr></thead>
+      <tbody>
+        {% for t in series.test %}
+        <tr><th scope="row">{{ t.year }}</th><td>{{ t.actual }}</td><td>{{ t.pred }}</td><td>{{ t.last if t.last is not none else "No record" }}</td>{% if show_range %}<td>{{ t.lo }} to {{ t.hi }}</td>{% endif %}</tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if not show_range %}
+    <p class="suggest-note">We do not show a likely range for {{ crop.name }}. In our tests the top of the range was {{ crop.range_high_pct }}% above the guess, which is too wide to help anyone.</p>
+    {% endif %}
+    {% else %}
+    <p class="suggest-note">This crop has no record for 2017 to 2019 in {{ d.name }}, so there is nothing to check the model against here.</p>
+    {% endif %}
+
+    <details class="data-table">
+      <summary>See every year as a table</summary>
+      <table>
+        <thead><tr><th scope="col">Year</th><th scope="col">Yield (tonnes per hectare)</th></tr></thead>
+        <tbody>{% for yr in series.years %}<tr><th scope="row">{{ yr }}</th><td>{{ series.yield[loop.index0] }}</td></tr>{% endfor %}</tbody>
+      </table>
+    </details>
+    {% else %}
+    <h2>No record for {{ crop.name }} in {{ d.name }}</h2>
+    <p>Our data has no yield for this crop in this district. Crops we do have for {{ d.name }}: {{ available|join(", ") }}.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <div>
+      <h2>How good is the model?</h2>
+      <p class="side-note">We trained on 1998 to 2016 and then looked once at 2017 to 2019. A "miss" is how far a guess was from the real yield, as a share of the real yield. We use the middle miss, so a few wild years do not decide the score.</p>
+    </div>
+    <div>
+      <p class="verdict">When last year's yield is known, simply repeating it is as good as our model. The model is useful when there is no history to copy.</p>
+      <table class="crop-table">
+        <thead><tr><th scope="col">Way of guessing</th><th scope="col">Rows tested</th><th scope="col">Usual miss</th><th scope="col">Within 25%</th></tr></thead>
+        <tbody>
+          {% for m in ydata.summary %}
+          <tr><th scope="row">{{ m.Method }}</th><td>{{ m.Rows }}</td><td>{{ m["Median error %"] }}%</td><td>{{ m["Within 25%"] }}%</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p class="suggest-note">"Rows with history" means the crop had a recorded yield in at least one of the three years before. "Within 25%" is the share of guesses that landed within a quarter of the real yield.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Crop by crop</h2>
+    <p class="side-note wide">Where history is known, the last two columns compare our model with repeating last year. "Better" shows which one missed by less, and "Tie" means less than half a point apart.</p>
+    <div class="table-scroll">
+      <table class="crop-table">
+        <thead>
+          <tr><th scope="col">Crop</th><th scope="col">Rows</th><th scope="col">Model's usual miss</th><th scope="col">Last year's usual miss</th><th scope="col">Better</th><th scope="col">Real yield inside our range</th></tr>
+        </thead>
+        <tbody>
+          {% for r in rows %}
+          <tr>
+            <th scope="row"><a href="{{ url_for('yield_page', district=d.slug, crop=r.slug) }}#result">{{ r.name }}</a></th>
+            <td>{{ r.history_rows }}</td>
+            <td>{{ r.forest_error_history if r.forest_error_history is not none else "-" }}%</td>
+            <td>{{ r.last_year_error_history if r.last_year_error_history is not none else "-" }}%</td>
+            <td>{{ r.better }}</td>
+            <td>{% if r.range_ok %}{{ r.inside_pct }}%{% else %}Range too wide to show{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="suggest-note">The range was built so that about 8 in 10 real yields fall inside it. Across all crops, {{ ydata.inside_pct_all }}% did in 2017 to 2019. For crops far below 80%, treat the range as too hopeful.</p>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>What to keep in mind</h2>
+    <ul class="limits">
+      <li>The model sees the district, crop, season, year and the usual rain of the district. It does not see that year's weather, water, soil or seed, so it cannot tell a bad year from a good one.</li>
+      <li>For that reason we do not offer a guess for next year. Without weather for that year, it could only give an ordinary value.</li>
+      <li>Our records end in 2019, and only three of those years were used as the final test. A score from three years can move a lot.</li>
+      <li>Yield is in tonnes per hectare. Some very small crops have only a few records in a district.</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

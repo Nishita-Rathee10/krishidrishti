@@ -2,7 +2,7 @@ import json
 import math
 import os
 
-from flask import Flask, abort, redirect, render_template, url_for
+from flask import Flask, abort, redirect, render_template, request, url_for
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SITE_NAME = "Krishi Drishti"
@@ -20,6 +20,16 @@ def load(name):
 DISTRICTS = load("districts.json")
 PAGES = load("district_pages.json")
 BY_SLUG = {d["slug"]: d for d in DISTRICTS["districts"]}
+YIELD = load("yield_data.json")
+CROP_BY_SLUG = {c["slug"]: c for c in YIELD["crops"]}
+SERIES_BY = {}
+for _s in YIELD["series"].values():
+    SERIES_BY.setdefault((_s["district"], _s["crop"]), {})[_s["season"]] = _s
+YIELD_DISTRICTS = {}
+for _slug in sorted({k[0] for k in SERIES_BY}, key=lambda x: BY_SLUG[x]["name"]):
+    YIELD_DISTRICTS.setdefault(BY_SLUG[_slug]["state"], []).append({"slug": _slug, "name": BY_SLUG[_slug]["name"]})
+SEASON_ORDER = {"Kharif": 0, "Rabi": 1, "Summer": 2, "Whole Year": 3}
+MAX_RANGE_TOP = 100  # a likely range is shown only if its top end is at most this many percent above the guess
 
 
 def temp_chart(values):
@@ -38,6 +48,57 @@ def rain_chart(rows):
                     "lo_pct": round(r["p10"] / top * 100, 1),
                     "hi_pct": round((r["p90"] - r["p10"]) / top * 100, 1)})
     return out, top
+
+
+def nice_axis(vmax):
+    raw = vmax / 4.0
+    mag = 10 ** math.floor(math.log10(raw))
+    step = 10 * mag
+    for m in (1, 2, 2.5, 5, 10):
+        if raw <= m * mag:
+            step = m * mag
+            break
+    n = math.ceil(vmax / step)
+    return step, n * step
+
+
+def num(v):
+    return f"{v:.2f}".rstrip("0").rstrip(".")
+
+
+def yield_chart(series, show_range):
+    w, h, left, right, top_m, bottom_m = 760, 340, 56, 14, 16, 44
+    x0, x1 = 1998, 2019
+    vals = list(series["yield"])
+    for t in series["test"]:
+        vals += [t["pred"]] + ([t["hi"]] if show_range else [])
+    step, ymax = nice_axis(max(vals) * 1.05)
+    inner_w, inner_h = w - left - right, h - top_m - bottom_m
+
+    def sx(year):
+        return round(left + (year - (x0 - 0.5)) / (x1 - x0 + 1) * inner_w, 1)
+
+    def sy(v):
+        return round(top_m + inner_h - v / ymax * inner_h, 1)
+
+    unit = inner_w / (x1 - x0 + 1)
+    ticks = [{"y": sy(i * step), "label": num(i * step)} for i in range(int(round(ymax / step)) + 1)]
+    xticks = [{"x": sx(y), "label": str(y)} for y in (2000, 2005, 2010, 2015, 2019)]
+    path, pts, prev = [], [], None
+    for yr, v in zip(series["years"], series["yield"]):
+        cmd = "L" if prev is not None and yr - prev == 1 else "M"
+        path.append(f"{cmd}{sx(yr)} {sy(v)}")
+        pts.append({"x": sx(yr), "y": sy(v), "year": yr, "v": v})
+        prev = yr
+    marks, ranges = [], []
+    for t in series["test"]:
+        marks.append({"x1": round(sx(t["year"]) - unit * 0.38, 1), "x2": round(sx(t["year"]) + unit * 0.38, 1), "y": sy(t["pred"])})
+        if show_range:
+            ranges.append({"x": round(sx(t["year"]) - unit * 0.38, 1), "y": sy(t["hi"]), "w": round(unit * 0.76, 1),
+                           "h": round(sy(t["lo"]) - sy(t["hi"]), 1)})
+    return {"w": w, "h": h, "left": left, "right": w - right, "base": sy(0), "ticks": ticks, "xticks": xticks,
+            "path": " ".join(path), "pts": pts, "marks": marks, "ranges": ranges,
+            "zone_x": round(sx(2017) - unit / 2, 1), "zone_w": round(unit * 3, 1), "top": top_m}
 
 
 @app.context_processor
@@ -61,6 +122,36 @@ def district(slug):
     near = [{"slug": n["slug"], "name": BY_SLUG[n["slug"]]["name"], "km": n["km"]} for n in page["near"]]
     return render_template("district.html", d=d, page=page, temps=temps, temp_top=temp_top,
                            rain_rows=rain_rows, rain_top=rain_top, near=near, months=MONTHS)
+
+
+@app.route("/yield")
+def yield_page():
+    dslug = request.args.get("district", "ludhiana")
+    cslug = request.args.get("crop", "wheat")
+    if dslug not in BY_SLUG:
+        dslug = "ludhiana"
+    if cslug not in CROP_BY_SLUG:
+        cslug = "wheat"
+    by_season = SERIES_BY.get((dslug, cslug), {})
+    seasons = sorted(by_season, key=lambda x: SEASON_ORDER.get(x, 9))
+    season = request.args.get("season", "")
+    if season not in by_season and seasons:
+        season = seasons[0]
+    series = by_season.get(season)
+    crop = CROP_BY_SLUG[cslug]
+    show_range = crop["range_high_pct"] <= MAX_RANGE_TOP
+    chart = yield_chart(series, show_range) if series else None
+    available = sorted({CROP_BY_SLUG[k[1]]["name"] for k in SERIES_BY if k[0] == dslug})
+    summary = {r["Method"]: r for r in YIELD["summary"]}
+    rows = []
+    for c in YIELD["crops"]:
+        diff = (c["forest_error_history"] or 0) - (c["last_year_error_history"] or 0)
+        better = "Model" if diff <= -0.5 else ("Last year" if diff >= 0.5 else "Tie")
+        rows.append(dict(c, better=better, range_ok=c["range_high_pct"] <= MAX_RANGE_TOP))
+    return render_template("yield.html", d=BY_SLUG[dslug], crop=crop, cslug=cslug, season=season, seasons=seasons,
+                           series=series, chart=chart, show_range=show_range, available=available,
+                           groups=YIELD_DISTRICTS, crops=YIELD["crops"], rows=rows, sm=summary, ydata=YIELD,
+                           max_top=MAX_RANGE_TOP)
 
 
 @app.route("/favicon.ico")
