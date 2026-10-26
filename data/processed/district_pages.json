@@ -1,0 +1,3940 @@
+{
+ "districts": {
+  "ambala": {
+   "temp": [
+    13.1,
+    16.3,
+    21.8,
+    28.2,
+    33.0,
+    33.8,
+    30.7,
+    28.5,
+    26.8,
+    23.7,
+    19.0,
+    14.8
+   ],
+   "humidity": [
+    45,
+    45,
+    38,
+    29,
+    25,
+    38,
+    66,
+    77,
+    72,
+    52,
+    43,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 95.9
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 97.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 67.7
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 15.9
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 14.3
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 0.6,
+     "p": 0.82,
+     "auc_in_100": 88,
+     "why": [
+      "Winter temperature of 17.0 °C",
+      "Lowest winter temperature of 2.7 °C",
+      "Rain from June to September of 917 mm"
+     ]
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 1.5,
+     "p": 0.76,
+     "auc_in_100": 86,
+     "why": [
+      "Peak summer heat of 46.2 °C",
+      "Rain from June to September of 917 mm"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "sas-nagar",
+     "km": 36
+    },
+    {
+     "slug": "panchkula",
+     "km": 37
+    },
+    {
+     "slug": "patiala",
+     "km": 39
+    },
+    {
+     "slug": "kurukshetra",
+     "km": 44
+    }
+   ]
+  },
+  "amritsar": {
+   "temp": [
+    12.4,
+    15.9,
+    21.9,
+    28.6,
+    34.5,
+    36.4,
+    34.0,
+    31.8,
+    29.5,
+    25.5,
+    19.5,
+    14.4
+   ],
+   "humidity": [
+    46,
+    47,
+    41,
+    32,
+    23,
+    31,
+    53,
+    63,
+    58,
+    43,
+    39,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 98.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.6
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "tarn-taran",
+     "km": 20
+    },
+    {
+     "slug": "kapurthala",
+     "km": 55
+    },
+    {
+     "slug": "gurdaspur",
+     "km": 69
+    },
+    {
+     "slug": "jalandhar",
+     "km": 75
+    }
+   ]
+  },
+  "barnala": {
+   "temp": [
+    12.5,
+    16.2,
+    22.4,
+    29.2,
+    34.7,
+    36.1,
+    33.7,
+    31.7,
+    29.5,
+    25.6,
+    19.7,
+    14.5
+   ],
+   "humidity": [
+    45,
+    44,
+    37,
+    28,
+    23,
+    34,
+    54,
+    62,
+    58,
+    42,
+    38,
+    40
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 94.3
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 5.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "sangrur",
+     "km": 32
+    },
+    {
+     "slug": "mansa",
+     "km": 45
+    },
+    {
+     "slug": "moga",
+     "km": 61
+    },
+    {
+     "slug": "bathinda",
+     "km": 61
+    }
+   ]
+  },
+  "bathinda": {
+   "temp": [
+    13.1,
+    16.6,
+    23.0,
+    29.7,
+    35.0,
+    36.4,
+    34.3,
+    32.5,
+    30.3,
+    26.6,
+    20.7,
+    15.3
+   ],
+   "humidity": [
+    41,
+    41,
+    35,
+    26,
+    23,
+    34,
+    52,
+    58,
+    54,
+    37,
+    32,
+    35
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 51.1
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 46.2
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 2.5
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.5
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "muktsar",
+     "km": 50
+    },
+    {
+     "slug": "mansa",
+     "km": 51
+    },
+    {
+     "slug": "faridkot",
+     "km": 55
+    },
+    {
+     "slug": "barnala",
+     "km": 61
+    }
+   ]
+  },
+  "bhiwani": {
+   "temp": [
+    13.3,
+    17.0,
+    23.3,
+    30.0,
+    34.7,
+    35.8,
+    33.2,
+    31.0,
+    29.3,
+    26.1,
+    20.6,
+    15.3
+   ],
+   "humidity": [
+    42,
+    40,
+    33,
+    25,
+    24,
+    37,
+    57,
+    66,
+    62,
+    43,
+    36,
+    37
+   ],
+   "major": [
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 44.1
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 36.1
+    },
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 9.9
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 6.5
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 45.5
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 43.7
+    },
+    {
+     "crop": "Gram",
+     "season": "Rabi",
+     "share": 8.6
+    },
+    {
+     "crop": "Barley",
+     "season": "Rabi",
+     "share": 2.1
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 66.2
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 17.2
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 9.8
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 4.4
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 2.2
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "charkhi-dadri",
+     "km": 26
+    },
+    {
+     "slug": "rohtak",
+     "km": 44
+    },
+    {
+     "slug": "jhajjar",
+     "km": 54
+    },
+    {
+     "slug": "hisar",
+     "km": 57
+    }
+   ]
+  },
+  "charkhi-dadri": {
+   "temp": [
+    13.7,
+    17.4,
+    23.6,
+    30.2,
+    34.8,
+    35.8,
+    33.0,
+    30.8,
+    29.4,
+    26.4,
+    21.0,
+    15.7
+   ],
+   "humidity": [
+    40,
+    38,
+    31,
+    24,
+    24,
+    36,
+    57,
+    67,
+    60,
+    41,
+    35,
+    36
+   ],
+   "major": [
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 31.1
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 22.6
+    },
+    {
+     "crop": "Arhar (tur)",
+     "season": "Kharif",
+     "share": 16.7
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 12.8
+    },
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 7.4
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 50.2
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 47.5
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 90.7
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 6.2
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "bhiwani",
+     "km": 26
+    },
+    {
+     "slug": "jhajjar",
+     "km": 37
+    },
+    {
+     "slug": "mahendragarh",
+     "km": 38
+    },
+    {
+     "slug": "rohtak",
+     "km": 45
+    }
+   ]
+  },
+  "faridabad": {
+   "temp": [
+    13.6,
+    17.4,
+    23.6,
+    30.4,
+    35.0,
+    35.9,
+    32.3,
+    29.8,
+    28.3,
+    25.2,
+    20.1,
+    15.2
+   ],
+   "humidity": [
+    44,
+    41,
+    33,
+    24,
+    23,
+    36,
+    63,
+    75,
+    69,
+    51,
+    43,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 69.5
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 20.9
+    },
+    {
+     "crop": "Jowar",
+     "season": "Kharif",
+     "share": 7.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.0
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 60.6
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 19.0
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 14.0
+    },
+    {
+     "crop": "Coriander",
+     "season": "Whole year",
+     "share": 4.0
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 2.5
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 0.8,
+     "p": 0.81,
+     "auc_in_100": 98,
+     "why": [
+      "Winter temperature of 18.0 °C",
+      "Winter humidity of 42.5 %"
+     ]
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 1.6,
+     "p": 0.72,
+     "auc_in_100": 86,
+     "why": [
+      "Winter temperature of 18.0 °C",
+      "Lowest winter temperature of 0.1 °C",
+      "Rain from June to September of 600 mm"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "gurugram",
+     "km": 28
+    },
+    {
+     "slug": "palwal",
+     "km": 30
+    },
+    {
+     "slug": "nuh",
+     "km": 45
+    },
+    {
+     "slug": "jhajjar",
+     "km": 66
+    }
+   ]
+  },
+  "faridkot": {
+   "temp": [
+    12.8,
+    16.3,
+    22.7,
+    29.4,
+    35.0,
+    36.5,
+    34.3,
+    32.5,
+    30.1,
+    26.3,
+    20.2,
+    14.9
+   ],
+   "humidity": [
+    43,
+    43,
+    36,
+    28,
+    22,
+    33,
+    52,
+    58,
+    55,
+    39,
+    34,
+    37
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 92.3
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 7.0
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.7
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "ferozepur",
+     "km": 31
+    },
+    {
+     "slug": "muktsar",
+     "km": 32
+    },
+    {
+     "slug": "moga",
+     "km": 42
+    },
+    {
+     "slug": "bathinda",
+     "km": 55
+    }
+   ]
+  },
+  "fatehabad": {
+   "temp": [
+    13.2,
+    16.8,
+    23.1,
+    29.8,
+    34.8,
+    36.1,
+    33.8,
+    31.9,
+    29.9,
+    26.4,
+    20.7,
+    15.3
+   ],
+   "humidity": [
+    42,
+    40,
+    34,
+    26,
+    24,
+    35,
+    54,
+    62,
+    57,
+    39,
+    33,
+    36
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 55.2
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 40.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 92.2
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 6.5
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 30.2
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 24.9
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 20.9
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 12.4
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 9.7
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 1.7,
+     "p": 0.75,
+     "auc_in_100": 92,
+     "why": [
+      "Winter humidity of 39.3 %",
+      "Rain from June to September of 283 mm",
+      "Yearly rain of 365 mm"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "sirsa",
+     "km": 41
+    },
+    {
+     "slug": "hisar",
+     "km": 48
+    },
+    {
+     "slug": "mansa",
+     "km": 53
+    },
+    {
+     "slug": "jind",
+     "km": 85
+    }
+   ]
+  },
+  "fatehgarh-sahib": {
+   "temp": [
+    12.8,
+    16.4,
+    22.5,
+    29.2,
+    34.4,
+    35.6,
+    32.8,
+    30.6,
+    28.6,
+    25.1,
+    19.6,
+    14.6
+   ],
+   "humidity": [
+    46,
+    45,
+    38,
+    28,
+    23,
+    35,
+    58,
+    68,
+    64,
+    46,
+    41,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 99.5
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 97.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "sas-nagar",
+     "km": 33
+    },
+    {
+     "slug": "patiala",
+     "km": 34
+    },
+    {
+     "slug": "rupnagar",
+     "km": 39
+    },
+    {
+     "slug": "panchkula",
+     "km": 45
+    }
+   ]
+  },
+  "fazilka": {
+   "temp": [
+    13.2,
+    16.7,
+    23.1,
+    29.6,
+    35.4,
+    37.3,
+    35.9,
+    34.4,
+    31.8,
+    27.3,
+    20.9,
+    15.3
+   ],
+   "humidity": [
+    40,
+    40,
+    35,
+    27,
+    21,
+    30,
+    45,
+    48,
+    46,
+    32,
+    30,
+    34
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 45.6
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 37.6
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 16.1
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 96.0
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 2.5
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "muktsar",
+     "km": 47
+    },
+    {
+     "slug": "faridkot",
+     "km": 76
+    },
+    {
+     "slug": "ferozepur",
+     "km": 82
+    },
+    {
+     "slug": "bathinda",
+     "km": 90
+    }
+   ]
+  },
+  "ferozepur": {
+   "temp": [
+    12.8,
+    16.2,
+    22.5,
+    29.1,
+    35.0,
+    36.9,
+    35.0,
+    33.2,
+    30.7,
+    26.5,
+    20.2,
+    14.9
+   ],
+   "humidity": [
+    42,
+    43,
+    37,
+    29,
+    22,
+    31,
+    49,
+    55,
+    51,
+    37,
+    34,
+    37
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 92.0
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 6.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.3
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "faridkot",
+     "km": 31
+    },
+    {
+     "slug": "muktsar",
+     "km": 52
+    },
+    {
+     "slug": "moga",
+     "km": 54
+    },
+    {
+     "slug": "tarn-taran",
+     "km": 65
+    }
+   ]
+  },
+  "gurdaspur": {
+   "temp": [
+    13.0,
+    16.1,
+    21.5,
+    27.6,
+    33.0,
+    34.8,
+    32.2,
+    30.1,
+    28.2,
+    24.7,
+    19.5,
+    14.9
+   ],
+   "humidity": [
+    44,
+    46,
+    42,
+    34,
+    26,
+    33,
+    58,
+    69,
+    63,
+    46,
+    39,
+    40
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 98.1
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.7
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 1.4,
+     "p": 0.85,
+     "auc_in_100": 88,
+     "why": [
+      "Lowest winter temperature of 3.1 °C",
+      "Yearly rain of 1,112 mm",
+      "Winter temperature of 17.0 °C"
+     ]
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 1.1,
+     "p": 0.79,
+     "auc_in_100": 86,
+     "why": [
+      "Peak summer heat of 46.3 °C",
+      "Yearly rain of 1,112 mm"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "pathankot",
+     "km": 35
+    },
+    {
+     "slug": "amritsar",
+     "km": 69
+    },
+    {
+     "slug": "kapurthala",
+     "km": 73
+    },
+    {
+     "slug": "hoshiarpur",
+     "km": 74
+    }
+   ]
+  },
+  "gurugram": {
+   "temp": [
+    13.5,
+    17.2,
+    23.5,
+    30.2,
+    34.9,
+    35.8,
+    32.7,
+    30.2,
+    28.7,
+    25.6,
+    20.3,
+    15.3
+   ],
+   "humidity": [
+    43,
+    40,
+    32,
+    24,
+    24,
+    36,
+    59,
+    71,
+    66,
+    47,
+    40,
+    40
+   ],
+   "major": [
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 79.5
+    },
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 12.7
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 2.8
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 76.7
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 21.2
+    },
+    {
+     "crop": "Barley",
+     "season": "Rabi",
+     "share": 2.1
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 65.3
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 18.2
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 10.0
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 4.1
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "faridabad",
+     "km": 28
+    },
+    {
+     "slug": "jhajjar",
+     "km": 39
+    },
+    {
+     "slug": "nuh",
+     "km": 40
+    },
+    {
+     "slug": "palwal",
+     "km": 45
+    }
+   ]
+  },
+  "hisar": {
+   "temp": [
+    13.6,
+    17.2,
+    23.5,
+    30.0,
+    34.7,
+    36.1,
+    33.8,
+    32.0,
+    30.2,
+    26.8,
+    20.9,
+    15.6
+   ],
+   "humidity": [
+    40,
+    38,
+    32,
+    25,
+    24,
+    35,
+    53,
+    60,
+    55,
+    38,
+    33,
+    36
+   ],
+   "major": [
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 55.6
+    },
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 22.9
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 13.1
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 4.5
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 73.1
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 21.9
+    },
+    {
+     "crop": "Gram",
+     "season": "Rabi",
+     "share": 3.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 52.6
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 17.5
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 15.3
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 9.8
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 2.2
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "fatehabad",
+     "km": 48
+    },
+    {
+     "slug": "bhiwani",
+     "km": 57
+    },
+    {
+     "slug": "jind",
+     "km": 59
+    },
+    {
+     "slug": "sirsa",
+     "km": 79
+    }
+   ]
+  },
+  "hoshiarpur": {
+   "temp": [
+    12.5,
+    16.0,
+    21.9,
+    28.4,
+    34.0,
+    35.6,
+    33.1,
+    30.9,
+    28.8,
+    25.0,
+    19.4,
+    14.4
+   ],
+   "humidity": [
+    47,
+    47,
+    41,
+    32,
+    24,
+    33,
+    56,
+    67,
+    62,
+    46,
+    41,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 55.1
+    },
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 43.5
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 96.8
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 2.7
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "jalandhar",
+     "km": 40
+    },
+    {
+     "slug": "shahid-bhagat-singh-nagar",
+     "km": 50
+    },
+    {
+     "slug": "kapurthala",
+     "km": 54
+    },
+    {
+     "slug": "ludhiana",
+     "km": 70
+    }
+   ]
+  },
+  "jalandhar": {
+   "temp": [
+    12.5,
+    16.0,
+    21.9,
+    28.4,
+    34.0,
+    35.6,
+    33.1,
+    30.9,
+    28.8,
+    25.0,
+    19.4,
+    14.4
+   ],
+   "humidity": [
+    47,
+    47,
+    41,
+    32,
+    24,
+    33,
+    56,
+    67,
+    62,
+    46,
+    41,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 95.5
+    },
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 4.1
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.1
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "kapurthala",
+     "km": 20
+    },
+    {
+     "slug": "hoshiarpur",
+     "km": 40
+    },
+    {
+     "slug": "ludhiana",
+     "km": 53
+    },
+    {
+     "slug": "shahid-bhagat-singh-nagar",
+     "km": 56
+    }
+   ]
+  },
+  "jhajjar": {
+   "temp": [
+    13.5,
+    17.2,
+    23.5,
+    30.2,
+    34.9,
+    35.8,
+    32.7,
+    30.2,
+    28.7,
+    25.6,
+    20.3,
+    15.3
+   ],
+   "humidity": [
+    43,
+    40,
+    32,
+    24,
+    24,
+    36,
+    59,
+    71,
+    66,
+    47,
+    40,
+    40
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 39.9
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 39.1
+    },
+    {
+     "crop": "Jowar",
+     "season": "Kharif",
+     "share": 11.9
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 5.9
+    },
+    {
+     "crop": "Arhar (tur)",
+     "season": "Kharif",
+     "share": 2.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 76.6
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 20.9
+    },
+    {
+     "crop": "Barley",
+     "season": "Rabi",
+     "share": 2.3
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 68.2
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 20.3
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 6.8
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 2.1
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "rohtak",
+     "km": 33
+    },
+    {
+     "slug": "charkhi-dadri",
+     "km": 37
+    },
+    {
+     "slug": "gurugram",
+     "km": 39
+    },
+    {
+     "slug": "rewari",
+     "km": 45
+    }
+   ]
+  },
+  "jind": {
+   "temp": [
+    13.0,
+    16.7,
+    22.9,
+    29.7,
+    34.6,
+    35.8,
+    33.2,
+    31.0,
+    29.1,
+    25.7,
+    20.1,
+    14.9
+   ],
+   "humidity": [
+    43,
+    42,
+    35,
+    26,
+    24,
+    36,
+    57,
+    66,
+    62,
+    44,
+    38,
+    39
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 60.4
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 30.5
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 8.7
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 97.4
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 2.3
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 69.5
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 13.8
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 10.2
+    },
+    {
+     "crop": "Coriander",
+     "season": "Whole year",
+     "share": 2.4
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 2.1
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "rohtak",
+     "km": 54
+    },
+    {
+     "slug": "kaithal",
+     "km": 55
+    },
+    {
+     "slug": "hisar",
+     "km": 59
+    },
+    {
+     "slug": "bhiwani",
+     "km": 60
+    }
+   ]
+  },
+  "kaithal": {
+   "temp": [
+    12.8,
+    16.4,
+    22.7,
+    29.4,
+    34.6,
+    35.8,
+    33.1,
+    30.9,
+    28.9,
+    25.2,
+    19.6,
+    14.6
+   ],
+   "humidity": [
+    45,
+    43,
+    36,
+    27,
+    23,
+    35,
+    57,
+    67,
+    62,
+    45,
+    40,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 93.1
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 4.7
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.4
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 78.2
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 8.9
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 8.6
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 2.6
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "kurukshetra",
+     "km": 46
+    },
+    {
+     "slug": "jind",
+     "km": 55
+    },
+    {
+     "slug": "karnal",
+     "km": 57
+    },
+    {
+     "slug": "patiala",
+     "km": 59
+    }
+   ]
+  },
+  "kapurthala": {
+   "temp": [
+    12.5,
+    16.0,
+    21.9,
+    28.4,
+    34.0,
+    35.6,
+    33.1,
+    30.9,
+    28.8,
+    25.0,
+    19.4,
+    14.4
+   ],
+   "humidity": [
+    47,
+    47,
+    41,
+    32,
+    24,
+    33,
+    56,
+    67,
+    62,
+    46,
+    41,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 98.2
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.1
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "jalandhar",
+     "km": 20
+    },
+    {
+     "slug": "tarn-taran",
+     "km": 44
+    },
+    {
+     "slug": "hoshiarpur",
+     "km": 54
+    },
+    {
+     "slug": "amritsar",
+     "km": 55
+    }
+   ]
+  },
+  "karnal": {
+   "temp": [
+    13.0,
+    16.7,
+    22.9,
+    29.6,
+    34.5,
+    35.5,
+    32.4,
+    30.0,
+    28.1,
+    24.8,
+    19.5,
+    14.7
+   ],
+   "humidity": [
+    45,
+    43,
+    36,
+    27,
+    24,
+    37,
+    61,
+    73,
+    68,
+    50,
+    43,
+    43
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 98.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.7
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 68.7
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 19.1
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 6.8
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 4.6
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "kurukshetra",
+     "km": 34
+    },
+    {
+     "slug": "panipat",
+     "km": 34
+    },
+    {
+     "slug": "yamunanagar",
+     "km": 56
+    },
+    {
+     "slug": "kaithal",
+     "km": 57
+    }
+   ]
+  },
+  "kurukshetra": {
+   "temp": [
+    13.1,
+    16.6,
+    22.6,
+    29.3,
+    34.2,
+    35.2,
+    32.0,
+    29.6,
+    27.7,
+    24.4,
+    19.2,
+    14.6
+   ],
+   "humidity": [
+    46,
+    45,
+    37,
+    28,
+    24,
+    37,
+    63,
+    75,
+    71,
+    52,
+    45,
+    44
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 94.8
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 97.9
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 54.6
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 41.3
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 3.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "karnal",
+     "km": 34
+    },
+    {
+     "slug": "ambala",
+     "km": 44
+    },
+    {
+     "slug": "kaithal",
+     "km": 46
+    },
+    {
+     "slug": "yamunanagar",
+     "km": 46
+    }
+   ]
+  },
+  "ludhiana": {
+   "temp": [
+    12.4,
+    16.1,
+    22.2,
+    28.9,
+    34.5,
+    36.0,
+    33.6,
+    31.5,
+    29.2,
+    25.4,
+    19.5,
+    14.4
+   ],
+   "humidity": [
+    46,
+    46,
+    39,
+    30,
+    23,
+    33,
+    55,
+    64,
+    60,
+    44,
+    40,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 98.7
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.5
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "shahid-bhagat-singh-nagar",
+     "km": 34
+    },
+    {
+     "slug": "jalandhar",
+     "km": 53
+    },
+    {
+     "slug": "fatehgarh-sahib",
+     "km": 59
+    },
+    {
+     "slug": "rupnagar",
+     "km": 65
+    }
+   ]
+  },
+  "mahendragarh": {
+   "temp": [
+    13.7,
+    17.4,
+    23.6,
+    30.2,
+    34.8,
+    35.8,
+    33.0,
+    30.8,
+    29.4,
+    26.4,
+    21.0,
+    15.7
+   ],
+   "humidity": [
+    40,
+    38,
+    31,
+    24,
+    24,
+    36,
+    57,
+    67,
+    60,
+    41,
+    35,
+    36
+   ],
+   "major": [
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 86.2
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 10.2
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 3.0
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 58.8
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 34.9
+    },
+    {
+     "crop": "Gram",
+     "season": "Rabi",
+     "share": 5.6
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 70.9
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 10.0
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 9.0
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 5.9
+    },
+    {
+     "crop": "Coriander",
+     "season": "Whole year",
+     "share": 4.2
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "charkhi-dadri",
+     "km": 38
+    },
+    {
+     "slug": "rewari",
+     "km": 45
+    },
+    {
+     "slug": "bhiwani",
+     "km": 58
+    },
+    {
+     "slug": "jhajjar",
+     "km": 61
+    }
+   ]
+  },
+  "mansa": {
+   "temp": [
+    12.8,
+    16.5,
+    22.8,
+    29.6,
+    34.8,
+    36.2,
+    33.8,
+    31.9,
+    29.7,
+    26.0,
+    20.1,
+    14.9
+   ],
+   "humidity": [
+    43,
+    42,
+    35,
+    27,
+    23,
+    34,
+    54,
+    61,
+    57,
+    41,
+    36,
+    38
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 54.0
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 43.3
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 2.2
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.3
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "barnala",
+     "km": 45
+    },
+    {
+     "slug": "bathinda",
+     "km": 51
+    },
+    {
+     "slug": "sangrur",
+     "km": 51
+    },
+    {
+     "slug": "fatehabad",
+     "km": 53
+    }
+   ]
+  },
+  "moga": {
+   "temp": [
+    12.6,
+    16.1,
+    22.3,
+    29.0,
+    34.8,
+    36.6,
+    34.3,
+    32.3,
+    29.9,
+    25.9,
+    19.8,
+    14.6
+   ],
+   "humidity": [
+    44,
+    45,
+    38,
+    30,
+    23,
+    32,
+    52,
+    59,
+    56,
+    41,
+    37,
+    39
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 99.0
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.2
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 0.7,
+     "p": 0.88,
+     "auc_in_100": 98,
+     "why": [
+      "Yearly rain of 461 mm",
+      "Lowest winter temperature of 0.3 °C"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "faridkot",
+     "km": 42
+    },
+    {
+     "slug": "ferozepur",
+     "km": 54
+    },
+    {
+     "slug": "barnala",
+     "km": 61
+    },
+    {
+     "slug": "kapurthala",
+     "km": 66
+    }
+   ]
+  },
+  "muktsar": {
+   "temp": [
+    13.1,
+    16.5,
+    22.9,
+    29.5,
+    35.2,
+    37.0,
+    35.0,
+    33.4,
+    30.9,
+    26.8,
+    20.6,
+    15.2
+   ],
+   "humidity": [
+    41,
+    42,
+    36,
+    28,
+    22,
+    32,
+    49,
+    54,
+    51,
+    35,
+    32,
+    35
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 70.1
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 28.7
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.1
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 1.0,
+     "p": 0.71,
+     "auc_in_100": 92,
+     "why": [
+      "Winter humidity of 39.4 %",
+      "Rain from June to September of 312 mm",
+      "Yearly rain of 400 mm"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "faridkot",
+     "km": 32
+    },
+    {
+     "slug": "fazilka",
+     "km": 47
+    },
+    {
+     "slug": "bathinda",
+     "km": 50
+    },
+    {
+     "slug": "ferozepur",
+     "km": 52
+    }
+   ]
+  },
+  "nuh": {
+   "temp": [
+    13.9,
+    17.6,
+    23.8,
+    30.4,
+    35.0,
+    35.8,
+    32.5,
+    30.0,
+    28.7,
+    25.8,
+    20.7,
+    15.7
+   ],
+   "humidity": [
+    41,
+    38,
+    31,
+    23,
+    23,
+    37,
+    60,
+    72,
+    66,
+    47,
+    39,
+    38
+   ],
+   "major": [
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 55.6
+    },
+    {
+     "crop": "Jowar",
+     "season": "Kharif",
+     "share": 21.1
+    },
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 16.3
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 4.9
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 74.5
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 23.9
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 74.6
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 18.1
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 4.2
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "palwal",
+     "km": 31
+    },
+    {
+     "slug": "rewari",
+     "km": 38
+    },
+    {
+     "slug": "gurugram",
+     "km": 40
+    },
+    {
+     "slug": "faridabad",
+     "km": 45
+    }
+   ]
+  },
+  "palwal": {
+   "temp": [
+    14.0,
+    17.8,
+    24.1,
+    30.8,
+    35.4,
+    36.2,
+    32.5,
+    30.0,
+    28.7,
+    25.7,
+    20.5,
+    15.6
+   ],
+   "humidity": [
+    43,
+    39,
+    31,
+    23,
+    23,
+    36,
+    62,
+    74,
+    68,
+    50,
+    42,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 58.7
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 13.9
+    },
+    {
+     "crop": "Jowar",
+     "season": "Kharif",
+     "share": 13.1
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 11.8
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 96.5
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 2.6
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 89.2
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 5.2
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 3.1
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "faridabad",
+     "km": 30
+    },
+    {
+     "slug": "nuh",
+     "km": 31
+    },
+    {
+     "slug": "gurugram",
+     "km": 45
+    },
+    {
+     "slug": "rewari",
+     "km": 68
+    }
+   ]
+  },
+  "panchkula": {
+   "temp": [
+    13.1,
+    16.3,
+    21.8,
+    28.2,
+    33.0,
+    33.8,
+    30.7,
+    28.5,
+    26.8,
+    23.7,
+    19.0,
+    14.8
+   ],
+   "humidity": [
+    45,
+    45,
+    38,
+    29,
+    25,
+    38,
+    66,
+    77,
+    72,
+    52,
+    43,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 61.2
+    },
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 28.3
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 5.0
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 92.7
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 4.0
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 50.1
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 29.7
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 12.2
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "sas-nagar",
+     "km": 12
+    },
+    {
+     "slug": "ambala",
+     "km": 37
+    },
+    {
+     "slug": "rupnagar",
+     "km": 43
+    },
+    {
+     "slug": "fatehgarh-sahib",
+     "km": 45
+    }
+   ]
+  },
+  "panipat": {
+   "temp": [
+    13.0,
+    16.7,
+    22.9,
+    29.6,
+    34.5,
+    35.5,
+    32.4,
+    30.0,
+    28.1,
+    24.8,
+    19.5,
+    14.7
+   ],
+   "humidity": [
+    45,
+    43,
+    36,
+    27,
+    24,
+    37,
+    61,
+    73,
+    68,
+    50,
+    43,
+    43
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 98.5
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.5
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 77.2
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 11.4
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 7.6
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "karnal",
+     "km": 34
+    },
+    {
+     "slug": "sonipat",
+     "km": 44
+    },
+    {
+     "slug": "jind",
+     "km": 63
+    },
+    {
+     "slug": "kurukshetra",
+     "km": 65
+    }
+   ]
+  },
+  "pathankot": {
+   "temp": [
+    9.7,
+    12.0,
+    16.7,
+    22.4,
+    27.5,
+    29.6,
+    27.5,
+    25.7,
+    23.9,
+    20.3,
+    15.8,
+    11.9
+   ],
+   "humidity": [
+    45,
+    50,
+    47,
+    40,
+    32,
+    39,
+    65,
+    75,
+    66,
+    48,
+    40,
+    39
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 74.3
+    },
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 21.7
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 96.9
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 2.3
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "gurdaspur",
+     "km": 35
+    },
+    {
+     "slug": "hoshiarpur",
+     "km": 86
+    },
+    {
+     "slug": "kapurthala",
+     "km": 103
+    },
+    {
+     "slug": "amritsar",
+     "km": 104
+    }
+   ]
+  },
+  "patiala": {
+   "temp": [
+    12.8,
+    16.4,
+    22.5,
+    29.2,
+    34.4,
+    35.6,
+    32.8,
+    30.6,
+    28.6,
+    25.1,
+    19.6,
+    14.6
+   ],
+   "humidity": [
+    46,
+    45,
+    38,
+    28,
+    23,
+    35,
+    58,
+    68,
+    64,
+    46,
+    41,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 99.3
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "fatehgarh-sahib",
+     "km": 34
+    },
+    {
+     "slug": "ambala",
+     "km": 39
+    },
+    {
+     "slug": "sas-nagar",
+     "km": 50
+    },
+    {
+     "slug": "sangrur",
+     "km": 53
+    }
+   ]
+  },
+  "rewari": {
+   "temp": [
+    13.9,
+    17.6,
+    23.8,
+    30.4,
+    35.0,
+    35.8,
+    32.5,
+    30.0,
+    28.7,
+    25.8,
+    20.7,
+    15.7
+   ],
+   "humidity": [
+    41,
+    38,
+    31,
+    23,
+    23,
+    37,
+    60,
+    72,
+    66,
+    47,
+    39,
+    38
+   ],
+   "major": [
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 87.2
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 7.2
+    },
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 3.2
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 58.1
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 40.3
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 77.2
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 9.8
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 4.8
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 4.2
+    },
+    {
+     "crop": "Coriander",
+     "season": "Whole year",
+     "share": 4.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "nuh",
+     "km": 38
+    },
+    {
+     "slug": "mahendragarh",
+     "km": 45
+    },
+    {
+     "slug": "jhajjar",
+     "km": 45
+    },
+    {
+     "slug": "gurugram",
+     "km": 49
+    }
+   ]
+  },
+  "rohtak": {
+   "temp": [
+    13.2,
+    16.9,
+    23.2,
+    29.9,
+    34.7,
+    35.8,
+    32.8,
+    30.3,
+    28.5,
+    25.3,
+    19.9,
+    15.0
+   ],
+   "humidity": [
+    44,
+    42,
+    34,
+    25,
+    24,
+    36,
+    59,
+    71,
+    66,
+    48,
+    41,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 50.4
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 15.8
+    },
+    {
+     "crop": "Jowar",
+     "season": "Kharif",
+     "share": 15.8
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 14.8
+    },
+    {
+     "crop": "Arhar (tur)",
+     "season": "Kharif",
+     "share": 2.3
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 88.0
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 9.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 86.7
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 6.5
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 3.6
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 2.3
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "jhajjar",
+     "km": 33
+    },
+    {
+     "slug": "sonipat",
+     "km": 43
+    },
+    {
+     "slug": "bhiwani",
+     "km": 44
+    },
+    {
+     "slug": "charkhi-dadri",
+     "km": 45
+    }
+   ]
+  },
+  "rupnagar": {
+   "temp": [
+    13.1,
+    16.5,
+    22.2,
+    28.7,
+    33.9,
+    35.1,
+    32.4,
+    30.3,
+    28.3,
+    25.0,
+    19.7,
+    15.0
+   ],
+   "humidity": [
+    45,
+    45,
+    39,
+    30,
+    24,
+    35,
+    59,
+    70,
+    65,
+    47,
+    41,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 63.8
+    },
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 35.9
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 96.7
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 2.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "sas-nagar",
+     "km": 37
+    },
+    {
+     "slug": "fatehgarh-sahib",
+     "km": 39
+    },
+    {
+     "slug": "panchkula",
+     "km": 43
+    },
+    {
+     "slug": "shahid-bhagat-singh-nagar",
+     "km": 44
+    }
+   ]
+  },
+  "sas-nagar": {
+   "temp": [
+    13.1,
+    16.3,
+    21.8,
+    28.2,
+    33.0,
+    33.8,
+    30.7,
+    28.5,
+    26.8,
+    23.7,
+    19.0,
+    14.8
+   ],
+   "humidity": [
+    45,
+    45,
+    38,
+    29,
+    25,
+    38,
+    66,
+    77,
+    72,
+    52,
+    43,
+    42
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 81.0
+    },
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 17.5
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 96.8
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "panchkula",
+     "km": 12
+    },
+    {
+     "slug": "fatehgarh-sahib",
+     "km": 33
+    },
+    {
+     "slug": "ambala",
+     "km": 36
+    },
+    {
+     "slug": "rupnagar",
+     "km": 37
+    }
+   ]
+  },
+  "sangrur": {
+   "temp": [
+    12.8,
+    16.5,
+    22.8,
+    29.6,
+    34.8,
+    36.2,
+    33.8,
+    31.9,
+    29.7,
+    26.0,
+    20.1,
+    14.9
+   ],
+   "humidity": [
+    43,
+    42,
+    35,
+    27,
+    23,
+    34,
+    54,
+    61,
+    57,
+    41,
+    36,
+    38
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 96.4
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 3.1
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.5
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "barnala",
+     "km": 32
+    },
+    {
+     "slug": "mansa",
+     "km": 51
+    },
+    {
+     "slug": "patiala",
+     "km": 53
+    },
+    {
+     "slug": "fatehgarh-sahib",
+     "km": 68
+    }
+   ]
+  },
+  "shahid-bhagat-singh-nagar": {
+   "temp": [
+    13.1,
+    16.5,
+    22.2,
+    28.7,
+    33.9,
+    35.1,
+    32.4,
+    30.3,
+    28.3,
+    25.0,
+    19.7,
+    15.0
+   ],
+   "humidity": [
+    45,
+    45,
+    39,
+    30,
+    24,
+    35,
+    59,
+    70,
+    65,
+    47,
+    41,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 84.8
+    },
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 15.2
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 97.4
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 2.2
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "ludhiana",
+     "km": 34
+    },
+    {
+     "slug": "rupnagar",
+     "km": 44
+    },
+    {
+     "slug": "hoshiarpur",
+     "km": 50
+    },
+    {
+     "slug": "jalandhar",
+     "km": 56
+    }
+   ]
+  },
+  "sirsa": {
+   "temp": [
+    13.4,
+    17.0,
+    23.4,
+    29.9,
+    35.0,
+    36.4,
+    34.3,
+    32.6,
+    30.5,
+    26.9,
+    21.0,
+    15.6
+   ],
+   "humidity": [
+    40,
+    39,
+    33,
+    25,
+    23,
+    34,
+    52,
+    57,
+    53,
+    36,
+    31,
+    34
+   ],
+   "major": [
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 65.3
+    },
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 27.4
+    },
+    {
+     "crop": "Guar",
+     "season": "Kharif",
+     "share": 4.8
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 84.1
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 12.9
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 42.0
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 20.4
+    },
+    {
+     "crop": "Garlic",
+     "season": "Whole year",
+     "share": 19.6
+    },
+    {
+     "crop": "Guar",
+     "season": "Whole year",
+     "share": 10.0
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 3.2
+    },
+    {
+     "crop": "Coriander",
+     "season": "Whole year",
+     "share": 2.6
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "fatehabad",
+     "km": 41
+    },
+    {
+     "slug": "mansa",
+     "km": 62
+    },
+    {
+     "slug": "bathinda",
+     "km": 75
+    },
+    {
+     "slug": "hisar",
+     "km": 79
+    }
+   ]
+  },
+  "sonipat": {
+   "temp": [
+    13.2,
+    16.9,
+    23.2,
+    29.9,
+    34.7,
+    35.8,
+    32.8,
+    30.3,
+    28.5,
+    25.3,
+    19.9,
+    15.0
+   ],
+   "humidity": [
+    44,
+    42,
+    34,
+    25,
+    24,
+    36,
+    59,
+    71,
+    66,
+    48,
+    41,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 83.0
+    },
+    {
+     "crop": "Bajra",
+     "season": "Kharif",
+     "share": 6.4
+    },
+    {
+     "crop": "Jowar",
+     "season": "Kharif",
+     "share": 5.6
+    },
+    {
+     "crop": "Cotton",
+     "season": "Kharif",
+     "share": 2.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 98.7
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 67.9
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 17.0
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 10.3
+    },
+    {
+     "crop": "Coriander",
+     "season": "Whole year",
+     "share": 3.8
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 1.3,
+     "p": 0.77,
+     "auc_in_100": 86,
+     "why": [
+      "Lowest winter temperature of 0.1 °C",
+      "Winter temperature of 17.7 °C",
+      "Winter humidity of 42.2 %"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "rohtak",
+     "km": 43
+    },
+    {
+     "slug": "panipat",
+     "km": 44
+    },
+    {
+     "slug": "jhajjar",
+     "km": 55
+    },
+    {
+     "slug": "gurugram",
+     "km": 59
+    }
+   ]
+  },
+  "tarn-taran": {
+   "temp": [
+    12.4,
+    15.9,
+    21.9,
+    28.6,
+    34.5,
+    36.4,
+    34.0,
+    31.8,
+    29.5,
+    25.5,
+    19.5,
+    14.4
+   ],
+   "humidity": [
+    46,
+    47,
+    41,
+    32,
+    23,
+    31,
+    53,
+    63,
+    58,
+    43,
+    39,
+    41
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 98.4
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 99.6
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 100.0
+    }
+   ],
+   "explore": [],
+   "near": [
+    {
+     "slug": "amritsar",
+     "km": 20
+    },
+    {
+     "slug": "kapurthala",
+     "km": 44
+    },
+    {
+     "slug": "jalandhar",
+     "km": 64
+    },
+    {
+     "slug": "ferozepur",
+     "km": 65
+    }
+   ]
+  },
+  "yamunanagar": {
+   "temp": [
+    13.2,
+    16.7,
+    22.4,
+    29.0,
+    33.7,
+    34.3,
+    30.6,
+    28.6,
+    26.7,
+    23.6,
+    18.9,
+    14.6
+   ],
+   "humidity": [
+    48,
+    47,
+    39,
+    29,
+    25,
+    40,
+    70,
+    81,
+    77,
+    59,
+    50,
+    48
+   ],
+   "major": [
+    {
+     "crop": "Rice",
+     "season": "Kharif",
+     "share": 97.6
+    },
+    {
+     "crop": "Wheat",
+     "season": "Rabi",
+     "share": 96.0
+    },
+    {
+     "crop": "Mustard and rapeseed",
+     "season": "Rabi",
+     "share": 3.1
+    },
+    {
+     "crop": "Sugarcane",
+     "season": "Whole year",
+     "share": 76.4
+    },
+    {
+     "crop": "Potato",
+     "season": "Whole year",
+     "share": 12.4
+    },
+    {
+     "crop": "Onion",
+     "season": "Whole year",
+     "share": 5.8
+    }
+   ],
+   "explore": [
+    {
+     "crop": "Maize",
+     "season": "Kharif",
+     "share": 1.0,
+     "p": 0.74,
+     "auc_in_100": 88,
+     "why": [
+      "Winter humidity of 47.6 %",
+      "Yearly rain of 1,107 mm",
+      "Peak summer heat of 47.1 °C"
+     ]
+    }
+   ],
+   "near": [
+    {
+     "slug": "kurukshetra",
+     "km": 46
+    },
+    {
+     "slug": "ambala",
+     "km": 53
+    },
+    {
+     "slug": "karnal",
+     "km": 56
+    },
+    {
+     "slug": "panchkula",
+     "km": 75
+    }
+   ]
+  }
+ },
+ "rain": {
+  "Punjab": {
+   "window": "Climatology, all years",
+   "rows": [
+    {
+     "month": 1,
+     "mean": 25.2,
+     "p10": 2.4,
+     "p90": 53.2
+    },
+    {
+     "month": 2,
+     "mean": 26.8,
+     "p10": 1.9,
+     "p90": 58.8
+    },
+    {
+     "month": 3,
+     "mean": 23.7,
+     "p10": 1.9,
+     "p90": 53.3
+    },
+    {
+     "month": 4,
+     "mean": 12.7,
+     "p10": 1.1,
+     "p90": 35.4
+    },
+    {
+     "month": 5,
+     "mean": 14.1,
+     "p10": 1.4,
+     "p90": 34.7
+    },
+    {
+     "month": 6,
+     "mean": 46.5,
+     "p10": 10.6,
+     "p90": 96.9
+    },
+    {
+     "month": 7,
+     "mean": 169.0,
+     "p10": 84.8,
+     "p90": 248.1
+    },
+    {
+     "month": 8,
+     "mean": 158.2,
+     "p10": 72.2,
+     "p90": 253.1
+    },
+    {
+     "month": 9,
+     "mean": 86.8,
+     "p10": 13.4,
+     "p90": 188.5
+    },
+    {
+     "month": 10,
+     "mean": 13.8,
+     "p10": 0.3,
+     "p90": 26.0
+    },
+    {
+     "month": 11,
+     "mean": 4.1,
+     "p10": 0.0,
+     "p90": 12.4
+    },
+    {
+     "month": 12,
+     "mean": 12.7,
+     "p10": 0.1,
+     "p90": 36.2
+    }
+   ]
+  },
+  "Haryana": {
+   "window": "Climatology, all years",
+   "rows": [
+    {
+     "month": 1,
+     "mean": 16.9,
+     "p10": 0.6,
+     "p90": 39.2
+    },
+    {
+     "month": 2,
+     "mean": 17.4,
+     "p10": 0.4,
+     "p90": 41.1
+    },
+    {
+     "month": 3,
+     "mean": 12.9,
+     "p10": 0.4,
+     "p90": 34.6
+    },
+    {
+     "month": 4,
+     "mean": 7.6,
+     "p10": 0.4,
+     "p90": 20.1
+    },
+    {
+     "month": 5,
+     "mean": 14.5,
+     "p10": 1.4,
+     "p90": 35.7
+    },
+    {
+     "month": 6,
+     "mean": 48.6,
+     "p10": 13.4,
+     "p90": 88.8
+    },
+    {
+     "month": 7,
+     "mean": 150.0,
+     "p10": 66.2,
+     "p90": 248.7
+    },
+    {
+     "month": 8,
+     "mean": 150.8,
+     "p10": 57.5,
+     "p90": 250.5
+    },
+    {
+     "month": 9,
+     "mean": 88.3,
+     "p10": 11.7,
+     "p90": 183.2
+    },
+    {
+     "month": 10,
+     "mean": 12.8,
+     "p10": 0.0,
+     "p90": 36.5
+    },
+    {
+     "month": 11,
+     "mean": 3.3,
+     "p10": 0.0,
+     "p90": 9.8
+    },
+    {
+     "month": 12,
+     "mean": 7.2,
+     "p10": 0.0,
+     "p90": 21.0
+    }
+   ]
+  }
+ }
+}

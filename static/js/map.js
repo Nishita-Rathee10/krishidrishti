@@ -18,8 +18,8 @@
 
   var LAYERS = {
     rain: { label: "Yearly rain", key: "rain", unit: "mm", digits: 0, ramp: ["#35564f", "#2f7f80", "#4fb0c4", "#a6e4f2"] },
-    winter: { label: "Winter temperature", key: "t_winter", unit: "\u00b0C", digits: 1, ramp: ["#4b523d", "#8f8a3b", "#d0ae2e", "#f7d65f"] },
-    summer: { label: "Peak summer heat", key: "t_summer", unit: "\u00b0C", digits: 1, ramp: ["#5b3b35", "#9a4a38", "#d8653a", "#f7a266"] }
+    winter: { label: "Winter temperature", key: "t_winter", unit: "°C", digits: 1, ramp: ["#4b523d", "#8f8a3b", "#d0ae2e", "#f7d65f"] },
+    summer: { label: "Peak summer heat", key: "t_summer", unit: "°C", digits: 1, ramp: ["#5b3b35", "#9a4a38", "#d8653a", "#f7a266"] }
   };
 
   var layerName = "rain";
@@ -110,9 +110,10 @@
       '<p class="readout-state">' + esc(d.state) + '</p>' +
       '<dl class="figures">' +
       figure("fig-rain", "Yearly rain", d.rain, 0, "mm") +
-      figure("fig-winter", "Winter temperature", d.t_winter, 1, "\u00b0C") +
-      figure("fig-summer", "Peak summer heat", d.t_summer, 1, "\u00b0C") +
-      '</dl><p class="readout-note">' + esc(note) + '</p>';
+      figure("fig-winter", "Winter temperature", d.t_winter, 1, "°C") +
+      figure("fig-summer", "Peak summer heat", d.t_summer, 1, "°C") +
+      '</dl><p class="readout-note">' + esc(note) + '</p>' +
+      '<p><a class="btn" href="/district/' + encodeURIComponent(d.slug) + '">Open the ' + esc(d.name) + ' page</a></p>';
   }
 
   function choose(slug) {

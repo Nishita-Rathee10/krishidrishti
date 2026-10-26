@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block title %}{{ d.name }}, {{ d.state }}: rain, temperature and crops | Krishi Drishti{% endblock %}
+{% block description %}{{ d.name }}, {{ d.state }}: usual rain, temperature in each month and the crops grown here, with notes on how far to trust each number.{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ url_for('index') }}">All districts</a></p>
+    <h1>{{ d.name }}</h1>
+    <p class="state-line">{{ d.state }}</p>
+    <dl class="figures">
+      <div class="fig-rain"><dt>Yearly rain</dt><dd>{{ "{:,.0f}".format(d.rain) }} <small>mm</small></dd></div>
+      <div class="fig-winter"><dt>Winter temperature</dt><dd>{{ "%.1f"|format(d.t_winter) }} <small>&deg;C</small></dd></div>
+      <div class="fig-summer"><dt>Peak summer heat</dt><dd>{{ "%.1f"|format(d.t_summer) }} <small>&deg;C</small></dd></div>
+    </dl>
+    <p class="readout-note">Rain is the average of 1986 to 2015. Temperatures come from a NASA model for 2001 to 2025. Peak summer heat is the highest temperature the model shows in April, May and June, so it reads far higher than a normal day.{% if d.approx_rain %} Rain for this district is copied from the district it was carved out of.{% endif %}</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <div>
+      <h2>Temperature through the year</h2>
+      <p class="side-note">The average daily temperature in each month, in degrees Celsius.</p>
+    </div>
+    <figure class="chart chart-temp">
+      <div class="chart-body">
+        <div class="axis" aria-hidden="true"><span>{{ temp_top }}</span><span>0</span></div>
+        <ol class="cols">
+          {% for t in temps %}
+          <li class="col" title="{{ t.month }}: {{ '%.1f'|format(t.value) }} &deg;C">
+            <div class="track">
+              <span class="v" style="bottom: calc({{ t.pct }}% + 3px)">{{ t.label }}</span>
+              <div class="bar" style="height: {{ t.pct }}%"></div>
+            </div>
+            <span class="m"><span class="m-long">{{ t.month[:3] }}</span><span class="m-short">{{ t.letter }}</span></span>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+      <details class="data-table">
+        <summary>See the numbers as a table</summary>
+        <table>
+          <thead><tr><th scope="col">Month</th><th scope="col">Temperature (&deg;C)</th><th scope="col">Humidity (%)</th></tr></thead>
+          <tbody>
+            {% for t in temps %}
+            <tr><th scope="row">{{ t.month }}</th><td>{{ "%.1f"|format(t.value) }}</td><td>{{ page.humidity[loop.index0] }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </details>
+    </figure>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <div>
+      <h2>Rain through the year</h2>
+      <p class="side-note">This is the pattern for all of {{ d.state }}{% if d.state == "Haryana" %}, together with Delhi and Chandigarh{% endif %}. We do not have month-by-month rain for single districts.</p>
+    </div>
+    <figure class="chart chart-rain">
+      <div class="chart-body">
+        <div class="axis" aria-hidden="true"><span>{{ rain_top }} mm</span><span>0</span></div>
+        <ol class="cols">
+          {% for r in rain_rows %}
+          <li class="col" title="{{ r.month }}: usual {{ '%.0f'|format(r.mean) }} mm, in most years between {{ '%.0f'|format(r.p10) }} and {{ '%.0f'|format(r.p90) }} mm">
+            <div class="track">
+              <div class="range" style="bottom: {{ r.lo_pct }}%; height: {{ r.hi_pct }}%"></div>
+              <div class="mean" style="bottom: {{ r.mean_pct }}%"></div>
+            </div>
+            <span class="m"><span class="m-long">{{ r.month[:3] }}</span><span class="m-short">{{ r.letter }}</span></span>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+      <figcaption class="key">
+        <span><i class="key-mean"></i>Usual rain (average)</span>
+        <span><i class="key-range"></i>Where rain stayed in about 8 of 10 years</span>
+      </figcaption>
+      <details class="data-table">
+        <summary>See the numbers as a table</summary>
+        <table>
+          <thead><tr><th scope="col">Month</th><th scope="col">Usual (mm)</th><th scope="col">Low end (mm)</th><th scope="col">High end (mm)</th></tr></thead>
+          <tbody>
+            {% for r in rain_rows %}
+            <tr><th scope="row">{{ r.month }}</th><td>{{ "%.0f"|format(r.mean) }}</td><td>{{ "%.0f"|format(r.p10) }}</td><td>{{ "%.0f"|format(r.p90) }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </details>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="crops">
+  <div class="wrap two-col">
+    <div>
+      <h2>Crops in {{ d.name }}</h2>
+      <p class="side-note">Kharif crops are sown with the monsoon, in June and July. Rabi crops are sown in winter, from October to December.</p>
+    </div>
+    <div class="crops">
+      <h3>Major crops today</h3>
+      <p>A crop counts as major when it covers at least 2% of the area recorded for its season. These are averages for 2010 to 2019.</p>
+      {% if page.major %}
+      <table class="crop-table">
+        <thead><tr><th scope="col">Crop</th><th scope="col">Season</th><th scope="col">Share of recorded area</th></tr></thead>
+        <tbody>
+          {% for m in page.major %}
+          <tr>
+            <th scope="row">{{ m.crop }}</th>
+            <td>{{ m.season }}</td>
+            <td><span class="share"><span class="share-bar" style="width: {{ [m.share, 100]|min }}%"></span></span><span class="share-num">{{ "%.1f"|format(m.share) }}%</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>No crop in our records reaches 2% of the recorded area here.</p>
+      {% endif %}
+
+      <h3 class="gap-top">Crops the climate may suit</h3>
+      {% if page.explore %}
+      <p>These crops are small here today, but {{ d.name }} has a climate like districts where they are major crops. We show a crop only when our model passed its own test for it.</p>
+      {% for e in page.explore %}
+      <article class="suggest">
+        <h4>{{ e.crop }} <span class="suggest-season">{{ e.season }}</span></h4>
+        <p>Today it covers {{ "%.1f"|format(e.share) }}% of the recorded area in {{ d.name }}. The model rates the climate here as a strong match.</p>
+        {% if e.why %}
+        <p class="why-title">What the model looked at</p>
+        <ul class="why">
+          {% for w in e.why %}<li>{{ w }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        <p class="suggest-note">In our test, when the model compared a district where {{ e.crop|lower }} is major with one where it is not, it put the right one higher {{ e.auc_in_100 }} times out of 100. These are links in the data, not causes. Water, soil and markets also decide what farmers grow.</p>
+      </article>
+      {% endfor %}
+      {% else %}
+      <p>We have no suggestion for {{ d.name }}. We show a crop only when our model passed its own test for it and the match here is strong.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>Nearby districts</h2>
+    <ul class="near">
+      {% for n in near %}
+      <li><a href="{{ url_for('district', slug=n.slug) }}">{{ n.name }}</a> <span>about {{ n.km }} km away</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}
