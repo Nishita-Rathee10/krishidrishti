@@ -20,6 +20,7 @@ def load(name):
 DISTRICTS = load("districts.json")
 PAGES = load("district_pages.json")
 BY_SLUG = {d["slug"]: d for d in DISTRICTS["districts"]}
+RAIN = load("rain_data.json")
 YIELD = load("yield_data.json")
 CROP_BY_SLUG = {c["slug"]: c for c in YIELD["crops"]}
 SERIES_BY = {}
@@ -101,6 +102,25 @@ def yield_chart(series, show_range):
             "zone_x": round(sx(2017) - unit / 2, 1), "zone_w": round(unit * 3, 1), "top": top_m}
 
 
+def rain_year_chart(r):
+    w, h, left, right, top_m, bottom_m = 760, 300, 56, 14, 16, 36
+    step, ymax = nice_axis(max(r["annual"]) * 1.04)
+    inner_w, inner_h = w - left - right, h - top_m - bottom_m
+    n = len(r["years"])
+    slot = inner_w / n
+
+    def sy(v):
+        return round(top_m + inner_h - v / ymax * inner_h, 1)
+
+    bars = [{"x": round(left + i * slot + slot * 0.12, 1), "w": round(slot * 0.76, 1), "y": sy(v),
+             "h": round(v / ymax * inner_h, 1), "year": yr, "v": int(v)}
+            for i, (yr, v) in enumerate(zip(r["years"], r["annual"]))]
+    ticks = [{"y": sy(i * step), "label": num(i * step)} for i in range(int(round(ymax / step)) + 1)]
+    xticks = [{"x": round(left + (yr - r["years"][0] + 0.5) * slot, 1), "label": str(yr)} for yr in (1910, 1930, 1950, 1970, 1990, 2010)]
+    return {"w": w, "h": h, "left": left, "right": w - right, "base": sy(0), "bars": bars, "ticks": ticks, "xticks": xticks,
+            "mean_y": sy(r["annual_mean"]), "band_y": sy(r["annual_p90"]), "band_h": round(sy(r["annual_p10"]) - sy(r["annual_p90"]), 1)}
+
+
 @app.context_processor
 def inject_site():
     return {"site_name": SITE_NAME, "site_url": os.environ.get("SITE_URL", "").rstrip("/")}
@@ -152,6 +172,19 @@ def yield_page():
                            series=series, chart=chart, show_range=show_range, available=available,
                            groups=YIELD_DISTRICTS, crops=YIELD["crops"], rows=rows, sm=summary, ydata=YIELD,
                            max_top=MAX_RANGE_TOP)
+
+
+@app.route("/rain")
+def rain_page():
+    slug = request.args.get("region", "punjab")
+    if slug not in RAIN["regions"]:
+        slug = "punjab"
+    r = RAIN["regions"][slug]
+    month_rows, month_top = rain_chart(r["months"])
+    sar = next(m for m in r["models"] if m["is_sarima"])
+    return render_template("rain.html", r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
+                           ychart=rain_year_chart(r), sar=sar, val_years=RAIN["val_years"], test_years=RAIN["test_years"],
+                           usual_month=round(r["annual_mean"] / 12))
 
 
 @app.route("/favicon.ico")

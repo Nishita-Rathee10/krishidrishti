@@ -245,7 +245,19 @@ h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; marg
   .yform .btn { margin-top: 0; }
 }
 
-.site-nav { margin-left: auto; display: flex; gap: 18px; font-weight: 600; }
+.site-nav { margin-left: auto; display: flex; gap: 18px; font-weight: 600; white-space: nowrap; }
+.brand-name { white-space: nowrap; }
 .site-nav a { color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
 .site-nav a:hover { border-bottom-color: var(--field); }
-@media (max-width: 520px) { .brand-name { font-size: 1.25rem; } .site-nav { gap: 12px; font-size: 1rem; } }
+@media (max-width: 520px) { .brand-name { font-size: 1.05rem; } .brand { gap: 8px; } .brand-mark { width: 28px; height: 28px; } .site-nav { gap: 10px; font-size: .92rem; } }
+
+/* Rain page */
+.chart-years svg { display: block; width: 100%; height: auto; }
+.chart-years .grid { stroke: var(--rule); stroke-width: 1; }
+.chart-years .tick { font-size: 13px; fill: var(--ink-soft); font-family: var(--font-body); }
+.chart-years .yband { fill: #E4EBDC; }
+.chart-years .ybar { fill: var(--canal); }
+.chart-years .ymean { stroke: var(--ink); stroke-width: 2.5; }
+.key-bar { display: inline-block; width: 12px; height: 14px; background: var(--canal); }
+.key-band { display: inline-block; width: 22px; height: 14px; background: #E4EBDC; border: 1px solid var(--rule); }
+.wide-list { max-width: 48rem; margin-top: 1.4em; }

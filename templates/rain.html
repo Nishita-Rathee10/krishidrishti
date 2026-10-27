@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block title %}Rain in {{ r.name }}: month by month and year by year | Krishi Drishti{% endblock %}
+{% block description %}How much rain {{ r.name }} usually gets each month, how much it changes from year to year, and how well models guessed the rain of a coming month.{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ url_for('index') }}">All districts</a></p>
+    <h1>Rain</h1>
+    <p class="lead">How much rain falls in each month, how much it changes from year to year, and how well a model could guess the rain of a coming month. The records run from 1901 to 2015.</p>
+    <p class="season-pick" aria-label="Choose a state">Show:
+      {% for k, v in regions.items() %}
+        {% if k == slug %}<strong>{{ v.name }}</strong>{% else %}<a href="{{ url_for('rain_page', region=k) }}">{{ v.name }}</a>{% endif %}{% if not loop.last %} &middot; {% endif %}
+      {% endfor %}
+    </p>
+    <p class="readout-note">{% if slug == "haryana" %}Haryana here includes Delhi and Chandigarh, because the source records them together.{% else %}One record for the whole state of Punjab. We do not have month-by-month rain for single districts.{% endif %}</p>
+    <dl class="figures">
+      <div class="fig-rain"><dt>Usual yearly rain</dt><dd>{{ "{:,}".format(r.annual_mean) }} <small>mm</small></dd></div>
+      <div class="fig-winter"><dt>Driest year, {{ r.driest.year }}</dt><dd>{{ "{:,}".format(r.driest.mm) }} <small>mm</small></dd></div>
+      <div class="fig-summer"><dt>Wettest year, {{ r.wettest.year }}</dt><dd>{{ "{:,}".format(r.wettest.mm) }} <small>mm</small></dd></div>
+    </dl>
+    <p class="readout-note">About {{ r.monsoon_share }}% of a usual year's rain falls from June to September.</p>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <div>
+      <h2>Month by month</h2>
+      <p class="side-note">The black line is the usual rain of each month. The blue box is where the rain stayed in about 8 of 10 years. Most of the rain comes in July, August and September.</p>
+    </div>
+    <figure class="chart chart-rain">
+      <div class="chart-body">
+        <div class="axis" aria-hidden="true"><span>{{ month_top }} mm</span><span>0</span></div>
+        <ol class="cols">
+          {% for m in month_rows %}
+          <li class="col" title="{{ m.month }}: usual {{ '%.0f'|format(m.mean) }} mm, in most years between {{ '%.0f'|format(m.p10) }} and {{ '%.0f'|format(m.p90) }} mm">
+            <div class="track">
+              <div class="range" style="bottom: {{ m.lo_pct }}%; height: {{ m.hi_pct }}%"></div>
+              <div class="mean" style="bottom: {{ m.mean_pct }}%"></div>
+            </div>
+            <span class="m"><span class="m-long">{{ m.month[:3] }}</span><span class="m-short">{{ m.letter }}</span></span>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+      <figcaption class="key">
+        <span><i class="key-mean"></i>Usual rain (average)</span>
+        <span><i class="key-range"></i>Where rain stayed in about 8 of 10 years</span>
+      </figcaption>
+      <details class="data-table">
+        <summary>See the numbers as a table</summary>
+        <table>
+          <thead><tr><th scope="col">Month</th><th scope="col">Usual (mm)</th><th scope="col">Low end (mm)</th><th scope="col">High end (mm)</th></tr></thead>
+          <tbody>{% for m in month_rows %}<tr><th scope="row">{{ m.month }}</th><td>{{ "%.0f"|format(m.mean) }}</td><td>{{ "%.0f"|format(m.p10) }}</td><td>{{ "%.0f"|format(m.p90) }}</td></tr>{% endfor %}</tbody>
+        </table>
+      </details>
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <div>
+      <h2>Year by year</h2>
+      <p class="side-note">Each bar is the rain of one year, 1901 to 2015. The black line is the average. In 8 of 10 years the total was between {{ "{:,}".format(r.annual_p10) }} and {{ "{:,}".format(r.annual_p90) }} mm, so a single year can be far from the average.</p>
+    </div>
+    <figure class="chart chart-years">
+      <svg viewBox="0 0 {{ ychart.w }} {{ ychart.h }}" role="img" aria-labelledby="rt rd" focusable="false">
+        <title id="rt">Rain of each year in {{ r.name }}, 1901 to 2015</title>
+        <desc id="rd">One bar for each year, in millimetres. The average is {{ r.annual_mean }} mm. The driest year was {{ r.driest.year }} with {{ r.driest.mm }} mm and the wettest was {{ r.wettest.year }} with {{ r.wettest.mm }} mm.</desc>
+        <rect class="yband" x="{{ ychart.left }}" y="{{ ychart.band_y }}" width="{{ ychart.right - ychart.left }}" height="{{ ychart.band_h }}"/>
+        {% for t in ychart.ticks %}
+        <line class="grid" x1="{{ ychart.left }}" x2="{{ ychart.right }}" y1="{{ t.y }}" y2="{{ t.y }}"/>
+        <text class="tick" x="{{ ychart.left - 8 }}" y="{{ t.y + 4 }}" text-anchor="end">{{ t.label }}</text>
+        {% endfor %}
+        {% for b in ychart.bars %}<rect class="ybar" x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}"><title>{{ b.year }}: {{ b.v }} mm</title></rect>{% endfor %}
+        <line class="ymean" x1="{{ ychart.left }}" x2="{{ ychart.right }}" y1="{{ ychart.mean_y }}" y2="{{ ychart.mean_y }}"/>
+        {% for x in ychart.xticks %}<text class="tick" x="{{ x.x }}" y="{{ ychart.base + 22 }}" text-anchor="middle">{{ x.label }}</text>{% endfor %}
+      </svg>
+      <p class="axis-title">Millimetres of rain in the year</p>
+      <figcaption class="key">
+        <span><i class="key-bar"></i>Rain in that year</span>
+        <span><i class="key-mean"></i>Average</span>
+        <span><i class="key-band"></i>Where 8 of 10 years fall</span>
+      </figcaption>
+      <details class="data-table">
+        <summary>See every year as a table</summary>
+        <table>
+          <thead><tr><th scope="col">Year</th><th scope="col">Whole year (mm)</th><th scope="col">June to September (mm)</th></tr></thead>
+          <tbody>{% for yr in r.years %}<tr><th scope="row">{{ yr }}</th><td>{{ "{:,.0f}".format(r.annual[loop.index0]) }}</td><td>{{ "{:,.0f}".format(r.monsoon[loop.index0]) }}</td></tr>{% endfor %}</tbody>
+        </table>
+      </details>
+    </figure>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <h2>Can a model guess the rain of a coming month?</h2>
+    <p class="side-note wide">We asked this the hard way. For each year we gave every method the records up to the end of the year before, and asked for all 12 months of the next year. Then we compared with what really fell. The "miss" below is the usual gap, in millimetres, for one month. We used {{ val_years }} to choose methods, then looked at {{ test_years }}.</p>
+    <p class="verdict">The seasonal model did a little better than the usual pattern, but its guesses for single months are still far off.</p>
+    <div class="table-scroll">
+      <table class="crop-table">
+        <thead>
+          <tr><th scope="col">Way of guessing</th><th scope="col">Miss, {{ val_years }}</th><th scope="col">Better than usual rain?</th><th scope="col">Miss, {{ test_years }}</th><th scope="col">Better than usual rain?</th><th scope="col">Miss for June to September total, {{ test_years }}</th></tr>
+        </thead>
+        <tbody>
+          {% for m in r.models %}
+          <tr>
+            <th scope="row">{{ m.name }}</th>
+            <td>{{ m.val_mae }} mm</td>
+            <td>{% if m.is_reference %}Starting point{% elif m.val_gain > 0 %}{{ m.val_gain }}% better{% else %}{{ (-m.val_gain)|round(1) }}% worse{% endif %}</td>
+            <td>{{ m.test_mae }} mm</td>
+            <td>{% if m.is_reference %}Starting point{% elif m.test_gain > 0 %}{{ m.test_gain }}% better{% else %}{{ (-m.test_gain)|round(1) }}% worse{% endif %}</td>
+            <td>{{ m.test_monsoon }} mm</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <ul class="limits wide-list">
+      <li>Before testing, we set one rule: the seasonal model is accepted only if it beats the best usual-rain method by at least 2% on {{ val_years }}. In {{ r.name }} it did, with {{ sar.val_gain }}%{% if sar.val_gain < 3 %}, which is only just over the line{% endif %}. On {{ test_years }} the gain was {{ sar.test_gain }}%.</li>
+      <li>A usual month has about {{ usual_month }} mm of rain. A miss of {{ sar.test_mae }} mm is large next to that. For the four monsoon months added together, {% set mm = r.monsoon|sum / r.monsoon|length %}every method missed by {{ r.monsoon_miss_low }} to {{ r.monsoon_miss_high }} mm. A usual monsoon brings about {{ mm|round|int }} mm, so that is {{ (100 * r.monsoon_miss_low / mm)|round|int }}% to {{ (100 * r.monsoon_miss_high / mm)|round|int }}% of it.</li>
+      <li>The usual pattern with its range held up well. In {{ test_years }}, {{ r.coverage }}% of real months fell inside the range, and we aimed for 80%.</li>
+      <li>The years {{ test_years }} were looked at twice, so treat that score as less clean than the first look.</li>
+    </ul>
+    <p class="verdict">So this site shows the usual rain and how much it varies. It does not promise the rain of a coming month.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <h2>What to keep in mind</h2>
+    <ul class="limits">
+      <li>These are records for a whole state, not for a single district or farm.</li>
+      <li>The records end in 2015. Rain after that year is not in them.</li>
+      <li>Rain is only one part of a farm's water. Canals, tube wells and the soil matter as much, and we do not have them.</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
