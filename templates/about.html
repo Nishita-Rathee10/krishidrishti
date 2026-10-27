@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}About Krishi Drishti | Krishi Drishti{% endblock %}
+{% block description %}Krishi Drishti is a college project by Nishita on farm data for Punjab and Haryana. What it is, what it is not, and how to reach us.{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ url_for('index') }}">All districts</a></p>
+    <h1>About</h1>
+    <div class="prose">
+      <p class="lead">Krishi Drishti is a college project made by Nishita at Lovely Professional University, for a course on supervised learning.</p>
+      <p>It looks at farm data for the districts of Punjab and Haryana: how much rain and heat each district gets, how much a crop yields, and which crops the climate of a district may suit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>What this is not</h2>
+    <div class="prose">
+      <p>It is not advice for farmers. The models see rain, temperature and humidity, and nothing about a field's water, soil, seed or market. Please do not change what you grow because of this site.</p>
+      <p>It does not promise rain, yield or prices. Where our models were not better than a simple rule, the pages say so.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <h2>Why Punjab and Haryana</h2>
+    <div class="prose">
+      <p>The two states have good district records of crops and rain, and they grow a mix of crops that makes the comparison interesting. We kept to two states so that every number could be checked.</p>
+      <p>Read <a href="{{ url_for('methods_page') }}">how we built it</a> to see the data and the tests.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>Built with</h2>
+    <p class="prose">Python, Flask, scikit-learn, statsmodels, SHAP and LIME. The site runs on Render, and the code is on <a href="{{ repo_url }}">GitHub</a>.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <h2>Tell us what is wrong</h2>
+    <div class="prose">
+      <p>If a number looks wrong, or a sentence is hard to follow, please tell us.</p>
+      <ul>
+        {% if feedback_url %}<li><a href="{{ feedback_url }}">Send feedback in a short form</a></li>{% endif %}
+        <li><a href="{{ repo_url }}/issues">Open an issue on GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}

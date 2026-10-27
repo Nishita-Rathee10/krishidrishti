@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}How we built Krishi Drishti: data, tests and what we left out | Krishi Drishti{% endblock %}
+{% block description %}The data behind Krishi Drishti, how each model was tested against simple rules, where the models did not win, and what we chose not to build.{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ url_for('index') }}">All districts</a></p>
+    <h1>How we built it</h1>
+    <p class="lead">This page explains where the numbers come from and how we checked them. We tested every model against a simple rule, and we say so where the simple rule did as well.</p>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>Our way of working</h2>
+    <ul class="limits">
+      <li>We decided how a model would be judged before looking at its results.</li>
+      <li>Every model had to beat a simple rule, such as "same as last year" or "the usual pattern". If it did not, we report that.</li>
+      <li>Data from the final test years was looked at once. The rain page says plainly where we looked twice.</li>
+      <li>Every chart has a table version, and every page lists what the numbers cannot tell you.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>The data</h2>
+    <p class="side-note wide">All of it is public. We cover {{ n_districts }} districts of Punjab and Haryana.</p>
+    <div class="table-scroll">
+      <table class="src-table">
+        <thead><tr><th scope="col">What</th><th scope="col">What it holds</th><th scope="col">Years</th><th scope="col">Used for</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Area, production and yield (file APY.csv)</th><td>Area and yield of each crop, by district and season. Published by India's agriculture ministry.</td><td>1998 to 2019</td><td>Yield page, and the crops each district grows</td></tr>
+          <tr><th scope="row">Monthly rain, 1901 to 2015</th><td>Rain in each month for Punjab, and for Haryana with Delhi and Chandigarh. From the India Meteorological Department.</td><td>1901 to 2015</td><td>Rain page, and the monthly pattern on district pages</td></tr>
+          <tr><th scope="row">District rain normals</th><td>Usual yearly rain and June to September rain of each district. From the India Meteorological Department.</td><td>Average of 1986 to 2015</td><td>Yield model, crop model, district pages</td></tr>
+          <tr><th scope="row">NASA POWER</th><td>Temperature and humidity for the spot where each district is. These are model values for a grid square of roughly 50 km, not readings from a thermometer in the district.</td><td>2001 to 2025</td><td>District pages, crop model</td></tr>
+          <tr><th scope="row">District locations</th><td>Latitude and longitude from a map lookup of each district name. Two districts, Rupnagar and Ferozepur, were fixed by hand.</td><td>Not applicable</td><td>Tile map, nearby districts, NASA lookup</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <h2>What we built and how it did</h2>
+    <div class="method-list">
+      <div>
+        <h3><a href="{{ url_for('yield_page') }}">Crop yield</a></h3>
+        <p>A random forest guesses the yield of a crop in a district. We trained on 1998 to 2016 and tested once on 2017 to 2019. Its usual miss (the middle value) was {{ ys["Forest, all test rows"]["Median error %"] }}%, against {{ ys["Rule crop and district median, all test rows"]["Median error %"] }}% for the district's usual yield.</p>
+        <p>Where last year's yield is known, repeating it had a usual miss of {{ ys["Rule same as last year, rows with history"]["Median error %"] }}% and the model {{ ys["Forest, rows with history"]["Median error %"] }}%. So the model does not beat last year's number.</p>
+      </div>
+      <div>
+        <h3><a href="{{ url_for('rain_page') }}">Rain</a></h3>
+        <p>We compared the usual pattern with a seasonal time-series model (SARIMA). Each year, every method got the records up to the year before and guessed all 12 months. We chose methods on 1971 to 2005 and looked at 2006 to 2015.</p>
+        <p>SARIMA beat the usual pattern by {{ sar.punjab.val_gain }}% in Punjab and {{ sar.haryana.val_gain }}% in Haryana on the first set, and by {{ sar.punjab.test_gain }}% and {{ sar.haryana.test_gain }}% on the second. The gain is small next to the size of the misses, so we show the usual pattern and its range.</p>
+      </div>
+      <div>
+        <h3><a href="{{ url_for('crops_page') }}">Crops that may suit a district</a></h3>
+        <p>A crop is major in a district when it covers at least 2% of that season's area. We averaged a logistic regression and a random forest on rain, temperature and humidity. Each district was judged by a model that never saw it.</p>
+        <p>Across all crops the model ranked the right district higher {{ c.auc_in_100 }} times out of 100. We show only the {{ c.shown|length }} crops that passed our own bar. SHAP shows which factors the forest leans on, and LIME gives the reasons for each district.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <div>
+      <h2>Techniques used</h2>
+      <p class="side-note">For readers who want the list.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="src-table">
+        <thead><tr><th scope="col">Technique</th><th scope="col">Where</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Random forest regression, log target</th><td>Yield</td></tr>
+          <tr><th scope="row">Rolling-year validation and a held-out test</th><td>Yield, rain</td></tr>
+          <tr><th scope="row">Simple baselines (last year, usual value, usual pattern)</th><td>Yield, rain</td></tr>
+          <tr><th scope="row">Seasonal averages with a 10 to 90 range</th><td>Rain</td></tr>
+          <tr><th scope="row">AR, MA, ARIMA and SARIMA</th><td>Rain</td></tr>
+          <tr><th scope="row">Logistic regression and random forest classifier, averaged</th><td>Crops</td></tr>
+          <tr><th scope="row">Leave-one-district-out validation</th><td>Crops</td></tr>
+          <tr><th scope="row">AUC, Brier score and calibration</th><td>Crops</td></tr>
+          <tr><th scope="row">SHAP and LIME</th><td>Crops</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>What we left out, and why</h2>
+    <ul class="limits">
+      <li><strong>Fertilizer advice.</strong> A fair tool needs soil test results for each farm or block. We do not have them in a usable form, and a guess from climate alone would mislead.</li>
+      <li><strong>Market prices.</strong> The price files we found were either very messy or too short to test a forecast fairly, so we do not forecast prices.</li>
+      <li><strong>Water, soil and seed.</strong> Canals, tube wells, soil type and seed variety shape a farm's yield. None of them is in our data.</li>
+      <li><strong>The future.</strong> Our records end in 2015 for rain and 2019 for crops. The yield model does not see a year's weather, so it cannot say anything useful about a year to come.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <h2>Check the work</h2>
+    <p class="prose">The code for every table and chart on this site is public, and each step can be run again. <a href="{{ repo_url }}">See the code on GitHub</a>.</p>
+  </div>
+</section>
+{% endblock %}

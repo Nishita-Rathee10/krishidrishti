@@ -57,6 +57,12 @@
     <div class="wrap footer-row">
       <p class="footer-name">Krishi Drishti</p>
       <p>A college project on supervised learning. It covers Punjab and Haryana only.</p>
+      <nav class="footer-nav" aria-label="About this site">
+        <a href="{{ url_for('methods_page') }}">How we built it</a>
+        <a href="{{ url_for('about_page') }}">About</a>
+        <a href="{{ url_for('privacy_page') }}">Privacy and use</a>
+        <a href="{{ repo_url }}">Source code</a>
+      </nav>
     </div>
   </footer>
   {% block scripts %}{% endblock %}

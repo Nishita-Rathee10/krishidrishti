@@ -1,4 +1,4 @@
-import json
+﻿import json
 import math
 import os
 
@@ -6,6 +6,8 @@ from flask import Flask, abort, redirect, render_template, request, url_for
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SITE_NAME = "Krishi Drishti"
+REPO_URL = "https://github.com/Nishita-Rathee10/krishidrishti"
+FEEDBACK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdAii2_v0d6XWRrVR7DLFfgW_5ac7wQ57DOckoCccmeGHz3Sw/viewform"  # paste the Google Form link here when it is ready
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
           "October", "November", "December"]
 
@@ -124,7 +126,7 @@ def rain_year_chart(r):
 
 @app.context_processor
 def inject_site():
-    return {"site_name": SITE_NAME, "site_url": os.environ.get("SITE_URL", "").rstrip("/")}
+    return {"repo_url": REPO_URL, "feedback_url": FEEDBACK_URL, "site_name": SITE_NAME, "site_url": os.environ.get("SITE_URL", "").rstrip("/")}
 
 
 @app.route("/")
@@ -194,6 +196,23 @@ def crops_page():
     top = max(x["value"] for x in g)
     bars = [{"label": x["label"], "pct": round(100 * x["value"] / top, 1), "share": x["share"]} for x in g]
     return render_template("crops.html", c=CROPS, bars=bars)
+
+
+@app.route("/methods")
+def methods_page():
+    ys = {r["Method"]: r for r in YIELD["summary"]}
+    sar = {k: next(m for m in v["models"] if m["is_sarima"]) for k, v in RAIN["regions"].items()}
+    return render_template("methods.html", ys=ys, sar=sar, rain=RAIN, c=CROPS, n_districts=len(DISTRICTS["districts"]))
+
+
+@app.route("/about")
+def about_page():
+    return render_template("about.html")
+
+
+@app.route("/privacy")
+def privacy_page():
+    return render_template("privacy.html")
 
 
 @app.route("/favicon.ico")

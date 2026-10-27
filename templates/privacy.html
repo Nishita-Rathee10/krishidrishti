@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Privacy and use | Krishi Drishti{% endblock %}
+{% block description %}What Krishi Drishti collects about visitors, who else may see it, and the terms for using the information on this site.{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ url_for('index') }}">All districts</a></p>
+    <h1>Privacy and use</h1>
+    <p class="readout-note">Last updated 27 October 2026.</p>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>Privacy</h2>
+    <div class="prose">
+      <p>This site has no accounts, no sign-up and no forms. We do not set cookies and we do not run analytics.</p>
+      <ul>
+        <li><strong>Server logs.</strong> The service that hosts this site, Render, may keep a record of each visit, such as the address of the device, the time and the page. We do not read or use it to identify anyone. Render's own privacy policy applies to it.</li>
+        <li><strong>Fonts.</strong> The text on this site uses fonts loaded from Google Fonts. When a page opens, Google can see the address of your device.</li>
+        {% if feedback_url %}<li><strong>The feedback form.</strong> It is a Google Form. It does not ask for your name, phone or email. What you type is stored by Google and seen by us.</li>{% endif %}
+        <li><strong>GitHub.</strong> If you open an issue, it is public and carries your GitHub name.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <h2>Use of the information</h2>
+    <div class="prose">
+      <ul>
+        <li>Krishi Drishti is a college project. The pages show what our models found in public data. They are not advice on farming, money or law.</li>
+        <li>The data can have mistakes, and our models can be wrong. Do not make a decision about land, crops or money only because of this site.</li>
+        <li>The site is given as it is, without any promise that it is correct, complete or always available.</li>
+        <li>The data belongs to the bodies that published it: India's agriculture ministry, the India Meteorological Department and NASA. The code is on <a href="{{ repo_url }}">GitHub</a>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>Contact</h2>
+    <p class="prose">Open an issue at <a href="{{ repo_url }}/issues">{{ repo_url }}/issues</a>.</p>
+  </div>
+</section>
+{% endblock %}
