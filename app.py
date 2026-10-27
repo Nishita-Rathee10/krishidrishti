@@ -21,6 +21,7 @@ DISTRICTS = load("districts.json")
 PAGES = load("district_pages.json")
 BY_SLUG = {d["slug"]: d for d in DISTRICTS["districts"]}
 RAIN = load("rain_data.json")
+CROPS = load("crops_data.json")
 YIELD = load("yield_data.json")
 CROP_BY_SLUG = {c["slug"]: c for c in YIELD["crops"]}
 SERIES_BY = {}
@@ -185,6 +186,14 @@ def rain_page():
     return render_template("rain.html", r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
                            ychart=rain_year_chart(r), sar=sar, val_years=RAIN["val_years"], test_years=RAIN["test_years"],
                            usual_month=round(r["annual_mean"] / 12))
+
+
+@app.route("/crops")
+def crops_page():
+    g = CROPS["shap"]["global"]
+    top = max(x["value"] for x in g)
+    bars = [{"label": x["label"], "pct": round(100 * x["value"] / top, 1), "share": x["share"]} for x in g]
+    return render_template("crops.html", c=CROPS, bars=bars)
 
 
 @app.route("/favicon.ico")

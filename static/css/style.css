@@ -261,3 +261,16 @@ h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; marg
 .key-bar { display: inline-block; width: 12px; height: 14px; background: var(--canal); }
 .key-band { display: inline-block; width: 22px; height: 14px; background: #E4EBDC; border: 1px solid var(--rule); }
 .wide-list { max-width: 48rem; margin-top: 1.4em; }
+
+/* Crops page */
+.crop-cards { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); margin-top: 24px; }
+.crop-card { background: #fff; border-left: 4px solid var(--field); padding: 16px 20px 8px; border-radius: 0 2px 2px 0; }
+.crop-card h3 { margin-bottom: .4em; }
+.hbars { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.hbars li { display: grid; grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr) 3.5rem; gap: 12px; align-items: center; }
+.hlabel { font-size: 1rem; }
+.htrack { display: block; height: 14px; background: #DCE3D5; }
+.hbar { display: block; height: 100%; background: var(--field); }
+.hnum { font-variant-numeric: tabular-nums; text-align: right; font-size: .95rem; color: var(--ink-soft); }
+@media (min-width: 900px) { .crop-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .hbars li { grid-template-columns: 1fr 3rem; } .hbars .htrack { grid-column: 1 / -1; order: 3; } }

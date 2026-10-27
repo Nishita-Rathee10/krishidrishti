@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block title %}Crops that suit the climate of Punjab and Haryana | Krishi Drishti{% endblock %}
+{% block description %}Which crops the climate of each district may suit, how well our model did in its own test, and the crops we choose not to show.{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ url_for('index') }}">All districts</a></p>
+    <h1>Crops</h1>
+    <p class="lead">A crop counts as major in a district when it covers at least 2% of the area recorded for its season. Our model learns what the rain, temperature and humidity are like where a crop is major, then checks which other districts look similar.</p>
+    <p class="readout-note">It sees climate only. It does not see water, soil, seed or market prices, which matter just as much to a farmer.</p>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <h2>Crops we show</h2>
+    <p class="side-note wide">We show a crop only when it passed three checks in our own test: it is major in at least 5 districts and missing in at least 5, and the model ranked the right district higher at least 70 times out of 100.</p>
+    <div class="crop-cards">
+      {% for e in c.shown %}
+      <article class="crop-card">
+        <h3>{{ e.name }} <span class="suggest-season">{{ e.season }}</span></h3>
+        <p>In our test, when the model compared a district where {{ e.name|lower }} is major with one where it is not, it put the right one higher <strong>{{ e.auc_in_100 }} times out of 100</strong>.</p>
+        <p>Major in {{ e.n_major }} of the {{ e.n_major + e.n_not }} districts we tested.</p>
+        {% if e.suits %}
+        <p class="why-title">The climate may also suit it in</p>
+        <ul class="why">
+          {% for s in e.suits %}<li><a href="{{ url_for('district', slug=s.slug) }}">{{ s.name }}</a>, where it covers {{ "%.1f"|format(s.share) }}% of the recorded area today</li>{% endfor %}
+        </ul>
+        {% else %}
+        <p>No district passed our bar for this crop.</p>
+        {% endif %}
+        {% if e.factors %}<p class="suggest-note">The model leaned most on: {{ e.factors|join(", ")|lower }}.</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <div>
+      <h2>How good is the model?</h2>
+      <p class="side-note">Each district was judged by a model that had never seen that district. This is closer to the real use than judging a model on data it learned from.</p>
+    </div>
+    <div>
+      <dl class="figures">
+        <div class="fig-rain"><dt>Right district ranked higher</dt><dd>{{ c.auc_in_100 }} <small>in 100</small></dd></div>
+        <div class="fig-winter"><dt>Brier score, our model</dt><dd>{{ c.brier }}</dd></div>
+        <div class="fig-summer"><dt>Brier score, always the average</dt><dd>{{ c.brier_base }}</dd></div>
+      </dl>
+      <p class="suggest-note">The Brier score is the average squared miss of a chance. Smaller is better, and ours is about half of what we get by always saying the average.</p>
+      <h3 class="gap-top">When it said 30%, did 30% happen?</h3>
+      <table class="crop-table">
+        <thead><tr><th scope="col">Chance the model gave</th><th scope="col">Cases</th><th scope="col">Model said, on average</th><th scope="col">Really major</th></tr></thead>
+        <tbody>
+          {% for b in c.calibration %}<tr><th scope="row">{{ b.bin }}</th><td>{{ b.rows }}</td><td>{{ b.said }}%</td><td>{{ b.real }}%</td></tr>{% endfor %}
+        </tbody>
+      </table>
+      {% if c.off_bins %}
+      <p class="suggest-note">The model was off by 8 points or more in {{ c.off_bins|length }} of the {{ c.calibration|length }} groups:
+        {% for b in c.off_bins %}{{ b.bin }} (said {{ b.said }}%, real {{ b.real }}%){% if not loop.last %}, {% endif %}{% endfor %}.
+        Read a chance as a rough guide, not as an exact number.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <div>
+      <h2>What the model looks at</h2>
+      <p class="side-note">The longer the bar, the more that factor moves the model's answer on average (SHAP). This is the forest half of our model, over {{ c.shap.rows }} crop and district rows. It shows what the model uses. It does not show what makes a crop grow.</p>
+    </div>
+    <figure class="chart">
+      <ol class="hbars">
+        {% for b in bars %}
+        <li><span class="hlabel">{{ b.label }}</span><span class="htrack"><span class="hbar" style="width: {{ b.pct }}%"></span></span><span class="hnum">{{ b.share }}%</span></li>
+        {% endfor %}
+      </ol>
+      <p class="axis-title">Share of the total push on the answer. "Crop identity" is simply which crop is being asked about.</p>
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Crops we do not show</h2>
+    <div class="two-col">
+      <div>
+        <h3>Grown almost everywhere</h3>
+        <p>There is nothing to compare, because they are major in almost every district: {{ c.widely_grown|join(", ")|lower }}.</p>
+      </div>
+      <div>
+        <h3>Too rare to test</h3>
+        <p>They are major in fewer than 3 districts, so there is nothing fair to test: {{ c.rare|join(", ")|lower }}.</p>
+      </div>
+    </div>
+    {% if c.not_shown %}
+    <h3 class="gap-top">Tested, but below our bar</h3>
+    <table class="crop-table">
+      <thead><tr><th scope="col">Crop</th><th scope="col">Season</th><th scope="col">Major in</th><th scope="col">Test score</th><th scope="col">Why we do not show it</th></tr></thead>
+      <tbody>
+        {% for e in c.not_shown %}
+        <tr><th scope="row">{{ e.name }}</th><td>{{ e.season }}</td><td>{{ e.n_major }} districts</td><td>{{ e.auc_in_100 if e.auc_in_100 is not none else "-" }} in 100</td><td>{{ e.why }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="suggest-note">A score of 50 in 100 is no better than a coin toss.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap two-col">
+    <h2>What to keep in mind</h2>
+    <ul class="limits">
+      <li>These are links in the data, not causes. A district may grow little of a crop because of water, soil, markets or habit, and not because of its climate.</li>
+      <li>Crop shares are averages for 2010 to 2019. Temperatures come from a NASA model for 2001 to 2025. Rain is the average of 1986 to 2015.</li>
+      <li>We cover {{ c.districts }} districts. For a crop that is major in only a few of them, a test score can swing a lot.</li>
+      <li>A suggestion is a place to look further. It is not advice to change what you grow.</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

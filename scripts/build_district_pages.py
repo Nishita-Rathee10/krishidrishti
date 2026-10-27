@@ -106,7 +106,7 @@ with open("data/processed/district_pages.json", "w", encoding="utf-8") as fh:
 
 print("Pages:", len(pages))
 print("Rain window used:", {k: v["window"] for k, v in rain.items()})
-print("Trusted crops with accuracy:", {k: round(v, 3) for k, v in auc.items()})
+print("Test score (AUC) of every crop that had both kinds of districts, trusted or not:", {k: round(v, 3) for k, v in auc.items()})
 n_ex = sum(len(p["explore"]) for p in pages.values())
 print("Total 'climate suits' suggestions:", n_ex)
 for slug in ("ludhiana", "moga"):
