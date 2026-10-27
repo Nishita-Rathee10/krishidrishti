@@ -213,7 +213,26 @@ def about_page():
 @app.route("/privacy")
 def privacy_page():
     return render_template("privacy.html")
+@app.route("/robots.txt")
+def robots():
+    from flask import Response
+    base = os.environ.get("SITE_URL", "").rstrip("/")
+    lines = ["User-agent: *", "Allow: /"]
+    if base:
+        lines.append(f"Sitemap: {base}/sitemap.xml")
+    return Response("\n".join(lines) + "\n", mimetype="text/plain")
 
+
+@app.route("/sitemap.xml")
+def sitemap():
+    from flask import Response
+    base = os.environ.get("SITE_URL", "").rstrip("/") or request.url_root.rstrip("/")
+    paths = ["/", "/yield", "/rain", "/crops", "/methods", "/about", "/privacy"]
+    paths += [f"/district/{d['slug']}" for d in DISTRICTS["districts"]]
+    body = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    body += [f"<url><loc>{base}{p}</loc></url>" for p in paths]
+    body.append("</urlset>")
+    return Response("\n".join(body), mimetype="application/xml")
 
 @app.route("/favicon.ico")
 def favicon():
