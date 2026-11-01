@@ -292,3 +292,9 @@ h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; marg
 .method-list { display: grid; gap: 28px; margin-top: 20px; }
 .method-list p { max-width: 42rem; }
 @media (min-width: 1000px) { .method-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; } }
+
+/* Language switch and Hindi text */
+.lang-switch { white-space: nowrap; font-size: .95rem; border-bottom: 1px solid currentColor; }
+html[lang="hi"] body { line-height: 1.75; }
+html[lang="hi"] h1, html[lang="hi"] h2, html[lang="hi"] h3, html[lang="hi"] h4 { line-height: 1.35; }
+html[lang="hi"] .brand-name { line-height: 1.2; }

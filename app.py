@@ -1,17 +1,67 @@
-﻿import json
+import json
 import math
 import os
+import re
 
-from flask import Flask, abort, redirect, render_template, request, url_for
+from flask import Flask, abort, g, redirect, render_template, request, url_for
+
+from i18n import tr
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SITE_NAME = "Krishi Drishti"
 REPO_URL = "https://github.com/Nishita-Rathee10/krishidrishti"
-FEEDBACK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdAii2_v0d6XWRrVR7DLFfgW_5ac7wQ57DOckoCccmeGHz3Sw/viewform"  # paste the Google Form link here when it is ready
+FEEDBACK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdAii2_v0d6XWRrVR7DLFfgW_5ac7wQ57DOckoCccmeGHz3Sw/viewform"
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
           "October", "November", "December"]
 
+MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
 app = Flask(__name__)
+
+
+def page(path):
+    """Register a page twice: at its English address and under /hi/ for Hindi."""
+    def deco(fn):
+        app.add_url_rule(path, endpoint=fn.__name__, view_func=fn)
+        app.add_url_rule("/hi/" if path == "/" else "/hi" + path, endpoint=fn.__name__ + "_hi", view_func=fn)
+        return fn
+    return deco
+
+
+@app.before_request
+def pick_language():
+    g.lang = "hi" if request.path == "/hi" or request.path.startswith("/hi/") else "en"
+
+
+def lurl(endpoint, **values):
+    if g.lang == "hi":
+        endpoint += "_hi"
+    return url_for(endpoint, **values)
+
+
+def month_labels(i):
+    letter = MONTHS[i][0] if g.lang == "en" else tr("letter:" + MONTH_ABBR[i])
+    return {"month": tr(MONTHS[i]), "abbr": tr(MONTH_ABBR[i]), "letter": letter}
+
+
+def season_label(s):
+    s = "Whole year" if str(s).lower() == "whole year" else str(s)
+    return tr(s)
+
+
+WHY_RE = re.compile(r"^(.+) of ([0-9,.]+) (mm|\u00b0C|%)$")
+
+
+def why_text(w):
+    m = WHY_RE.match(w)
+    if not m:
+        return tr(w)
+    label, value, unit = m.groups()
+    return tr("{label} of {value} {unit}", label=tr(label), value=value, unit=tr(unit))
+
+
+app.jinja_env.globals.update({"_": tr, "lurl": lurl, "season_label": season_label, "why_text": why_text})
+app.jinja_env.filters["tr"] = tr
 
 
 def load(name):
@@ -38,15 +88,15 @@ MAX_RANGE_TOP = 100  # a likely range is shown only if its top end is at most th
 
 def temp_chart(values):
     top = 40.0
-    return [{"month": MONTHS[i], "letter": MONTHS[i][0], "value": v, "label": f"{v:.0f}",
-             "pct": round(max(v, 0) / top * 100, 1)} for i, v in enumerate(values)], int(top)
+    return [dict(month_labels(i), value=v, label=f"{v:.0f}", pct=round(max(v, 0) / top * 100, 1))
+            for i, v in enumerate(values)], int(top)
 
 
 def rain_chart(rows):
     top = max(math.ceil(max(r["p90"] for r in rows) / 50.0) * 50, 50)
     out = []
     for r in rows:
-        out.append({"month": MONTHS[r["month"] - 1], "letter": MONTHS[r["month"] - 1][0],
+        out.append({**month_labels(r["month"] - 1),
                     "mean": r["mean"], "p10": r["p10"], "p90": r["p90"],
                     "mean_pct": round(r["mean"] / top * 100, 1),
                     "lo_pct": round(r["p10"] / top * 100, 1),
@@ -126,15 +176,40 @@ def rain_year_chart(r):
 
 @app.context_processor
 def inject_site():
-    return {"repo_url": REPO_URL, "feedback_url": FEEDBACK_URL, "site_name": SITE_NAME, "site_url": os.environ.get("SITE_URL", "").rstrip("/")}
+    path = request.path
+    if g.lang == "hi":
+        en_path = path[3:] or "/"
+        hi_path = path
+    else:
+        en_path = path
+        hi_path = "/hi/" if path == "/" else "/hi" + path
+    query = request.query_string.decode("utf-8")
+    alt_path = (en_path if g.lang == "hi" else hi_path) + ("?" + query if query else "")
+    site_url = os.environ.get("SITE_URL", "").rstrip("/")
+    return {"repo_url": REPO_URL, "feedback_url": FEEDBACK_URL, "site_name": SITE_NAME, "site_url": site_url,
+            "lang": g.lang, "alt_path": alt_path, "en_path": en_path, "hi_path": hi_path,
+            "base_url": site_url or request.url_root.rstrip("/")}
 
 
-@app.route("/")
+def map_payload():
+    districts = []
+    for d in DISTRICTS["districts"]:
+        districts.append(dict(d, name=str(tr(d["name"])), state_label=str(tr(d["state"]))))
+    districts.sort(key=lambda x: x["name"])
+    text = {k: str(tr(v)) for k, v in {
+        "rain": "Yearly rain", "winter": "Winter temperature", "summer": "Peak summer heat", "mm": "mm",
+        "note": "Rain is the average of 1986 to 2015. Temperatures come from a NASA model for 2001 to 2025. Peak summer heat is the highest temperature the model shows in April, May and June, so it reads far higher than a normal day.",
+        "note_approx": "Rain for this district is copied from the district it was carved out of.",
+        "open": "Open the {name} page", "empty": "Choose a district from the list, or select a square on the map."}.items()}
+    return dict(DISTRICTS, districts=districts, text=text, prefix="/hi" if g.lang == "hi" else "")
+
+
+@page("/")
 def index():
-    return render_template("index.html", map_data=DISTRICTS)
+    return render_template("index.html", map_data=map_payload())
 
 
-@app.route("/district/<slug>")
+@page("/district/<slug>")
 def district(slug):
     d = BY_SLUG.get(slug)
     if d is None:
@@ -147,7 +222,7 @@ def district(slug):
                            rain_rows=rain_rows, rain_top=rain_top, near=near, months=MONTHS)
 
 
-@app.route("/yield")
+@page("/yield")
 def yield_page():
     dslug = request.args.get("district", "ludhiana")
     cslug = request.args.get("crop", "wheat")
@@ -177,7 +252,7 @@ def yield_page():
                            max_top=MAX_RANGE_TOP)
 
 
-@app.route("/rain")
+@page("/rain")
 def rain_page():
     slug = request.args.get("region", "punjab")
     if slug not in RAIN["regions"]:
@@ -190,7 +265,7 @@ def rain_page():
                            usual_month=round(r["annual_mean"] / 12))
 
 
-@app.route("/crops")
+@page("/crops")
 def crops_page():
     g = CROPS["shap"]["global"]
     top = max(x["value"] for x in g)
@@ -198,21 +273,23 @@ def crops_page():
     return render_template("crops.html", c=CROPS, bars=bars)
 
 
-@app.route("/methods")
+@page("/methods")
 def methods_page():
     ys = {r["Method"]: r for r in YIELD["summary"]}
     sar = {k: next(m for m in v["models"] if m["is_sarima"]) for k, v in RAIN["regions"].items()}
     return render_template("methods.html", ys=ys, sar=sar, rain=RAIN, c=CROPS, n_districts=len(DISTRICTS["districts"]))
 
 
-@app.route("/about")
+@page("/about")
 def about_page():
     return render_template("about.html")
 
 
-@app.route("/privacy")
+@page("/privacy")
 def privacy_page():
     return render_template("privacy.html")
+
+
 @app.route("/robots.txt")
 def robots():
     from flask import Response
@@ -229,10 +306,12 @@ def sitemap():
     base = os.environ.get("SITE_URL", "").rstrip("/") or request.url_root.rstrip("/")
     paths = ["/", "/yield", "/rain", "/crops", "/methods", "/about", "/privacy"]
     paths += [f"/district/{d['slug']}" for d in DISTRICTS["districts"]]
+    paths += ["/hi/" if p == "/" else "/hi" + p for p in paths]
     body = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     body += [f"<url><loc>{base}{p}</loc></url>" for p in paths]
     body.append("</urlset>")
     return Response("\n".join(body), mimetype="application/xml")
+
 
 @app.route("/favicon.ico")
 def favicon():

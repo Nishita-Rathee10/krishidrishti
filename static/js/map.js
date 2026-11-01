@@ -16,10 +16,13 @@
   var legendBar = document.getElementById("legend-bar");
   var approxNote = document.getElementById("approx-note");
 
+  var T = data.text;
+  var prefix = data.prefix || "";
+
   var LAYERS = {
-    rain: { label: "Yearly rain", key: "rain", unit: "mm", digits: 0, ramp: ["#35564f", "#2f7f80", "#4fb0c4", "#a6e4f2"] },
-    winter: { label: "Winter temperature", key: "t_winter", unit: "°C", digits: 1, ramp: ["#4b523d", "#8f8a3b", "#d0ae2e", "#f7d65f"] },
-    summer: { label: "Peak summer heat", key: "t_summer", unit: "°C", digits: 1, ramp: ["#5b3b35", "#9a4a38", "#d8653a", "#f7a266"] }
+    rain: { label: T.rain, key: "rain", unit: T.mm, digits: 0, ramp: ["#35564f", "#2f7f80", "#4fb0c4", "#a6e4f2"] },
+    winter: { label: T.winter, key: "t_winter", unit: "°C", digits: 1, ramp: ["#4b523d", "#8f8a3b", "#d0ae2e", "#f7d65f"] },
+    summer: { label: T.summer, key: "t_summer", unit: "°C", digits: 1, ramp: ["#5b3b35", "#9a4a38", "#d8653a", "#f7a266"] }
   };
 
   var layerName = "rain";
@@ -88,7 +91,7 @@
       var t = max === min ? 0.5 : (d[L.key] - min) / (max - min);
       var el = cells[d.slug];
       el.style.setProperty("--c", colorAt(L.ramp, t));
-      el.setAttribute("aria-label", d.name + ", " + d.state + ". " + L.label + " " + fmt(d[L.key], L.digits) + " " + L.unit);
+      el.setAttribute("aria-label", d.name + ", " + d.state_label + ". " + L.label + " " + fmt(d[L.key], L.digits) + " " + L.unit);
     });
     legendMin.textContent = fmt(min, L.digits) + " " + L.unit;
     legendMax.textContent = fmt(max, L.digits) + " " + L.unit;
@@ -103,17 +106,17 @@
   }
 
   function renderReadout(d) {
-    var note = "Rain is the average of 1986 to 2015. Temperatures come from a NASA model for 2001 to 2025. Peak summer heat is the highest temperature the model shows in April, May and June, so it reads far higher than a normal day.";
-    if (d.approx_rain) note += " Rain for this district is copied from the district it was carved out of.";
+    var note = T.note;
+    if (d.approx_rain) note += " " + T.note_approx;
     readout.innerHTML =
       '<h2 class="readout-name">' + esc(d.name) + '</h2>' +
-      '<p class="readout-state">' + esc(d.state) + '</p>' +
+      '<p class="readout-state">' + esc(d.state_label) + '</p>' +
       '<dl class="figures">' +
-      figure("fig-rain", "Yearly rain", d.rain, 0, "mm") +
-      figure("fig-winter", "Winter temperature", d.t_winter, 1, "°C") +
-      figure("fig-summer", "Peak summer heat", d.t_summer, 1, "°C") +
+      figure("fig-rain", T.rain, d.rain, 0, T.mm) +
+      figure("fig-winter", T.winter, d.t_winter, 1, "°C") +
+      figure("fig-summer", T.summer, d.t_summer, 1, "°C") +
       '</dl><p class="readout-note">' + esc(note) + '</p>' +
-      '<p><a class="btn" href="/district/' + encodeURIComponent(d.slug) + '">Open the ' + esc(d.name) + ' page</a></p>';
+      '<p><a class="btn" href="' + prefix + '/district/' + encodeURIComponent(d.slug) + '">' + esc(T.open.replace("{name}", d.name)) + '</a></p>';
   }
 
   function choose(slug) {
@@ -121,7 +124,7 @@
     if (!slug || !bySlug[slug]) {
       selected = null;
       select.value = "";
-      readout.innerHTML = '<p class="readout-empty">Choose a district from the list, or select a square on the map.</p>';
+      readout.innerHTML = '<p class="readout-empty">' + esc(T.empty) + '</p>';
       return;
     }
     selected = slug;

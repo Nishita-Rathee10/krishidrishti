@@ -1,14 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Krishi Drishti{% endblock %}</title>
-  <meta name="description" content="{% block description %}Farm data for the districts of Punjab and Haryana.{% endblock %}">
+  <title>{% block title %}{{ _("Krishi Drishti") }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ _("Farm data for the districts of Punjab and Haryana.") }}{% endblock %}">
   {% block robots %}{% endblock %}
   {% if site_url %}<link rel="canonical" href="{{ site_url }}{{ request.path }}">{% endif %}
+  <link rel="alternate" hreflang="en" href="{{ base_url }}{{ en_path }}">
+  <link rel="alternate" hreflang="hi" href="{{ base_url }}{{ hi_path }}">
+  <link rel="alternate" hreflang="x-default" href="{{ base_url }}{{ en_path }}">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="{{ site_name }}">
+  <meta property="og:locale" content="{{ 'hi_IN' if lang == 'hi' else 'en_IN' }}">
+  <meta property="og:site_name" content="{{ _('Krishi Drishti') }}">
   <meta property="og:title" content="{{ self.title() }}">
   <meta property="og:description" content="{{ self.description() }}">
   <meta name="theme-color" content="#11241B">
@@ -19,10 +23,10 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">{{ _("Skip to content") }}</a>
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand" href="{{ url_for('index') }}">
+      <a class="brand" href="{{ lurl('index') }}">
         <svg class="brand-mark" viewBox="0 0 21 21" aria-hidden="true" focusable="false">
           <rect width="21" height="21" fill="#11241B"/>
           <g fill="#EDBB2B">
@@ -36,13 +40,14 @@
           </g>
           <rect x="9.3" y="9.3" width="2.4" height="2.4" fill="#E0503F"/>
         </svg>
-        <span class="brand-name">Krishi Drishti</span>
+        <span class="brand-name">{{ _("Krishi Drishti") }}</span>
       </a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="{{ url_for('index') }}">Districts</a>
-        <a href="{{ url_for('yield_page') }}">Crop yield</a>
-        <a href="{{ url_for('rain_page') }}">Rain</a>
-        <a href="{{ url_for('crops_page') }}">Crops</a>
+      <nav class="site-nav" aria-label="{{ _('Main') }}">
+        <a href="{{ lurl('index') }}">{{ _("Districts") }}</a>
+        <a href="{{ lurl('yield_page') }}">{{ _("Crop yield") }}</a>
+        <a href="{{ lurl('rain_page') }}">{{ _("Rain") }}</a>
+        <a href="{{ lurl('crops_page') }}">{{ _("Crops") }}</a>
+        {% if lang == "hi" %}<a class="lang-switch" href="{{ alt_path }}" lang="en" hreflang="en">English</a>{% else %}<a class="lang-switch" href="{{ alt_path }}" lang="hi" hreflang="hi">हिन्दी</a>{% endif %}
       </nav>
     </div>
   </header>
@@ -55,13 +60,13 @@
   <footer class="site-footer">
     <div class="stitch stitch-sarson" aria-hidden="true"></div>
     <div class="wrap footer-row">
-      <p class="footer-name">Krishi Drishti</p>
-      <p>A college project on supervised learning. It covers Punjab and Haryana only.</p>
-      <nav class="footer-nav" aria-label="About this site">
-        <a href="{{ url_for('methods_page') }}">How we built it</a>
-        <a href="{{ url_for('about_page') }}">About</a>
-        <a href="{{ url_for('privacy_page') }}">Privacy and use</a>
-        <a href="{{ repo_url }}">Source code</a>
+      <p class="footer-name">{{ _("Krishi Drishti") }}</p>
+      <p>{{ _("A college project on supervised learning. It covers Punjab and Haryana only.") }}</p>
+      <nav class="footer-nav" aria-label="{{ _('About this site') }}">
+        <a href="{{ lurl('methods_page') }}">{{ _("How we built it") }}</a>
+        <a href="{{ lurl('about_page') }}">{{ _("About") }}</a>
+        <a href="{{ lurl('privacy_page') }}">{{ _("Privacy and use") }}</a>
+        <a href="{{ repo_url }}">{{ _("Source code") }}</a>
       </nav>
     </div>
   </footer>
