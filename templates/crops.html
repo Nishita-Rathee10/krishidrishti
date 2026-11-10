@@ -51,12 +51,12 @@
       </dl>
       <p class="suggest-note">{{ _("The Brier score is the average squared miss of a chance. Smaller is better, and ours is about half of what we get by always saying the average.") }}</p>
       <h3 class="gap-top">{{ _("When it said 30%, did 30% happen?") }}</h3>
-      <table class="crop-table">
+      <div class="tscroll"><table class="crop-table">
         <thead><tr><th scope="col">{{ _("Chance the model gave") }}</th><th scope="col">{{ _("Cases") }}</th><th scope="col">{{ _("Model said, on average") }}</th><th scope="col">{{ _("Really major") }}</th></tr></thead>
         <tbody>
           {% for b in c.calibration %}<tr><th scope="row">{{ b.bin }}</th><td>{{ b.rows }}</td><td>{{ b.said }}%</td><td>{{ b.real }}%</td></tr>{% endfor %}
         </tbody>
-      </table>
+      </table></div>
       {% if c.off_bins %}
       <p class="suggest-note">{{ _("The model was off by 8 points or more in {a} of the {b} groups:", a=c.off_bins|length, b=c.calibration|length) }}
         {% for b in c.off_bins %}{{ _("{bin} (said {said}%, real {real}%)", bin=b.bin, said=b.said, real=b.real) }}{% if not loop.last %}, {% endif %}{% endfor %}.
@@ -98,14 +98,14 @@
     </div>
     {% if c.not_shown %}
     <h3 class="gap-top">{{ _("Tested, but below our bar") }}</h3>
-    <table class="crop-table">
+    <div class="tscroll"><table class="crop-table">
       <thead><tr><th scope="col">{{ _("Crop") }}</th><th scope="col">{{ _("Season") }}</th><th scope="col">{{ _("Major in") }}</th><th scope="col">{{ _("Test score") }}</th><th scope="col">{{ _("Why we do not show it") }}</th></tr></thead>
       <tbody>
         {% for e in c.not_shown %}
         <tr><th scope="row">{{ _(e.name) }}</th><td>{{ season_label(e.season) }}</td><td>{{ _("{n} districts", n=e.n_major) }}</td><td>{% if e.auc_in_100 is not none %}{{ _("{n} in 100", n=e.auc_in_100) }}{% else %}-{% endif %}</td><td>{{ _(e.why) }}</td></tr>
         {% endfor %}
       </tbody>
-    </table>
+    </table></div>
     <p class="suggest-note">{{ _("A score of 50 in 100 is no better than a coin toss.") }}</p>
     {% endif %}
   </div>
