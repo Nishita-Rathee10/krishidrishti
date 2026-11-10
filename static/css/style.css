@@ -298,3 +298,11 @@ h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; marg
 html[lang="hi"] body { line-height: 1.75; }
 html[lang="hi"] h1, html[lang="hi"] h2, html[lang="hi"] h3, html[lang="hi"] h4 { line-height: 1.35; }
 html[lang="hi"] .brand-name { line-height: 1.2; }
+
+/* Phone header: brand on the first row, links on the second, nothing cut off */
+.site-nav { align-items: center; }
+.site-nav a.lang-switch { border-bottom: 2px solid transparent; text-decoration: underline; text-underline-offset: 4px; line-height: 1.35; }
+@media (max-width: 640px) {
+  .header-row { flex-wrap: wrap; min-height: 0; padding-top: 12px; padding-bottom: 10px; row-gap: 8px; }
+  .site-nav { margin-left: 0; width: 100%; justify-content: space-between; gap: 6px; font-size: .95rem; }
+}
