@@ -309,3 +309,13 @@ html[lang="hi"] .brand-name { line-height: 1.2; }
 
 /* Wide tables scroll inside their own box instead of widening the page */
 .tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Phones: bigger chart text, ranges and probability bands stay on one line */
+.crop-table td, .crop-table tbody th { font-variant-numeric: tabular-nums; }
+.range-cell, .crop-table tbody th.nowrap { white-space: nowrap; }
+@media (max-width: 640px) {
+  .chart-yield .tick, .chart-years .tick { font-size: 22px; }
+  .chart-yield .zone-label { font-size: 18px; text-anchor: end; transform: translateX(46px); }
+  .crop-table th, .crop-table td { padding-right: 8px; }
+  .crop-table thead th { font-size: .88rem; }
+}

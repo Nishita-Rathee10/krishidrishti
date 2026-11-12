@@ -54,7 +54,7 @@
       <div class="tscroll"><table class="crop-table">
         <thead><tr><th scope="col">{{ _("Chance the model gave") }}</th><th scope="col">{{ _("Cases") }}</th><th scope="col">{{ _("Model said, on average") }}</th><th scope="col">{{ _("Really major") }}</th></tr></thead>
         <tbody>
-          {% for b in c.calibration %}<tr><th scope="row">{{ b.bin }}</th><td>{{ b.rows }}</td><td>{{ b.said }}%</td><td>{{ b.real }}%</td></tr>{% endfor %}
+          {% for b in c.calibration %}<tr><th scope="row" class="nowrap">{{ b.bin }}</th><td>{{ b.rows }}</td><td>{{ b.said }}%</td><td>{{ b.real }}%</td></tr>{% endfor %}
         </tbody>
       </table></div>
       {% if c.off_bins %}

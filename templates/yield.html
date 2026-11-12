@@ -73,14 +73,14 @@
 
     {% if series.test %}
     <h3 class="gap-top">{{ _("The three years the model had not seen") }}</h3>
-    <table class="crop-table">
+    <div class="tscroll"><table class="crop-table">
       <thead><tr><th scope="col">{{ _("Year") }}</th><th scope="col">{{ _("Real yield") }}</th><th scope="col">{{ _("Model's guess") }}</th><th scope="col">{{ _("Last year's yield") }}</th>{% if show_range %}<th scope="col">{{ _("Likely range") }}</th>{% endif %}</tr></thead>
       <tbody>
         {% for t in series.test %}
-        <tr><th scope="row">{{ t.year }}</th><td>{{ t.actual }}</td><td>{{ t.pred }}</td><td>{{ t.last if t.last is not none else _("No record") }}</td>{% if show_range %}<td>{{ _("{lo} to {hi}", lo=t.lo, hi=t.hi) }}</td>{% endif %}</tr>
+        <tr><th scope="row">{{ t.year }}</th><td>{{ "%.2f"|format(t.actual) }}</td><td>{{ "%.2f"|format(t.pred) }}</td><td>{{ "%.2f"|format(t.last) if t.last is not none else _("No record") }}</td>{% if show_range %}<td class="range-cell">{{ _("{lo} to {hi}", lo="%.2f"|format(t.lo), hi="%.2f"|format(t.hi)) }}</td>{% endif %}</tr>
         {% endfor %}
       </tbody>
-    </table>
+    </table></div>
     {% if not show_range %}
     <p class="suggest-note">{{ _("We do not show a likely range for {crop}. In our tests the top of the range was {pct}% above the guess, which is too wide to help anyone.", crop=cname, pct=crop.range_high_pct) }}</p>
     {% endif %}
@@ -110,14 +110,14 @@
     </div>
     <div>
       <p class="verdict">{{ _("When last year's yield is known, simply repeating it is as good as our model. The model is useful when there is no history to copy.") }}</p>
-      <table class="crop-table">
+      <div class="tscroll"><table class="crop-table">
         <thead><tr><th scope="col">{{ _("Way of guessing") }}</th><th scope="col">{{ _("Rows tested") }}</th><th scope="col">{{ _("Usual miss") }}</th><th scope="col">{{ _("Within 25%") }}</th></tr></thead>
         <tbody>
           {% for m in ydata.summary %}
           <tr><th scope="row">{{ _(m.Method) }}</th><td>{{ m.Rows }}</td><td>{{ m["Median error %"] }}%</td><td>{{ m["Within 25%"] }}%</td></tr>
           {% endfor %}
         </tbody>
-      </table>
+      </table></div>
       <p class="suggest-note">{{ _("&quot;Rows with history&quot; means the crop had a recorded yield in at least one of the three years before. &quot;Within 25%&quot; is the share of guesses that landed within a quarter of the real yield.") }}</p>
     </div>
   </div>
@@ -128,7 +128,7 @@
     <h2>{{ _("Crop by crop") }}</h2>
     <p class="side-note wide">{{ _("Where history is known, the last two columns compare our model with repeating last year. &quot;Better&quot; shows which one missed by less, and &quot;Tie&quot; means less than half a point apart.") }}</p>
     <div class="table-scroll">
-      <table class="crop-table">
+      <div class="tscroll"><table class="crop-table">
         <thead>
           <tr><th scope="col">{{ _("Crop") }}</th><th scope="col">{{ _("Rows") }}</th><th scope="col">{{ _("Model's usual miss") }}</th><th scope="col">{{ _("Last year's usual miss") }}</th><th scope="col">{{ _("Better") }}</th><th scope="col">{{ _("Real yield inside our range") }}</th></tr>
         </thead>
@@ -144,7 +144,7 @@
           </tr>
           {% endfor %}
         </tbody>
-      </table>
+      </table></div>
     </div>
     <p class="suggest-note">{{ _("The range was built so that about 8 in 10 real yields fall inside it. Across all crops, {pct}% did in 2017 to 2019. For crops far below 80%, treat the range as too hopeful.", pct=ydata.inside_pct_all) }}</p>
   </div>
