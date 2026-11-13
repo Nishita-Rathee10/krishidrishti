@@ -62,6 +62,8 @@
         <p>{{ _("Across all crops the model ranked the right district higher {a} times out of 100. We show only the {b} crops that passed our own bar. SHAP shows which factors the forest leans on, and LIME gives the reasons for each district.", a=c.auc_in_100, b=c.shown|length) }}</p>
         <p>{{ _("The <a href='{url}'>Crop check</a> page uses these same results for one district and one crop. It only says how close the climate is to places where the crop is major. It is not a prediction.", url=lurl('check_page')) }}</p>
         <p>{{ _("Groundwater is shown as plain facts from the Central Ground Water Board. We did not feed it into any model. Punjab is from the March 2024 assessment and Haryana from March 2022.") }}</p>
+        {% if gwt %}{% set ga = gwt.results["all tested crops"] %}{% set gs = gwt.results["the crops we show"] %}
+        <p>{{ _("We also tried adding groundwater to the model as one more clue, and tested it on districts the model had never seen. Across all tested crops the score moved from {a} to {b} out of 100, and for the crops we show from {c} to {d}. Before the test we had set a bar: a gain of at least {bar} points. It did not reach the bar, so groundwater stays out of the model.", a="%.1f"|format(ga.climate_only * 100), b="%.1f"|format(ga.with_groundwater * 100), c="%.1f"|format(gs.climate_only * 100), d="%.1f"|format(gs.with_groundwater * 100), bar="%.0f"|format(gwt.bar_gain * 100)) }}</p>{% endif %}
       </div>
     </div>
   </div>

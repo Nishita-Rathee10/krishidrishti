@@ -86,6 +86,10 @@ with open(os.path.join(BASE, "data", "processed", "groundwater_district.csv"), e
         GW[_slug] = {"slug": _slug, "pct": float(_r["Stage_pct"]), "category": _cat, "year": _r["Assessed_as_on_March"],
                      "key": {"Over-exploited": "over", "Critical": "critical", "Semi-critical": "semi", "Safe": "safe"}[_cat]}
 assert len(GW) == 44
+try:
+    GWT = load("groundwater_test.json")
+except FileNotFoundError:
+    GWT = None
 CHECK_BY = {c["slug"]: c for c in CHECK["crops"]}
 CROP_BY_SLUG = {c["slug"]: c for c in YIELD["crops"]}
 SERIES_BY = {}
@@ -301,7 +305,7 @@ def check_page():
 def methods_page():
     ys = {r["Method"]: r for r in YIELD["summary"]}
     sar = {k: next(m for m in v["models"] if m["is_sarima"]) for k, v in RAIN["regions"].items()}
-    return render_template("methods.html", ys=ys, sar=sar, rain=RAIN, c=CROPS, n_districts=len(DISTRICTS["districts"]))
+    return render_template("methods.html", ys=ys, sar=sar, rain=RAIN, c=CROPS, n_districts=len(DISTRICTS["districts"]), gwt=GWT)
 
 
 @page("/about")

@@ -4,6 +4,7 @@ import json
 PATH = "translations/hi.json"
 NEW = {
     "Groundwater here": "यहाँ भूजल",
+    "We also tried adding groundwater to the model as one more clue, and tested it on districts the model had never seen. Across all tested crops the score moved from {a} to {b} out of 100, and for the crops we show from {c} to {d}. Before the test we had set a bar: a gain of at least {bar} points. It did not reach the bar, so groundwater stays out of the model.": "हमने भूजल को मॉडल में एक और संकेत की तरह जोड़कर भी देखा, और उसे ऐसे ज़िलों पर परखा जो मॉडल ने कभी नहीं देखे थे। सभी परखी गई फ़सलों में स्कोर 100 में से {a} से {b} हुआ, और जो फ़सलें हम दिखाते हैं उनमें {c} से {d}। टेस्ट से पहले हमने एक पैमाना तय किया था: कम से कम {bar} अंक की बढ़त। वह पैमाना पूरा नहीं हुआ, इसलिए भूजल मॉडल से बाहर रहता है।",
     "Over-exploited": "अत्यधिक दोहन",
     "Critical": "गंभीर",
     "Semi-critical": "अर्ध-गंभीर",

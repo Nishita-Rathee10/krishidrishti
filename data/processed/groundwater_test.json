@@ -1,0 +1,22 @@
+{
+ "bar_gain": 0.03,
+ "bar_repeats": 4,
+ "results": {
+  "all tested crops": {
+   "climate_only": 0.792,
+   "with_groundwater": 0.813,
+   "gain": 0.022,
+   "better_in_repeats": 5,
+   "repeats": 5,
+   "passes": false
+  },
+  "the crops we show": {
+   "climate_only": 0.897,
+   "with_groundwater": 0.905,
+   "gain": 0.008,
+   "better_in_repeats": 4,
+   "repeats": 5,
+   "passes": false
+  }
+ }
+}
