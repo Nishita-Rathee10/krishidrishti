@@ -327,3 +327,11 @@ html[lang="hi"] .brand-name { line-height: 1.2; }
 .check-medium { border-left: 6px solid var(--sarson); }
 .check-low { border-left: 6px solid var(--chilli); }
 .crop-table td.nowrap { white-space: nowrap; }
+
+/* Groundwater box */
+.water-box { background: #fff; border: 1.5px solid var(--rule); border-left: 6px solid var(--canal); padding: 14px 18px; margin: 20px 0; max-width: 40rem; }
+.water-box p { margin: 0 0 8px; }
+.water-box p:last-child { margin-bottom: 0; }
+.water-over, .water-critical { border-left-color: var(--chilli); }
+.water-semi { border-left-color: var(--sarson); }
+.water-safe { border-left-color: var(--field); }

@@ -40,6 +40,7 @@
     <h2>{{ _("{crop} in {district}", crop=cname, district=dname) }}</h2>
     {% if not res %}
     <p>{{ _("We did not test {crop} in {district}, because the records for it cover only some districts. So we have no check to show.", crop=cname, district=dname) }}</p>
+    {% include "_water.html" %}
     {% else %}
     <article class="crop-card check-card check-{{ res.band|lower }}">
       <p class="check-verdict">
@@ -57,6 +58,7 @@
       {% endif %}
     </article>
 
+    {% include "_water.html" %}
     {% if res.why %}
     <h3>{{ _("What the model looked at") }}</h3>
     <ul class="why">

@@ -76,6 +76,16 @@ RAIN = load("rain_data.json")
 CROPS = load("crops_data.json")
 YIELD = load("yield_data.json")
 CHECK = load("check_data.json")
+GW = {}
+with open(os.path.join(BASE, "data", "processed", "groundwater_district.csv"), encoding="utf-8") as _fh:
+    import csv
+    _by = {(d["state"], d["source_name"]): d["slug"] for d in DISTRICTS["districts"]}
+    for _r in csv.DictReader(_fh):
+        _slug = _by[(_r["State"], _r["District"])]
+        _cat = _r["Category"]
+        GW[_slug] = {"slug": _slug, "pct": float(_r["Stage_pct"]), "category": _cat, "year": _r["Assessed_as_on_March"],
+                     "key": {"Over-exploited": "over", "Critical": "critical", "Semi-critical": "semi", "Safe": "safe"}[_cat]}
+assert len(GW) == 44
 CHECK_BY = {c["slug"]: c for c in CHECK["crops"]}
 CROP_BY_SLUG = {c["slug"]: c for c in YIELD["crops"]}
 SERIES_BY = {}
@@ -221,7 +231,7 @@ def district(slug):
     rain_rows, rain_top = rain_chart(PAGES["rain"][d["state"]]["rows"])
     near = [{"slug": n["slug"], "name": BY_SLUG[n["slug"]]["name"], "km": n["km"]} for n in page["near"]]
     return render_template("district.html", d=d, page=page, temps=temps, temp_top=temp_top,
-                           rain_rows=rain_rows, rain_top=rain_top, near=near, months=MONTHS)
+                           rain_rows=rain_rows, rain_top=rain_top, near=near, months=MONTHS, gw=GW.get(slug))
 
 
 @page("/yield")
@@ -284,7 +294,7 @@ def check_page():
     crop = CHECK_BY.get(cslug) or CHECK["crops"][0]
     res = CHECK["districts"][d["slug"]].get(crop["slug"]) if asked else None
     return render_template("check.html", d=d, crop=crop, crops=CHECK["crops"], groups=YIELD_DISTRICTS,
-                           asked=asked, res=res)
+                           asked=asked, res=res, gw=GW.get(d["slug"]))
 
 
 @page("/methods")

@@ -24,10 +24,9 @@
 </section>
 
 <section class="band">
-  
   <div class="wrap">
     <h2>{{ _("The data") }}</h2>
-    <p class="side-note wide">{{ _("All of it is public. We cover {n} districts of Punjab and Haryana.", n=n_districts) }}  {{ _("The raw files are not kept in the repository because some are very large. The code that turns them into the data of this site is in the repository.") }}</p>
+    <p class="side-note wide">{{ _("All of it is public. We cover {n} districts of Punjab and Haryana.", n=n_districts) }}</p>
     <div class="table-scroll">
       <table class="src-table">
         <thead><tr><th scope="col">{{ _("What") }}</th><th scope="col">{{ _("What it holds") }}</th><th scope="col">{{ _("Years") }}</th><th scope="col">{{ _("Used for") }}</th></tr></thead>
@@ -61,6 +60,8 @@
         <h3><a href="{{ lurl('crops_page') }}">{{ _("Crops that may suit a district") }}</a></h3>
         <p>{{ _("A crop is major in a district when it covers at least 2% of that season's area. We averaged a logistic regression and a random forest on rain, temperature and humidity. Each district was judged by a model that never saw it.") }}</p>
         <p>{{ _("Across all crops the model ranked the right district higher {a} times out of 100. We show only the {b} crops that passed our own bar. SHAP shows which factors the forest leans on, and LIME gives the reasons for each district.", a=c.auc_in_100, b=c.shown|length) }}</p>
+        <p>{{ _("The <a href='{url}'>Crop check</a> page uses these same results for one district and one crop. It only says how close the climate is to places where the crop is major. It is not a prediction.", url=lurl('check_page')) }}</p>
+        <p>{{ _("Groundwater is shown as plain facts from the Central Ground Water Board. We did not feed it into any model. Punjab is from the March 2024 assessment and Haryana from March 2022.") }}</p>
       </div>
     </div>
   </div>

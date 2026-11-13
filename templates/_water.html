@@ -1,0 +1,11 @@
+{% if gw %}
+<div class="water-box water-{{ gw.key }}">
+  <p class="water-title">{{ _("Groundwater here") }}: <strong>{{ _(gw.category) }}</strong></p>
+  <p>{{ _("Officially, {pct}% of the groundwater that nature refills in a year is pumped out. Assessed in March {year}.", pct="%.0f"|format(gw.pct), year=gw.year) }}</p>
+  {% if gw.key == "over" or gw.key == "critical" %}
+  <p>{{ _("Where water is short, a crop that needs a lot of water may be hard to grow even if the climate suits it. Our check does not see this.") }}</p>
+  {% endif %}
+  {% if gw.slug == "sangrur" %}<p>{{ _("This number leaves out Malerkotla, which was made a separate district in 2021.") }}</p>{% endif %}
+  <p class="side-note">{{ _("Source: Central Ground Water Board. Over-exploited means above 100%, critical 90 to 100%, semi-critical 70 to 90%, safe up to 70%. These are block-level counts added up for the district.") }}</p>
+</div>
+{% endif %}
