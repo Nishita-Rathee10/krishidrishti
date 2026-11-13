@@ -24,6 +24,7 @@
 </section>
 
 <section class="band">
+  
   <div class="wrap">
     <h2>{{ _("The data") }}</h2>
     <p class="side-note wide">{{ _("All of it is public. We cover {n} districts of Punjab and Haryana.", n=n_districts) }}  {{ _("The raw files are not kept in the repository because some are very large. The code that turns them into the data of this site is in the repository.") }}</p>
@@ -31,9 +32,9 @@
       <table class="src-table">
         <thead><tr><th scope="col">{{ _("What") }}</th><th scope="col">{{ _("What it holds") }}</th><th scope="col">{{ _("Years") }}</th><th scope="col">{{ _("Used for") }}</th></tr></thead>
         <tbody>
-          <tr><th scope="row">{{ _("Area, production and yield (file APY.csv)") }}</th><td>{{ _("Area and yield of each crop, by district and season. Public crop records for Indian districts.") }}</td><td>{{ _("1998 to 2019") }}</td><td>{{ _("Yield page, and the crops each district grows") }}</td></tr>
-          <tr><th scope="row">{{ _("Monthly rain, 1901 to 2015") }}</th><td>{{ _("Rain in each month for Punjab, and for Haryana with Delhi and Chandigarh. Public rainfall records for India.") }}</td><td>{{ _("1901 to 2015") }}</td><td>{{ _("Rain page, and the monthly pattern on district pages") }}</td></tr>
-          <tr><th scope="row">{{ _("District rain normals") }}</th><td>{{ _("Usual yearly rain and June to September rain of each district. Public rainfall records for India.") }}</td><td>{{ _("Average of 1986 to 2015") }}</td><td>{{ _("Yield model, crop model, district pages") }}</td></tr>
+          <tr><th scope="row">{{ _("Area, production and yield (file APY.csv)") }}</th><td>{{ _("Area and yield of each crop, by district and season. Published by India's agriculture ministry.") }}</td><td>{{ _("1998 to 2019") }}</td><td>{{ _("Yield page, and the crops each district grows") }}</td></tr>
+          <tr><th scope="row">{{ _("Monthly rain, 1901 to 2015") }}</th><td>{{ _("Rain in each month for Punjab, and for Haryana with Delhi and Chandigarh. From the India Meteorological Department.") }}</td><td>{{ _("1901 to 2015") }}</td><td>{{ _("Rain page, and the monthly pattern on district pages") }}</td></tr>
+          <tr><th scope="row">{{ _("District rain normals") }}</th><td>{{ _("Usual yearly rain and June to September rain of each district. From the India Meteorological Department.") }}</td><td>{{ _("Average of 1986 to 2015") }}</td><td>{{ _("Yield model, crop model, district pages") }}</td></tr>
           <tr><th scope="row">{{ _("NASA POWER") }}</th><td>{{ _("Temperature and humidity for the spot where each district is. These are model values for a grid square of roughly 50 km, not readings from a thermometer in the district.") }}</td><td>{{ _("2001 to 2025") }}</td><td>{{ _("District pages, crop model") }}</td></tr>
           <tr><th scope="row">{{ _("District locations") }}</th><td>{{ _("Latitude and longitude from a map lookup of each district name. Two districts, Rupnagar and Ferozepur, were fixed by hand.") }}</td><td>{{ _("Not applicable") }}</td><td>{{ _("Tile map, nearby districts, NASA lookup") }}</td></tr>
         </tbody>

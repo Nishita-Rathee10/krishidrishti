@@ -304,7 +304,7 @@ html[lang="hi"] .brand-name { line-height: 1.2; }
 .site-nav a.lang-switch { border-bottom: 2px solid transparent; text-decoration: underline; text-underline-offset: 4px; line-height: 1.35; }
 @media (max-width: 640px) {
   .header-row { flex-wrap: wrap; min-height: 0; padding-top: 12px; padding-bottom: 10px; row-gap: 8px; }
-  .site-nav { margin-left: 0; width: 100%; justify-content: space-between; gap: 6px; font-size: .95rem; }
+  .site-nav { margin-left: 0; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 4px 10px; font-size: .95rem; }
 }
 
 /* Wide tables scroll inside their own box instead of widening the page */
@@ -319,3 +319,11 @@ html[lang="hi"] .brand-name { line-height: 1.2; }
   .crop-table th, .crop-table td { padding-right: 8px; }
   .crop-table thead th { font-size: .88rem; }
 }
+
+/* Crop check */
+.check-card { max-width: 40rem; margin-bottom: 20px; }
+.check-verdict { font-weight: 700; font-size: 1.15rem; margin: 0 0 8px; }
+.check-high { border-left: 6px solid var(--field); }
+.check-medium { border-left: 6px solid var(--sarson); }
+.check-low { border-left: 6px solid var(--chilli); }
+.crop-table td.nowrap { white-space: nowrap; }

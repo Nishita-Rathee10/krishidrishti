@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% set dname = _(d.name) %}
+{% set cname = _(crop.name) %}
+{% block title %}{{ _("Crop check: does the climate of your district suit a crop?") }} | {{ _("Krishi Drishti") }}{% endblock %}
+{% block description %}{{ _("Pick a district and a crop to see if the temperature, humidity and rain there look like places where that crop is major. This is a check, not a prediction.") }}{% endblock %}
+
+{% block main %}
+<section class="district-head">
+  <div class="wrap">
+    <p class="crumb"><a href="{{ lurl('index') }}">{{ _("All districts") }}</a></p>
+    <h1>{{ _("Crop check") }}</h1>
+    <p class="lead">{{ _("Pick a district and a crop. We compare the temperature, humidity and rain of that district with the districts where the crop is major, and tell you how close they are.") }}</p>
+    <p class="readout-note">{{ _("This is a check, not a prediction and not farming advice. It sees climate only. It does not see water, soil, seed or market prices.") }}</p>
+
+    <form class="yform" method="get" action="{{ lurl('check_page') }}">
+      <div class="picker">
+        <label for="district">{{ _("District") }}</label>
+        <select id="district" name="district">
+          {% for state, items in groups.items() %}
+          <optgroup label="{{ _(state) }}">
+            {% for it in items %}<option value="{{ it.slug }}"{% if it.slug == d.slug %} selected{% endif %}>{{ _(it.name) }}</option>{% endfor %}
+          </optgroup>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="picker">
+        <label for="crop">{{ _("Crop") }}</label>
+        <select id="crop" name="crop">
+          {% for c in crops %}<option value="{{ c.slug }}"{% if c.slug == crop.slug %} selected{% endif %}>{{ _(c.name) }} ({{ season_label(c.season) }})</option>{% endfor %}
+        </select>
+      </div>
+      <button class="btn" type="submit">{{ _("Check crop") }}</button>
+    </form>
+  </div>
+</section>
+
+{% if asked %}
+<section class="band" id="result">
+  <div class="wrap">
+    <h2>{{ _("{crop} in {district}", crop=cname, district=dname) }}</h2>
+    {% if not res %}
+    <p>{{ _("We did not test {crop} in {district}, because the records for it cover only some districts. So we have no check to show.", crop=cname, district=dname) }}</p>
+    {% else %}
+    <article class="crop-card check-card check-{{ res.band|lower }}">
+      <p class="check-verdict">
+        {% if res.band == "High" %}{{ _("The climate looks like a good match for {crop}.", crop=cname|lower) }}
+        {% elif res.band == "Medium" %}{{ _("The climate is a partial match for {crop}.", crop=cname|lower) }}
+        {% else %}{{ _("The climate does not look like a good match for {crop}.", crop=cname|lower) }}{% endif %}
+      </p>
+      <p>{% if res.major %}{{ _("Today {crop} is a major crop here. It covers {share}% of the area recorded for {season}.", crop=cname, share="%.1f"|format(res.share), season=season_label(crop.season)|lower) }}
+         {% elif res.share > 0 %}{{ _("Today {crop} is grown here, but only on {share}% of the area recorded for {season}.", crop=cname, share="%.1f"|format(res.share), season=season_label(crop.season)|lower) }}
+         {% else %}{{ _("Today {crop} is not recorded here.", crop=cname) }}{% endif %}</p>
+      {% if res.band == "High" and not res.major %}
+      <p>{{ _("So the climate may suit it, even though it is not major here. Water, soil, seed or prices may be the reason, and we cannot see those.") }}</p>
+      {% elif res.band == "Low" and res.major %}
+      <p>{{ _("Farmers here do grow it widely, so something other than climate is probably helping, such as water or markets. Our check can be wrong.") }}</p>
+      {% endif %}
+    </article>
+
+    {% if res.why %}
+    <h3>{{ _("What the model looked at") }}</h3>
+    <ul class="why">
+      {% for w in res.why %}<li>{{ why_text(w.label ~ " of " ~ ("{:,.0f}".format(w.value) if w.unit == "mm" else "%.1f"|format(w.value)) ~ " " ~ w.unit) }}
+        &mdash; {% if w.helps %}{{ _("points towards a match") }}{% else %}{{ _("points away from a match") }}{% endif %}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if res.near %}
+    <h3>{% if res.major %}{{ _("Nearby districts with a similar or better climate for it") }}{% else %}{{ _("Nearby districts where {crop} does well", crop=cname|lower) }}{% endif %}</h3>
+    <div class="tscroll">
+      <table class="crop-table">
+        <thead><tr><th>{{ _("District") }}</th><th>{{ _("Distance") }}</th><th>{{ _("Today") }}</th></tr></thead>
+        <tbody>
+          {% for n in res.near %}
+          <tr><td><a href="{{ lurl('district', slug=n.slug) }}">{{ _(n.name) }}</a></td>
+              <td class="nowrap">{{ n.km }} {{ _("km") }}</td>
+              <td>{% if n.major %}{{ _("Major crop, {share}% of recorded area", share="%.1f"|format(n.share)) }}{% else %}{{ _("Climate suits it, but it covers only {share}%", share="%.1f"|format(n.share)) }}{% endif %}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="side-note">{{ _("Distance is a straight line between district centres.") }}</p>
+    {% endif %}
+
+    <p class="suggest-note">{{ _("How good is this check? In our own test, when the model compared a district where {crop} is major with one where it is not, it put the right one higher {n} times out of 100. See the Crops page for all the checks.", crop=cname|lower, n=crop.auc_in_100) }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

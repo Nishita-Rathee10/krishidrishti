@@ -75,6 +75,8 @@ BY_SLUG = {d["slug"]: d for d in DISTRICTS["districts"]}
 RAIN = load("rain_data.json")
 CROPS = load("crops_data.json")
 YIELD = load("yield_data.json")
+CHECK = load("check_data.json")
+CHECK_BY = {c["slug"]: c for c in CHECK["crops"]}
 CROP_BY_SLUG = {c["slug"]: c for c in YIELD["crops"]}
 SERIES_BY = {}
 for _s in YIELD["series"].values():
@@ -273,6 +275,18 @@ def crops_page():
     return render_template("crops.html", c=CROPS, bars=bars)
 
 
+@page("/check")
+def check_page():
+    dslug = request.args.get("district", "")
+    cslug = request.args.get("crop", "")
+    asked = dslug in BY_SLUG and cslug in CHECK_BY
+    d = BY_SLUG.get(dslug) or BY_SLUG["ludhiana"]
+    crop = CHECK_BY.get(cslug) or CHECK["crops"][0]
+    res = CHECK["districts"][d["slug"]].get(crop["slug"]) if asked else None
+    return render_template("check.html", d=d, crop=crop, crops=CHECK["crops"], groups=YIELD_DISTRICTS,
+                           asked=asked, res=res)
+
+
 @page("/methods")
 def methods_page():
     ys = {r["Method"]: r for r in YIELD["summary"]}
@@ -304,7 +318,7 @@ def robots():
 def sitemap():
     from flask import Response
     base = os.environ.get("SITE_URL", "").rstrip("/") or request.url_root.rstrip("/")
-    paths = ["/", "/yield", "/rain", "/crops", "/methods", "/about", "/privacy"]
+    paths = ["/", "/check", "/yield", "/rain", "/crops", "/methods", "/about", "/privacy"]
     paths += [f"/district/{d['slug']}" for d in DISTRICTS["districts"]]
     paths += ["/hi/" if p == "/" else "/hi" + p for p in paths]
     body = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
