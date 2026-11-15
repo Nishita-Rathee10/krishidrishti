@@ -190,6 +190,23 @@ def rain_year_chart(r):
             "mean_y": sy(r["annual_mean"]), "band_y": sy(r["annual_p90"]), "band_h": round(sy(r["annual_p10"]) - sy(r["annual_p90"]), 1)}
 
 
+def calib_chart(bins):
+    w, h, left, bottom, top, right = 420, 340, 52, 46, 14, 14
+    iw, ih = w - left - right, h - top - bottom
+
+    def sx(v):
+        return round(left + v / 100 * iw, 1)
+
+    def sy(v):
+        return round(top + ih - v / 100 * ih, 1)
+
+    pts = [{"x": sx(b["said"]), "y": sy(b["real"]), "said": b["said"], "real": b["real"], "rows": b["rows"]} for b in bins]
+    ticks = [{"x": sx(v), "y": sy(v), "label": str(v)} for v in (0, 25, 50, 75, 100)]
+    return {"w": w, "h": h, "left": left, "right": w - right, "top": top, "base": sy(0), "ticks": ticks, "pts": pts,
+            "path": " ".join(("M" if i == 0 else "L") + f"{p['x']} {p['y']}" for i, p in enumerate(pts)),
+            "d0": (sx(0), sy(0)), "d1": (sx(100), sy(100))}
+
+
 @app.context_processor
 def inject_site():
     path = request.path
@@ -262,10 +279,16 @@ def yield_page():
         diff = (c["forest_error_history"] or 0) - (c["last_year_error_history"] or 0)
         better = "Model" if diff <= -0.5 else ("Last year" if diff >= 0.5 else "Tie")
         rows.append(dict(c, better=better, range_ok=c["range_high_pct"] <= MAX_RANGE_TOP))
+    ytop = max(max(r["forest_error_history"] or 0, r["last_year_error_history"] or 0) for r in rows) or 1
+    for r in rows:
+        r["m_pct"] = round((r["forest_error_history"] or 0) / ytop * 100, 1)
+        r["l_pct"] = round((r["last_year_error_history"] or 0) / ytop * 100, 1)
+    stop = max(m["Median error %"] for m in YIELD["summary"]) or 1
+    sbars = [{"name": m["Method"], "err": m["Median error %"], "pct": round(m["Median error %"] / stop * 100, 1)} for m in YIELD["summary"]]
     return render_template("yield.html", d=BY_SLUG[dslug], crop=crop, cslug=cslug, season=season, seasons=seasons,
                            series=series, chart=chart, show_range=show_range, available=available,
                            groups=YIELD_DISTRICTS, crops=YIELD["crops"], rows=rows, sm=summary, ydata=YIELD,
-                           max_top=MAX_RANGE_TOP)
+                           max_top=MAX_RANGE_TOP, sbars=sbars)
 
 
 @page("/rain")
@@ -276,7 +299,12 @@ def rain_page():
     r = RAIN["regions"][slug]
     month_rows, month_top = rain_chart(r["months"])
     sar = next(m for m in r["models"] if m["is_sarima"])
-    return render_template("rain.html", r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
+    gtop = max(max(abs(m["val_gain"]), abs(m["test_gain"])) for m in r["models"]) or 1
+    gains = [{"name": m["name"], "is_ref": m["is_reference"], "is_sarima": m["is_sarima"],
+              "val": m["val_gain"], "test": m["test_gain"],
+              "val_pct": round(abs(m["val_gain"]) / gtop * 100, 1), "test_pct": round(abs(m["test_gain"]) / gtop * 100, 1)}
+             for m in r["models"] if not m["is_reference"]]
+    return render_template("rain.html", gains=gains, r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
                            ychart=rain_year_chart(r), sar=sar, val_years=RAIN["val_years"], test_years=RAIN["test_years"],
                            usual_month=round(r["annual_mean"] / 12))
 
@@ -286,7 +314,18 @@ def crops_page():
     g = CROPS["shap"]["global"]
     top = max(x["value"] for x in g)
     bars = [{"label": x["label"], "pct": round(100 * x["value"] / top, 1), "share": x["share"]} for x in g]
-    return render_template("crops.html", c=CROPS, bars=bars)
+    return render_template("crops.html", c=CROPS, bars=bars, calib=calib_chart(CROPS["calibration"]))
+
+
+@page("/lab")
+def lab_page():
+    ys = {r["Method"]: r for r in YIELD["summary"]}
+    sar = {k: next(m for m in v["models"] if m["is_sarima"]) for k, v in RAIN["regions"].items()}
+    shap = [{"label": x["label"], "pct": round(100 * x["value"] / CROPS["shap"]["global"][0]["value"], 1), "share": x["share"]}
+            for x in CROPS["shap"]["global"]]
+    scores = sorted(CROPS["shown"] + CROPS["not_shown"], key=lambda e: -(e["auc_in_100"] or 0))
+    return render_template("lab.html", ys=ys, sar=sar, rain=RAIN, c=CROPS, gwt=GWT, shap=shap, scores=scores,
+                           calib=calib_chart(CROPS["calibration"]), n_districts=len(DISTRICTS["districts"]))
 
 
 @page("/check")
@@ -332,7 +371,7 @@ def robots():
 def sitemap():
     from flask import Response
     base = os.environ.get("SITE_URL", "").rstrip("/") or request.url_root.rstrip("/")
-    paths = ["/", "/check", "/yield", "/rain", "/crops", "/methods", "/about", "/privacy"]
+    paths = ["/", "/check", "/yield", "/rain", "/crops", "/lab", "/methods", "/about", "/privacy"]
     paths += [f"/district/{d['slug']}" for d in DISTRICTS["districts"]]
     paths += ["/hi/" if p == "/" else "/hi" + p for p in paths]
     body = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

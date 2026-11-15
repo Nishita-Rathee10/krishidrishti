@@ -1,0 +1,18 @@
+{% macro calib_svg(calib) %}
+<div class="calib">
+  <svg viewBox="0 0 {{ calib.w }} {{ calib.h }}" role="img" aria-labelledby="cb1 cb2" focusable="false">
+    <title id="cb1">{{ _("When the model said X%, how often was it right?") }}</title>
+    <desc id="cb2">{{ _("The closer the line is to the dashed diagonal, the better the chances match what happened. The numbers are in the table below the chart.") }}</desc>
+    {% for t in calib.ticks %}
+    <line class="grid" x1="{{ calib.left }}" x2="{{ calib.right }}" y1="{{ t.y }}" y2="{{ t.y }}"/>
+    <text class="tick" x="{{ calib.left - 8 }}" y="{{ t.y + 4 }}" text-anchor="end">{{ t.label }}</text>
+    <text class="tick" x="{{ t.x }}" y="{{ calib.base + 22 }}" text-anchor="middle">{{ t.label }}</text>
+    {% endfor %}
+    <line class="diag" x1="{{ calib.d0[0] }}" y1="{{ calib.d0[1] }}" x2="{{ calib.d1[0] }}" y2="{{ calib.d1[1] }}"/>
+    <path class="cline" d="{{ calib.path }}"/>
+    {% for p in calib.pts %}<circle class="cdot" cx="{{ p.x }}" cy="{{ p.y }}" r="4.5"><title>{{ _("Said {a}%, real {b}%", a=p.said, b=p.real) }}</title></circle>{% endfor %}
+    <text class="lab" x="{{ (calib.left + calib.right) / 2 }}" y="{{ calib.h - 6 }}" text-anchor="middle">{{ _("What the model said (%)") }}</text>
+  </svg>
+  <p class="axis-title">{{ _("Up: how often the crop was really major (%). Dashed line: a perfect match.") }}</p>
+</div>
+{% endmacro %}
