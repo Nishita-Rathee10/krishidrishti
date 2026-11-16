@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_t3.html" import t3 as t3chart %}
 {% from "_calib.html" import calib_svg %}
 {% block title %}{{ _("Crops that suit the climate of Punjab and Haryana") }} | {{ _("Krishi Drishti") }}{% endblock %}
 {% block description %}{{ _("Which crops the climate of each district may suit, how well our model did in its own test, and the crops we choose not to show.") }}{% endblock %}
@@ -18,6 +19,12 @@
       <summary>{{ _("What counts as a major crop?") }}</summary>
       <p>{{ _("A crop counts as major in a district when it covers at least 2% of the area recorded for its season. Our model learns what the rain, temperature and humidity are like where a crop is major, then checks which other districts look similar.") }}</p>
     </details>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    {{ t3chart(_("How well the model ranks districts, crop by crop"), _("Taller means a better score out of 100. Green crops are shown on this site; grey ones are not."), t3, [{"c": "#5cc08a", "t": _("Shown")}, {"c": "#8fa396", "t": _("Not shown")}]) }}
   </div>
 </section>
 
@@ -134,4 +141,8 @@
     </details>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/t3.js') }}" defer></script>
 {% endblock %}

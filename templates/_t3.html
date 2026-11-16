@@ -1,0 +1,8 @@
+{% macro t3(title, sub, data, key=none) %}
+<div class="t3" role="group" aria-label="{{ title }}">
+  <p class="t3-title">{{ title }}</p>
+  {% if sub %}<p class="t3-sub">{{ sub }}</p>{% endif %}
+  <script type="application/json">{{ data | tojson }}</script>
+  {% if key %}<div class="t3-key">{% for k in key %}<span><i style="background: {{ k.c }}"></i>{{ k.t }}</span>{% endfor %}</div>{% endif %}
+</div>
+{% endmacro %}

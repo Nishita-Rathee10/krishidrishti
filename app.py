@@ -207,6 +207,70 @@ def calib_chart(bins):
             "d0": (sx(0), sy(0)), "d1": (sx(100), sy(100))}
 
 
+
+C_BLUE, C_TEAL, C_GREEN, C_GOLD, C_RED, C_GREY = "#5ab0d8", "#3f9fa0", "#5cc08a", "#f0c040", "#e5604d", "#8fa396"
+
+
+def month_label(i):
+    name = MONTHS[i]
+    return name[:3] if g.lang != "hi" else str(tr(name))
+
+
+def t3_rain(r):
+    items = []
+    for m in r["months"]:
+        i = m["month"] - 1
+        monsoon = 6 <= m["month"] <= 9
+        items.append({"v": m["mean"], "l": month_label(i), "val": f"{m['mean']:.0f}" if monsoon or m["mean"] > 40 else "",
+                      "c": C_BLUE if monsoon else C_TEAL, "tip": f"{tr(MONTHS[i])}: {m['mean']:.0f} {tr('mm')}"})
+    return {"items": items}
+
+
+def t3_yield(series, show_guess=True):
+    items, x = [], 0
+    test = {t["year"]: t for t in (series.get("test") or [])}
+    ys = list(zip(series["years"], series["yield"]))
+    for k, (yr, v) in enumerate(ys):
+        t = test.get(yr)
+        lab = str(yr) if (k % 4 == 0 or t) else ""
+        items.append({"x": x, "v": v, "l": lab, "c": C_GREEN, "dim": False,
+                      "tip": f"{yr}: {v} {tr('t/ha')}"})
+        x += 1
+        if t and show_guess:
+            items.append({"x": x, "v": t["pred"], "c": C_GOLD, "on": True,
+                          "tip": str(yr) + ", " + tr("Our model's guess") + ": " + str(t["pred"]) + " " + tr("t/ha")})
+            x += 1
+    return {"items": items}
+
+
+def t3_crops(c):
+    ordered = sorted(c["shown"] + c["not_shown"], key=lambda e: -(e["auc_in_100"] or 0))
+    return {"items": [{"v": e["auc_in_100"] or 0, "l": str(tr(e["name"]))[:7], "val": str(e["auc_in_100"] or "-"),
+                       "c": C_GREEN if e.get("trusted") else C_GREY,
+                       "tip": f"{tr(e['name'])}: {e['auc_in_100']} / 100"} for e in ordered], "max": 100}
+
+
+def t3_check(band):
+    items = []
+    for k, (name, h, col) in enumerate((("Low", 40, C_RED), ("Medium", 75, C_GOLD), ("High", 110, C_GREEN))):
+        items.append({"v": h, "l": str(tr(name)), "c": col, "dim": name != band, "on": name == band, "tip": str(tr(name))})
+    return {"items": items, "max": 110, "maxS": 64, "maxH": 150}
+
+
+def t3_lab(ys, c):
+    yb, yf = ys["Rule crop and district median, all test rows"]["Median error %"], ys["Forest, all test rows"]["Median error %"]
+    yl, yh = ys["Rule same as last year, rows with history"]["Median error %"], ys["Forest, rows with history"]["Median error %"]
+    pairs = [(tr("Yield, all rows"), 100, yf / yb * 100), (tr("Yield, last year known"), 100, yh / yl * 100),
+             (tr("Crop chances"), 100, c["brier"] / c["brier_base"] * 100)]
+    items = []
+    for k, (name, rule, model) in enumerate(pairs):
+        items.append({"x": k * 3, "v": rule, "c": C_GOLD, "l": "", "val": "100", "tip": f"{name}: {tr('Simple rule')} 100"})
+        items.append({"x": k * 3 + 1, "v": model, "c": C_GREEN if model < 100 else C_RED, "l": "", "val": f"{model:.0f}",
+                      "tip": f"{name}: {tr('Our model')} {model:.0f}"})
+        items.append({"x": k * 3 + 2, "v": 0.001, "l": str(name), "c": "#000", "dim": True})
+    return {"items": items, "max": 120}
+
+
 @app.context_processor
 def inject_site():
     path = request.path
@@ -300,7 +364,7 @@ def yield_page():
     stop = max(m["Median error %"] for m in YIELD["summary"]) or 1
     sbars = [{"name": m["Method"], "err": m["Median error %"], "pct": round(m["Median error %"] / stop * 100, 1)} for m in YIELD["summary"]]
     return render_template("yield.html", d=BY_SLUG[dslug], crop=crop, cslug=cslug, season=season, seasons=seasons,
-                           series=series, chart=chart, show_range=show_range, available=available,
+                           series=series, t3=(t3_yield(series) if series else None), chart=chart, show_range=show_range, available=available,
                            groups=YIELD_DISTRICTS, crops=YIELD["crops"], rows=rows, sm=summary, ydata=YIELD,
                            max_top=MAX_RANGE_TOP, sbars=sbars)
 
@@ -318,7 +382,7 @@ def rain_page():
               "val": m["val_gain"], "test": m["test_gain"],
               "val_pct": round(abs(m["val_gain"]) / gtop * 100, 1), "test_pct": round(abs(m["test_gain"]) / gtop * 100, 1)}
              for m in r["models"] if not m["is_reference"]]
-    return render_template("rain.html", gains=gains, r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
+    return render_template("rain.html", t3=t3_rain(r), gains=gains, r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
                            ychart=rain_year_chart(r), sar=sar, val_years=RAIN["val_years"], test_years=RAIN["test_years"],
                            usual_month=round(r["annual_mean"] / 12))
 
@@ -328,7 +392,7 @@ def crops_page():
     g = CROPS["shap"]["global"]
     top = max(x["value"] for x in g)
     bars = [{"label": x["label"], "pct": round(100 * x["value"] / top, 1), "share": x["share"]} for x in g]
-    return render_template("crops.html", c=CROPS, bars=bars, calib=calib_chart(CROPS["calibration"]))
+    return render_template("crops.html", t3=t3_crops(CROPS), c=CROPS, bars=bars, calib=calib_chart(CROPS["calibration"]))
 
 
 @page("/lab")
@@ -338,7 +402,7 @@ def lab_page():
     shap = [{"label": x["label"], "pct": round(100 * x["value"] / CROPS["shap"]["global"][0]["value"], 1), "share": x["share"]}
             for x in CROPS["shap"]["global"]]
     scores = sorted(CROPS["shown"] + CROPS["not_shown"], key=lambda e: -(e["auc_in_100"] or 0))
-    return render_template("lab.html", ys=ys, sar=sar, rain=RAIN, c=CROPS, gwt=GWT, shap=shap, scores=scores,
+    return render_template("lab.html", t3=t3_lab(ys, CROPS), ys=ys, sar=sar, rain=RAIN, c=CROPS, gwt=GWT, shap=shap, scores=scores,
                            calib=calib_chart(CROPS["calibration"]), n_districts=len(DISTRICTS["districts"]))
 
 
@@ -351,7 +415,7 @@ def check_page():
     crop = CHECK_BY.get(cslug) or CHECK["crops"][0]
     res = CHECK["districts"][d["slug"]].get(crop["slug"]) if asked else None
     return render_template("check.html", d=d, crop=crop, crops=CHECK["crops"], groups=YIELD_DISTRICTS,
-                           asked=asked, res=res, gw=GW.get(d["slug"]))
+                           asked=asked, res=res, gw=GW.get(d["slug"]), t3_check=(t3_check(res["band"]) if res else None))
 
 
 @page("/methods")

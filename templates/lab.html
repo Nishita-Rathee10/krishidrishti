@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_t3.html" import t3 as t3chart %}
 {% from "_calib.html" import calib_svg %}
 {% set yf = ys["Forest, all test rows"] %}
 {% set yb = ys["Rule crop and district median, all test rows"] %}
@@ -20,6 +21,12 @@
       <div class="kpi k-gold"><div class="kpi-num">{{ c.auc_in_100 }}<small> {{ _("in 100") }}</small></div><div class="kpi-label">{{ _("Crops: right district ranked higher") }}</div><div class="kpi-sub">{{ _("50 is a coin toss") }}</div></div>
       {% if gw %}<div class="kpi k-red"><div class="kpi-num">{{ "%+.1f"|format((gw["all tested crops"].with_groundwater - gw["all tested crops"].climate_only) * 100) }}</div><div class="kpi-label">{{ _("Groundwater test: gain in score") }}</div><div class="kpi-sub">{{ _("Needed: {n}", n="+%.0f"|format(gwt.bar_gain * 100)) }}</div></div>{% endif %}
     </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    {{ t3chart(_("Our model against a simple rule"), _("Gold is the simple rule (always 100). Green is our model. A shorter green tower means fewer mistakes. A red tower means the model did worse."), t3, [{"c": "#f0c040", "t": _("Simple rule")}, {"c": "#5cc08a", "t": _("Our model, better")}, {"c": "#e5604d", "t": _("Our model, worse")}]) }}
   </div>
 </section>
 
@@ -213,4 +220,8 @@
     <p class="suggest-note">{{ _("These results are made by scripts in our public code. See the Methods page for the full story.") }} <a href="{{ lurl('methods_page') }}">{{ _("Methods") }}</a> &middot; <a href="{{ repo_url }}">{{ _("Source code") }}</a></p>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/t3.js') }}" defer></script>
 {% endblock %}

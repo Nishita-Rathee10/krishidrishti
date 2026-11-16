@@ -553,3 +553,25 @@ html[lang="hi"] .brand-name { line-height: 1.2; }
 
 @media (min-width: 900px) { .iso-scene { height: 540px; } .tile-map.iso { --s: 25px; } }
 @media (min-width: 641px) and (max-width: 899px) { .iso-scene { height: 480px; } .tile-map.iso { --s: 24px; } }
+
+/* ---- 3D bar charts (towers) ---- */
+.t3 { position: relative; background: var(--deep); color: #E6EEE7; border-radius: 3px; padding: 14px 14px 10px; overflow: hidden; }
+.t3-title { margin: 0 0 2px; font-weight: 700; }
+.t3-sub { margin: 0; font-size: .92rem; color: #B9C9BC; }
+.t3-scene { position: relative; perspective: 1400px; display: grid; place-items: center; }
+.t3-plane { position: relative; transform-style: preserve-3d; transform: translateY(10px) rotateX(60deg) rotateZ(var(--rz, -25deg)); transition: transform .35s ease-out; }
+.t3-cell { position: absolute; left: calc(var(--x) * var(--s)); top: 0; width: var(--s); height: var(--s); transform-style: preserve-3d; outline: none; }
+.t3-cell .t3f { position: absolute; display: block; transition: height 1s cubic-bezier(.2, .8, .2, 1), width 1s cubic-bezier(.2, .8, .2, 1), transform 1s cubic-bezier(.2, .8, .2, 1); transition-delay: calc(var(--i) * 40ms); }
+.t3-cell .t3t { inset: 2px; background: var(--c); transform: translateZ(var(--h, 0px)); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .3); }
+.t3-cell .t3a { left: 2px; right: 2px; bottom: 0; height: var(--h, 0px); background: color-mix(in srgb, var(--c) 68%, #000); transform-origin: bottom; transform: rotateX(-90deg); }
+.t3-cell .t3r { top: 2px; bottom: 2px; right: 0; width: var(--h, 0px); background: color-mix(in srgb, var(--c) 48%, #000); transform-origin: right; transform: rotateY(90deg); }
+.t3-cell.dim .t3f { opacity: .35; }
+.t3-cell.on .t3t { box-shadow: 0 0 0 3px #fff, 0 0 22px 6px var(--c); }
+.t3-cell:hover .t3t, .t3-cell:focus-visible .t3t { background: color-mix(in srgb, var(--c) 70%, #fff); }
+.t3-lab, .t3-val { position: absolute; left: 50%; white-space: nowrap; font-size: .8rem; font-weight: 600; transform-origin: 0 0; pointer-events: none; }
+.t3-lab { top: 100%; transform: rotateZ(25deg) rotateX(-60deg) translate(-50%, 6px); color: #D5E0D2; }
+.t3-val { top: 50%; transform: translateZ(var(--h, 0px)) rotateZ(25deg) rotateX(-60deg) translate(-50%, -135%); color: #fff; font-size: .85rem; text-shadow: 0 1px 2px #000; }
+.t3-tip { position: absolute; transform: translate(-50%, -100%); background: #fff; color: var(--ink); padding: 4px 10px; font-size: .9rem; border: 1px solid var(--ink); pointer-events: none; white-space: nowrap; z-index: 3; }
+.t3-key { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 4px 0 0; font-size: .88rem; color: #D5E0D2; }
+.t3-key i { display: inline-block; width: 12px; height: 12px; margin-right: 6px; vertical-align: -1px; }
+@media (prefers-reduced-motion: reduce) { .t3-cell .t3f, .t3-plane { transition: none; } }

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_t3.html" import t3 as t3chart %}
 {% set dname = _(d.name) %}
 {% set cname = _(crop.name) %}
 {% block title %}{{ _("Crop yield in Punjab and Haryana: past yields and how well our model guessed") }} | {{ _("Krishi Drishti") }}{% endblock %}
@@ -32,6 +33,14 @@
     </form>
   </div>
 </section>
+
+{% if t3 %}
+<section class="band">
+  <div class="wrap">
+    {{ t3chart(_("{crop} in {district}", crop=cname, district=dname) ~ ": " ~ _("yield by year"), _("Green towers are real yields. Gold towers are what our model guessed for years it had not seen."), t3, [{"c": "#5cc08a", "t": _("Real yield")}, {"c": "#f0c040", "t": _("Our model's guess")}]) }}
+  </div>
+</section>
+{% endif %}
 
 <section class="band" id="result">
   <div class="wrap">
@@ -189,4 +198,8 @@
     </details>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/t3.js') }}" defer></script>
 {% endblock %}

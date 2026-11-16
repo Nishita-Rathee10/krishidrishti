@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_t3.html" import t3 as t3chart %}
 {% set dname = _(d.name) %}
 {% set cname = _(crop.name) %}
 {% block title %}{{ _("Crop check: does the climate of your district suit a crop?") }} | {{ _("Krishi Drishti") }}{% endblock %}
@@ -48,12 +49,7 @@
         {% elif res.band == "Medium" %}{{ _("The climate is a partial match for {crop}.", crop=cname|lower) }}
         {% else %}{{ _("The climate does not look like a good match for {crop}.", crop=cname|lower) }}{% endif %}
       </p>
-      <div class="gauge" role="img" aria-label="{{ _('How close is the climate?') }}: {{ _(res.band) }}">
-        <div class="g-seg g-low{% if res.band == 'Low' %} on{% endif %}">{{ _("Low") }}</div>
-        <div class="g-seg g-med{% if res.band == 'Medium' %} on{% endif %}">{{ _("Medium") }}</div>
-        <div class="g-seg g-high{% if res.band == 'High' %} on{% endif %}">{{ _("High") }}</div>
-      </div>
-      <div class="g-track" aria-hidden="true"><span class="g-pointer" style="left: {{ 15 if res.band == 'Low' else (50 if res.band == 'Medium' else 85) }}%"></span></div>
+      {{ t3chart(_("How close is the climate?"), _("The glowing tower is the answer for this district and crop."), t3_check) }}
       <p class="suggest-note" style="margin: 0">{{ _("How close is the climate?") }}</p>
     </article>
 
@@ -115,4 +111,8 @@
   </div>
 </section>
 {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/t3.js') }}" defer></script>
 {% endblock %}

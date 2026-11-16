@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_t3.html" import t3 as t3chart %}
 {% set rname = _(r.name) %}
 {% block title %}{{ _("Rain in {region}: month by month and year by year", region=rname) }} | {{ _("Krishi Drishti") }}{% endblock %}
 {% block description %}{{ _("How much rain {region} usually gets each month, how much it changes from year to year, and how well models guessed the rain of a coming month.", region=rname) }}{% endblock %}
@@ -21,6 +22,12 @@
       <div class="fig-summer"><dt>{{ _("Wettest year, {year}", year=r.wettest.year) }}</dt><dd>{{ "{:,}".format(r.wettest.mm) }} <small>{{ _("mm") }}</small></dd></div>
     </dl>
     <p class="readout-note">{{ _("About {pct}% of a usual year's rain falls from June to September.", pct=r.monsoon_share) }}</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    {{ t3chart(_("Rain in each month"), _("Taller means more rain. The tall blue towers are the monsoon months."), t3, [{"c": "#5ab0d8", "t": _("June to September")}, {"c": "#3f9fa0", "t": _("Other months")}]) }}
   </div>
 </section>
 
@@ -169,4 +176,8 @@
     </details>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/t3.js') }}" defer></script>
 {% endblock %}
