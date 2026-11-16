@@ -20,12 +20,13 @@
   var prefix = data.prefix || "";
 
   var LAYERS = {
+    water: { label: T.water, key: "gw", unit: "%", digits: 0, ramp: ["#2f7f4f", "#d0ae2e", "#d9822b", "#b3321f"] },
     rain: { label: T.rain, key: "rain", unit: T.mm, digits: 0, ramp: ["#35564f", "#2f7f80", "#4fb0c4", "#a6e4f2"] },
     winter: { label: T.winter, key: "t_winter", unit: "°C", digits: 1, ramp: ["#4b523d", "#8f8a3b", "#d0ae2e", "#f7d65f"] },
     summer: { label: T.summer, key: "t_summer", unit: "°C", digits: 1, ramp: ["#5b3b35", "#9a4a38", "#d8653a", "#f7a266"] }
   };
 
-  var layerName = "rain";
+  var layerName = "water";
   var selected = null;
   var cells = {};
   var bySlug = {};
@@ -55,32 +56,25 @@
     });
   }
 
-  // Build the tile map row by row, so keyboard order runs north to south
+  // Build a 3D map: one tower per district
   grid.style.setProperty("--cols", data.cols);
-  var spot = {};
-  districts.forEach(function (d) { spot[d.col + "," + d.row] = d; bySlug[d.slug] = d; });
-  var counter = 0;
-  for (var r = 0; r < data.rows; r++) {
-    for (var c = 0; c < data.cols; c++) {
-      var d = spot[c + "," + r];
-      if (!d) {
-        var gap = document.createElement("span");
-        gap.className = "void";
-        gap.setAttribute("aria-hidden", "true");
-        grid.appendChild(gap);
-        continue;
-      }
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "cell" + (d.approx_rain ? " approx" : "");
-      b.style.setProperty("--i", counter++);
-      b.setAttribute("aria-pressed", "false");
-      b.dataset.slug = d.slug;
-      b.innerHTML = '<svg viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 1.5L8.5 8.5M8.5 1.5L1.5 8.5"/></svg>';
-      grid.appendChild(b);
-      cells[d.slug] = b;
-    }
-  }
+  grid.style.setProperty("--rows", data.rows);
+  grid.classList.add("iso");
+  districts.forEach(function (d, i) {
+    bySlug[d.slug] = d;
+    var b = document.createElement("div");
+    b.className = "iso-cell" + (d.approx_rain ? " approx" : "");
+    b.setAttribute("role", "button");
+    b.setAttribute("tabindex", "0");
+    b.setAttribute("aria-pressed", "false");
+    b.dataset.slug = d.slug;
+    b.style.setProperty("--x", d.col);
+    b.style.setProperty("--y", d.row);
+    b.style.setProperty("--i", i);
+    b.innerHTML = '<i class="f ft"></i><i class="f ff"></i><i class="f fr"></i>';
+    grid.appendChild(b);
+    cells[d.slug] = b;
+  });
 
   function applyLayer() {
     var L = LAYERS[layerName];
@@ -91,12 +85,13 @@
       var t = max === min ? 0.5 : (d[L.key] - min) / (max - min);
       var el = cells[d.slug];
       el.style.setProperty("--c", colorAt(L.ramp, t));
+      el.style.setProperty("--h", Math.round(8 + t * 112) + "px");
       el.setAttribute("aria-label", d.name + ", " + d.state_label + ". " + L.label + " " + fmt(d[L.key], L.digits) + " " + L.unit);
     });
     legendMin.textContent = fmt(min, L.digits) + " " + L.unit;
     legendMax.textContent = fmt(max, L.digits) + " " + L.unit;
     legendBar.style.background = "linear-gradient(90deg," + L.ramp.join(",") + ")";
-    panel.classList.remove("layer-rain", "layer-winter", "layer-summer");
+    panel.classList.remove("layer-rain", "layer-winter", "layer-summer", "layer-water");
     panel.classList.add("layer-" + layerName);
     approxNote.hidden = layerName !== "rain";
   }
@@ -115,6 +110,7 @@
       figure("fig-rain", T.rain, d.rain, 0, T.mm) +
       figure("fig-winter", T.winter, d.t_winter, 1, "°C") +
       figure("fig-summer", T.summer, d.t_summer, 1, "°C") +
+      (d.gw ? figure("fig-water", T.water, d.gw, 0, "%") : "") +
       '</dl><p class="readout-note">' + esc(note) + '</p>' +
       '<p><a class="btn" href="' + prefix + '/district/' + encodeURIComponent(d.slug) + '">' + esc(T.open.replace("{name}", d.name)) + '</a></p>';
   }
@@ -150,19 +146,32 @@
   function hideTip() { tip.hidden = true; }
 
   grid.addEventListener("click", function (e) {
-    var b = e.target.closest(".cell");
+    var b = e.target.closest(".iso-cell");
     if (b) choose(b.dataset.slug);
   });
   grid.addEventListener("mouseover", function (e) {
-    var b = e.target.closest(".cell");
+    var b = e.target.closest(".iso-cell");
     if (b) showTip(b.dataset.slug);
   });
   grid.addEventListener("mouseout", hideTip);
   grid.addEventListener("focusin", function (e) {
-    var b = e.target.closest(".cell");
+    var b = e.target.closest(".iso-cell");
     if (b) showTip(b.dataset.slug);
   });
   grid.addEventListener("focusout", hideTip);
+  grid.addEventListener("keydown", function (e) {
+    var b = e.target.closest(".iso-cell");
+    if (b && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); choose(b.dataset.slug); }
+  });
+  var scene = grid.parentNode;
+  if (!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+    scene.addEventListener("mousemove", function (e) {
+      var r = scene.getBoundingClientRect();
+      var k = (e.clientX - r.left) / r.width - 0.5;
+      grid.style.setProperty("--rz", (-35 + k * 24) + "deg");
+    });
+    scene.addEventListener("mouseleave", function () { grid.style.setProperty("--rz", "-35deg"); });
+  }
   select.addEventListener("change", function () { choose(select.value); });
   Array.prototype.forEach.call(document.querySelectorAll('input[name="layer"]'), function (input) {
     input.addEventListener("change", function () {
@@ -171,4 +180,12 @@
   });
 
   applyLayer();
+  // rise animation on load: start flat, then grow
+  Array.prototype.forEach.call(grid.querySelectorAll(".iso-cell"), function (el) {
+    el.dataset.h = el.style.getPropertyValue("--h");
+    el.style.setProperty("--h", "0px");
+  });
+  setTimeout(function () {
+    Array.prototype.forEach.call(grid.querySelectorAll(".iso-cell"), function (el) { el.style.setProperty("--h", el.dataset.h); });
+  }, 250);
 })();

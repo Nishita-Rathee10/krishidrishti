@@ -657,5 +657,21 @@
  "Today's share of the area": "आज क्षेत्र में हिस्सा",
  "Major from 2%": "2% से प्रमुख",
  "How good is this check?": "यह जाँच कितनी भरोसेमंद है?",
- "In our test the model put the right district higher this many times out of 100. 50 is a coin toss.": "हमारी परख में मॉडल ने 100 में से इतनी बार सही ज़िला ऊपर रखा। 50 यानी सिक्का उछालने जैसा।"
+ "In our test the model put the right district higher this many times out of 100. 50 is a coin toss.": "हमारी परख में मॉडल ने 100 में से इतनी बार सही ज़िला ऊपर रखा। 50 यानी सिक्का उछालने जैसा।",
+ "Check a crop": "फ़सल जाँचें",
+ "Punjab and Haryana, district by district": "पंजाब और हरियाणा, ज़िला दर ज़िला",
+ "Rain, crops, yield and water for 44 districts.": "44 ज़िलों की बारिश, फ़सलें, पैदावार और पानी।",
+ "Groundwater use": "भूजल का उपयोग",
+ "Map of the 44 districts, one tower each": "44 ज़िलों का नक्शा, हर ज़िले का एक टावर",
+ "Each tower is one district, placed near its main town. Taller means a higher number. Move the mouse over the map to turn it.": "हर टावर एक ज़िला है, जो उसके मुख्य शहर के पास रखा गया है। जितना ऊँचा, उतनी बड़ी संख्या। नक्शे पर माउस घुमाएँ तो वह घूमता है।",
+ "of 44 districts pump out more water than nature refills": "44 में से इतने ज़िले क़ुदरत के भरने से ज़्यादा पानी निकाल रहे हैं",
+ "crop model score out of 100": "फ़सल मॉडल का स्कोर, 100 में से",
+ "usual miss of the yield model": "पैदावार मॉडल की सामान्य चूक",
+ "Water stress": "पानी पर दबाव",
+ "Explore": "खोजें",
+ "Real vs model": "असली बनाम मॉडल",
+ "What suits where": "कहाँ क्या उगता है",
+ "Low, Medium, High": "कम, मध्यम, ज़्यादा",
+ "Every test, in charts": "हर परख, चार्ट में",
+ "Each square is one district. Groundwater use is the share of yearly refill that is pumped out (above 100% is over-exploited). Rain is the 1986 to 2015 average. Temperatures come from a NASA model.": "हर टावर एक ज़िला है। भूजल उपयोग वह हिस्सा है जो साल भर में भरे पानी में से निकाला जाता है (100% से ऊपर यानी अत्यधिक दोहन)। बारिश 1986 से 2015 का औसत है। तापमान NASA मॉडल से हैं।"
 }

@@ -6,32 +6,32 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <h1>{{ _("Rain, crops and yield for every district of Punjab and Haryana") }}</h1>
-      <p class="lead">{{ _("Pick one of the 44 districts to see its usual rain and how warm its winters and summers are. Every number on this site comes with a note on how far to trust it.") }}</p>
-
+      <h1>{{ _("Punjab and Haryana, district by district") }}</h1>
+      <p class="lead">{{ _("Rain, crops, yield and water for 44 districts.") }}</p>
+      <div class="cta-row">
+        <a class="btn" href="{{ lurl('check_page') }}?district=sangrur&crop=cotton-kharif">{{ _("Check a crop") }}</a>
+        <a class="btn btn-ghost" href="{{ lurl('lab_page') }}">{{ _("Model Lab") }}</a>
+      </div>
       <div class="picker">
         <label for="district-select">{{ _("District") }}</label>
         <select id="district-select">
           <option value="">{{ _("Choose a district") }}</option>
           {% for state in ["Punjab", "Haryana"] %}
           <optgroup label="{{ _(state) }}">
-            {% for d in map_data.districts if d.state == state %}
-            <option value="{{ d.slug }}">{{ d.name }}</option>
-            {% endfor %}
+            {% for d in map_data.districts if d.state == state %}<option value="{{ d.slug }}">{{ d.name }}</option>{% endfor %}
           </optgroup>
           {% endfor %}
         </select>
       </div>
-
-      <div id="readout" class="readout" aria-live="polite">
-        <p class="readout-empty">{{ _("Choose a district from the list, or select a square on the map.") }}</p>
-      </div>
+      <div id="readout" class="readout" aria-live="polite"><p class="readout-empty">{{ _("Choose a district from the list, or select a square on the map.") }}</p></div>
     </div>
 
     <div class="map-panel" id="map-panel">
       <fieldset class="layers">
         <legend>{{ _("Show on the map") }}</legend>
-        <input type="radio" name="layer" id="layer-rain" value="rain" checked>
+        <input type="radio" name="layer" id="layer-water" value="water" checked>
+        <label for="layer-water">{{ _("Groundwater use") }}</label>
+        <input type="radio" name="layer" id="layer-rain" value="rain">
         <label for="layer-rain">{{ _("Yearly rain") }}</label>
         <input type="radio" name="layer" id="layer-winter" value="winter">
         <label for="layer-winter">{{ _("Winter temperature") }}</label>
@@ -39,47 +39,70 @@
         <label for="layer-summer">{{ _("Peak summer heat") }}</label>
       </fieldset>
 
-      <div class="tile-map" id="tile-map" role="group" aria-label="{{ _('Map of the 44 districts, one square each') }}"></div>
+      <div class="iso-scene"><div class="tile-map" id="tile-map" role="group" aria-label="{{ _('Map of the 44 districts, one tower each') }}"></div></div>
 
       <div class="legend-row">
         <span id="legend-min"></span>
         <div class="legend-bar" id="legend-bar"></div>
         <span id="legend-max"></span>
       </div>
-      <p class="map-note">{{ _("Each square is one district, placed near its main town. This is a tile map, not a boundary map.") }}<span id="approx-note"> {{ _("A dashed square means its rain figure is copied from the district it was carved out of.") }}</span></p>
+      <p class="map-note">{{ _("Each tower is one district, placed near its main town. Taller means a higher number. Move the mouse over the map to turn it.") }}<span id="approx-note"> {{ _("A dashed square means its rain figure is copied from the district it was carved out of.") }}</span></p>
       <div class="tip" id="tip" hidden></div>
     </div>
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap two-col">
-    <h2>{{ _("How to read the map") }}</h2>
-    <dl class="defs">
-      <div>
-        <dt>{{ _("Yearly rain") }}</dt>
-        <dd>{{ _("The average rain in one year, in millimetres, over 1986 to 2015. Most of it falls between June and September.") }}</dd>
-      </div>
-      <div>
-        <dt>{{ _("Winter temperature") }}</dt>
-        <dd>{{ _("The average daily temperature from November to March, in degrees Celsius.") }}</dd>
-      </div>
-      <div>
-        <dt>{{ _("Peak summer heat") }}</dt>
-        <dd>{{ _("The highest temperature the NASA model shows in April, May and June, averaged over the three months, in degrees Celsius. This is the heat of the hottest days, not a normal day, and the model can run hotter than weather stations.") }}</dd>
-      </div>
-    </dl>
+<section class="band bigstats">
+  <div class="wrap">
+    <div class="bigrow">
+      <div class="big"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4.5 6 7.2 6 10.5a6 6 0 0 1-12 0C6 10.2 9 7.5 12 3z"/></svg><b data-count="{{ cats.over }}">{{ cats.over }}</b><span>{{ _("of 44 districts pump out more water than nature refills") }}</span></div>
+      <div class="big big-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><b data-count="{{ auc }}">{{ auc }}</b><span>{{ _("crop model score out of 100") }}</span></div>
+      <div class="big big-gold"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><b data-count="{{ yerr }}" data-dec="1">{{ yerr }}<small>%</small></b><span>{{ _("usual miss of the yield model") }}</span></div>
+    </div>
   </div>
 </section>
 
 <section class="band band-alt">
-  <div class="wrap two-col">
-    <h2>{{ _("Where these numbers come from and where they stop") }}</h2>
-    <ul class="limits">
-      <li>{{ _("Rain figures are district averages for 1986 to 2015. Fazilka, Pathankot and Charkhi Dadri became districts after the older records were made, so they use the figure of the district they were carved out of.") }}</li>
-      <li>{{ _("Temperatures come from a NASA computer model with squares about 50 km wide. They are taken at each district's main town, so neighbouring districts look alike.") }}</li>
-      <li>{{ _("The farm records used on this site end in 2019.") }}</li>
-    </ul>
+  <div class="wrap">
+    <h2>{{ _("Water stress") }}</h2>
+    <div class="water-grid">
+      <div class="donut-wrap">
+        <div class="donut" style="background: conic-gradient({{ donut }})" role="img" aria-label="{{ cats.over }} / {{ n_all }}"><div class="donut-hole"><b>{{ cats.over }}</b><span>/ {{ n_all }}</span></div></div>
+        <ul class="dleg">
+          <li><i style="background:#b3321f"></i>{{ _("Over-exploited") }} <b>{{ cats.over }}</b></li>
+          <li><i style="background:#d9822b"></i>{{ _("Critical") }} <b>{{ cats.critical }}</b></li>
+          <li><i style="background:#e0b92f"></i>{{ _("Semi-critical") }} <b>{{ cats.semi }}</b></li>
+          <li><i style="background:#2f7f4f"></i>{{ _("Safe") }} <b>{{ cats.safe }}</b></li>
+        </ul>
+      </div>
+      <ol class="rank">
+        {% for v in top %}
+        <li><a href="{{ lurl('district', slug=v.slug) }}">{{ v.name }}</a><span class="rtrack"><span class="rbar" style="width: {{ v.w }}%"></span></span><b>{{ "%.0f"|format(v.pct) }}%</b></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>{{ _("Explore") }}</h2>
+    <div class="tiles">
+      <a class="tile t-blue" href="{{ lurl('rain_page') }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4.5 6 7.2 6 10.5a6 6 0 0 1-12 0C6 10.2 9 7.5 12 3z"/></svg><b>{{ _("Rain") }}</b><span>1901 &rarr; 2015</span></a>
+      <a class="tile" href="{{ lurl('yield_page') }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 12c0-3-2-5-5-5 0 3 2 5 5 5zM12 17c0-3-2-5-5-5 0 3 2 5 5 5zM12 17c0-3 2-5 5-5 0 3-2 5-5 5z"/></svg><b>{{ _("Crop yield") }}</b><span>{{ _("Real vs model") }}</span></a>
+      <a class="tile t-gold" href="{{ lurl('crops_page') }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c0-9 6-15 16-16 0 10-6 16-16 16zM4 20l9-9"/></svg><b>{{ _("Crops") }}</b><span>{{ _("What suits where") }}</span></a>
+      <a class="tile t-red" href="{{ lurl('check_page') }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><b>{{ _("Crop check") }}</b><span>{{ _("Low, Medium, High") }}</span></a>
+      <a class="tile t-dark" href="{{ lurl('lab_page') }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg><b>{{ _("Model Lab") }}</b><span>{{ _("Every test, in charts") }}</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <details class="more" style="margin-top: 0">
+      <summary>{{ _("How to read the map") }}</summary>
+      <p class="side-note wide">{{ _("Each square is one district. Groundwater use is the share of yearly refill that is pumped out (above 100% is over-exploited). Rain is the 1986 to 2015 average. Temperatures come from a NASA model.") }}</p>
+    </details>
   </div>
 </section>
 
@@ -87,5 +110,16 @@
 {% endblock %}
 
 {% block scripts %}
+<script>
+(function () {
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.querySelectorAll("[data-count]").forEach(function (el) {
+    var end = parseFloat(el.dataset.count), dec = parseInt(el.dataset.dec || "0", 10), small = el.querySelector("small");
+    var tail = small ? small.outerHTML : "", t0 = null;
+    function step(t) { if (t0 === null) t0 = t; var k = Math.min((t - t0) / 900, 1); el.innerHTML = (end * (1 - Math.pow(1 - k, 3))).toFixed(dec) + tail; if (k < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  });
+})();
+</script>
 <script src="{{ url_for('static', filename='js/map.js') }}" defer></script>
 {% endblock %}

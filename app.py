@@ -227,10 +227,10 @@ def inject_site():
 def map_payload():
     districts = []
     for d in DISTRICTS["districts"]:
-        districts.append(dict(d, name=str(tr(d["name"])), state_label=str(tr(d["state"]))))
+        districts.append(dict(d, name=str(tr(d["name"])), state_label=str(tr(d["state"])), gw=(GW.get(d["slug"]) or {}).get("pct")))
     districts.sort(key=lambda x: x["name"])
     text = {k: str(tr(v)) for k, v in {
-        "rain": "Yearly rain", "winter": "Winter temperature", "summer": "Peak summer heat", "mm": "mm",
+        "water": "Groundwater use", "rain": "Yearly rain", "winter": "Winter temperature", "summer": "Peak summer heat", "mm": "mm",
         "note": "Rain is the average of 1986 to 2015. Temperatures come from a NASA model for 2001 to 2025. Peak summer heat is the highest temperature the model shows in April, May and June, so it reads far higher than a normal day.",
         "note_approx": "Rain for this district is copied from the district it was carved out of.",
         "open": "Open the {name} page", "empty": "Choose a district from the list, or select a square on the map."}.items()}
@@ -239,7 +239,21 @@ def map_payload():
 
 @page("/")
 def index():
-    return render_template("index.html", map_data=map_payload())
+    cats = {k: sum(1 for v in GW.values() if v["key"] == k) for k in ("over", "critical", "semi", "safe")}
+    top = sorted(GW.values(), key=lambda v: -v["pct"])[:8]
+    top = [dict(v, name=str(tr(BY_SLUG[v["slug"]]["name"])), state=BY_SLUG[v["slug"]]["state"]) for v in top]
+    tmax = max(v["pct"] for v in top)
+    for v in top:
+        v["w"] = round(v["pct"] / tmax * 100, 1)
+    n_all = len(GW)
+    deg, acc = [], 0.0
+    for k, col in (("over", "#b3321f"), ("critical", "#d9822b"), ("semi", "#e0b92f"), ("safe", "#2f7f4f")):
+        nxt = acc + cats[k] / n_all * 360
+        deg.append(f"{col} {acc:.1f}deg {nxt:.1f}deg")
+        acc = nxt
+    by_state = {st: sum(1 for v in GW.values() if v["key"] == "over" and BY_SLUG[v["slug"]]["state"] == st) for st in ("Punjab", "Haryana")}
+    return render_template("index.html", map_data=map_payload(), cats=cats, top=top, n_all=n_all, donut=", ".join(deg),
+                           auc=CROPS["auc_in_100"], by_state=by_state, yerr=YIELD["summary"][0]["Median error %"])
 
 
 @page("/district/<slug>")
