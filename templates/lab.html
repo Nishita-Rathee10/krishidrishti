@@ -9,7 +9,7 @@
 {% block description %}{{ _("Which algorithm does each job on this site, how it was tested, and how well it did against a simple rule.") }}{% endblock %}
 
 {% block main %}
-<section class="district-head">
+<section class="lab-hero">
   <div class="wrap">
     <p class="crumb"><a href="{{ lurl('index') }}">{{ _("All districts") }}</a></p>
     <h1>{{ _("Model Lab") }}</h1>
@@ -23,51 +23,74 @@
   </div>
 </section>
 
+<section class="band">
+  <div class="wrap">
+    <h2>{{ _("From public data to this website") }}</h2>
+    <ol class="flow">
+      <li>{{ _("Public data") }}<small>{{ _("Yield, rain, climate, groundwater") }}</small></li>
+      <li>{{ _("Tidy tables") }}<small>{{ _("One row per district and year") }}</small></li>
+      <li>{{ _("Train") }}<small>{{ _("On the computer, not on the site") }}</small></li>
+      <li>{{ _("Test") }}<small>{{ _("On years or districts it never saw") }}</small></li>
+      <li>{{ _("Saved results") }}<small>{{ _("Small JSON and CSV files") }}</small></li>
+      <li>{{ _("This website") }}<small>{{ _("Pages only read the saved files") }}</small></li>
+    </ol>
+  </div>
+</section>
+
 <section class="band band-alt">
   <div class="wrap">
     <h2>{{ _("Which algorithm does what") }}</h2>
     <div class="card-grid" style="margin-top: 18px">
       <article class="algo">
         <h3>{{ _("Crop yield") }}</h3>
-        <p class="algo-name">{{ _("Random forest") }}</p>
-        <dl>
-          <dt>{{ _("Learns from") }}</dt><dd>{{ _("District, crop, season, year and the usual rain of the district") }}</dd>
-          <dt>{{ _("Gives") }}</dt><dd>{{ _("Yield in tonnes per hectare") }}</dd>
-          <dt>{{ _("Tested by") }}</dt><dd>{{ _("Trained on 1998 to 2016, then looked once at 2017 to 2019") }}</dd>
-          <dt>{{ _("Compared with") }}</dt><dd>{{ _("Usual yield of the district and crop, and last year's yield") }}</dd>
-        </dl>
+        <div class="aflow">
+          <div class="in"><span>{{ _("District") }}</span><span>{{ _("Crop") }}</span><span>{{ _("Season") }}</span><span>{{ _("Year") }}</span><span>{{ _("Usual rain") }}</span></div><div class="arrow">&darr;</div>
+          <div class="node">{{ _("Random forest") }}</div><div class="arrow">&darr;</div>
+          <div class="out">{{ _("Yield in tonnes per hectare") }}</div>
+        </div>
+        <div class="tags">
+          <div><b>{{ _("Tested by") }}</b><span>{{ _("Trained on 1998 to 2016, then looked once at 2017 to 2019") }}</span></div>
+          <div><b>{{ _("Compared with") }}</b><span>{{ _("Usual yield of the district and crop, and last year's yield") }}</span></div>
+        </div>
         <p class="suggest-note"><a href="{{ lurl('yield_page') }}">{{ _("Open the Crop yield page") }}</a></p>
       </article>
       <article class="algo a-blue">
         <h3>{{ _("Rain") }}</h3>
-        <p class="algo-name">{{ _("Seasonal time-series model (SARIMA)") }}</p>
-        <dl>
-          <dt>{{ _("Model used") }}</dt><dd>{% for k, v in sar.items() %}{{ _(rain.regions[k].name) }}: {{ v.key }}{% if not loop.last %}<br>{% endif %}{% endfor %}</dd>
-          <dt>{{ _("Learns from") }}</dt><dd>{{ _("Monthly rain of the state, 1901 to 2015") }}</dd>
-          <dt>{{ _("Tested by") }}</dt><dd>{{ _("Every year: records up to the year before, then guess all 12 months") }}</dd>
-          <dt>{{ _("Compared with") }}</dt><dd>{{ _("The usual rain of each month") }}</dd>
-        </dl>
+        <div class="aflow">
+          <div class="in"><span>{{ _("Monthly rain, 1901 to 2015") }}</span></div><div class="arrow">&darr;</div>
+          <div class="node">{{ _("Seasonal time-series model (SARIMA)") }}<br><small>{% for k, v in sar.items() %}{{ _(rain.regions[k].name) }}: {{ v.key }}{% if not loop.last %} &middot; {% endif %}{% endfor %}</small></div><div class="arrow">&darr;</div>
+          <div class="out">{{ _("Rain of the coming 12 months") }}</div>
+        </div>
+        <div class="tags">
+          <div><b>{{ _("Tested by") }}</b><span>{{ _("Every year: records up to the year before, then guess all 12 months") }}</span></div>
+          <div><b>{{ _("Compared with") }}</b><span>{{ _("The usual rain of each month") }}</span></div>
+        </div>
         <p class="suggest-note"><a href="{{ lurl('rain_page') }}">{{ _("Open the Rain page") }}</a></p>
       </article>
       <article class="algo a-gold">
         <h3>{{ _("Crops") }}</h3>
-        <p class="algo-name">{{ _("Logistic regression and random forest, averaged") }}</p>
-        <dl>
-          <dt>{{ _("Learns from") }}</dt><dd>{{ _("Rain, temperature and humidity of each district") }}</dd>
-          <dt>{{ _("Gives") }}</dt><dd>{{ _("The chance that a crop is major in a district") }}</dd>
-          <dt>{{ _("Tested by") }}</dt><dd>{{ _("Each district is judged by a model that never saw it") }}</dd>
-          <dt>{{ _("Compared with") }}</dt><dd>{{ _("Always saying the average chance") }}</dd>
-        </dl>
+        <div class="aflow">
+          <div class="in"><span>{{ _("Rain") }}</span><span>{{ _("Temperature") }}</span><span>{{ _("Humidity") }}</span></div><div class="arrow">&darr;</div>
+          <div class="node">{{ _("Logistic regression and random forest, averaged") }}</div><div class="arrow">&darr;</div>
+          <div class="out">{{ _("The chance that a crop is major in a district") }}</div>
+        </div>
+        <div class="tags">
+          <div><b>{{ _("Tested by") }}</b><span>{{ _("Each district is judged by a model that never saw it") }}</span></div>
+          <div><b>{{ _("Compared with") }}</b><span>{{ _("Always saying the average chance") }}</span></div>
+        </div>
         <p class="suggest-note"><a href="{{ lurl('crops_page') }}">{{ _("Open the Crops page") }}</a></p>
       </article>
       <article class="algo a-red">
         <h3>{{ _("Explaining the model") }}</h3>
-        <p class="algo-name">{{ _("SHAP and LIME") }}</p>
-        <dl>
-          <dt>{{ _("SHAP") }}</dt><dd>{{ _("Shows which inputs push the answer most, over all rows") }}</dd>
-          <dt>{{ _("LIME") }}</dt><dd>{{ _("Gives the reasons for one district and one crop") }}</dd>
-          <dt>{{ _("Used on") }}</dt><dd>{{ _("The Crops page and the Crop check page") }}</dd>
-        </dl>
+        <div class="aflow">
+          <div class="in"><span>{{ _("Model answers") }}</span></div><div class="arrow">&darr;</div>
+          <div class="node">{{ _("SHAP and LIME") }}</div><div class="arrow">&darr;</div>
+          <div class="out">{{ _("Which inputs push the answer") }}</div>
+        </div>
+        <div class="tags">
+          <div><b>{{ _("Tested by") }}</b><span>{{ _("SHAP: all rows. LIME: one district and one crop") }}</span></div>
+          <div><b>{{ _("Compared with") }}</b><span>{{ _("The Crops page and the Crop check page") }}</span></div>
+        </div>
         <p class="suggest-note"><a href="{{ lurl('check_page') }}">{{ _("Open the Crop check page") }}</a></p>
       </article>
     </div>
@@ -110,15 +133,13 @@
 <section class="band band-alt">
   <div class="wrap">
     <h2>{{ _("Rules set before testing") }}</h2>
-    <div class="tscroll"><table class="crop-table" style="margin-top: 14px">
-      <thead><tr><th scope="col">{{ _("Task") }}</th><th scope="col">{{ _("The rule") }}</th><th scope="col">{{ _("What happened") }}</th><th scope="col">{{ _("Result") }}</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">{{ _("Yield, when last year is known") }}</th><td>{{ _("Beat last year's yield") }}</td><td>{{ _("{a}% against {b}%", a=yh["Median error %"], b=yl["Median error %"]) }}</td><td>{% if yh["Median error %"] < yl["Median error %"] %}<span class="pill pill-pass">{{ _("Met") }}</span>{% else %}<span class="pill pill-fail">{{ _("Not met") }}</span>{% endif %}</td></tr>
-        <tr><th scope="row">{{ _("Rain") }}</th><td>{{ _("Beat the best usual method by 2% on {y}", y=rain.val_years) }}</td><td>{% for k, v in sar.items() %}{{ _(rain.regions[k].name) }} {{ "%+.1f"|format(v.val_gain) }}%{% if not loop.last %}, {% endif %}{% endfor %}</td><td>{% if sar.values()|selectattr("val_gain", "ge", 2)|list|length == sar|length %}<span class="pill pill-pass">{{ _("Met") }}</span>{% else %}<span class="pill pill-fail">{{ _("Not met") }}</span>{% endif %}</td></tr>
-        <tr><th scope="row">{{ _("Crops") }}</th><td>{{ _("Major in 5+ districts, missing in 5+, score 70 or more") }}</td><td>{{ _("{n} crops passed", n=c.shown|length) }}</td><td><span class="pill pill-pass">{{ _("Applied") }}</span></td></tr>
-        {% if gw %}<tr><th scope="row">{{ _("Groundwater") }}</th><td>{{ _("Gain of {g} or more, better in {r} of 5 repeats", g="%.2f"|format(gwt.bar_gain), r=gwt.bar_repeats) }}</td><td>{{ _("Gain {a} and {b}", a="%+.3f"|format(gw["all tested crops"].with_groundwater - gw["all tested crops"].climate_only), b="%+.3f"|format(gw["the crops we show"].with_groundwater - gw["the crops we show"].climate_only)) }}</td><td>{% if gw["all tested crops"].passes and gw["the crops we show"].passes %}<span class="pill pill-pass">{{ _("Met") }}</span>{% else %}<span class="pill pill-fail">{{ _("Not met") }}</span>{% endif %}</td></tr>{% endif %}
-      </tbody>
-    </table></div>
+    <div class="rules">
+      <div class="rule {% if yh['Median error %'] < yl['Median error %'] %}ok{% else %}no{% endif %}"><span class="ico">{% if yh['Median error %'] < yl['Median error %'] %}&#10003;{% else %}&#10005;{% endif %}</span><div><h3>{{ _("Yield, when last year is known") }}</h3><p>{{ _("The rule") }}: {{ _("Beat last year's yield") }}</p><p><strong>{{ _("{a}% against {b}%", a=yh["Median error %"], b=yl["Median error %"]) }}</strong></p></div></div>
+      <div class="rule {% if sar.values()|selectattr('val_gain', 'ge', 2)|list|length == sar|length %}ok{% else %}no{% endif %}"><span class="ico">{% if sar.values()|selectattr('val_gain', 'ge', 2)|list|length == sar|length %}&#10003;{% else %}&#10005;{% endif %}</span><div><h3>{{ _("Rain") }}</h3><p>{{ _("The rule") }}: {{ _("Beat the best usual method by 2% on {y}", y=rain.val_years) }}</p><p><strong>{% for k, v in sar.items() %}{{ _(rain.regions[k].name) }} {{ "%+.1f"|format(v.val_gain) }}%{% if not loop.last %}, {% endif %}{% endfor %}</strong></p></div></div>
+      <div class="rule info"><span class="ico">{{ c.shown|length }}</span><div><h3>{{ _("Crops") }}</h3><p>{{ _("The rule") }}: {{ _("Major in 5+ districts, missing in 5+, score 70 or more") }}</p><p><strong>{{ _("{n} crops passed", n=c.shown|length) }}</strong></p></div></div>
+      {% if gw %}{% set gg = (gw["all tested crops"].with_groundwater - gw["all tested crops"].climate_only) %}{% set gg2 = (gw["the crops we show"].with_groundwater - gw["the crops we show"].climate_only) %}
+      <div class="rule {% if gw['all tested crops'].passes and gw['the crops we show'].passes %}ok{% else %}no{% endif %}"><span class="ico">{% if gw['all tested crops'].passes and gw['the crops we show'].passes %}&#10003;{% else %}&#10005;{% endif %}</span><div><h3>{{ _("Groundwater") }}</h3><p>{{ _("The rule") }}: {{ _("Gain of {g} or more, better in {r} of 5 repeats", g="%.2f"|format(gwt.bar_gain), r=gwt.bar_repeats) }}</p><p><strong>{{ _("Gain {a} and {b}", a="%+.3f"|format(gg), b="%+.3f"|format(gg2)) }}</strong></p></div></div>{% endif %}
+    </div>
     <p class="suggest-note">{{ _("We wrote each rule before we looked at the results. Where a rule was not met, we say so.") }}</p>
   </div>
 </section>
@@ -127,13 +148,16 @@
   <div class="wrap two-col">
     <div>
       <h2>{{ _("Crop scores") }}</h2>
-      <p class="side-note">{{ _("Right district ranked higher, out of 100. Green crops are shown on the site.") }}</p>
+      <p class="side-note">{{ _("Right district ranked higher, out of 100. Green rings are crops shown on the site; grey rings are not shown.") }}</p>
     </div>
-    <ol class="hbars wide-num">
-      {% for e in scores %}
-      <li><span class="hlabel">{{ _(e.name) }} <small>{{ season_label(e.season) }}</small></span><span class="htrack"><span class="hbar{% if not e.trusted %} b-grey{% endif %}" style="width: {{ e.auc_in_100 or 0 }}%"></span></span><span class="hnum">{{ e.auc_in_100 if e.auc_in_100 is not none else "-" }}</span></li>
+    <div class="rings">
+      {% for e in scores %}{% set v = e.auc_in_100 or 0 %}
+      <div class="ring{% if not e.trusted %} grey{% endif %}">
+        <svg viewBox="0 0 92 92" role="img" aria-label="{{ _(e.name) }}: {{ v }}"><circle class="rb" cx="46" cy="46" r="38"/><circle class="rf" cx="46" cy="46" r="38" stroke-dasharray="{{ (v / 100 * 238.8)|round(1) }} 238.8"/><text x="46" y="55" text-anchor="middle">{{ v if e.auc_in_100 is not none else "-" }}</text></svg>
+        <div class="rn">{{ _(e.name) }}</div><div class="rs">{{ season_label(e.season) }}</div>
+      </div>
       {% endfor %}
-    </ol>
+    </div>
   </div>
 </section>
 

@@ -2,6 +2,9 @@
 <div class="water-box water-{{ gw.key }}">
   <p class="water-title">{{ _("Groundwater here") }}: <strong>{{ _(gw.category) }}</strong></p>
   <p>{{ _("Officially, {pct}% of the groundwater that nature refills in a year is pumped out. Assessed in March {year}.", pct="%.0f"|format(gw.pct), year=gw.year) }}</p>
+  {% set wp = ([gw.pct, 150]|min / 150 * 100)|round(1) %}
+  <div class="wmeter" aria-hidden="true"><i class="wm-safe"></i><i class="wm-semi"></i><i class="wm-crit"></i><i class="wm-over"></i></div>
+  <div class="wtrack" aria-hidden="true"><span class="wpoint" style="left: {{ wp }}%"></span></div>
   {% if gw.key == "over" or gw.key == "critical" %}
   <p>{{ _("Where water is short, a crop that needs a lot of water may be hard to grow even if the climate suits it. Our check does not see this.") }}</p>
   {% endif %}

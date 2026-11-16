@@ -48,43 +48,69 @@
         {% elif res.band == "Medium" %}{{ _("The climate is a partial match for {crop}.", crop=cname|lower) }}
         {% else %}{{ _("The climate does not look like a good match for {crop}.", crop=cname|lower) }}{% endif %}
       </p>
+      <div class="gauge" role="img" aria-label="{{ _('How close is the climate?') }}: {{ _(res.band) }}">
+        <div class="g-seg g-low{% if res.band == 'Low' %} on{% endif %}">{{ _("Low") }}</div>
+        <div class="g-seg g-med{% if res.band == 'Medium' %} on{% endif %}">{{ _("Medium") }}</div>
+        <div class="g-seg g-high{% if res.band == 'High' %} on{% endif %}">{{ _("High") }}</div>
+      </div>
+      <div class="g-track" aria-hidden="true"><span class="g-pointer" style="left: {{ 15 if res.band == 'Low' else (50 if res.band == 'Medium' else 85) }}%"></span></div>
+      <p class="suggest-note" style="margin: 0">{{ _("How close is the climate?") }}</p>
+    </article>
+
+    {% set cap = [10, (res.share|round(0, 'ceil') + 2)]|max %}
+    <div class="check-block">
+      <h3>{{ _("Today's share of the area") }}</h3>
+      <div class="meter" role="img" aria-label="{{ '%.1f'|format(res.share) }}%"><i style="width: {{ (res.share / cap * 100)|round(1) }}%"></i><b style="left: {{ (2 / cap * 100)|round(1) }}%"></b></div>
+      <div class="meter-note"><span style="left: {{ (2 / cap * 100)|round(1) }}%">{{ _("Major from 2%") }}</span></div>
       <p>{% if res.major %}{{ _("Today {crop} is a major crop here. It covers {share}% of the area recorded for {season}.", crop=cname, share="%.1f"|format(res.share), season=season_label(crop.season)|lower) }}
          {% elif res.share > 0 %}{{ _("Today {crop} is grown here, but only on {share}% of the area recorded for {season}.", crop=cname, share="%.1f"|format(res.share), season=season_label(crop.season)|lower) }}
          {% else %}{{ _("Today {crop} is not recorded here.", crop=cname) }}{% endif %}</p>
       {% if res.band == "High" and not res.major %}
-      <p>{{ _("So the climate may suit it, even though it is not major here. Water, soil, seed or prices may be the reason, and we cannot see those.") }}</p>
+      <p class="suggest-note">{{ _("So the climate may suit it, even though it is not major here. Water, soil, seed or prices may be the reason, and we cannot see those.") }}</p>
       {% elif res.band == "Low" and res.major %}
-      <p>{{ _("Farmers here do grow it widely, so something other than climate is probably helping, such as water or markets. Our check can be wrong.") }}</p>
+      <p class="suggest-note">{{ _("Farmers here do grow it widely, so something other than climate is probably helping, such as water or markets. Our check can be wrong.") }}</p>
       {% endif %}
-    </article>
+    </div>
 
     {% include "_water.html" %}
+
     {% if res.why %}
-    <h3>{{ _("What the model looked at") }}</h3>
-    <ul class="why">
-      {% for w in res.why %}<li>{{ why_text(w.label ~ " of " ~ ("{:,.0f}".format(w.value) if w.unit == "mm" else "%.1f"|format(w.value)) ~ " " ~ w.unit) }}
-        &mdash; {% if w.helps %}{{ _("points towards a match") }}{% else %}{{ _("points away from a match") }}{% endif %}</li>{% endfor %}
-    </ul>
+    <div class="check-block">
+      <h3>{{ _("What the model looked at") }}</h3>
+      <div class="fgrid">
+        {% for w in res.why %}
+        <div class="fcard{% if not w.helps %} away{% endif %}">
+          <div class="fv">{{ "{:,.0f}".format(w.value) if w.unit == "mm" else "%.1f"|format(w.value) }}<small> {{ _(w.unit) }}</small></div>
+          <div class="fl">{{ _(w.label) }}</div>
+          <div class="ft">{% if w.helps %}&#10003; {{ _("points towards a match") }}{% else %}&#10005; {{ _("points away from a match") }}{% endif %}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
     {% endif %}
 
     {% if res.near %}
-    <h3>{% if res.major %}{{ _("Nearby districts with a similar or better climate for it") }}{% else %}{{ _("Nearby districts where {crop} does well", crop=cname|lower) }}{% endif %}</h3>
-    <div class="tscroll">
-      <table class="crop-table">
-        <thead><tr><th>{{ _("District") }}</th><th>{{ _("Distance") }}</th><th>{{ _("Today") }}</th></tr></thead>
-        <tbody>
-          {% for n in res.near %}
-          <tr><td><a href="{{ lurl('district', slug=n.slug) }}">{{ _(n.name) }}</a></td>
-              <td class="nowrap">{{ n.km }} {{ _("km") }}</td>
-              <td>{% if n.major %}{{ _("Major crop, {share}% of recorded area", share="%.1f"|format(n.share)) }}{% else %}{{ _("Climate suits it, but it covers only {share}%", share="%.1f"|format(n.share)) }}{% endif %}</td></tr>
-          {% endfor %}
-        </tbody>
-      </table>
+    <div class="check-block">
+      <h3>{% if res.major %}{{ _("Nearby districts with a similar or better climate for it") }}{% else %}{{ _("Nearby districts where {crop} does well", crop=cname|lower) }}{% endif %}</h3>
+      <div class="ncards">
+        {% for n in res.near %}
+        <div class="ncard">
+          <div class="nn"><a href="{{ lurl('district', slug=n.slug) }}">{{ _(n.name) }}</a></div>
+          <div class="nk">{{ n.km }} {{ _("km") }}</div>
+          <div class="meter" style="height: 10px; margin: 8px 0 4px"><i style="width: {{ ([n.share * 5, 100]|min)|round(1) }}%"></i></div>
+          <div class="nk">{% if n.major %}{{ _("Major crop, {share}% of recorded area", share="%.1f"|format(n.share)) }}{% else %}{{ _("Climate suits it, but it covers only {share}%", share="%.1f"|format(n.share)) }}{% endif %}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="side-note">{{ _("Distance is a straight line between district centres.") }}</p>
     </div>
-    <p class="side-note">{{ _("Distance is a straight line between district centres.") }}</p>
     {% endif %}
 
-    <p class="suggest-note">{{ _("How good is this check? In our own test, when the model compared a district where {crop} is major with one where it is not, it put the right one higher {n} times out of 100. See the Crops page for all the checks.", crop=cname|lower, n=crop.auc_in_100) }}</p>
+    <div class="check-block">
+      <h3>{{ _("How good is this check?") }}</h3>
+      <div class="score" style="max-width: 34rem"><span class="score-num">{{ crop.auc_in_100 }}<small> {{ _("in 100") }}</small></span><span class="htrack"><span class="hbar" style="width: {{ crop.auc_in_100 }}%"></span></span></div>
+      <p class="suggest-note">{{ _("In our test the model put the right district higher this many times out of 100. 50 is a coin toss.") }} <a href="{{ lurl('crops_page') }}">{{ _("Crops") }}</a> &middot; <a href="{{ lurl('lab_page') }}">{{ _("Model Lab") }}</a></p>
+    </div>
     {% endif %}
   </div>
 </section>
