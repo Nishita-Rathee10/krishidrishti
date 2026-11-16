@@ -33,6 +33,75 @@
   </div>
 </section>
 
+<section class="band" id="result">
+  <div class="wrap">
+    {% if series %}
+    <h2>{{ _("{crop} in {district}", crop=cname, district=dname) }}</h2>
+    {% if seasons|length > 1 %}
+    <p class="season-pick">{{ _("Season:") }}
+      {% for s in seasons %}
+        {% if s == season %}<strong>{{ season_label(s) }}</strong>{% else %}<a href="{{ lurl('yield_page', district=d.slug, crop=cslug, season=s) }}#result">{{ season_label(s) }}</a>{% endif %}{% if not loop.last %} &middot; {% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    <figure class="chart chart-yield">
+      <svg viewBox="0 0 {{ chart.w }} {{ chart.h }}" role="img" aria-labelledby="yt yd" focusable="false">
+        <title id="yt">{{ _("Yield of {crop} in {district}, 1998 to 2019", crop=cname, district=dname) }}</title>
+        <desc id="yd">{{ _("A line of real yields in tonnes per hectare. For 2017 to 2019 it also shows what our model guessed and a likely range. The numbers are in the table below the chart.") if show_range else _("A line of real yields in tonnes per hectare. For 2017 to 2019 it also shows what our model guessed. The numbers are in the table below the chart.") }}</desc>
+        <rect class="zone" x="{{ chart.zone_x }}" y="{{ chart.top }}" width="{{ chart.zone_w }}" height="{{ chart.base - chart.top }}"/>
+        {% for t in chart.ticks %}
+        <line class="grid" x1="{{ chart.left }}" x2="{{ chart.right }}" y1="{{ t.y }}" y2="{{ t.y }}"/>
+        <text class="tick" x="{{ chart.left - 8 }}" y="{{ t.y + 4 }}" text-anchor="end">{{ t.label }}</text>
+        {% endfor %}
+        {% for x in chart.xticks %}
+        <text class="tick" x="{{ x.x }}" y="{{ chart.base + 22 }}" text-anchor="middle">{{ x.label }}</text>
+        {% endfor %}
+        <text class="zone-label" x="{{ chart.zone_x + chart.zone_w / 2 }}" y="{{ chart.top + 14 }}" text-anchor="middle">{{ _("Not seen by model") }}</text>
+        {% for r in chart.ranges %}<rect class="range" x="{{ r.x }}" y="{{ r.y }}" width="{{ r.w }}" height="{{ r.h }}"/>{% endfor %}
+        <path class="line" d="{{ chart.path }}"/>
+        {% for p in chart.pts %}<circle class="dot" cx="{{ p.x }}" cy="{{ p.y }}" r="3.5"><title>{{ p.year }}: {{ p.v }} {{ _("t/ha") }}</title></circle>{% endfor %}
+        {% for m in chart.marks %}<line class="guess" x1="{{ m.x1 }}" x2="{{ m.x2 }}" y1="{{ m.y }}" y2="{{ m.y }}"/>{% endfor %}
+      </svg>
+      <p class="axis-title">{{ _("Tonnes per hectare") }}</p>
+      <div class="key">
+        <span><i class="key-line"></i>{{ _("Real yield") }}</span>
+        {% if series.test %}<span><i class="key-guess"></i>{{ _("Our model's guess") }}</span>{% endif %}
+        {% if show_range and series.test %}<span><i class="key-range2"></i>{{ _("Likely range") }}</span>{% endif %}
+      </div>
+    </figure>
+
+    {% if series.test %}
+    <h3 class="gap-top">{{ _("The three years the model had not seen") }}</h3>
+    <div class="tscroll"><table class="crop-table">
+      <thead><tr><th scope="col">{{ _("Year") }}</th><th scope="col">{{ _("Real yield") }}</th><th scope="col">{{ _("Model's guess") }}</th><th scope="col">{{ _("Last year's yield") }}</th>{% if show_range %}<th scope="col">{{ _("Likely range") }}</th>{% endif %}</tr></thead>
+      <tbody>
+        {% for t in series.test %}
+        <tr><th scope="row">{{ t.year }}</th><td>{{ "%.2f"|format(t.actual) }}</td><td>{{ "%.2f"|format(t.pred) }}</td><td>{{ "%.2f"|format(t.last) if t.last is not none else _("No record") }}</td>{% if show_range %}<td class="range-cell">{{ _("{lo} to {hi}", lo="%.2f"|format(t.lo), hi="%.2f"|format(t.hi)) }}</td>{% endif %}</tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    {% if not show_range %}
+    <p class="suggest-note">{{ _("We do not show a likely range for {crop}. In our tests the top of the range was {pct}% above the guess, which is too wide to help anyone.", crop=cname, pct=crop.range_high_pct) }}</p>
+    {% endif %}
+    {% else %}
+    <p class="suggest-note">{{ _("This crop has no record for 2017 to 2019 in {district}, so there is nothing to check the model against here.", district=dname) }}</p>
+    {% endif %}
+
+    <details class="data-table">
+      <summary>{{ _("See every year as a table") }}</summary>
+      <table>
+        <thead><tr><th scope="col">{{ _("Year") }}</th><th scope="col">{{ _("Yield (tonnes per hectare)") }}</th></tr></thead>
+        <tbody>{% for yr in series.years %}<tr><th scope="row">{{ yr }}</th><td>{{ series.yield[loop.index0] }}</td></tr>{% endfor %}</tbody>
+      </table>
+    </details>
+    {% else %}
+    <h2>{{ _("No record for {crop} in {district}", crop=cname, district=dname) }}</h2>
+    <p>{{ _("Our data has no yield for this crop in this district. Crops we do have for {district}: {list}.", district=dname, list=available|map("tr")|join(", ")) }}</p>
+    {% endif %}
+  </div>
+</section>
+
 <section class="band band-alt">
   <div class="wrap">
     <h2>{{ _("How good is the model?") }}</h2>
