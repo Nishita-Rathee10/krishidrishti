@@ -10,7 +10,6 @@
   <div class="wrap">
     <p class="crumb"><a href="{{ lurl('index') }}">{{ _("All districts") }}</a></p>
     <h1>{{ _("Crop yield") }}</h1>
-    <p class="lead">{{ _("Pick a district and a crop. See the real yield, and what our model guessed for three years it had not seen.") }}</p>
 
     <form class="yform" method="get" action="{{ lurl('yield_page') }}">
       <div class="picker">
@@ -34,14 +33,6 @@
   </div>
 </section>
 
-{% if t3 %}
-<section class="band">
-  <div class="wrap">
-    {{ t3chart(_("{crop} in {district}", crop=cname, district=dname) ~ ": " ~ _("yield by year"), _("Green towers are real yields. Gold towers are what our model guessed for years it had not seen."), t3, [{"c": "#5cc08a", "t": _("Real yield")}, {"c": "#f0c040", "t": _("Our model's guess")}]) }}
-  </div>
-</section>
-{% endif %}
-
 <section class="band" id="result">
   <div class="wrap">
     {% if series %}
@@ -53,33 +44,10 @@
       {% endfor %}
     </p>
     {% endif %}
+    {% if t3 %}{{ t3chart(_("Real yield by year"), _("Green towers are real yields. Gold towers are what our model guessed for years it had not seen."), t3, [{"c": "#5cc08a", "t": _("Real yield")}, {"c": "#f0c040", "t": _("Our model's guess")}]) }}{% endif %}
 
-    <figure class="chart chart-yield">
-      <svg viewBox="0 0 {{ chart.w }} {{ chart.h }}" role="img" aria-labelledby="yt yd" focusable="false">
-        <title id="yt">{{ _("Yield of {crop} in {district}, 1998 to 2019", crop=cname, district=dname) }}</title>
-        <desc id="yd">{{ _("A line of real yields in tonnes per hectare. For 2017 to 2019 it also shows what our model guessed and a likely range. The numbers are in the table below the chart.") if show_range else _("A line of real yields in tonnes per hectare. For 2017 to 2019 it also shows what our model guessed. The numbers are in the table below the chart.") }}</desc>
-        <rect class="zone" x="{{ chart.zone_x }}" y="{{ chart.top }}" width="{{ chart.zone_w }}" height="{{ chart.base - chart.top }}"/>
-        {% for t in chart.ticks %}
-        <line class="grid" x1="{{ chart.left }}" x2="{{ chart.right }}" y1="{{ t.y }}" y2="{{ t.y }}"/>
-        <text class="tick" x="{{ chart.left - 8 }}" y="{{ t.y + 4 }}" text-anchor="end">{{ t.label }}</text>
-        {% endfor %}
-        {% for x in chart.xticks %}
-        <text class="tick" x="{{ x.x }}" y="{{ chart.base + 22 }}" text-anchor="middle">{{ x.label }}</text>
-        {% endfor %}
-        <text class="zone-label" x="{{ chart.zone_x + chart.zone_w / 2 }}" y="{{ chart.top + 14 }}" text-anchor="middle">{{ _("Not seen by model") }}</text>
-        {% for r in chart.ranges %}<rect class="range" x="{{ r.x }}" y="{{ r.y }}" width="{{ r.w }}" height="{{ r.h }}"/>{% endfor %}
-        <path class="line" d="{{ chart.path }}"/>
-        {% for p in chart.pts %}<circle class="dot" cx="{{ p.x }}" cy="{{ p.y }}" r="3.5"><title>{{ p.year }}: {{ p.v }} {{ _("t/ha") }}</title></circle>{% endfor %}
-        {% for m in chart.marks %}<line class="guess" x1="{{ m.x1 }}" x2="{{ m.x2 }}" y1="{{ m.y }}" y2="{{ m.y }}"/>{% endfor %}
-      </svg>
-      <p class="axis-title">{{ _("Tonnes per hectare") }}</p>
-      <div class="key">
-        <span><i class="key-line"></i>{{ _("Real yield") }}</span>
-        {% if series.test %}<span><i class="key-guess"></i>{{ _("Our model's guess") }}</span>{% endif %}
-        {% if show_range and series.test %}<span><i class="key-range2"></i>{{ _("Likely range") }}</span>{% endif %}
-      </div>
-    </figure>
-
+    <details class="more">
+    <summary>{{ _("The three years the model had not seen") }}</summary>
     {% if series.test %}
     <h3 class="gap-top">{{ _("The three years the model had not seen") }}</h3>
     <div class="tscroll"><table class="crop-table">
@@ -104,6 +72,7 @@
         <tbody>{% for yr in series.years %}<tr><th scope="row">{{ yr }}</th><td>{{ series.yield[loop.index0] }}</td></tr>{% endfor %}</tbody>
       </table>
     </details>
+    </details>
     {% else %}
     <h2>{{ _("No record for {crop} in {district}", crop=cname, district=dname) }}</h2>
     <p>{{ _("Our data has no yield for this crop in this district. Crops we do have for {district}: {list}.", district=dname, list=available|map("tr")|join(", ")) }}</p>
@@ -120,11 +89,8 @@
       <div class="kpi"><div class="kpi-num">{{ sm["Forest, rows with history"]["Median error %"] }}<small>%</small></div><div class="kpi-label">{{ _("Model, when history is known") }}</div><div class="kpi-sub">{{ _("Smaller is better") }}</div></div>
       <div class="kpi k-red"><div class="kpi-num">{{ sm["Rule same as last year, rows with history"]["Median error %"] }}<small>%</small></div><div class="kpi-label">{{ _("Repeat last year") }}</div><div class="kpi-sub">{{ _("When history is known") }}</div></div>
     </div>
+    {{ t3chart(_("Usual miss, by way of guessing"), _("A shorter tower is better. Green is our model, gold is a simple rule."), t3m, [{"c": "#5cc08a", "t": _("Our model")}, {"c": "#f0c040", "t": _("Simple rule")}]) }}
     <p class="verdict">{{ _("When last year's yield is known, simply repeating it is as good as our model. The model is useful when there is no history to copy.") }}</p>
-    <p class="chart-title">{{ _("Usual miss by way of guessing (smaller is better)") }}</p>
-    <ol class="hbars wide-num">
-      {% for b in sbars %}<li><span class="hlabel">{{ _(b.name) }}</span><span class="htrack"><span class="hbar{% if 'Forest' in b.name %}{% else %} b-gold{% endif %}" style="width: {{ b.pct }}%"></span></span><span class="hnum">{{ b.err }}%</span></li>{% endfor %}
-    </ol>
     <details class="more">
       <summary>{{ _("How we tested") }}</summary>
       <p class="side-note wide">{{ _("We trained on 1998 to 2016 and then looked once at 2017 to 2019. A &quot;miss&quot; is how far a guess was from the real yield, as a share of the real yield. We use the middle miss, so a few wild years do not decide the score.") }}</p>
@@ -143,23 +109,7 @@
 
 <section class="band">
   <div class="wrap">
-    <h2>{{ _("Crop by crop") }}</h2>
-    <div class="key">
-      <span><i class="key-sq" style="background: var(--field)"></i>{{ _("Our model") }}</span>
-      <span><i class="key-sq" style="background: var(--sarson)"></i>{{ _("Repeat last year") }}</span>
-    </div>
-    <ul class="pairs" style="margin-top: 14px">
-      {% for r in rows %}
-      <li>
-        <a href="{{ lurl('yield_page', district=d.slug, crop=r.slug) }}#result">{{ _(r.name) }}</a>
-        <div>
-          <div class="prow"><span class="htrack"><span class="hbar" style="width: {{ r.m_pct }}%"></span></span><span class="hnum">{{ r.forest_error_history if r.forest_error_history is not none else "-" }}%</span></div>
-          <div class="prow"><span class="htrack"><span class="hbar b-gold" style="width: {{ r.l_pct }}%"></span></span><span class="hnum">{{ r.last_year_error_history if r.last_year_error_history is not none else "-" }}%</span></div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-    <p class="axis-title">{{ _("Usual miss when history is known (smaller is better)") }}</p>
+    {{ t3chart(_("Crop by crop"), _("Usual miss when last year is known. A shorter tower is better. Green: our model is as good or better. Gold: repeating last year is better."), t3c, [{"c": "#5cc08a", "t": _("Model as good or better")}, {"c": "#f0c040", "t": _("Last year better")}]) }}
     <details class="more">
       <summary>{{ _("See the table") }}</summary>
       <p class="side-note wide">{{ _("Where history is known, the last two columns compare our model with repeating last year. &quot;Better&quot; shows which one missed by less, and &quot;Tie&quot; means less than half a point apart.") }}</p>

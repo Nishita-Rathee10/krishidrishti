@@ -33,7 +33,7 @@
     var cells = [];
     items.forEach(function (it, i) {
       var c = document.createElement("div");
-      c.className = "t3-cell" + (it.dim ? " dim" : "") + (it.on ? " on" : "");
+      c.className = "t3-cell" + (it.dim ? " dim" : "") + (it.on ? " on" : "") + (it.hide ? " hide" : "");
       c.setAttribute("tabindex", "0");
       c.setAttribute("role", "img");
       c.setAttribute("aria-label", it.tip || it.l || "");
@@ -50,7 +50,7 @@
 
     function size() {
       var w = root.clientWidth || 600;
-      var S = Math.max(14, Math.min(cfg.maxS || 48, Math.floor(w * 0.9 / (0.9 * n + 0.8))));
+      var S = Math.max(14, Math.min(cfg.maxS || 48, Math.floor(w * 0.66 / (0.9 * n + 0.8))));
       var H = Math.round(Math.min(cfg.maxH || 200, Math.max(110, w * 0.3)));
       plane.style.setProperty("--s", S + "px");
       plane.style.width = n * S + "px";

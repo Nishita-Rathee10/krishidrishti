@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% from "_t3.html" import t3 as t3chart %}
-{% from "_calib.html" import calib_svg %}
 {% set yf = ys["Forest, all test rows"] %}
 {% set yb = ys["Rule crop and district median, all test rows"] %}
 {% set yh = ys["Forest, rows with history"] %}
@@ -14,7 +13,6 @@
   <div class="wrap">
     <p class="crumb"><a href="{{ lurl('index') }}">{{ _("All districts") }}</a></p>
     <h1>{{ _("Model Lab") }}</h1>
-    <p class="lead">{{ _("What runs behind this site: which algorithm does each job, and how well it did. Every number here comes from saved test results.") }}</p>
     <div class="kpis" style="margin-top: 22px">
       <div class="kpi"><div class="kpi-num">{{ yf["Median error %"] }}<small>%</small></div><div class="kpi-label">{{ _("Yield: usual miss") }}</div><div class="kpi-sub">{{ _("Simple rule: {n}%", n=yb["Median error %"]) }}</div></div>
       <div class="kpi k-blue"><div class="kpi-num">{{ "%+.1f"|format(sar.punjab.test_gain) }}<small>%</small></div><div class="kpi-label">{{ _("Rain: gain over usual rain") }}</div><div class="kpi-sub">{{ _("Punjab, final look") }}</div></div>
@@ -104,39 +102,6 @@
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap">
-    <h2>{{ _("Model against a simple rule") }}</h2>
-    <div class="key">
-      <span><i class="key-sq" style="background: var(--field)"></i>{{ _("Our model") }}</span>
-      <span><i class="key-sq" style="background: var(--sarson)"></i>{{ _("Simple rule") }}</span>
-    </div>
-    {% set top = [yb["Median error %"], yf["Median error %"]]|max %}
-    <p class="chart-title" style="margin-top: 16px">{{ _("Yield: usual miss, all test rows (smaller is better)") }}</p>
-    <ul class="pairs">
-      <li><span>{{ _("Usual yield rule") }}</span><div class="prow"><span class="htrack"><span class="hbar b-gold" style="width: {{ (yb['Median error %'] / top * 100)|round(1) }}%"></span></span><span class="hnum">{{ yb["Median error %"] }}%</span></div></li>
-      <li><span>{{ _("Random forest") }}</span><div class="prow"><span class="htrack"><span class="hbar" style="width: {{ (yf['Median error %'] / top * 100)|round(1) }}%"></span></span><span class="hnum">{{ yf["Median error %"] }}%</span></div></li>
-    </ul>
-    <p class="chart-title" style="margin-top: 18px">{{ _("Yield: usual miss when last year is known (smaller is better)") }}</p>
-    <ul class="pairs">
-      <li><span>{{ _("Repeat last year") }}</span><div class="prow"><span class="htrack"><span class="hbar b-gold" style="width: {{ (yl['Median error %'] / yh['Median error %'] * 100)|round(1) if yh['Median error %'] > yl['Median error %'] else 100 }}%"></span></span><span class="hnum">{{ yl["Median error %"] }}%</span></div></li>
-      <li><span>{{ _("Random forest") }}</span><div class="prow"><span class="htrack"><span class="hbar" style="width: {{ (yh['Median error %'] / yl['Median error %'] * 100)|round(1) if yl['Median error %'] > yh['Median error %'] else 100 }}%"></span></span><span class="hnum">{{ yh["Median error %"] }}%</span></div></li>
-    </ul>
-    <p class="chart-title" style="margin-top: 18px">{{ _("Crops: Brier score (smaller is better)") }}</p>
-    <ul class="pairs">
-      <li><span>{{ _("Always the average") }}</span><div class="prow"><span class="htrack"><span class="hbar b-gold" style="width: 100%"></span></span><span class="hnum">{{ c.brier_base }}</span></div></li>
-      <li><span>{{ _("Our model") }}</span><div class="prow"><span class="htrack"><span class="hbar" style="width: {{ (c.brier / c.brier_base * 100)|round(1) }}%"></span></span><span class="hnum">{{ c.brier }}</span></div></li>
-    </ul>
-    <p class="chart-title" style="margin-top: 18px">{{ _("Rain: gain over the best usual-rain method, final look (more is better)") }}</p>
-    <ul class="pairs">
-      {% for k, v in sar.items() %}
-      <li><span>{{ _(rain.regions[k].name) }}</span><div class="prow"><span class="htrack"><span class="hbar{% if v.test_gain < 0 %} b-red{% endif %}" style="width: {{ ([v.test_gain|abs * 8, 100]|min)|round(1) }}%"></span></span><span class="hnum">{{ "%+.1f"|format(v.test_gain) }}%</span></div></li>
-      {% endfor %}
-    </ul>
-    <p class="verdict" style="margin-top: 18px">{{ _("The model wins clearly only where the simple rule is weak.") }}</p>
-  </div>
-</section>
-
 <section class="band band-alt">
   <div class="wrap">
     <h2>{{ _("Rules set before testing") }}</h2>
@@ -152,65 +117,27 @@
 </section>
 
 <section class="band">
-  <div class="wrap two-col">
-    <div>
-      <h2>{{ _("Crop scores") }}</h2>
-      <p class="side-note">{{ _("Right district ranked higher, out of 100. Green rings are crops shown on the site; grey rings are not shown.") }}</p>
-    </div>
-    <div class="rings">
-      {% for e in scores %}{% set v = e.auc_in_100 or 0 %}
-      <div class="ring{% if not e.trusted %} grey{% endif %}">
-        <svg viewBox="0 0 92 92" role="img" aria-label="{{ _(e.name) }}: {{ v }}"><circle class="rb" cx="46" cy="46" r="38"/><circle class="rf" cx="46" cy="46" r="38" stroke-dasharray="{{ (v / 100 * 238.8)|round(1) }} 238.8"/><text x="46" y="55" text-anchor="middle">{{ v if e.auc_in_100 is not none else "-" }}</text></svg>
-        <div class="rn">{{ _(e.name) }}</div><div class="rs">{{ season_label(e.season) }}</div>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="wrap">
+    {{ t3chart(_("Crop scores"), _("Right district ranked higher, out of 100. Green crops are shown on the site; grey are not."), t3c, [{"c": "#5cc08a", "t": _("Shown")}, {"c": "#8fa396", "t": _("Not shown")}]) }}
   </div>
 </section>
 
 <section class="band band-alt">
-  <div class="wrap two-col">
-    <div>
-      <h2>{{ _("When it said 30%, did 30% happen?") }}</h2>
-      <p class="side-note">{{ _("Read a chance as a rough guide, not as an exact number.") }}</p>
-    </div>
-    {{ calib_svg(calib) }}
+  <div class="wrap">
+    {{ t3chart(_("When it said 30%, did 30% happen?"), _("Gold is the chance the model gave. Green is what really happened. Same height means a trustworthy chance."), t3cal, [{"c": "#f0c040", "t": _("Model said")}, {"c": "#5cc08a", "t": _("Really major")}]) }}
   </div>
 </section>
 
 <section class="band">
-  <div class="wrap two-col">
-    <div>
-      <h2>{{ _("What the model looks at") }}</h2>
-      <p class="side-note">{{ _("The longer the bar, the more that factor moves the model's answer (SHAP).") }}</p>
-    </div>
-    <ol class="hbars">
-      {% for b in shap %}<li><span class="hlabel">{{ _(b.label) }}</span><span class="htrack"><span class="hbar" style="width: {{ b.pct }}%"></span></span><span class="hnum">{{ b.share }}%</span></li>{% endfor %}
-    </ol>
+  <div class="wrap">
+    {{ t3chart(_("What the model looks at"), _("Taller means that factor moves the answer more. The gold tower is simply which crop is asked about."), t3s, none) }}
   </div>
 </section>
 
-{% if gw %}
+{% if gw and t3gw %}
 <section class="band band-alt">
   <div class="wrap">
-    <h2>{{ _("Does groundwater help the crop model?") }}</h2>
-    <div class="key">
-      <span><i class="key-sq" style="background: var(--field)"></i>{{ _("Climate only") }}</span>
-      <span><i class="key-sq" style="background: var(--canal)"></i>{{ _("Climate and groundwater") }}</span>
-    </div>
-    <ul class="pairs" style="margin-top: 14px">
-      {% for name, v in gw.items() %}
-      <li>
-        <span>{{ _(name) }}</span>
-        <div>
-          <div class="prow"><span class="htrack"><span class="hbar" style="width: {{ (v.climate_only * 100)|round(1) }}%"></span></span><span class="hnum">{{ (v.climate_only * 100)|round(1) }}</span></div>
-          <div class="prow"><span class="htrack"><span class="hbar b-blue" style="width: {{ (v.with_groundwater * 100)|round(1) }}%"></span></span><span class="hnum">{{ (v.with_groundwater * 100)|round(1) }}</span></div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-    <p class="axis-title">{{ _("Score out of 100 on districts not seen in training") }}</p>
-    <p class="verdict" style="margin-top: 16px">{{ _("The gain was too small to pass our rule, so groundwater stays on the site as context only.") }}</p>
+    {{ t3chart(_("Does groundwater help the crop model?"), _("Score out of 100 on districts not seen in training. The gain was too small to pass our rule, so groundwater stays on the site as context only."), t3gw, [{"c": "#f0c040", "t": _("Climate only")}, {"c": "#5ab0d8", "t": _("Climate and groundwater")}]) }}
   </div>
 </section>
 {% endif %}

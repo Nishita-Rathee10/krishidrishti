@@ -9,7 +9,6 @@
   <div class="wrap">
     <p class="crumb"><a href="{{ lurl('index') }}">{{ _("All districts") }}</a></p>
     <h1>{{ _("Crops") }}</h1>
-    <p class="lead">{{ _("Which crops the climate of a district may suit. The model sees climate only, not water, soil, seed or prices.") }}</p>
     <div class="kpis" style="margin-top: 22px; max-width: 44rem">
       <div class="kpi"><div class="kpi-num">{{ c.auc_in_100 }}<small> {{ _("in 100") }}</small></div><div class="kpi-label">{{ _("Right district ranked higher") }}</div><div class="kpi-sub">{{ _("50 is a coin toss") }}</div></div>
       <div class="kpi k-blue"><div class="kpi-num">{{ c.brier }}</div><div class="kpi-label">{{ _("Brier score, our model") }}</div><div class="kpi-sub">{{ _("Smaller is better") }}</div></div>
@@ -31,13 +30,11 @@
 <section class="band band-alt">
   <div class="wrap">
     <h2>{{ _("Crops we show") }}</h2>
-    <p class="side-note wide">{{ _("Score: how often the model put the right district higher, out of 100.") }}</p>
     <div class="crop-cards">
       {% for e in c.shown %}
       <article class="crop-card">
         <h3>{{ _(e.name) }} <span class="suggest-season">{{ season_label(e.season) }}</span></h3>
         <div class="score"><span class="score-num">{{ e.auc_in_100 }}<small> {{ _("in 100") }}</small></span><span class="htrack"><span class="hbar" style="width: {{ e.auc_in_100 }}%"></span></span></div>
-        <p class="suggest-note" style="margin: 0 0 6px">{{ _("Major in {a} of the {b} districts we tested.", a=e.n_major, b=e.n_major + e.n_not) }}</p>
         {% if e.suits %}
         <p class="why-title" style="margin: 8px 0 0">{{ _("The climate may also suit it in") }}</p>
         <ul class="chips">
@@ -46,7 +43,6 @@
         {% else %}
         <p class="suggest-note">{{ _("No district passed our bar for this crop.") }}</p>
         {% endif %}
-        {% if e.factors %}<ul class="chips">{% for f in e.factors %}<li>{{ _(f) }}</li>{% endfor %}</ul>{% endif %}
       </article>
       {% endfor %}
     </div>
@@ -58,46 +54,29 @@
 </section>
 
 <section class="band">
-  <div class="wrap two-col">
-    <div>
-      <h2>{{ _("When it said 30%, did 30% happen?") }}</h2>
-      <p class="side-note">{{ _("Read a chance as a rough guide, not as an exact number.") }}</p>
-    </div>
-    <div>
-      {{ calib_svg(calib) }}
-      <details class="more">
-        <summary>{{ _("See the table") }}</summary>
-        <div class="tscroll"><table class="crop-table">
-          <thead><tr><th scope="col">{{ _("Chance the model gave") }}</th><th scope="col">{{ _("Cases") }}</th><th scope="col">{{ _("Model said, on average") }}</th><th scope="col">{{ _("Really major") }}</th></tr></thead>
-          <tbody>
-            {% for b in c.calibration %}<tr><th scope="row" class="nowrap">{{ b.bin }}</th><td>{{ b.rows }}</td><td>{{ b.said }}%</td><td>{{ b.real }}%</td></tr>{% endfor %}
-          </tbody>
-        </table></div>
-        <p class="suggest-note">{{ _("Each district was judged by a model that had never seen that district. This is closer to the real use than judging a model on data it learned from.") }}</p>
-        <p class="suggest-note">{{ _("The Brier score is the average squared miss of a chance. Smaller is better, and ours is about half of what we get by always saying the average.") }}</p>
-      </details>
-    </div>
+  <div class="wrap">
+    {{ t3chart(_("When it said 30%, did 30% happen?"), _("Gold is the chance the model gave. Green is what really happened. Same height means a trustworthy chance."), t3cal, [{"c": "#f0c040", "t": _("Model said")}, {"c": "#5cc08a", "t": _("Really major")}]) }}
+    <details class="more">
+      <summary>{{ _("See the table") }}</summary>
+      <div class="tscroll"><table class="crop-table">
+        <thead><tr><th scope="col">{{ _("Chance the model gave") }}</th><th scope="col">{{ _("Cases") }}</th><th scope="col">{{ _("Model said, on average") }}</th><th scope="col">{{ _("Really major") }}</th></tr></thead>
+        <tbody>
+          {% for b in c.calibration %}<tr><th scope="row" class="nowrap">{{ b.bin }}</th><td>{{ b.rows }}</td><td>{{ b.said }}%</td><td>{{ b.real }}%</td></tr>{% endfor %}
+        </tbody>
+      </table></div>
+      <p class="suggest-note">{{ _("Each district was judged by a model that had never seen that district. This is closer to the real use than judging a model on data it learned from.") }}</p>
+      <p class="suggest-note">{{ _("The Brier score is the average squared miss of a chance. Smaller is better, and ours is about half of what we get by always saying the average.") }}</p>
+    </details>
   </div>
 </section>
 
 <section class="band band-alt">
-  <div class="wrap two-col">
-    <div>
-      <h2>{{ _("What the model looks at") }}</h2>
-      <p class="side-note">{{ _("The longer the bar, the more that factor moves the model's answer (SHAP).") }}</p>
-    </div>
-    <figure class="chart">
-      <ol class="hbars">
-        {% for b in bars %}
-        <li><span class="hlabel">{{ _(b.label) }}</span><span class="htrack"><span class="hbar" style="width: {{ b.pct }}%"></span></span><span class="hnum">{{ b.share }}%</span></li>
-        {% endfor %}
-      </ol>
-      <p class="axis-title">{{ _("Share of the total push on the answer. &quot;Crop identity&quot; is simply which crop is being asked about.") }}</p>
-      <details class="more">
-        <summary>{{ _("About this chart") }}</summary>
-        <p class="side-note wide">{{ _("This is the forest half of our model, over {rows} crop and district rows. It shows what the model uses. It does not show what makes a crop grow.", rows=c.shap.rows) }}</p>
-      </details>
-    </figure>
+  <div class="wrap">
+    {{ t3chart(_("What the model looks at"), _("Taller means that factor moves the answer more. The gold tower is simply which crop is asked about."), t3s, none) }}
+    <details class="more">
+      <summary>{{ _("About this chart") }}</summary>
+      <p class="side-note wide">{{ _("This is the forest half of our model, over {rows} crop and district rows. It shows what the model uses. It does not show what makes a crop grow.", rows=c.shap.rows) }}</p>
+    </details>
   </div>
 </section>
 
@@ -106,13 +85,6 @@
     <h2>{{ _("Crops we do not show") }}</h2>
     <p class="side-note wide">{{ _("Grown almost everywhere") }}: {{ c.widely_grown|map("tr")|join(", ") }}. {{ _("Too rare to test") }}: {{ c.rare|map("tr")|join(", ") }}.</p>
     {% if c.not_shown %}
-    <p class="chart-title" style="margin-top: 14px">{{ _("Tested, but below our bar") }}</p>
-    <ol class="hbars">
-      {% for e in c.not_shown %}
-      <li><span class="hlabel">{{ _(e.name) }} <small>{{ season_label(e.season) }}</small></span><span class="htrack"><span class="hbar b-grey" style="width: {{ e.auc_in_100 or 0 }}%"></span></span><span class="hnum">{{ e.auc_in_100 if e.auc_in_100 is not none else "-" }}</span></li>
-      {% endfor %}
-    </ol>
-    <p class="axis-title">{{ _("A score of 50 in 100 is no better than a coin toss.") }}</p>
     <details class="more">
       <summary>{{ _("Why we do not show them") }}</summary>
       <div class="tscroll"><table class="crop-table">

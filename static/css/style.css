@@ -566,6 +566,7 @@ html[lang="hi"] .brand-name { line-height: 1.2; }
 .t3-cell .t3a { left: 2px; right: 2px; bottom: 0; height: var(--h, 0px); background: color-mix(in srgb, var(--c) 68%, #000); transform-origin: bottom; transform: rotateX(-90deg); }
 .t3-cell .t3r { top: 2px; bottom: 2px; right: 0; width: var(--h, 0px); background: color-mix(in srgb, var(--c) 48%, #000); transform-origin: right; transform: rotateY(90deg); }
 .t3-cell.dim .t3f { opacity: .35; }
+.t3-cell.hide .t3f { display: none; }
 .t3-cell.on .t3t { box-shadow: 0 0 0 3px #fff, 0 0 22px 6px var(--c); }
 .t3-cell:hover .t3t, .t3-cell:focus-visible .t3t { background: color-mix(in srgb, var(--c) 70%, #fff); }
 .t3-lab, .t3-val { position: absolute; left: 50%; white-space: nowrap; font-size: .8rem; font-weight: 600; transform-origin: 0 0; pointer-events: none; }

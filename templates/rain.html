@@ -9,7 +9,6 @@
   <div class="wrap">
     <p class="crumb"><a href="{{ lurl('index') }}">{{ _("All districts") }}</a></p>
     <h1>{{ _("Rain") }}</h1>
-    <p class="lead">{{ _("Usual rain, how much it changes, and whether a model can guess it. Records: 1901 to 2015.") }}</p>
     <p class="season-pick" aria-label="{{ _('Choose a state') }}">{{ _("Show:") }}
       {% for k, v in regions.items() %}
         {% if k == slug %}<strong>{{ _(v.name) }}</strong>{% else %}<a href="{{ lurl('rain_page', region=k) }}">{{ _(v.name) }}</a>{% endif %}{% if not loop.last %} &middot; {% endif %}
@@ -32,104 +31,32 @@
 </section>
 
 <section class="band band-alt">
-  <div class="wrap two-col">
-    <div>
-      <h2>{{ _("Month by month") }}</h2>
-      <p class="side-note">{{ _("The line is the usual rain. The box is where it stayed in 8 of 10 years.") }}</p>
-    </div>
-    <figure class="chart chart-rain">
-      <div class="chart-body">
-        <div class="axis" aria-hidden="true"><span>{{ month_top }} {{ _("mm") }}</span><span>0</span></div>
-        <ol class="cols">
-          {% for m in month_rows %}
-          <li class="col" title="{{ _('{month}: usual {mean} mm, in most years between {lo} and {hi} mm', month=m.month, mean='%.0f'|format(m.mean), lo='%.0f'|format(m.p10), hi='%.0f'|format(m.p90)) }}">
-            <div class="track">
-              <div class="range" style="bottom: {{ m.lo_pct }}%; height: {{ m.hi_pct }}%"></div>
-              <div class="mean" style="bottom: {{ m.mean_pct }}%"></div>
-            </div>
-            <span class="m"><span class="m-long">{{ m.abbr }}</span><span class="m-short">{{ m.letter }}</span></span>
-          </li>
-          {% endfor %}
-        </ol>
-      </div>
-      <figcaption class="key">
-        <span><i class="key-mean"></i>{{ _("Usual rain (average)") }}</span>
-        <span><i class="key-range"></i>{{ _("Where rain stayed in about 8 of 10 years") }}</span>
-      </figcaption>
-      <details class="data-table">
-        <summary>{{ _("See the numbers as a table") }}</summary>
-        <table>
-          <thead><tr><th scope="col">{{ _("Month") }}</th><th scope="col">{{ _("Usual (mm)") }}</th><th scope="col">{{ _("Low end (mm)") }}</th><th scope="col">{{ _("High end (mm)") }}</th></tr></thead>
-          <tbody>{% for m in month_rows %}<tr><th scope="row">{{ m.month }}</th><td>{{ "%.0f"|format(m.mean) }}</td><td>{{ "%.0f"|format(m.p10) }}</td><td>{{ "%.0f"|format(m.p90) }}</td></tr>{% endfor %}</tbody>
-        </table>
-      </details>
-    </figure>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap two-col">
-    <div>
-      <h2>{{ _("Year by year") }}</h2>
-      <p class="side-note">{{ _("Each bar is one year. A single year can be far from the average.") }}</p>
-    </div>
-    <figure class="chart chart-years">
-      <svg viewBox="0 0 {{ ychart.w }} {{ ychart.h }}" role="img" aria-labelledby="rt rd" focusable="false">
-        <title id="rt">{{ _("Rain of each year in {region}, 1901 to 2015", region=rname) }}</title>
-        <desc id="rd">{{ _("One bar for each year, in millimetres. The average is {avg} mm. The driest year was {dy} with {dm} mm and the wettest was {wy} with {wm} mm.", avg=r.annual_mean, dy=r.driest.year, dm=r.driest.mm, wy=r.wettest.year, wm=r.wettest.mm) }}</desc>
-        <rect class="yband" x="{{ ychart.left }}" y="{{ ychart.band_y }}" width="{{ ychart.right - ychart.left }}" height="{{ ychart.band_h }}"/>
-        {% for t in ychart.ticks %}
-        <line class="grid" x1="{{ ychart.left }}" x2="{{ ychart.right }}" y1="{{ t.y }}" y2="{{ t.y }}"/>
-        <text class="tick" x="{{ ychart.left - 8 }}" y="{{ t.y + 4 }}" text-anchor="end">{{ t.label }}</text>
-        {% endfor %}
-        {% for b in ychart.bars %}<rect class="ybar" x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}"><title>{{ b.year }}: {{ b.v }} {{ _("mm") }}</title></rect>{% endfor %}
-        <line class="ymean" x1="{{ ychart.left }}" x2="{{ ychart.right }}" y1="{{ ychart.mean_y }}" y2="{{ ychart.mean_y }}"/>
-        {% for x in ychart.xticks %}<text class="tick" x="{{ x.x }}" y="{{ ychart.base + 22 }}" text-anchor="middle">{{ x.label }}</text>{% endfor %}
-      </svg>
-      <p class="axis-title">{{ _("Millimetres of rain in the year") }}</p>
-      <figcaption class="key">
-        <span><i class="key-bar"></i>{{ _("Rain in that year") }}</span>
-        <span><i class="key-mean"></i>{{ _("Average") }}</span>
-        <span><i class="key-band"></i>{{ _("Where 8 of 10 years fall") }}</span>
-      </figcaption>
-      <details class="data-table">
-        <summary>{{ _("See every year as a table") }}</summary>
-        <table>
-          <thead><tr><th scope="col">{{ _("Year") }}</th><th scope="col">{{ _("Whole year (mm)") }}</th><th scope="col">{{ _("June to September (mm)") }}</th></tr></thead>
-          <tbody>{% for yr in r.years %}<tr><th scope="row">{{ yr }}</th><td>{{ "{:,.0f}".format(r.annual[loop.index0]) }}</td><td>{{ "{:,.0f}".format(r.monsoon[loop.index0]) }}</td></tr>{% endfor %}</tbody>
-        </table>
-      </details>
-    </figure>
+  <div class="wrap">
+    {{ t3chart(_("Rain by decade"), _("Average rain per year in each 10 years. Blue towers are wetter than usual."), t3d, [{"c": "#5ab0d8", "t": _("Wetter than usual")}, {"c": "#3f9fa0", "t": _("Drier than usual")}]) }}
+    <details class="more">
+      <summary>{{ _("See the numbers as a table") }}</summary>
+      <div class="table-scroll"><table class="crop-table">
+        <thead><tr><th scope="col">{{ _("Month") }}</th><th scope="col">{{ _("Usual (mm)") }}</th><th scope="col">{{ _("Low end (mm)") }}</th><th scope="col">{{ _("High end (mm)") }}</th></tr></thead>
+        <tbody>{% for m in month_rows %}<tr><th scope="row">{{ m.month }}</th><td>{{ "%.0f"|format(m.mean) }}</td><td>{{ "%.0f"|format(m.p10) }}</td><td>{{ "%.0f"|format(m.p90) }}</td></tr>{% endfor %}</tbody>
+      </table></div>
+      <div class="table-scroll"><table class="crop-table">
+        <thead><tr><th scope="col">{{ _("Year") }}</th><th scope="col">{{ _("Whole year (mm)") }}</th><th scope="col">{{ _("June to September (mm)") }}</th></tr></thead>
+        <tbody>{% for yr in r.years %}<tr><th scope="row">{{ yr }}</th><td>{{ "{:,.0f}".format(r.annual[loop.index0]) }}</td><td>{{ "{:,.0f}".format(r.monsoon[loop.index0]) }}</td></tr>{% endfor %}</tbody>
+      </table></div>
+    </details>
   </div>
 </section>
 
 <section class="band band-alt">
   <div class="wrap">
     <h2>{{ _("Can a model guess the rain of a coming month?") }}</h2>
-    <p class="verdict">{{ _("The seasonal model did a little better than the usual pattern, but its guesses for single months are still far off.") }}</p>
     <div class="kpis">
       <div class="kpi k-blue"><div class="kpi-num">{{ "%+.1f"|format(sar.val_gain) }}<small>%</small></div><div class="kpi-label">{{ _("Seasonal model vs usual rain") }}</div><div class="kpi-sub">{{ val_years }} ({{ _("used to choose") }})</div></div>
       <div class="kpi k-blue"><div class="kpi-num">{{ "%+.1f"|format(sar.test_gain) }}<small>%</small></div><div class="kpi-label">{{ _("Seasonal model vs usual rain") }}</div><div class="kpi-sub">{{ test_years }} ({{ _("final look") }})</div></div>
       <div class="kpi k-gold"><div class="kpi-num">{{ sar.test_mae }}<small> {{ _("mm") }}</small></div><div class="kpi-label">{{ _("Usual miss for one month") }}</div><div class="kpi-sub">{{ _("A usual month has about {usual} mm", usual=usual_month) }}</div></div>
       <div class="kpi k-red"><div class="kpi-num">{{ r.coverage }}<small>%</small></div><div class="kpi-label">{{ _("Real months inside the range") }}</div><div class="kpi-sub">{{ _("We aimed for 80%") }}</div></div>
     </div>
-    <p class="chart-title">{{ _("Gain over the best usual-rain method (more is better)") }}</p>
-    <div class="key">
-      <span><i class="key-sq" style="background: var(--field)"></i>{{ _("Better") }}</span>
-      <span><i class="key-sq" style="background: var(--chilli)"></i>{{ _("Worse") }}</span>
-    </div>
-    <ul class="pairs" style="margin-top: 14px">
-      {% for g in gains %}
-      <li>
-        <span>{{ _(g.name) }}</span>
-        <div>
-          <div class="prow"><span class="htrack"><span class="hbar{% if g.val < 0 %} b-red{% endif %}" style="width: {{ g.val_pct }}%"></span></span><span class="hnum">{{ "%+.1f"|format(g.val) }}%</span></div>
-          <div class="prow"><span class="htrack"><span class="hbar{% if g.test < 0 %} b-red{% endif %}" style="width: {{ g.test_pct }}%; opacity: .6"></span></span><span class="hnum">{{ "%+.1f"|format(g.test) }}%</span></div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-    <p class="axis-title">{{ _("Top bar: {a}. Lighter bar: {b}.", a=val_years, b=test_years) }}</p>
+    {{ t3chart(_("Can a model guess next month's rain?"), _("Green or blue means better than the usual rain pattern. Red means worse. Left tower: {a}. Right tower: {b}.", a=val_years, b=test_years), t3g, [{"c": "#5cc08a", "t": _("Better")}, {"c": "#e5604d", "t": _("Worse")}]) }}
     <p class="verdict" style="margin-top: 18px">{{ _("So this site shows the usual rain and how much it varies. It does not promise the rain of a coming month.") }}</p>
     <details class="more">
       <summary>{{ _("How we tested") }}</summary>

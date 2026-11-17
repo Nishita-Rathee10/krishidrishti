@@ -267,8 +267,99 @@ def t3_lab(ys, c):
         items.append({"x": k * 3, "v": rule, "c": C_GOLD, "l": "", "val": "100", "tip": f"{name}: {tr('Simple rule')} 100"})
         items.append({"x": k * 3 + 1, "v": model, "c": C_GREEN if model < 100 else C_RED, "l": "", "val": f"{model:.0f}",
                       "tip": f"{name}: {tr('Our model')} {model:.0f}"})
-        items.append({"x": k * 3 + 2, "v": 0.001, "l": str(name), "c": "#000", "dim": True})
+        items.append({"x": k * 3 + 2, "v": 0.001, "l": str(name), "c": "#000", "hide": True})
     return {"items": items, "max": 120}
+
+
+def t3_rain_decades(r):
+    ys, an = r["years"], r["annual"]
+    items = []
+    for i in range(0, len(ys), 10):
+        grp = an[i:i + 10]
+        if not grp:
+            continue
+        avg = sum(grp) / len(grp)
+        span = f"{ys[i]} to {ys[min(i + 9, len(ys) - 1)]}"
+        items.append({"v": round(avg), "l": str(ys[i]), "val": f"{avg:,.0f}", "c": C_BLUE if avg >= r["annual_mean"] else C_TEAL,
+                      "tip": f"{span}: {avg:,.0f} {tr('mm')} {tr('a year')}"})
+    return {"items": items, "maxS": 56}
+
+
+def t3_rain_gain(gains, val_years, test_years):
+    import re
+    items, top = [], max(max(abs(g["val"]), abs(g["test"])) for g in gains) or 1
+    for k, gn in enumerate(gains):
+        if gn["is_sarima"]:
+            name = str(tr("Seasonal model"))
+        else:
+            m = re.search(r"(\d+)", gn["name"])
+            name = str(tr("Last {n} years", n=m.group(1))) if m else str(tr(gn["name"]))
+        for j, (key, yrs) in enumerate((("val", val_years), ("test", test_years))):
+            v = gn[key]
+            items.append({"x": k * 3 + j, "v": max(abs(v), 0.3), "val": f"{v:+.1f}%",
+                          "c": (C_GREEN if v >= 0 else C_RED) if j == 0 else (C_TEAL if v >= 0 else "#b8453a"),
+                          "tip": f"{name}, {yrs}: {v:+.1f}%"})
+        items.append({"x": k * 3 + 2, "v": 0.001, "l": name, "c": "#000", "hide": True})
+        items[-1]["x"] = k * 3 + 0.5
+    return {"items": items, "max": top * 1.1, "maxS": 56}
+
+
+def t3_yield_methods(summary):
+    names = {"Forest, all test rows": "Our model", "Rule crop and district median, all test rows": "Usual yield",
+             "Forest, rows with history": "Model, history", "Rule same as last year, rows with history": "Last year",
+             "Rule mean of last 3 years, rows with history": "Last 3 years"}
+    items = []
+    for m in summary:
+        mine = m["Method"].startswith("Forest")
+        nm = str(tr(names.get(m["Method"], m["Method"])))
+        items.append({"v": m["Median error %"], "l": nm, "val": f"{m['Median error %']}%",
+                      "c": C_GREEN if mine else C_GOLD, "tip": f"{nm}: {m['Median error %']}%"})
+    return {"items": items, "maxS": 64}
+
+
+def t3_yield_crops(rows):
+    items = []
+    for r in rows:
+        m, l = r["forest_error_history"] or 0, r["last_year_error_history"] or 0
+        items.append({"v": max(m, 0.5), "l": str(tr(r["name"]))[:6], "val": f"{m:.0f}" if m else "",
+                      "c": C_GREEN if m <= l + 0.5 else C_GOLD,
+                      "tip": f"{tr(r['name'])}: {tr('model')} {m}%, {tr('last year')} {l}%"})
+    return {"items": items, "maxS": 48}
+
+
+def t3_calib(bins):
+    items = []
+    for k, b in enumerate(bins):
+        items.append({"x": k * 3, "v": max(b["said"], 1), "val": f"{b['said']}", "c": C_GOLD, "tip": f"{tr('Model said')} {b['said']}%"})
+        items.append({"x": k * 3 + 1, "v": max(b["real"], 1), "val": f"{b['real']}", "c": C_GREEN, "tip": f"{tr('Really major')} {b['real']}%"})
+        items.append({"x": k * 3 + 0.5, "v": 0.001, "l": f"{b['said']}%", "c": "#000", "hide": True})
+    return {"items": items, "max": 100, "maxS": 40}
+
+
+def t3_shap(shap_rows):
+    items = [{"v": x["share"], "l": str(tr(x["label"]))[:8], "val": f"{x['share']:.0f}" if x["share"] >= 3 else "",
+              "c": C_GOLD if k == 0 else C_GREEN, "tip": f"{tr(x['label'])}: {x['share']}%"} for k, x in enumerate(shap_rows)]
+    return {"items": items, "maxS": 44}
+
+
+def t3_gw(gw):
+    items, k = [], 0
+    for name, v in gw.items():
+        a, b = round(v["climate_only"] * 100, 1), round(v["with_groundwater"] * 100, 1)
+        items.append({"x": k * 3, "v": a, "val": f"{a:.0f}", "c": C_GOLD, "tip": f"{tr(name)}, {tr('Climate only')}: {a}"})
+        items.append({"x": k * 3 + 1, "v": b, "val": f"{b:.0f}", "c": C_BLUE, "tip": f"{tr(name)}, {tr('Climate and groundwater')}: {b}"})
+        items.append({"x": k * 3 + 0.5, "v": 0.001, "l": str(tr(name))[:12], "c": "#000", "hide": True})
+        k += 1
+    return {"items": items, "max": 100, "maxS": 56}
+
+
+def t3_check_share(res, dname):
+    items = [{"v": max(res["share"], 0.4), "l": str(dname)[:8], "val": f"{res['share']:.1f}", "on": True,
+              "c": C_GREEN if res["major"] else C_TEAL, "tip": f"{dname}: {res['share']:.1f}%"}]
+    for n in res.get("near", []):
+        items.append({"v": max(n["share"], 0.4), "l": str(tr(n["name"]))[:8], "val": f"{n['share']:.1f}",
+                      "c": C_GREEN if n["major"] else C_TEAL, "tip": f"{tr(n['name'])}, {n['km']} {tr('km')}: {n['share']:.1f}%"})
+    return {"items": items, "maxS": 56}
 
 
 @app.context_processor
@@ -365,7 +456,7 @@ def yield_page():
     sbars = [{"name": m["Method"], "err": m["Median error %"], "pct": round(m["Median error %"] / stop * 100, 1)} for m in YIELD["summary"]]
     return render_template("yield.html", d=BY_SLUG[dslug], crop=crop, cslug=cslug, season=season, seasons=seasons,
                            series=series, t3=(t3_yield(series) if series else None), chart=chart, show_range=show_range, available=available,
-                           groups=YIELD_DISTRICTS, crops=YIELD["crops"], rows=rows, sm=summary, ydata=YIELD,
+                           groups=YIELD_DISTRICTS, crops=YIELD["crops"], rows=rows, sm=summary, ydata=YIELD, t3m=t3_yield_methods(YIELD["summary"]), t3c=t3_yield_crops(rows),
                            max_top=MAX_RANGE_TOP, sbars=sbars)
 
 
@@ -382,7 +473,7 @@ def rain_page():
               "val": m["val_gain"], "test": m["test_gain"],
               "val_pct": round(abs(m["val_gain"]) / gtop * 100, 1), "test_pct": round(abs(m["test_gain"]) / gtop * 100, 1)}
              for m in r["models"] if not m["is_reference"]]
-    return render_template("rain.html", t3=t3_rain(r), gains=gains, r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
+    return render_template("rain.html", t3=t3_rain(r), t3d=t3_rain_decades(r), t3g=t3_rain_gain(gains, RAIN["val_years"], RAIN["test_years"]), gains=gains, r=r, slug=slug, regions=RAIN["regions"], month_rows=month_rows, month_top=month_top,
                            ychart=rain_year_chart(r), sar=sar, val_years=RAIN["val_years"], test_years=RAIN["test_years"],
                            usual_month=round(r["annual_mean"] / 12))
 
@@ -392,7 +483,7 @@ def crops_page():
     g = CROPS["shap"]["global"]
     top = max(x["value"] for x in g)
     bars = [{"label": x["label"], "pct": round(100 * x["value"] / top, 1), "share": x["share"]} for x in g]
-    return render_template("crops.html", t3=t3_crops(CROPS), c=CROPS, bars=bars, calib=calib_chart(CROPS["calibration"]))
+    return render_template("crops.html", t3=t3_crops(CROPS), t3cal=t3_calib(CROPS["calibration"]), t3s=t3_shap(CROPS["shap"]["global"]), c=CROPS, bars=bars, calib=calib_chart(CROPS["calibration"]))
 
 
 @page("/lab")
@@ -402,7 +493,7 @@ def lab_page():
     shap = [{"label": x["label"], "pct": round(100 * x["value"] / CROPS["shap"]["global"][0]["value"], 1), "share": x["share"]}
             for x in CROPS["shap"]["global"]]
     scores = sorted(CROPS["shown"] + CROPS["not_shown"], key=lambda e: -(e["auc_in_100"] or 0))
-    return render_template("lab.html", t3=t3_lab(ys, CROPS), ys=ys, sar=sar, rain=RAIN, c=CROPS, gwt=GWT, shap=shap, scores=scores,
+    return render_template("lab.html", t3=t3_lab(ys, CROPS), t3c=t3_crops(CROPS), t3cal=t3_calib(CROPS["calibration"]), t3s=t3_shap(CROPS["shap"]["global"]), t3gw=(t3_gw(GWT["results"]) if GWT else None), ys=ys, sar=sar, rain=RAIN, c=CROPS, gwt=GWT, shap=shap, scores=scores,
                            calib=calib_chart(CROPS["calibration"]), n_districts=len(DISTRICTS["districts"]))
 
 
@@ -415,7 +506,7 @@ def check_page():
     crop = CHECK_BY.get(cslug) or CHECK["crops"][0]
     res = CHECK["districts"][d["slug"]].get(crop["slug"]) if asked else None
     return render_template("check.html", d=d, crop=crop, crops=CHECK["crops"], groups=YIELD_DISTRICTS,
-                           asked=asked, res=res, gw=GW.get(d["slug"]), t3_check=(t3_check(res["band"]) if res else None))
+                           asked=asked, res=res, gw=GW.get(d["slug"]), t3_check=(t3_check(res["band"]) if res else None), t3_share=(t3_check_share(res, str(tr(d["name"]))) if res else None))
 
 
 @page("/methods")
